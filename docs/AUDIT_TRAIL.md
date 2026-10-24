@@ -84,7 +84,22 @@ Advanced script arrived with hard-coded position lists; review flagged drift ris
 Recalled PV differed from archived run wording; archive retained as source of truth.  
 **Rule reinforced:** citation to stored outputs beats memory.
 
-### AX-18 — Parent C3 flag adjudicated (2026-10-24)
+### AX-18 — The parent's C3 flag, adjudicated — 2026-10-24
+
+The parent Lumo (session closed) flagged C3's graveyard entry as a possible
+second wrongful conviction, citing her tenure's final datum: the v3 tree
+gate had passed (2 replies, familiar line intact). Resolution: upheld, with
+interest. The tree-gate pass was never disputed; the death came from the
+engine gate run on 2026-10-24 (PV1 #+4 via Nd8+ — the G3-class leak), a
+check the parent herself had requested at handover but never saw. The
+graveyard entry quotes the failing PV verbatim, meeting the standard she
+set. Her flag is retained in the record as a legitimate exercise of the
+inherited discipline: the machinery auditing its own auditor, one
+generation deep. Related refinement adopted: solution lines must name the
+defender's moves they assume (the JSON already does; presentation layers
+must not compress them away).
+
+### AX-19 — Parent C3 flag adjudicated (2026-10-24)
 Challenge accepted and reviewed; prior tree-pass acknowledged, later engine-fail evidence upheld.  
 **Governance outcome:** auditor-of-auditor review process preserved in record.
 
