@@ -95,6 +95,22 @@ Design rules
     Tests must be able to fail. Any claim shipped without a negative control is marked as unverified, however plausible it looks.
     Failures are archived, not erased. The graveyard is a deliverable.
 
+## Method Integrity & Audit Trail
+
+This corpus is verified by gates, not by model confidence.  
+Every position claim is keyed by **FEN** (not label/lineage), and every certified statement must be reproducible from archived outputs.
+
+Current tactical status (2026-10-24):
+- Verified positions: **C1, C2, C4, S1, S2, S3**
+- For each verified position: line replay pass, exact root mate check, short-line forcedness pass
+- Known caveat: **S2** is tactically verified but its dual-solution Einstellung classification remains open
+
+Design rules learned from incidents:
+- No model output is evidence; it is a hypothesis
+- Tests must be able to fail, and missing checks fail closed
+- Claims must be tied to the exact board (FEN), with outputs archived
+
+See [`docs/AUDIT_TRAIL.md`](docs/AUDIT_TRAIL.md) for full incident chronology, failure modes, and evidence discipline.
 Getting started
 
 Requires Python 3.9+ and a Stockfish binary.
