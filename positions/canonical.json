@@ -1,0 +1,307 @@
+{
+  "schema_version": 1,
+  "updated": "2026-10-24",
+  "primary_key": "fen",
+  "design_rule": "FEN is the primary key. If a label and a FEN disagree, the FEN wins and the label is corrected. Scripts must load positions from this file rather than hard-coding FENs.",
+  "status_vocabulary": {
+    "verified": "Passed replay, engine root, and tree gates.",
+    "tree_gate_passed": "Forcedness proven for the tested branch; other gates or branches outstanding.",
+    "untested": "No test of any kind has been run."
+  },
+  "positions": [
+    {
+      "id": "C1",
+      "name": "Critical (Bilalić reconstruction)",
+      "fen": "3r2k1/pp4pp/8/6N1/1b1B4/8/PP2QPPP/R4K1R w - - 0 1",
+      "side_to_move": "white",
+      "status": "verified",
+      "first_move": "Qe6+",
+      "lines": {
+        "short": {
+          "length": 3,
+          "san": ["Qe6+", "Kh8", "Qh6", "Rxd4", "Qxh7#"],
+          "expect_mate": true,
+          "note": "Mate in 3. Rxd4 defense confirmed by tree gate."
+        },
+        "familiar": {
+          "length": 5,
+          "san": ["Qe6+", "Kh8", "Nf7+", "Kg8", "Nh6+", "Kh8", "Qg8+", "Rxg8", "Nf7#"],
+          "expect_mate": true,
+          "note": "Smothered mate in 5. Valid but slower."
+        },
+        "sideline_Kf8": {
+          "length": 2,
+          "san": ["Qe6+", "Kf8", "Nxh7#"],
+          "expect_mate": true,
+          "note": "Mate in 2 via inferior defense; not a solution line."
+        }
+      },
+      "gate_results": {
+        "replay": "pass",
+        "engine_root": "#+3",
+        "expected_root_mate": 3,
+        "tree_gate": "pass",
+        "tree_gate_replies_checked": 2,
+        "falsification_controls": "not_applicable"
+      },
+      "notes": "Original Bilalić reconstruction. After 1.Qe6+ Black has exactly two legal replies (Kh8, Kf8): no blocking square exists on the e6-g8 diagonal and no Black piece can capture on e6. Independent reconstruction in the spirit of the published problem, not a transcription — published version's second-move defenses are Rd7/Kg8/Bg6, this variant's is Rxd4 (extra piece on d4).",
+      "provenance": "Bilalić, McLeod & Gobet (2008), Cognition 108(3), 652-661, Fig. 1; reconstructed independently."
+    },
+    {
+      "id": "C2",
+      "name": "Mirror (queenside, P2 replacement)",
+      "fen": "1k2rrn1/pp4pp/5n1p/1N3b2/4B3/8/PPPQ2PP/R1K4R w - - 0 1",
+      "side_to_move": "white",
+      "status": "verified",
+      "first_move": "Qd6+",
+      "lines": {
+        "short": {
+          "length": 3,
+          "san": ["Qd6+", "Ka8", "Qa6", "Re7", "Qxa7#"],
+          "expect_mate": true
+        },
+        "familiar": {
+          "length": 5,
+          "san": ["Qd6+", "Ka8", "Nc7+", "Kb8", "Na6+", "Ka8", "Qb8+", "Rxb8", "Nc7#"],
+          "expect_mate": true
+        },
+        "sideline_Kc8": {
+          "length": 2,
+          "san": ["Qd6+", "Kc8", "Nxa7#"],
+          "expect_mate": true
+        }
+      },
+      "gate_results": {
+        "replay": "pass",
+        "engine_root": "#+3",
+        "expected_root_mate": 3,
+        "tree_gate": "pass",
+        "tree_gate_replies_checked": 2,
+        "falsification_controls": "not_run"
+      },
+      "notes": "P2 replacement for earlier C2. Verified on 2026-10-23: replay pass, engine root #+3 exact, and short-line tree gate pass with 2 legal replies after 1.Qd6+."
+    },
+    {
+      "id": "C4",
+      "name": "Original mirror (queenside), reinstated",
+      "fen": "1k2r3/pp1b4/6br/1N6/4B2N/8/PPPQ2PP/R1K4R w - - 0 1",
+      "side_to_move": "white",
+      "status": "verified",
+      "first_move": "Qd6+",
+      "lines": {
+        "short": {
+          "length": 3,
+          "san": ["Qd6+", "Ka8", "Qa6", "Rxe4", "Qxa7#"],
+          "expect_mate": true,
+          "note": "Short line is engine-witnessed: identical to PV1 from the 2026-10-24 reinstatement check."
+        },
+        "familiar": {
+          "length": 5,
+          "san": ["Qd6+", "Ka8", "Nc7+", "Kb8", "Na6+", "Ka8", "Qb8+", "Rxb8", "Nc7#"],
+          "expect_mate": true,
+          "note": "Carried from the original pipeline certification, pre-retirement. Engine's #+5 on the reinstatement check entered via Qf4+, not Qd6+; legality and mating finish of this line still need replay confirmation."
+        },
+        "sideline_Kc8": {
+          "length": 2,
+          "san": ["Qd6+", "Kc8", "Qc7#"],
+          "expect_mate": true,
+          "note": "Mate in 2 via inferior defense; reflects this board's queenside placement (differs from C2's Nxa7#)."
+        }
+      },
+        "gate_results": {
+         "replay": "pass",
+         "engine_root": "#+3",
+         "expected_root_mate": 3,
+         "tree_gate": "pass",
+         "tree_gate_replies_checked": 2,
+         "falsification_controls": "not_run"
+      },
+      "notes": "Former C2, retired 2026-10-23 on a leak finding (Nxe8+) that came from a different board. Engine check 2026-10-24: root #+3 exact, no #+4 in MultiPV 3, smothered #+5 at PV2. Reinstated after replay, engine-root and short-line tree gates all passed. Lesson: claims about a position must be keyed by FEN, not by label or lineage."
+    },
+    {
+      "id": "S1",
+      "name": "Smothered family, kingside (Black to move)",
+      "fen": "r4k1r/pp2qppp/1p3n2/RB1b4/6n1/P7/1BP3PP/R2R2K1 b - - 0 1",
+      "side_to_move": "black",
+      "status": "verified",
+      "first_move": "Qe3+",
+      "lines": {
+        "short": {
+          "length": 3,
+          "san": ["Qe3+", "Kh1", "Qh3", "Rd2", "Qxh2#"],
+          "expect_mate": true,
+          "note": "Mate in 3."
+        },
+        "familiar": {
+          "length": 5,
+          "san": ["Qe3+", "Kh1", "Nf2+", "Kg1", "Nh3+", "Kh1", "Qg1+", "Rxg1", "Nf2#"],
+          "expect_mate": true,
+          "note": "Smothered mate in 5."
+        }
+      },
+      "gate_results": {
+        "replay": "pass",
+        "engine_root": "#+3",
+        "expected_root_mate": 3,
+        "tree_gate": "pass",
+        "tree_gate_replies_checked": 2,
+        "falsification_controls": "not_run"
+      },
+      "notes": "Black-to-move position. Engine gate (attacker POV) and short-line forcedness gate both passed on 2026-10-23.",
+      "provenance": "Smothered-family sibling discovered during corpus expansion."
+    },
+        {
+      "id": "S2",
+      "name": "Smothered family, queenside (White to move)",
+      "fen": "1k2r3/pp3ppp/5nnp/1N5b/4B3/P6P/PPPQ2P1/R1K4R w - - 0 1",
+      "side_to_move": "white",
+      "status": "untested",
+      "first_move": "Qd6+",
+      "lines": {
+        "short": {
+          "length": 3,
+          "san": ["Qd6+", "Ka8", "Qa6", "Nxe4", "Qxa7#"],
+          "expect_mate": true,
+          "note": "Engine-witnessed PV from 2026-10-23 analysis."
+        }
+      },
+      "gate_results": {
+        "replay": "not_run",
+        "engine_root": "not_run",
+        "expected_root_mate": 3,
+        "tree_gate": "not_run",
+        "tree_gate_replies_checked": null,
+        "falsification_controls": "not_run"
+      },
+      "notes": "Short line added from engine-witnessed PV. Familiar line not yet transcribed — promotion covers the short line only for now."
+    },
+    {
+      "id": "S3",
+      "name": "Smothered family, queenside (Black to move)",
+      "fen": "2k4r/pppq1pp1/5pp1/4b1B1/1n3B2/5N2/PP3PP1/1K2R1N1 b - - 0 1",
+      "side_to_move": "black",
+      "status": "verified",
+      "first_move": "Qd3+",
+      "lines": {
+        "short": {
+          "length": 3,
+          "san": ["Qd3+", "Ka1", "Qa3", "Re2", "Qxa2#"],
+          "expect_mate": true,
+          "note": "Mate in 3."
+        },
+        "familiar": {
+          "length": 5,
+          "san": ["Qd3+", "Ka1", "Nc2+", "Kb1", "Na3+", "Ka1", "Qb1+", "Rxb1", "Nc2#"],
+          "expect_mate": true,
+          "note": "Smothered mate in 5."
+        }
+      },
+      "gate_results": {
+        "replay": "pass",
+        "engine_root": "#+3",
+        "expected_root_mate": 3,
+        "tree_gate": "pass",
+        "tree_gate_replies_checked": 2,
+        "falsification_controls": "not_run"
+      },
+      "notes": "Black-to-move position. Engine gate (attacker POV) and short-line forcedness gate passed on 2026-10-23.",
+      "provenance": "Smothered-family sibling discovered during corpus expansion."
+    }
+  ],
+  "open_items": [
+    {
+      "id": "OI-1",
+      "subject": "C3 engine root eval",
+      "claim_to_test": "Root eval is exactly #+5 and no mate-in-4 leak exists.",
+      "status": "CLOSED — FAILED. PV1 = #+4 via Nd8+. C3 retired to graveyard as G5.",
+      "priority": "closed"
+    },
+    {
+      "id": "OI-2",
+      "subject": "S1 tree gate",
+      "claim_to_test": "Familiar line forced against all legal defences, scored from the attacker's perspective.",
+      "status": "CLOSED — PASSED for short line. forced_mate_gate.py (--lines short) checked 2 legal replies after 1...Qe3+; both permit mate within budget.",
+      "priority": "closed"
+    },
+    {
+      "id": "OI-3",
+      "subject": "Both-branch verification",
+      "claim_to_test": "Short and familiar lines each independently forced, for C1, C2, C4, S2, S3.",
+      "priority": "medium"
+    },
+    {
+      "id": "OI-4",
+      "subject": "Defence-enumeration counts for S1-S3",
+      "claim_to_test": "Recorded counts of 33 / 26 / 27 legal replies, each permitting mate in 1.",
+      "priority": "medium"
+    },
+    {
+      "id": "OI-5",
+      "subject": "Kh8 dispute",
+      "claim_to_test": "Unresolved disagreement over one defensive reply. Competing explanations: scrambled-FEN input versus a genuine alternative.",
+      "priority": "medium"
+    },
+    {
+      "id": "OI-6",
+      "subject": "Canonical IDs in scripts",
+      "claim_to_test": "Script output labels use canonical IDs rather than informal names.",
+      "status": "IN PROGRESS — engine_gate.py and forced_mate_gate.py migrated to loader; stockfish_gate.py pending loader migration.",
+      "priority": "low"
+    },
+    {
+      "id": "OI-7",
+      "subject": "C4 reinstatement",
+      "claim_to_test": "Former C2 passes the full gate battery on its own board.",
+      "status": "Engine check 2026-10-24: PV1 #+3 exact, no #+4 leak, smothered #+5 present. Awaiting engine_gate.py and forced_mate_gate.py runs for formal promotion.",
+      "priority": "high"
+    },
+    {
+      "id": "OI-8",
+      "subject": "S2 promotion",
+      "claim_to_test": "S2 short line (engine-witnessed: Qd6+ Ka8 Qa6 Nxe4 Qxa7#) passes both gates.",
+      "priority": "high"
+    }
+  ],
+  "graveyard": [
+    {
+      "id": "G1",
+      "name": "Greek-gift candidate",
+      "fen": "3r1rk1/p4ppp/3p4/4P3/7Q/3B1N2/PP3PPP/4R1K1 w - - 0 1",
+      "cause_of_death": "1.Qxh7# is mate in 1 — the solver sees the shortcut immediately.",
+      "lesson": "Enumerate all legal first moves for mate-in-1/2 before evaluating any candidate.",
+      "postmortem_note": "Retained as the base position for the falsification controls: removing the d3-bishop, moving the f8-rook to e8, adding a knight on f6, or a pawn on h6 each kills the mate as predicted. All five controls passed 2026-10-22."
+    },
+    {
+      "id": "G2",
+      "name": "Early generated candidate",
+      "fen": "r3r1k1/pp1n1ppp/2p2n2/3p4/3P1B2/2N1Q3/PP3PPP/2R2RK1 w - - 0 1",
+      "cause_of_death": "No forced mate anywhere; engine eval approximately +8.88 to +8.99 across PVs.",
+      "lesson": "The replay gate rejects 'no mate' cheaply, before any expensive tree search. Confirmed independently by engine gate: 'no forced mate for White in any PV'.",
+      "postmortem_note": "Originally proposed by Copilot as a candidate; correctly reported dead by the engine gate."
+    },
+    {
+      "id": "G3",
+      "name": "Extinction f6 (leaky)",
+      "fen": "3r2k1/pp4pp/5b2/6N1/3B4/8/PP2QPPP/R4K1R w - - 0 1",
+      "cause_of_death": "A mate-in-4 line exists (Nxd8+), so the intended mate-in-5 is not the fastest solution.",
+      "lesson": "Root eval must equal the target #+N exactly; a shorter mate destroys the puzzle's premise.",
+      "postmortem_note": "Engine gate output archived: PV1 #+4 via Qe6+ Kh8 Nf7+ Kg8 Nxd8+ Kh8 Qe8#."
+    },
+    {
+      "id": "G4",
+      "name": "Twin f6+f8N",
+      "fen": "3r1nk1/pp4pp/5b2/6N1/3B4/8/PP2QPPP/R4K1R w - - 0 1",
+      "cause_of_death": "The f8-knight defends e6, so the queen sacrifice is refuted by Nxe6.",
+      "lesson": "No single piece satisfied the occupancy and non-defence requirements simultaneously; the constraint set was unsatisfiable and the pattern was abandoned in favour of relocating the rook.",
+      "postmortem_note": "This FEN remained embedded in forced_mate_gate.py after C3 superseded it, producing a spurious Nxe6 failure attributed to the twin v3 label. Resolved by replacing the hard-coded FEN and adopting canonical.json as the single source of truth. Engine also found a #+5 via Qc4+ Ne6 Qxe6+ — the position mates, but the Qe6+-dual-solution experimental property is broken."
+    },
+    {
+      "id": "G5",
+      "name": "Extinction twin v3 (Ra8)",
+      "fen": "r5k1/pp4pp/5b2/6N1/3B4/8/PP2QPPP/R4K1R w - - 0 1",
+      "cause_of_death": "Mate-in-4 leak via Nd8+: PV1 #+4 (Qe6+ Kh8 Nf7+ Kg8 Nd8+ Kh8 Qe8#). The v3 change fixed the Nxe6 refutation by relocating the rook to a8 but left d8 vacated, allowing the knight to occupy it.",
+      "lesson": "The repair addressed the previous failure (G4) without re-testing the failure before it (G3's leak). Each fix must be validated against ALL prior failure modes, not just the most recent. Constraints (a) piece blocking the queen's g7 path, (b) nothing defending e6, (c) d8 not yieldable to the knight — have now killed three consecutive revisions (G3, G4, G5) in the same d8/e6/h7 region.",
+      "postmortem_note": "Tree gate had passed (forcedness after Qe6+ confirmed, 2 replies), but engine gate revealed the leak — demonstrating that the two gates check orthogonal properties. Rabbit toothpaste rule invoked: three consecutive same-signature failures suggests the pattern itself is hostile. Constraint-conflict analysis is a project artifact. Survivors: C1, C2, S1, S2, S3."
+    }
+  ]
+}
