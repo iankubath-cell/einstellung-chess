@@ -1,0 +1,20 @@
+S2 EXACTNESS ADJUDICATION
+----------------------------------------------------------------------
+A1: After 1.Qd6+ Ka8, is Nc7+ mate in 3?
+    FEN: k3r3/pp3ppp/3Q1nnp/1N5b/4B3/P6P/PPP3P1/R1K4R w - - 2 2
+    restricted to Nc7+: #3   (expected if claim right: #3)
+    PV: 2. Nc7+ Kb8 3. Nxe8+ Ka8 4. Qd8#
+    >>> CLAIM SUPPORTED
+
+B1: After 2.Nc7+ Kb8, is Nxe8+ mate in 2?
+    FEN: 1k2r3/ppN2ppp/3Q1nnp/7b/4B3/P6P/PPP3P1/R1K4R w - - 4 3
+    restricted to Nxe8+: #2   (expected if claim right: #2)
+    PV: 3. Nxe8+ Ka8 4. Qd8#
+    >>> CLAIM SUPPORTED
+
+B2: After 2.Nc7+ Kb8, is Na6+ mate in 3?
+    FEN: 1k2r3/ppN2ppp/3Q1nnp/7b/4B3/P6P/PPP3P1/R1K4R w - - 4 3
+    restricted to Na6+: #3   (expected if claim right: #3)
+    PV: 3. Na6+ Ka8 4. Qc6 Rxe4 5. Qc8#
+    >>> CLAIM SUPPORTED
+

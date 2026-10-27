@@ -1,12 +1,39 @@
 {
   "schema_version": 1,
-  "updated": "2026-10-24",
+  "updated": "2026-10-27",
   "primary_key": "fen",
   "design_rule": "FEN is the primary key. If a label and a FEN disagree, the FEN wins and the label is corrected. Scripts must load positions from this file rather than hard-coding FENs.",
   "status_vocabulary": {
     "verified": "Passed replay, engine root, and tree gates.",
     "tree_gate_passed": "Forcedness proven for the tested branch; other gates or branches outstanding.",
+    "verified_puzzle_only": "Verified as a sound puzzle by engine analysis, but classified as NOT an Einstellung instrument: the familiar line is beaten by a faster alternative from its fork point, so the experimental property fails. Retained as a must-reject fixture. NOTE: this status is deliberately outside the gate's status=='verified' selection, so the instrument gate skips it by construction.",
     "untested": "No test of any kind has been run."
+  },
+  "last_certified_run": {
+    "date": "2026-10-26",
+    "capture": "docs/outputs/stockfish_gate_depth24_full.txt",
+    "log": "docs/outputs/run_full_depth24.log (START 26/10 18:18:47, EXITCODE 0, END 27/10 01:12:01 — ~6.9 h wall clock; local time = UTC for this run, UK clocks reverted 25 Oct)",
+    "scope": "Checks A-E PLUS all ten falsification controls (ctl1/ctl2 per position), five verified positions (C1, C2, C4, S1, S3), depth 24, python-chess + Stockfish two-engine agreement, exit code 0, single self-contained run via python -u with PYTHONIOENCODING=utf-8",
+    "superseded_captures": {
+      "skip_controls": "docs/outputs/stockfish_gate_depth24.txt (2026-10-25, A-E only) — superseded by the full run",
+      "relayed_copy": "docs/outputs/stockfish_gate_depth24_relayed_copy.txt (2026-10-24 output, relayed via chat; retains evidentiary value for reproduction history only)"
+    },
+    "reproduction_history": "2026-10-25 A-E capture compared against relayed 2026-10-24 copy via Compare-Object with TrimEnd(): all A-E rows identical; 2026-10-26 full run independently reproduces the complete battery. A-E rows now witnessed in three runs; controls witnessed in two.",
+    "runtime_calibration": "Full battery incl. controls ~6.9 h at depth 24 single-threaded; controls dominate (~2,000 engine searches). Motivates the planned --control-depth knob (~12) for future runs; bounded 'nothing mates within 3' claims do not require depth-24 searches.",
+    "control_semantics": {
+      "ctl1": "Falsification control: remove or alter a piece the mate depends on; the mate must disappear. This can fail, so it is real evidence.",
+      "ctl2": "Sanity check only: key-piece set is derived from the position's own mating lines, so passing is weak evidence."
+    },
+    "environment": {
+      "python": "3.14.5",
+      "python_chess": "1.11.2 (pip name: chess)",
+      "stockfish_binary": "stockfish-windows-x86-64-universal; UCI handshake: id name Stockfish 19, id author the Stockfish developers (see AUTHORS file)",
+      "environment_capture": "Collected post-hoc at ~02:06 on 27/10 (docs/outputs/run_full_depth24_environment_posthoc.log), environment presumed unchanged since the 18:18 26/10 launch — nothing in the session modified it. Threads and hash settings were the script's defaults (not printed). The post-hoc capture arose from a logging mishap (see audit trail) but the values match those recorded independently on 25/10.",
+      "log_integrity_note": "The run log was briefly appended with the environment block on 27/10 and subsequently restored to its original three lines; restored content verified against the three known lines (START/EXITCODE/END above). The appended block is preserved separately in the _environment_posthoc.log file. Gate output file never touched.",
+      "canonical_json_sha256_at_first_certified_run": "061dfc373666f5f8c2e1c0cf16b1b31f10e7687bbacb98357070e6959ebb6678 (pre-edit file; confirmed by certutil on 2026-10-27 to be the file on disk before this edit). The post-edit hash of THIS file must be recorded in the audit trail, not here — a file cannot contain its own hash.",
+      "stockfish_gate_sha256": "56d08baf6682081f539901fb526d04f54d0c902f52c706170eca38c81d333266 (unpatched; encoding handled via PYTHONIOENCODING env var, permanent fix not yet deployed to disk — binding valid only until the patch lands)",
+      "load_positions_sha256": "02f7dfe2c8eeea84570cc651854bf752369699c5c4a34a1d74811bda5410d920"
+    }
   },
   "positions": [
     {
@@ -42,7 +69,9 @@
         "expected_root_mate": 3,
         "tree_gate": "pass",
         "tree_gate_replies_checked": 2,
-        "falsification_controls": "not_applicable"
+        "falsification_controls": "pass (ctl1 + ctl2; fresh capture in 2026-10-26 full run, docs/outputs/stockfish_gate_depth24_full.txt)",
+        "defence_enumeration": { "after_Qe6+": 2, "after_Qh6_short_2nd": 24 },
+        "depth24_capture": "2026-10-26 full run, docs/outputs/stockfish_gate_depth24_full.txt"
       },
       "notes": "Original Bilalić reconstruction. After 1.Qe6+ Black has exactly two legal replies (Kh8, Kf8): no blocking square exists on the e6-g8 diagonal and no Black piece can capture on e6. Independent reconstruction in the spirit of the published problem, not a transcription — published version's second-move defenses are Rd7/Kg8/Bg6, this variant's is Rxd4 (extra piece on d4).",
       "provenance": "Bilalić, McLeod & Gobet (2008), Cognition 108(3), 652-661, Fig. 1; reconstructed independently."
@@ -77,7 +106,9 @@
         "expected_root_mate": 3,
         "tree_gate": "pass",
         "tree_gate_replies_checked": 2,
-        "falsification_controls": "not_run"
+        "falsification_controls": "pass (ctl1 + ctl2; fresh capture in 2026-10-26 full run, docs/outputs/stockfish_gate_depth24_full.txt)",
+        "defence_enumeration": { "after_Qd6+": 2, "after_Qa6_short_2nd": 25 },
+        "depth24_capture": "2026-10-26 full run, docs/outputs/stockfish_gate_depth24_full.txt"
       },
       "notes": "P2 replacement for earlier C2. Verified on 2026-10-23: replay pass, engine root #+3 exact, and short-line tree gate pass with 2 legal replies after 1.Qd6+."
     },
@@ -99,7 +130,7 @@
           "length": 5,
           "san": ["Qd6+", "Ka8", "Nc7+", "Kb8", "Na6+", "Ka8", "Qb8+", "Rxb8", "Nc7#"],
           "expect_mate": true,
-          "note": "Carried from the original pipeline certification, pre-retirement. Engine's #+5 on the reinstatement check entered via Qf4+, not Qd6+; legality and mating finish of this line still need replay confirmation."
+          "note": "Replay confirmed 2026-10-24 and 2026-10-25 (PASS C4 A 'familiar' replays and ends in mate). Observation retained from the reinstatement check: the engine's own #+5 entered via Qf4+, not Qd6+ — the recorded line is the carried-over pipeline line, now replay-verified. NOTE: the familiar line is therefore NOT unique at its own length (the Qf4+ route also mates in 5). Per the 2026-10-27 consistency ruling, non-uniqueness at the familiar line's own length is an observation, not a rejection criterion — S2's rejection rests on the faster-mate leak, not on non-uniqueness, precisely so that this position remains a valid instrument."
         },
         "sideline_Kc8": {
           "length": 2,
@@ -108,15 +139,17 @@
           "note": "Mate in 2 via inferior defense; reflects this board's queenside placement (differs from C2's Nxa7#)."
         }
       },
-        "gate_results": {
-         "replay": "pass",
-         "engine_root": "#+3",
-         "expected_root_mate": 3,
-         "tree_gate": "pass",
-         "tree_gate_replies_checked": 2,
-         "falsification_controls": "not_run"
+      "gate_results": {
+        "replay": "pass",
+        "engine_root": "#+3",
+        "expected_root_mate": 3,
+        "tree_gate": "pass",
+        "tree_gate_replies_checked": 2,
+        "falsification_controls": "pass (ctl1 + ctl2; fresh capture in 2026-10-26 full run, docs/outputs/stockfish_gate_depth24_full.txt)",
+        "defence_enumeration": { "after_Qd6+": 2, "after_Qa6_short_2nd": 27 },
+        "depth24_capture": "2026-10-26 full run, docs/outputs/stockfish_gate_depth24_full.txt"
       },
-      "notes": "Former C2, retired 2026-10-23 on a leak finding (Nxe8+) that came from a different board. Engine check 2026-10-24: root #+3 exact, no #+4 in MultiPV 3, smothered #+5 at PV2. Reinstated after replay, engine-root and short-line tree gates all passed. Lesson: claims about a position must be keyed by FEN, not by label or lineage."
+      "notes": "Former C2, retired 2026-10-23 on a leak finding (Nxe8+) that came from a different board. Engine check 2026-10-24: root #+3 exact, no #+4 in MultiPV 3, smothered #+5 at PV2. Reinstated after replay, engine-root and short-line tree gates all passed. Formally promoted 2026-10-25 via depth-24 capture; controls freshly captured 2026-10-26. Lesson: claims about a position must be keyed by FEN, not by label or lineage."
     },
     {
       "id": "S1",
@@ -145,17 +178,19 @@
         "expected_root_mate": 3,
         "tree_gate": "pass",
         "tree_gate_replies_checked": 2,
-        "falsification_controls": "not_run"
+        "falsification_controls": "pass (ctl1 + ctl2; fresh capture in 2026-10-26 full run, docs/outputs/stockfish_gate_depth24_full.txt)",
+        "defence_enumeration": { "after_Qe3+": 2, "after_Qh3_short_2nd": 33 },
+        "depth24_capture": "2026-10-26 full run, docs/outputs/stockfish_gate_depth24_full.txt"
       },
-      "notes": "Black-to-move position. Engine gate (attacker POV) and short-line forcedness gate both passed on 2026-10-23.",
+      "notes": "Black-to-move position. Engine gate (attacker POV) and short-line forcedness gate both passed on 2026-10-23. ctl2 key squares ['a7', 'd5', 'e7', 'f6', 'g4'] land on the predicted g4-knight/d5-bishop region.",
       "provenance": "Smothered-family sibling discovered during corpus expansion."
     },
-        {
+    {
       "id": "S2",
       "name": "Smothered family, queenside (White to move)",
       "fen": "1k2r3/pp3ppp/5nnp/1N5b/4B3/P6P/PPPQ2P1/R1K4R w - - 0 1",
       "side_to_move": "white",
-      "status": "untested",
+      "status": "verified_puzzle_only",
       "first_move": "Qd6+",
       "lines": {
         "short": {
@@ -163,17 +198,26 @@
           "san": ["Qd6+", "Ka8", "Qa6", "Nxe4", "Qxa7#"],
           "expect_mate": true,
           "note": "Engine-witnessed PV from 2026-10-23 analysis."
+        },
+        "familiar": {
+          "length": 5,
+          "san": ["Qd6+", "Ka8", "Nc7+", "Kb8", "Na6+", "Ka8", "Qb8+", "Rxb8", "Nc7#"],
+          "expect_mate": true,
+          "note": "Smothered mate in 5 (the nominal familiar line). Transcribed to canonical 2026-10-27; replay previously checked only in an assistant sandbox, to be confirmed by load_positions.py validate on this machine at commit. NOT part of the operator's engine runs. Beaten from the fork point by Nxe8+ (mate in 2), see classification_note."
         }
       },
       "gate_results": {
-        "replay": "not_run",
-        "engine_root": "not_run",
+        "replay": "pass (short line, engine-witnessed)",
+        "engine_root": "#+3 (s2_query archive)",
         "expected_root_mate": 3,
+        "expected_rejection": "faster_mate_leak",
         "tree_gate": "not_run",
+        "tree_gate_note": "The 2026-10-24 corpus-wide tree gate reportedly covered all six short rows including S2's, with 2 replies checked and zero failures. Not yet confirmed against the archived output whether that run used S2's CURRENT FEN. Resolution: if confirmed → set tree_gate='pass (short line, corpus tree gate 2026-10-24, 2 replies)' and tree_gate_replies_checked=2. If the run predated this FEN → retain not_run, as recorded here.",
         "tree_gate_replies_checked": null,
-        "falsification_controls": "not_run"
+        "falsification_controls": "not_applicable (not an instrument)",
+        "classification_note": "Verified mate-in-3 puzzle, NOT an Einstellung instrument. Archive docs/outputs/s2_query_2026-10-24.txt, three restricted-search queries, all CLAIM SUPPORTED: A1 — after 1.Qd6+ Ka8, Nc7+ restricted gives #3 (PV 2.Nc7+ Kb8 3.Nxe8+ Ka8 4.Qd8#; note the engine's fastest continuation under the Nc7+ restriction itself routes through Nxe8+); B1 — after 2.Nc7+ Kb8, Nxe8+ restricted gives #2 (PV 3.Nxe8+ Ka8 4.Qd8#); B2 — Na6+ restricted gives #3 with PV via the quiet Qc6 (Rxe4) Qc8# route (Qc6 is not check: the c6-a8 diagonal is blocked by the b7 pawn). CONCLUSION — sole rejection criterion is the faster-mate leak: from the fork point after 2...Kb8, Nxe8+ mates in 2, beating the familiar route's 3. The familiar route's tie with the Qc6 route at mate-in-3 is recorded as observation only: per the 2026-10-27 consistency ruling, non-uniqueness at the familiar line's own length is NOT a rejection criterion (C4's familiar line is likewise non-unique at its own length and remains a valid instrument). Depth caveat: the archive does NOT record search depth; 'depth 28' per session record, not evidenced in the file. Disposition: must-reject fixture for the composer."
       },
-      "notes": "Short line added from engine-witnessed PV. Familiar line not yet transcribed — promotion covers the short line only for now."
+      "notes": "Adjudicated 2026-10-24/25 (AX-20). Hypothesis: solver predictions A1 #3, B1 #2, B2 #3 — 3/3 held. Evidence: operator's engine run (archive above). Archive file: original run 2026-10-24, reproduced and captured 2026-10-25 (file mtime 2026-10-25 13:23), outputs matched. Familiar line transcribed to canonical 2026-10-27 for the must-reject fixture set (previously unrecorded; classification unaffected — the rejection rests on B1's faster mate, not on the familiar line's properties). Joins the must-reject fixture set (G1-G5 + S2). Status is outside the gate's status=='verified' selection, so the instrument gate skips S2 by construction."
     },
     {
       "id": "S3",
@@ -202,7 +246,9 @@
         "expected_root_mate": 3,
         "tree_gate": "pass",
         "tree_gate_replies_checked": 2,
-        "falsification_controls": "not_run"
+        "falsification_controls": "pass (ctl1 + ctl2; fresh capture in 2026-10-26 full run, docs/outputs/stockfish_gate_depth24_full.txt)",
+        "defence_enumeration": { "after_Qd3+": 2, "after_Qa3_short_2nd": 27 },
+        "depth24_capture": "2026-10-26 full run, docs/outputs/stockfish_gate_depth24_full.txt"
       },
       "notes": "Black-to-move position. Engine gate (attacker POV) and short-line forcedness gate passed on 2026-10-23.",
       "provenance": "Smothered-family sibling discovered during corpus expansion."
@@ -213,7 +259,7 @@
       "id": "OI-1",
       "subject": "C3 engine root eval",
       "claim_to_test": "Root eval is exactly #+5 and no mate-in-4 leak exists.",
-      "status": "CLOSED — FAILED. PV1 = #+4 via Nd8+. C3 retired to graveyard as G5.",
+      "status": "CLOSED — FAILED. PV1 = #+4 via Qe6+ Kh8 Nf7+ Kg8 Nd8+ Kh8 Qe8#. C3 retired to graveyard as G5.",
       "priority": "closed"
     },
     {
@@ -227,44 +273,49 @@
       "id": "OI-3",
       "subject": "Both-branch verification",
       "claim_to_test": "Short and familiar lines each independently forced, for C1, C2, C4, S2, S3.",
-      "priority": "medium"
+      "status": "CLOSED — D checks in the depth-24 captures verify exact per-node mate distances (py=sf at every node; semantics confirmed by code-read: sf=4 means shortest mate is exactly 4, not within 4). Applies to the five instruments; S2 adjudicated separately (OI-8).",
+      "priority": "closed"
     },
     {
       "id": "OI-4",
-      "subject": "Defence-enumeration counts for S1-S3",
-      "claim_to_test": "Recorded counts of 33 / 26 / 27 legal replies, each permitting mate in 1.",
-      "priority": "medium"
+      "subject": "Defence-enumeration counts",
+      "claim_to_test": "Engine-verified counts replace remembered figures.",
+      "status": "CLOSED — Engine-verified E-sweep counts: C1 24, C2 25, C4 27, S1 33, S3 27 (plus 2 replies after each shared first move). Witnessed in three runs (24 Oct relay, 25 Oct capture, 26 Oct full run).",
+      "priority": "closed"
     },
     {
       "id": "OI-5",
       "subject": "Kh8 dispute",
       "claim_to_test": "Unresolved disagreement over one defensive reply. Competing explanations: scrambled-FEN input versus a genuine alternative.",
+      "status": "OPEN — still unresolved; fresh run evidence needed or formal park.",
       "priority": "medium"
     },
     {
       "id": "OI-6",
       "subject": "Canonical IDs in scripts",
       "claim_to_test": "Script output labels use canonical IDs rather than informal names.",
-      "status": "IN PROGRESS — engine_gate.py and forced_mate_gate.py migrated to loader; stockfish_gate.py pending loader migration.",
-      "priority": "low"
+      "status": "CLOSED — All gates migrated to loader (stockfish_gate.py header reads 'loader-backed'; run output uses canonical IDs C1-S3). Evidenced 2026-10-25.",
+      "priority": "closed"
     },
     {
       "id": "OI-7",
       "subject": "C4 reinstatement",
       "claim_to_test": "Former C2 passes the full gate battery on its own board.",
-      "status": "Engine check 2026-10-24: PV1 #+3 exact, no #+4 leak, smothered #+5 present. Awaiting engine_gate.py and forced_mate_gate.py runs for formal promotion.",
-      "priority": "high"
+      "status": "CLOSED — PASSED. All A-E checks and controls pass in the 2026-10-26 full run (docs/outputs/stockfish_gate_depth24_full.txt). Formal promotion complete.",
+      "priority": "closed"
     },
     {
       "id": "OI-8",
-      "subject": "S2 promotion",
-      "claim_to_test": "S2 short line (engine-witnessed: Qd6+ Ka8 Qa6 Nxe4 Qxa7#) passes both gates.",
-      "priority": "high"
+      "subject": "S2 classification",
+      "claim_to_test": "Does the familiar smothered finish remain the fastest route from the fork point?",
+      "status": "CLOSED — NOT AN INSTRUMENT. Nxe8+ mates in 2 from the fork point (B1); even the Nc7+-restricted search prefers Nxe8+ (A1 PV). The familiar route's tie with Qc6 at mate-in-3 is observation only, not a rejection criterion. Evidence: docs/outputs/s2_query_2026-10-24.txt (AX-20), verified against file contents 2026-10-27. Status verified_puzzle_only; joins must-reject fixtures.",
+      "priority": "closed"
     }
   ],
   "graveyard": [
     {
       "id": "G1",
+      "expected_rejection": "mate_in_1",
       "name": "Greek-gift candidate",
       "fen": "3r1rk1/p4ppp/3p4/4P3/7Q/3B1N2/PP3PPP/4R1K1 w - - 0 1",
       "cause_of_death": "1.Qxh7# is mate in 1 — the solver sees the shortcut immediately.",
@@ -273,6 +324,7 @@
     },
     {
       "id": "G2",
+      "expected_rejection": "no_forced_mate",
       "name": "Early generated candidate",
       "fen": "r3r1k1/pp1n1ppp/2p2n2/3p4/3P1B2/2N1Q3/PP3PPP/2R2RK1 w - - 0 1",
       "cause_of_death": "No forced mate anywhere; engine eval approximately +8.88 to +8.99 across PVs.",
@@ -281,6 +333,7 @@
     },
     {
       "id": "G3",
+      "expected_rejection": "faster_mate_leak",
       "name": "Extinction f6 (leaky)",
       "fen": "3r2k1/pp4pp/5b2/6N1/3B4/8/PP2QPPP/R4K1R w - - 0 1",
       "cause_of_death": "A mate-in-4 line exists (Nxd8+), so the intended mate-in-5 is not the fastest solution.",
@@ -289,6 +342,7 @@
     },
     {
       "id": "G4",
+      "expected_rejection": "refuted_defence",
       "name": "Twin f6+f8N",
       "fen": "3r1nk1/pp4pp/5b2/6N1/3B4/8/PP2QPPP/R4K1R w - - 0 1",
       "cause_of_death": "The f8-knight defends e6, so the queen sacrifice is refuted by Nxe6.",
@@ -297,11 +351,12 @@
     },
     {
       "id": "G5",
+      "expected_rejection": "faster_mate_leak",
       "name": "Extinction twin v3 (Ra8)",
       "fen": "r5k1/pp4pp/5b2/6N1/3B4/8/PP2QPPP/R4K1R w - - 0 1",
       "cause_of_death": "Mate-in-4 leak via Nd8+: PV1 #+4 (Qe6+ Kh8 Nf7+ Kg8 Nd8+ Kh8 Qe8#). The v3 change fixed the Nxe6 refutation by relocating the rook to a8 but left d8 vacated, allowing the knight to occupy it.",
       "lesson": "The repair addressed the previous failure (G4) without re-testing the failure before it (G3's leak). Each fix must be validated against ALL prior failure modes, not just the most recent. Constraints (a) piece blocking the queen's g7 path, (b) nothing defending e6, (c) d8 not yieldable to the knight — have now killed three consecutive revisions (G3, G4, G5) in the same d8/e6/h7 region.",
-      "postmortem_note": "Tree gate had passed (forcedness after Qe6+ confirmed, 2 replies), but engine gate revealed the leak — demonstrating that the two gates check orthogonal properties. Rabbit toothpaste rule invoked: three consecutive same-signature failures suggests the pattern itself is hostile. Constraint-conflict analysis is a project artifact. Survivors: C1, C2, S1, S2, S3."
+      "postmortem_note": "Tree gate had passed (forcedness after Qe6+ confirmed, 2 replies), but engine gate revealed the leak — demonstrating that the two gates check orthogonal properties. Rabbit toothpaste rule invoked: three consecutive same-signature failures suggests the pattern itself is hostile. Constraint-conflict analysis is a project artifact. Survivors: C1, C2, C4, S1, S3 (originally recorded 2026-10-24 as C1, C2, S1, S3; C4 added 2026-10-25 after reinstatement)."
     }
   ]
 }

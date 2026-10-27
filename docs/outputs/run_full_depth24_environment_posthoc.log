@@ -1,0 +1,11 @@
+START 26/10/2026 18:18:47.11 
+EXITCODE 0 
+END 27/10/2026  1:12:01.69 
+Python 3.14.5
+Name: chess
+Version: 1.11.2
+id name Stockfish 19
+id author the Stockfish developers (see AUTHORS file)
+56d08baf6682081f539901fb526d04f54d0c902f52c706170eca38c81d333266  Stockfish_gate.py
+02f7dfe2c8eeea84570cc651854bf752369699c5c4a34a1d74811bda5410d920  load_positions.py
+061dfc373666f5f8c2e1c0cf16b1b31f10e7687bbacb98357070e6959ebb6678  canonical.json

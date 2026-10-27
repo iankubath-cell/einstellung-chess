@@ -1,0 +1,116 @@
+STOCKFISH GATE (loader-backed)  depth=24
+--------------------------------------------------------------------------------------------------------------
+Corpus verified selected: 5  IDs=C1,C2,C4,S1,S3
+
+C1 — Critical (Bilalić reconstruction)
+FEN: 3r2k1/pp4pp/8/6N1/1b1B4/8/PP2QPPP/R4K1R w - - 0 1  (White to move)
+PASS  C1 A  valid FEN, side to move not in check                     
+PASS  C1 A  line 'short' replays and ends in mate                    
+PASS  C1 A  line 'familiar' replays and ends in mate                 
+PASS  C1 A  line 'sideline_Kf8' replays and ends in mate             
+PASS  C1 B  same first move in all recorded lines                    Qe6+
+PASS  C1 B  at least one line strictly longer than short             short=3 longer=[('familiar', 5)]
+PASS  C1 B  fork at attacker's 2nd move (where applicable)           familiar:Nf7+ vs short:Qh6
+PASS  C1 C  python-chess vs Stockfish agree on all 46 first moves    
+PASS  C1 C  no first move mates in 1                                 py=[] sf=[]
+PASS  C1 C  no first move mates within 2                             py=[] sf=[]
+PASS  C1 C  only the shared first move mates within 3                py=['Qe6+'] sf=['Qe6+']
+PASS  C1 D  short          move 2 Qh6     forces mate in 2           py=2 sf=2
+PASS  C1 D  short          move 3 Qxh7#   forces mate in 1           py=1 sf=1
+PASS  C1 D  familiar       move 2 Nf7+    forces mate in 4           py=4 sf=4
+PASS  C1 D  familiar       move 3 Nh6+    forces mate in 3           py=3 sf=3
+PASS  C1 D  familiar       move 4 Qg8+    forces mate in 2           py=2 sf=2
+PASS  C1 D  familiar       move 5 Nf7#    forces mate in 1           py=1 sf=1
+PASS  C1 D  sideline_Kf8   move 2 Nxh7#   forces mate in 1           py=1 sf=1
+PASS  C1 E  after Qe6+: all 2 defender replies mated within 2        
+PASS  C1 E  after Qh6 (short line): all 24 defender replies mated within 1 
+
+C2 — Mirror (queenside, P2 replacement)
+FEN: 1k2rrn1/pp4pp/5n1p/1N3b2/4B3/8/PPPQ2PP/R1K4R w - - 0 1  (White to move)
+PASS  C2 A  valid FEN, side to move not in check                     
+PASS  C2 A  line 'short' replays and ends in mate                    
+PASS  C2 A  line 'familiar' replays and ends in mate                 
+PASS  C2 A  line 'sideline_Kc8' replays and ends in mate             
+PASS  C2 B  same first move in all recorded lines                    Qd6+
+PASS  C2 B  at least one line strictly longer than short             short=3 longer=[('familiar', 5)]
+PASS  C2 B  fork at attacker's 2nd move (where applicable)           familiar:Nc7+ vs short:Qa6
+PASS  C2 C  python-chess vs Stockfish agree on all 46 first moves    
+PASS  C2 C  no first move mates in 1                                 py=[] sf=[]
+PASS  C2 C  no first move mates within 2                             py=[] sf=[]
+PASS  C2 C  only the shared first move mates within 3                py=['Qd6+'] sf=['Qd6+']
+PASS  C2 D  short          move 2 Qa6     forces mate in 2           py=2 sf=2
+PASS  C2 D  short          move 3 Qxa7#   forces mate in 1           py=1 sf=1
+PASS  C2 D  familiar       move 2 Nc7+    forces mate in 4           py=4 sf=4
+PASS  C2 D  familiar       move 3 Na6+    forces mate in 3           py=3 sf=3
+PASS  C2 D  familiar       move 4 Qb8+    forces mate in 2           py=2 sf=2
+PASS  C2 D  familiar       move 5 Nc7#    forces mate in 1           py=1 sf=1
+PASS  C2 D  sideline_Kc8   move 2 Nxa7#   forces mate in 1           py=1 sf=1
+PASS  C2 E  after Qd6+: all 2 defender replies mated within 2        
+PASS  C2 E  after Qa6 (short line): all 25 defender replies mated within 1 
+
+C4 — Original mirror (queenside), reinstated
+FEN: 1k2r3/pp1b4/6br/1N6/4B2N/8/PPPQ2PP/R1K4R w - - 0 1  (White to move)
+PASS  C4 A  valid FEN, side to move not in check                     
+PASS  C4 A  line 'short' replays and ends in mate                    
+PASS  C4 A  line 'familiar' replays and ends in mate                 
+PASS  C4 A  line 'sideline_Kc8' replays and ends in mate             
+PASS  C4 B  same first move in all recorded lines                    Qd6+
+PASS  C4 B  at least one line strictly longer than short             short=3 longer=[('familiar', 5)]
+PASS  C4 B  fork at attacker's 2nd move (where applicable)           familiar:Nc7+ vs short:Qa6
+PASS  C4 C  python-chess vs Stockfish agree on all 48 first moves    
+PASS  C4 C  no first move mates in 1                                 py=[] sf=[]
+PASS  C4 C  no first move mates within 2                             py=[] sf=[]
+PASS  C4 C  only the shared first move mates within 3                py=['Qd6+'] sf=['Qd6+']
+PASS  C4 D  short          move 2 Qa6     forces mate in 2           py=2 sf=2
+PASS  C4 D  short          move 3 Qxa7#   forces mate in 1           py=1 sf=1
+PASS  C4 D  familiar       move 2 Nc7+    forces mate in 4           py=4 sf=4
+PASS  C4 D  familiar       move 3 Na6+    forces mate in 3           py=3 sf=3
+PASS  C4 D  familiar       move 4 Qb8+    forces mate in 2           py=2 sf=2
+PASS  C4 D  familiar       move 5 Nc7#    forces mate in 1           py=1 sf=1
+PASS  C4 D  sideline_Kc8   move 2 Qc7#    forces mate in 1           py=1 sf=1
+PASS  C4 E  after Qd6+: all 2 defender replies mated within 2        
+PASS  C4 E  after Qa6 (short line): all 27 defender replies mated within 1 
+
+S1 — Smothered family, kingside (Black to move)
+FEN: r4k1r/pp2qppp/1p3n2/RB1b4/6n1/P7/1BP3PP/R2R2K1 b - - 0 1  (Black to move)
+PASS  S1 A  valid FEN, side to move not in check                     
+PASS  S1 A  line 'short' replays and ends in mate                    
+PASS  S1 A  line 'familiar' replays and ends in mate                 
+PASS  S1 B  same first move in all recorded lines                    Qe3+
+PASS  S1 B  at least one line strictly longer than short             short=3 longer=[('familiar', 5)]
+PASS  S1 B  fork at attacker's 2nd move (where applicable)           familiar:Nf2+ vs short:Qh3
+PASS  S1 C  python-chess vs Stockfish agree on all 44 first moves    
+PASS  S1 C  no first move mates in 1                                 py=[] sf=[]
+PASS  S1 C  no first move mates within 2                             py=[] sf=[]
+PASS  S1 C  only the shared first move mates within 3                py=['Qe3+'] sf=['Qe3+']
+PASS  S1 D  short          move 2 Qh3     forces mate in 2           py=2 sf=2
+PASS  S1 D  short          move 3 Qxh2#   forces mate in 1           py=1 sf=1
+PASS  S1 D  familiar       move 2 Nf2+    forces mate in 4           py=4 sf=4
+PASS  S1 D  familiar       move 3 Nh3+    forces mate in 3           py=3 sf=3
+PASS  S1 D  familiar       move 4 Qg1+    forces mate in 2           py=2 sf=2
+PASS  S1 D  familiar       move 5 Nf2#    forces mate in 1           py=1 sf=1
+PASS  S1 E  after Qe3+: all 2 defender replies mated within 2        
+PASS  S1 E  after Qh3 (short line): all 33 defender replies mated within 1 
+
+S3 — Smothered family, queenside (Black to move)
+FEN: 2k4r/pppq1pp1/5pp1/4b1B1/1n3B2/5N2/PP3PP1/1K2R1N1 b - - 0 1  (Black to move)
+PASS  S3 A  valid FEN, side to move not in check                     
+PASS  S3 A  line 'short' replays and ends in mate                    
+PASS  S3 A  line 'familiar' replays and ends in mate                 
+PASS  S3 B  same first move in all recorded lines                    Qd3+
+PASS  S3 B  at least one line strictly longer than short             short=3 longer=[('familiar', 5)]
+PASS  S3 B  fork at attacker's 2nd move (where applicable)           familiar:Nc2+ vs short:Qa3
+PASS  S3 C  python-chess vs Stockfish agree on all 48 first moves    
+PASS  S3 C  no first move mates in 1                                 py=[] sf=[]
+PASS  S3 C  no first move mates within 2                             py=[] sf=[]
+PASS  S3 C  only the shared first move mates within 3                py=['Qd3+'] sf=['Qd3+']
+PASS  S3 D  short          move 2 Qa3     forces mate in 2           py=2 sf=2
+PASS  S3 D  short          move 3 Qxa2#   forces mate in 1           py=1 sf=1
+PASS  S3 D  familiar       move 2 Nc2+    forces mate in 4           py=4 sf=4
+PASS  S3 D  familiar       move 3 Na3+    forces mate in 3           py=3 sf=3
+PASS  S3 D  familiar       move 4 Qb1+    forces mate in 2           py=2 sf=2
+PASS  S3 D  familiar       move 5 Nc2#    forces mate in 1           py=1 sf=1
+PASS  S3 E  after Qd3+: all 2 defender replies mated within 2        
+PASS  S3 E  after Qa3 (short line): all 27 defender replies mated within 1 
+--------------------------------------------------------------------------------------------------------------
+All checks passed; python-chess and Stockfish agree everywhere.
