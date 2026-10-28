@@ -1,0 +1,150 @@
+ok   C1  expect=PASS              -> PASS    codes=[] nodes=2022 tier=two-engine
+        PASS fen valid, side to move not in check  
+        PASS line 'short' replays and ends in mate  
+        PASS line 'short' starts with the shared first move  Qe6+
+        PASS line 'short' length matches declared 3  recorded 3
+        PASS line 'familiar' replays and ends in mate  
+        PASS line 'familiar' starts with the shared first move  Qe6+
+        PASS line 'familiar' length matches declared 5  recorded 5
+        PASS line 'sideline_Kf8' replays and ends in mate  
+        PASS line 'sideline_Kf8' starts with the shared first move  Qe6+
+        PASS no first move mates in 1  mate in 1: []
+        PASS solver and engine agree on all 46 first moves (horizon 3)  
+        PASS no other first move mates within 3  []
+        PASS declared first move's shortest mate is exactly 3  Qe6+
+        PASS short: move 2 Qh6 forces mate in exactly 2  declared remaining 2, solver 2, engine 2
+        PASS short: move 3 Qxh7# forces mate in exactly 1  declared remaining 1, solver 1, engine 1
+        PASS familiar: move 2 Nf7+ forces mate in exactly 4  declared remaining 4, solver 4, engine 4
+        PASS familiar: move 3 Nh6+ forces mate in exactly 3  declared remaining 3, solver 3, engine 3
+        PASS familiar: move 4 Qg8+ forces mate in exactly 2  declared remaining 2, solver 2, engine 2
+        PASS familiar: move 5 Nf7# forces mate in exactly 1  declared remaining 1, solver 1, engine 1
+        PASS sideline_Kf8: move 2 Nxh7# forces mate in exactly 1  declared remaining 1, solver 1, engine 1
+ok   C2  expect=PASS              -> PASS    codes=[] nodes=1957 tier=two-engine
+        PASS fen valid, side to move not in check  
+        PASS line 'short' replays and ends in mate  
+        PASS line 'short' starts with the shared first move  Qd6+
+        PASS line 'short' length matches declared 3  recorded 3
+        PASS line 'familiar' replays and ends in mate  
+        PASS line 'familiar' starts with the shared first move  Qd6+
+        PASS line 'familiar' length matches declared 5  recorded 5
+        PASS line 'sideline_Kc8' replays and ends in mate  
+        PASS line 'sideline_Kc8' starts with the shared first move  Qd6+
+        PASS no first move mates in 1  mate in 1: []
+        PASS solver and engine agree on all 46 first moves (horizon 3)  
+        PASS no other first move mates within 3  []
+        PASS declared first move's shortest mate is exactly 3  Qd6+
+        PASS short: move 2 Qa6 forces mate in exactly 2  declared remaining 2, solver 2, engine 2
+        PASS short: move 3 Qxa7# forces mate in exactly 1  declared remaining 1, solver 1, engine 1
+        PASS familiar: move 2 Nc7+ forces mate in exactly 4  declared remaining 4, solver 4, engine 4
+        PASS familiar: move 3 Na6+ forces mate in exactly 3  declared remaining 3, solver 3, engine 3
+        PASS familiar: move 4 Qb8+ forces mate in exactly 2  declared remaining 2, solver 2, engine 2
+        PASS familiar: move 5 Nc7# forces mate in exactly 1  declared remaining 1, solver 1, engine 1
+        PASS sideline_Kc8: move 2 Nxa7# forces mate in exactly 1  declared remaining 1, solver 1, engine 1
+ok   C4  expect=PASS              -> PASS    codes=[] nodes=2358 tier=two-engine
+        PASS fen valid, side to move not in check  
+        PASS line 'short' replays and ends in mate  
+        PASS line 'short' starts with the shared first move  Qd6+
+        PASS line 'short' length matches declared 3  recorded 3
+        PASS line 'familiar' replays and ends in mate  
+        PASS line 'familiar' starts with the shared first move  Qd6+
+        PASS line 'familiar' length matches declared 5  recorded 5
+        PASS line 'sideline_Kc8' replays and ends in mate  
+        PASS line 'sideline_Kc8' starts with the shared first move  Qd6+
+        PASS no first move mates in 1  mate in 1: []
+        PASS solver and engine agree on all 48 first moves (horizon 3)  
+        PASS no other first move mates within 3  []
+        PASS declared first move's shortest mate is exactly 3  Qd6+
+        PASS short: move 2 Qa6 forces mate in exactly 2  declared remaining 2, solver 2, engine 2
+        PASS short: move 3 Qxa7# forces mate in exactly 1  declared remaining 1, solver 1, engine 1
+        PASS familiar: move 2 Nc7+ forces mate in exactly 4  declared remaining 4, solver 4, engine 4
+        PASS familiar: move 3 Na6+ forces mate in exactly 3  declared remaining 3, solver 3, engine 3
+        PASS familiar: move 4 Qb8+ forces mate in exactly 2  declared remaining 2, solver 2, engine 2
+        PASS familiar: move 5 Nc7# forces mate in exactly 1  declared remaining 1, solver 1, engine 1
+        PASS sideline_Kc8: move 2 Qc7# forces mate in exactly 1  declared remaining 1, solver 1, engine 1
+ok   S1  expect=PASS              -> PASS    codes=[] nodes=2145 tier=two-engine
+        PASS fen valid, side to move not in check  
+        PASS line 'short' replays and ends in mate  
+        PASS line 'short' starts with the shared first move  Qe3+
+        PASS line 'short' length matches declared 3  recorded 3
+        PASS line 'familiar' replays and ends in mate  
+        PASS line 'familiar' starts with the shared first move  Qe3+
+        PASS line 'familiar' length matches declared 5  recorded 5
+        PASS no first move mates in 1  mate in 1: []
+        PASS solver and engine agree on all 44 first moves (horizon 3)  
+        PASS no other first move mates within 3  []
+        PASS declared first move's shortest mate is exactly 3  Qe3+
+        PASS short: move 2 Qh3 forces mate in exactly 2  declared remaining 2, solver 2, engine 2
+        PASS short: move 3 Qxh2# forces mate in exactly 1  declared remaining 1, solver 1, engine 1
+        PASS familiar: move 2 Nf2+ forces mate in exactly 4  declared remaining 4, solver 4, engine 4
+        PASS familiar: move 3 Nh3+ forces mate in exactly 3  declared remaining 3, solver 3, engine 3
+        PASS familiar: move 4 Qg1+ forces mate in exactly 2  declared remaining 2, solver 2, engine 2
+        PASS familiar: move 5 Nf2# forces mate in exactly 1  declared remaining 1, solver 1, engine 1
+ok   S2  expect=faster_mate_leak  -> FAIL    codes=['faster_mate_leak'] nodes=2004 tier=python-only
+        PASS fen valid, side to move not in check  
+        PASS line 'short' replays and ends in mate  
+        PASS line 'short' starts with the shared first move  Qd6+
+        PASS line 'short' length matches declared 3  recorded 3
+        PASS line 'familiar' replays and ends in mate  
+        PASS line 'familiar' starts with the shared first move  Qd6+
+        PASS line 'familiar' length matches declared 5  recorded 5
+        PASS no first move mates in 1  mate in 1: []
+        PASS solver and engine agree on all 44 first moves (horizon 3)  
+        PASS no other first move mates within 3  []
+        PASS declared first move's shortest mate is exactly 3  Qd6+
+        PASS short: move 2 Qa6 forces mate in exactly 2  declared remaining 2, solver 2, engine 2
+        PASS short: move 3 Qxa7# forces mate in exactly 1  declared remaining 1, solver 1, engine 1
+        FAIL familiar: move 2 Nc7+ forces mate in exactly 4  declared remaining 4, solver 3, engine 3
+        PASS familiar: move 3 Na6+ forces mate in exactly 3  declared remaining 3, solver 3, engine 3
+        PASS familiar: move 4 Qb8+ forces mate in exactly 2  declared remaining 2, solver 2, engine 2
+        PASS familiar: move 5 Nc7# forces mate in exactly 1  declared remaining 1, solver 1, engine 1
+ok   S3  expect=PASS              -> PASS    codes=[] nodes=2297 tier=two-engine
+        PASS fen valid, side to move not in check  
+        PASS line 'short' replays and ends in mate  
+        PASS line 'short' starts with the shared first move  Qd3+
+        PASS line 'short' length matches declared 3  recorded 3
+        PASS line 'familiar' replays and ends in mate  
+        PASS line 'familiar' starts with the shared first move  Qd3+
+        PASS line 'familiar' length matches declared 5  recorded 5
+        PASS no first move mates in 1  mate in 1: []
+        PASS solver and engine agree on all 48 first moves (horizon 3)  
+        PASS no other first move mates within 3  []
+        PASS declared first move's shortest mate is exactly 3  Qd3+
+        PASS short: move 2 Qa3 forces mate in exactly 2  declared remaining 2, solver 2, engine 2
+        PASS short: move 3 Qxa2# forces mate in exactly 1  declared remaining 1, solver 1, engine 1
+        PASS familiar: move 2 Nc2+ forces mate in exactly 4  declared remaining 4, solver 4, engine 4
+        PASS familiar: move 3 Na3+ forces mate in exactly 3  declared remaining 3, solver 3, engine 3
+        PASS familiar: move 4 Qb1+ forces mate in exactly 2  declared remaining 2, solver 2, engine 2
+        PASS familiar: move 5 Nc2# forces mate in exactly 1  declared remaining 1, solver 1, engine 1
+ok   G1  expect=mate_in_1         -> FAIL    codes=['mate_in_1', 'alt_first_move_mates'] nodes=2443 tier=python-only
+        PASS fen valid, side to move not in check  
+        FAIL no first move mates in 1  mate in 1: ['Qxh7#']
+        PASS solver and engine agree on all 49 first moves (horizon 3)  
+        FAIL no other first move mates within 3  ['Qxh7#']
+        PASS declared first move's shortest mate is exactly 3  Bxh7+
+ok   G2  expect=no_forced_mate    -> FAIL    codes=['no_forced_mate'] nodes=2275 tier=python-only
+        PASS fen valid, side to move not in check  
+        PASS no first move mates in 1  mate in 1: []
+        PASS solver and engine agree on all 43 first moves (horizon 3)  
+        PASS no other first move mates within 3  []
+        FAIL declared first move forces mate within 3  
+ok   G3  expect=faster_mate_leak  -> FAIL    codes=['faster_mate_leak'] nodes=1592 tier=python-only
+        PASS fen valid, side to move not in check  
+        PASS no first move mates in 1  mate in 1: []
+        PASS solver and engine agree on all 47 first moves (horizon 3)  
+        PASS no other first move mates within 3  []
+        FAIL declared first move's shortest mate is 5  shortest is 4
+ok   G4  expect=refuted_defence   -> FAIL    codes=['refuted_defence'] nodes=9401 tier=python-only
+        PASS fen valid, side to move not in check  
+        PASS no first move mates in 1  mate in 1: []
+        PASS solver and engine agree on all 47 first moves (horizon 3)  
+        PASS no other first move mates within 3  []
+        FAIL declared first move forces mate within 5  1 replies mated, 1 escape
+ok   G5  expect=faster_mate_leak  -> FAIL    codes=['faster_mate_leak'] nodes=1793 tier=python-only
+        PASS fen valid, side to move not in check  
+        PASS no first move mates in 1  mate in 1: []
+        PASS solver and engine agree on all 47 first moves (horizon 3)  
+        PASS no other first move mates within 3  []
+        FAIL declared first move's shortest mate is 5  shortest is 4
+
+run provenance: {'python': '3.14.5', 'python_chess': '1.11.2', 'engine_depth': '24', 'solver_budget': '5000000', 'engine_id': 'Stockfish 19', 'engine_author': 'the Stockfish developers (see AUTHORS file)', 'threads': '1 (applied)', 'hash': '256 (applied)'}
+ALL FIXTURES BEHAVE AS EXPECTED

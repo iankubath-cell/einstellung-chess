@@ -1,0 +1,10 @@
+{
+  "note": "Test INPUTS for the must-reject fixtures. FENs are NOT stored here: they come from canonical.json's graveyard (FEN stays single-sourced). first_move/declared describe what each failed candidate CLAIMED, not what is true of the position. 'expect' must equal the graveyard entry's expected_rejection.",
+  "candidates": [
+    {"graveyard_id": "G1", "first_move": "Bxh7+", "declared": {"short": 3, "familiar": 5}, "expect": "mate_in_1"},
+    {"graveyard_id": "G2", "first_move": "Bh6",   "declared": {"short": 3, "familiar": 5}, "expect": "no_forced_mate"},
+    {"graveyard_id": "G3", "first_move": "Qe6+",  "declared": {"familiar": 5}, "expect": "faster_mate_leak"},
+    {"graveyard_id": "G4", "first_move": "Qe6+",  "declared": {"familiar": 5}, "expect": "refuted_defence"},
+    {"graveyard_id": "G5", "first_move": "Qe6+",  "declared": {"familiar": 5}, "expect": "faster_mate_leak"}
+  ]
+}
