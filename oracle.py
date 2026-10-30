@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""oracle.py -- verdicts on Einstellung candidates (v0.1, first piece of the composer).
+"""oracle.py -- verdicts on Einstellung candidates (v0.2, first piece of the composer).
 
 A *candidate* is: a FEN, the declared shared first move (SAN), and the declared
 forced-mate lengths of the lines it claims (e.g. short=3, familiar=5).  SAN
@@ -60,6 +60,10 @@ DEFAULT_BUDGET = 5_000_000
 
 class BudgetExceeded(Exception):
     pass
+
+
+class StopJudging(Exception):
+    """Raised in fast mode at the first failed check."""
 
 
 # --------------------------------------------------------------------------- solver
@@ -181,6 +185,7 @@ class Verdict:
     budget: int = DEFAULT_BUDGET
     evidence_tier: str = "python-only"
     caveats: List[str] = field(default_factory=list)
+    fast: bool = False
     meta: Dict[str, str] = field(default_factory=dict)
 
     @property
@@ -194,6 +199,8 @@ class Verdict:
                 self.status = FAIL
             if code and code not in self.codes:
                 self.codes.append(code)
+            if self.fast:
+                raise StopJudging()
 
     def finish(self):
         if self.status == PASS and self.caveats:
@@ -205,14 +212,19 @@ class Verdict:
 # --------------------------------------------------------------------------- the oracle
 
 def judge(c: Candidate, budget: int = DEFAULT_BUDGET, engine=None, depth: int = 24,
-          engine_info: Optional[Dict[str, str]] = None) -> Verdict:
-    v = Verdict(id=c.id, budget=budget)
+          engine_info: Optional[Dict[str, str]] = None, fast: bool = False) -> Verdict:
+    """fast=True stops at the first failed check (for search loops): the verdict then
+    lists only that first failure, not every failure."""
+    v = Verdict(id=c.id, budget=budget, fast=fast)
     v.meta = {"python": sys.version.split()[0], "python_chess": chess.__version__,
               "engine_depth": str(depth) if engine else "none", "solver_budget": str(budget)}
     v.meta.update(engine_info or {})
+    v.meta["fast"] = str(fast)
     S = Solver(budget)
     try:
         _judge(c, S, v, engine, depth)
+    except StopJudging:
+        pass
     except BudgetExceeded:
         v.status = UNKNOWN
         if "budget_exceeded" not in v.codes:
@@ -297,6 +309,10 @@ def _judge(c: Candidate, S: Solver, v: Verdict, eng, depth: int):
     v.add(f"no other first move mates within {h}", not others, f"{others}", code="alt_first_move_mates")
 
     Lstar = S.len_after(b0, first, lmin)
+    if eng is not None:
+        s_first = sf_len(eng, b0, depth, first, lmin)
+        v.add(f"solver and engine agree on the declared first move out to {lmin}",
+              s_first == Lstar, f"solver {Lstar}, engine {s_first}", code="engine_disagree")
     if Lstar is None:
         # refuted_defence: a CHECK that some replies lose to and others escape (the
         # defender has a refutation). Anything else that fails is no_forced_mate.
@@ -383,7 +399,7 @@ def cmd_corpus(a) -> int:
     bad = 0
     try:
         for cand, expect in load_candidates(Path(a.canonical), Path(a.rejects)):
-            v = judge(cand, budget=a.budget, engine=eng, depth=a.depth, engine_info=info)
+            v = judge(cand, budget=a.budget, engine=eng, depth=a.depth, engine_info=info, fast=a.fast)
             if expect == "PASS":
                 ok = v.status == PASS
             else:
@@ -411,7 +427,7 @@ def cmd_verify(a) -> int:
     eng, info = (open_engine(a.engine) if a.engine else (None, None))
     try:
         v = judge(Candidate("cli", a.fen, a.first, declared, lines), budget=a.budget, engine=eng,
-                  depth=a.depth, engine_info=info)
+                  depth=a.depth, engine_info=info, fast=a.fast)
     finally:
         if eng:
             eng.quit()
@@ -436,6 +452,7 @@ def main(argv=None) -> int:
     pc.add_argument("--depth", type=int, default=24)
     pc.add_argument("--budget", type=int, default=DEFAULT_BUDGET)
     pc.add_argument("--verbose", action="store_true")
+    pc.add_argument("--fast", action="store_true", help="stop each candidate at its first failed check")
     pc.set_defaults(fn=cmd_corpus)
 
     pv = sub.add_parser("verify", help="judge one candidate")
@@ -446,6 +463,7 @@ def main(argv=None) -> int:
     pv.add_argument("--engine", default=None)
     pv.add_argument("--depth", type=int, default=24)
     pv.add_argument("--budget", type=int, default=DEFAULT_BUDGET)
+    pv.add_argument("--fast", action="store_true")
     pv.set_defaults(fn=cmd_verify)
 
     a = ap.parse_args(argv)
