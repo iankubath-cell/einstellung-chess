@@ -1,0 +1,51 @@
+ok   involution id 3r2k1/pp4pp/8/6N1/1b1B4/
+ok   involution H  3r2k1/pp4pp/8/6N1/1b1B4/
+ok   involution C  3r2k1/pp4pp/8/6N1/1b1B4/
+ok   involution HC 3r2k1/pp4pp/8/6N1/1b1B4/
+ok   involution id r4k1r/pp2qppp/1p3n2/RB1b
+ok   involution H  r4k1r/pp2qppp/1p3n2/RB1b
+ok   involution C  r4k1r/pp2qppp/1p3n2/RB1b
+ok   involution HC r4k1r/pp2qppp/1p3n2/RB1b
+ok   every eligible position has a skeleton (6)
+ok   skeleton C1  attacker=W pieces=7 decoration=11 replays=True self_mates=True
+ok   skeleton C2  attacker=W pieces=7 decoration=15 replays=True self_mates=True
+ok   skeleton C4  attacker=W pieces=7 decoration=12 replays=True self_mates=True
+ok   skeleton S1  attacker=B pieces=7 decoration=16 replays=True self_mates=True
+ok   skeleton S2  attacker=W pieces=7 decoration=16 replays=True self_mates=True
+ok   skeleton S3  attacker=B pieces=7 decoration=15 replays=True self_mates=True
+     6 skeletons -> 1 families
+ok   oracle C1  H  PASS    codes=[]  (identity: PASS []; nodes 2022 -> 1948)
+ok   oracle C1  C  PASS    codes=[]  (identity: PASS []; nodes 2022 -> 4499)
+ok   oracle C1  HC PASS    codes=[]  (identity: PASS []; nodes 2022 -> 5001)
+ok   oracle C2  H  PASS    codes=[]  (identity: PASS []; nodes 1957 -> 1799)
+ok   oracle C2  C  PASS    codes=[]  (identity: PASS []; nodes 1957 -> 2348)
+ok   oracle C2  HC PASS    codes=[]  (identity: PASS []; nodes 1957 -> 2174)
+ok   oracle C4  H  PASS    codes=[]  (identity: PASS []; nodes 2358 -> 2377)
+ok   oracle C4  C  PASS    codes=[]  (identity: PASS []; nodes 2358 -> 2387)
+ok   oracle C4  HC PASS    codes=[]  (identity: PASS []; nodes 2358 -> 2093)
+ok   oracle S1  H  PASS    codes=[]  (identity: PASS []; nodes 2145 -> 1761)
+ok   oracle S1  C  PASS    codes=[]  (identity: PASS []; nodes 2145 -> 1797)
+ok   oracle S1  HC PASS    codes=[]  (identity: PASS []; nodes 2145 -> 1773)
+ok   oracle S2  H  FAIL    codes=['faster_mate_leak']  (identity: FAIL ['faster_mate_leak']; nodes 2004 -> 2097)
+ok   oracle S2  C  FAIL    codes=['faster_mate_leak']  (identity: FAIL ['faster_mate_leak']; nodes 2004 -> 2479)
+ok   oracle S2  HC FAIL    codes=['faster_mate_leak']  (identity: FAIL ['faster_mate_leak']; nodes 2004 -> 1937)
+ok   oracle S3  H  PASS    codes=[]  (identity: PASS []; nodes 2297 -> 2034)
+ok   oracle S3  C  PASS    codes=[]  (identity: PASS []; nodes 2297 -> 2422)
+ok   oracle S3  HC PASS    codes=[]  (identity: PASS []; nodes 2297 -> 2096)
+ok   oracle G1  H  FAIL    codes=['mate_in_1', 'alt_first_move_mates']  (identity: FAIL ['mate_in_1', 'alt_first_move_mates']; nodes 2443 -> 2115)
+ok   oracle G1  C  FAIL    codes=['mate_in_1', 'alt_first_move_mates']  (identity: FAIL ['mate_in_1', 'alt_first_move_mates']; nodes 2443 -> 2465)
+ok   oracle G1  HC FAIL    codes=['mate_in_1', 'alt_first_move_mates']  (identity: FAIL ['mate_in_1', 'alt_first_move_mates']; nodes 2443 -> 2318)
+ok   oracle G2  H  FAIL    codes=['no_forced_mate']  (identity: FAIL ['no_forced_mate']; nodes 2275 -> 2599)
+ok   oracle G2  C  FAIL    codes=['no_forced_mate']  (identity: FAIL ['no_forced_mate']; nodes 2275 -> 2398)
+ok   oracle G2  HC FAIL    codes=['no_forced_mate']  (identity: FAIL ['no_forced_mate']; nodes 2275 -> 2380)
+ok   oracle G3  H  FAIL    codes=['faster_mate_leak']  (identity: FAIL ['faster_mate_leak']; nodes 1592 -> 1481)
+ok   oracle G3  C  FAIL    codes=['faster_mate_leak']  (identity: FAIL ['faster_mate_leak']; nodes 1592 -> 2174)
+ok   oracle G3  HC FAIL    codes=['faster_mate_leak']  (identity: FAIL ['faster_mate_leak']; nodes 1592 -> 1854)
+ok   oracle G4  H  FAIL    codes=['refuted_defence']  (identity: FAIL ['refuted_defence']; nodes 9401 -> 9456)
+ok   oracle G4  C  FAIL    codes=['refuted_defence']  (identity: FAIL ['refuted_defence']; nodes 9401 -> 12282)
+ok   oracle G4  HC FAIL    codes=['refuted_defence']  (identity: FAIL ['refuted_defence']; nodes 9401 -> 8413)
+ok   oracle G5  H  FAIL    codes=['faster_mate_leak']  (identity: FAIL ['faster_mate_leak']; nodes 1793 -> 1481)
+ok   oracle G5  C  FAIL    codes=['faster_mate_leak']  (identity: FAIL ['faster_mate_leak']; nodes 1793 -> 1635)
+ok   oracle G5  HC FAIL    codes=['faster_mate_leak']  (identity: FAIL ['faster_mate_leak']; nodes 1793 -> 1409)
+
+ALL SKELETON TESTS PASSED
