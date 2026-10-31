@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""oracle.py -- verdicts on Einstellung candidates (v0.2, first piece of the composer).
+"""oracle.py -- verdicts on Einstellung candidates (v0.3, first piece of the composer).
 
 A *candidate* is: a FEN, the declared shared first move (SAN), and the declared
 forced-mate lengths of the lines it claims (e.g. short=3, familiar=5).  SAN
@@ -52,6 +52,7 @@ CODES = (
     "alt_first_move_mates",
     "engine_disagree",
     "budget_exceeded",
+    "engine_timeout",
     "horizon_uncertified",
 )
 
@@ -60,6 +61,10 @@ DEFAULT_BUDGET = 5_000_000
 
 class BudgetExceeded(Exception):
     pass
+
+
+class EngineTimeout(Exception):
+    """An engine search hit its time cap before reaching the requested depth."""
 
 
 class StopJudging(Exception):
@@ -128,12 +133,31 @@ class Solver:
 
 # --------------------------------------------------------------------------- engine side
 
-def sf_len(eng, b: chess.Board, depth: int, root: Optional[chess.Move], cap: Optional[int]):
+ENGINE_LOG: List[tuple] = []     # (label, seconds, depth reached, timed_out) for every engine search
+PROGRESS = False                 # print each engine search as it finishes (diagnosis of slow runs)
+
+
+def sf_len(eng, b: chess.Board, depth: int, root: Optional[chess.Move], cap: Optional[int],
+           timeout: Optional[float] = None, label: str = ""):
     """Stockfish forced-mate length for the side to move, restricted to `root`.
     None = no mate found (or longer than cap). NOTE: engine absence of a mate is
-    never a proof; only agreement with the exhaustive solver counts as evidence."""
+    never a proof; only agreement with the exhaustive solver counts as evidence.
+    With `timeout` (seconds) the search is capped; if it stops before `depth`, raises
+    EngineTimeout rather than returning a result from an unfinished search."""
     import chess.engine
-    info = eng.analyse(b, chess.engine.Limit(depth=depth), root_moves=[root] if root else None)
+    import time
+    t0 = time.time()
+    lim = chess.engine.Limit(depth=depth, time=timeout) if timeout else chess.engine.Limit(depth=depth)
+    info = eng.analyse(b, lim, root_moves=[root] if root else None)
+    secs = time.time() - t0
+    reached = info.get("depth", depth)
+    timed_out = bool(timeout) and reached < depth
+    ENGINE_LOG.append((label, secs, reached, timed_out))
+    if PROGRESS:
+        print(f"    [engine] {label or 'search'}: {secs:.1f}s, depth {reached}{' TIMEOUT' if timed_out else ''}",
+              flush=True)
+    if timed_out:
+        raise EngineTimeout(f"{label or 'engine search'} reached depth {reached} of {depth} in {secs:.0f}s")
     sc = info["score"].pov(b.turn)
     if sc.is_mate() and sc.mate() and sc.mate() > 0:
         k = sc.mate()
@@ -205,24 +229,33 @@ class Verdict:
     def finish(self):
         if self.status == PASS and self.caveats:
             self.status = UNKNOWN          # a pass with unproven claims is not a pass
-            self.codes.append("horizon_uncertified")
+            self.evidence_tier = "uncertified"   # an UNKNOWN verdict carries no evidence tier
+            if any(not c.startswith("engine_timeout") for c in self.caveats):
+                self.codes.append("horizon_uncertified")
+            if any(c.startswith("engine_timeout") for c in self.caveats):
+                self.codes.append("engine_timeout")
         self.codes.sort(key=CODES.index)
 
 
 # --------------------------------------------------------------------------- the oracle
 
 def judge(c: Candidate, budget: int = DEFAULT_BUDGET, engine=None, depth: int = 24,
-          engine_info: Optional[Dict[str, str]] = None, fast: bool = False) -> Verdict:
-    """fast=True stops at the first failed check (for search loops): the verdict then
+          engine_info: Optional[Dict[str, str]] = None, fast: bool = False,
+          engine_timeout: Optional[float] = None) -> Verdict:
+    """engine_timeout: seconds cap per engine search (None = no cap, as in v0.2); a search that
+    hits the cap makes the verdict UNKNOWN (engine_timeout), never PASS.
+    fast=True stops at the first failed check (for search loops): the verdict then
     lists only that first failure, not every failure."""
     v = Verdict(id=c.id, budget=budget, fast=fast)
     v.meta = {"python": sys.version.split()[0], "python_chess": chess.__version__,
               "engine_depth": str(depth) if engine else "none", "solver_budget": str(budget)}
     v.meta.update(engine_info or {})
     v.meta["fast"] = str(fast)
+    v.meta["engine_timeout"] = f"{engine_timeout}s" if (engine and engine_timeout) else "none"
     S = Solver(budget)
+    del ENGINE_LOG[:]
     try:
-        _judge(c, S, v, engine, depth)
+        _judge(c, S, v, engine, depth, engine_timeout)
     except StopJudging:
         pass
     except BudgetExceeded:
@@ -231,13 +264,16 @@ def judge(c: Candidate, budget: int = DEFAULT_BUDGET, engine=None, depth: int = 
             v.codes.append("budget_exceeded")
         v.checks.append(Check("budget", False, f"node budget {budget} exhausted"))
     v.nodes = S.nodes
+    if ENGINE_LOG:
+        slow = max(ENGINE_LOG, key=lambda e: e[1])
+        v.meta["engine_searches"] = f"{len(ENGINE_LOG)} in {sum(e[1] for e in ENGINE_LOG):.0f}s; slowest {slow[0] or 'search'} {slow[1]:.0f}s"
     if engine is not None and v.status == PASS:
         v.evidence_tier = "two-engine"
     v.finish()
     return v
 
 
-def _judge(c: Candidate, S: Solver, v: Verdict, eng, depth: int):
+def _judge(c: Candidate, S: Solver, v: Verdict, eng, depth: int, tmo: Optional[float] = None):
     # --- 0. board and declared first move
     try:
         b0 = chess.Board(c.fen)
@@ -295,14 +331,21 @@ def _judge(c: Candidate, S: Solver, v: Verdict, eng, depth: int):
                          f"uniqueness out to {lmin} not certified")
 
     if eng is not None:
-        bad = {}
+        bad, stopped = {}, None
         for mv in list(b0.legal_moves):
             san = b0.san(mv)
-            s = sf_len(eng, b0, depth, mv, h)
+            try:
+                s = sf_len(eng, b0, depth, mv, h, tmo, f"first move {san}")
+            except EngineTimeout as e:
+                stopped = str(e)
+                break
             if s != table[san]:
                 bad[san] = (table[san], s)
-        v.add(f"solver and engine agree on all {len(table)} first moves (horizon {h})", not bad,
-              f"DISAGREE {bad}" if bad else "", code="engine_disagree")
+        if stopped:
+            v.caveats.append(f"engine_timeout: first-move table not completed ({stopped})")
+        else:
+            v.add(f"solver and engine agree on all {len(table)} first moves (horizon {h})", not bad,
+                  f"DISAGREE {bad}" if bad else "", code="engine_disagree")
 
     # --- 4. the declared first move, searched out to its own declared horizon lmin
     others = sorted(s for s, n in table.items() if s != c.first_move and n is not None and n <= h)
@@ -310,9 +353,12 @@ def _judge(c: Candidate, S: Solver, v: Verdict, eng, depth: int):
 
     Lstar = S.len_after(b0, first, lmin)
     if eng is not None:
-        s_first = sf_len(eng, b0, depth, first, lmin)
-        v.add(f"solver and engine agree on the declared first move out to {lmin}",
-              s_first == Lstar, f"solver {Lstar}, engine {s_first}", code="engine_disagree")
+        try:
+            s_first = sf_len(eng, b0, depth, first, lmin, tmo, f"declared first move {c.first_move}")
+            v.add(f"solver and engine agree on the declared first move out to {lmin}",
+                  s_first == Lstar, f"solver {Lstar}, engine {s_first}", code="engine_disagree")
+        except EngineTimeout as e:
+            v.caveats.append(f"engine_timeout: declared first move not completed ({e})")
     if Lstar is None:
         # refuted_defence: a CHECK that some replies lose to and others escape (the
         # defender has a refutation). Anything else that fails is no_forced_mate.
@@ -357,11 +403,14 @@ def _judge(c: Candidate, S: Solver, v: Verdict, eng, depth: int):
                         ok = p == remaining
                         det = f"declared remaining {remaining}, solver {p}"
                         if eng is not None:
-                            s_len = sf_len(eng, b, depth, mv, None)
-                            det += f", engine {s_len}"
-                            if s_len != p:
-                                v.add(f"{key}: solver and engine agree at move {i // 2 + 1} {s}", False,
-                                      det, code="engine_disagree")
+                            try:
+                                s_len = sf_len(eng, b, depth, mv, None, tmo, f"{key} move {i // 2 + 1} {s}")
+                                det += f", engine {s_len}"
+                                if s_len != p:
+                                    v.add(f"{key}: solver and engine agree at move {i // 2 + 1} {s}", False,
+                                          det, code="engine_disagree")
+                            except EngineTimeout as e:
+                                v.caveats.append(f"engine_timeout: {key} move {i // 2 + 1} not completed ({e})")
                         v.add(f"{key}: move {i // 2 + 1} {s} forces mate in exactly {remaining}", ok, det,
                               code=code)
                 b.push_san(s)
@@ -395,11 +444,14 @@ def _fmt(v: Verdict) -> str:
 
 
 def cmd_corpus(a) -> int:
+    global PROGRESS
+    PROGRESS = bool(a.progress)
     eng, info = (open_engine(a.engine) if a.engine else (None, None))
     bad = 0
     try:
         for cand, expect in load_candidates(Path(a.canonical), Path(a.rejects)):
-            v = judge(cand, budget=a.budget, engine=eng, depth=a.depth, engine_info=info, fast=a.fast)
+            v = judge(cand, budget=a.budget, engine=eng, depth=a.depth, engine_info=info, fast=a.fast,
+                      engine_timeout=a.engine_timeout)
             if expect == "PASS":
                 ok = v.status == PASS
             else:
@@ -419,6 +471,8 @@ def cmd_corpus(a) -> int:
 
 
 def cmd_verify(a) -> int:
+    global PROGRESS
+    PROGRESS = bool(a.progress)
     declared = {k: int(n) for k, n in (x.split("=") for x in a.declared.split(","))}
     lines = {}
     for x in a.line or []:
@@ -427,7 +481,7 @@ def cmd_verify(a) -> int:
     eng, info = (open_engine(a.engine) if a.engine else (None, None))
     try:
         v = judge(Candidate("cli", a.fen, a.first, declared, lines), budget=a.budget, engine=eng,
-                  depth=a.depth, engine_info=info, fast=a.fast)
+                  depth=a.depth, engine_info=info, fast=a.fast, engine_timeout=a.engine_timeout)
     finally:
         if eng:
             eng.quit()
@@ -453,6 +507,9 @@ def main(argv=None) -> int:
     pc.add_argument("--budget", type=int, default=DEFAULT_BUDGET)
     pc.add_argument("--verbose", action="store_true")
     pc.add_argument("--fast", action="store_true", help="stop each candidate at its first failed check")
+    pc.add_argument("--engine-timeout", type=float, default=None,
+                    help="seconds cap per engine search; a capped search gives UNKNOWN, never PASS")
+    pc.add_argument("--progress", action="store_true", help="print each engine search and its time")
     pc.set_defaults(fn=cmd_corpus)
 
     pv = sub.add_parser("verify", help="judge one candidate")
@@ -464,6 +521,8 @@ def main(argv=None) -> int:
     pv.add_argument("--depth", type=int, default=24)
     pv.add_argument("--budget", type=int, default=DEFAULT_BUDGET)
     pv.add_argument("--fast", action="store_true")
+    pv.add_argument("--engine-timeout", type=float, default=None)
+    pv.add_argument("--progress", action="store_true")
     pv.set_defaults(fn=cmd_verify)
 
     a = ap.parse_args(argv)

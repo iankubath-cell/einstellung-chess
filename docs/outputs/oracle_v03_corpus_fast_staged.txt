@@ -1,0 +1,14 @@
+ok   C1  expect=PASS              -> PASS    codes=[] nodes=2022 tier=python-only
+ok   C2  expect=PASS              -> PASS    codes=[] nodes=1957 tier=python-only
+ok   C4  expect=PASS              -> PASS    codes=[] nodes=2358 tier=python-only
+ok   S1  expect=PASS              -> PASS    codes=[] nodes=2145 tier=python-only
+ok   S2  expect=faster_mate_leak  -> FAIL    codes=['faster_mate_leak'] nodes=1994 tier=python-only
+ok   S3  expect=PASS              -> PASS    codes=[] nodes=2297 tier=python-only
+ok   G1  expect=mate_in_1         -> FAIL    codes=['mate_in_1'] nodes=0 tier=python-only
+ok   G2  expect=no_forced_mate    -> FAIL    codes=['no_forced_mate'] nodes=2275 tier=python-only
+ok   G3  expect=faster_mate_leak  -> FAIL    codes=['faster_mate_leak'] nodes=1592 tier=python-only
+ok   G4  expect=refuted_defence   -> FAIL    codes=['refuted_defence'] nodes=9401 tier=python-only
+ok   G5  expect=faster_mate_leak  -> FAIL    codes=['faster_mate_leak'] nodes=1793 tier=python-only
+
+run provenance: {'python': '3.14.5', 'python_chess': '1.11.2', 'engine_depth': 'none', 'solver_budget': '5000000', 'fast': 'True', 'engine_timeout': 'none'}
+ALL FIXTURES BEHAVE AS EXPECTED
