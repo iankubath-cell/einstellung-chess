@@ -1,0 +1,44 @@
+    [engine] first move Rh8: 0.2s, depth 24
+    [engine] first move Rxg7: 0.2s, depth 24
+    [engine] first move Rh6: 0.1s, depth 24
+    [engine] first move Rh5: 0.2s, depth 24
+    [engine] first move Rh4: 0.2s, depth 24
+    [engine] first move Rh3: 0.2s, depth 24
+    [engine] first move Rh2: 0.2s, depth 24
+    [engine] first move Rhh1: 0.3s, depth 24
+    [engine] first move Nc7: 18.3s, depth 24
+    [engine] first move Nxa7: 7.0s, depth 24
+    [engine] first move Nd6: 42.9s, depth 24
+    [engine] first move Nbd4: 9.4s, depth 24
+    [engine] first move Nc3: 2.5s, depth 24
+    [engine] first move Na3: 3.9s, depth 24
+    [engine] first move Bxb7: 22.8s, depth 24
+    [engine] first move Bc6: 0.2s, depth 24
+    [engine] first move Bxf5: 0.1s, depth 24
+    [engine] first move Bd5: 2.0s, depth 24
+    [engine] first move Bd3: 2.5s, depth 24
+    [engine] first move Ng5: 0.2s, depth 24
+    [engine] first move Ne5: 0.2s, depth 24
+    [engine] first move Nh4: 0.2s, depth 24
+    [engine] first move Nfd4: 0.7s, depth 24
+    [engine] first move Nh2: 300.0s, depth 15 TIMEOUT
+    [engine] declared first move Qd6+: 0.0s, depth 24
+    [engine] familiar move 2 Nc7+: 0.0s, depth 24
+    [engine] familiar move 3 Na6+: 0.0s, depth 24
+    [engine] familiar move 4 Qb8+: 0.0s, depth 24
+    [engine] familiar move 5 Nc7#: 0.0s, depth 24
+UNKNOWN codes=['engine_timeout'] nodes=2600 tier=uncertified
+  PASS fen valid, side to move not in check  
+  PASS line 'familiar' replays and ends in mate  
+  PASS line 'familiar' starts with the shared first move  Qd6+
+  PASS line 'familiar' length matches declared 5  recorded 5
+  PASS no first move mates in 1  mate in 1: []
+  PASS no other first move mates within 3  []
+  PASS solver and engine agree on the declared first move out to 3  solver 3, engine 3
+  PASS declared first move's shortest mate is exactly 3  Qd6+
+  PASS familiar: move 2 Nc7+ forces mate in exactly 4  declared remaining 4, solver 4, engine 4
+  PASS familiar: move 3 Na6+ forces mate in exactly 3  declared remaining 3, solver 3, engine 3
+  PASS familiar: move 4 Qb8+ forces mate in exactly 2  declared remaining 2, solver 2, engine 2
+  PASS familiar: move 5 Nc7# forces mate in exactly 1  declared remaining 1, solver 1, engine 1
+  CAVEAT engine_timeout: first-move table not completed (first move Nh2 reached depth 15 of 24 in 300s)
+  provenance: {'python': '3.14.5', 'python_chess': '1.11.2', 'engine_depth': '24', 'solver_budget': '5000000', 'engine_id': 'Stockfish 19', 'engine_author': 'the Stockfish developers (see AUTHORS file)', 'threads': '1 (applied)', 'hash': '256 (applied)', 'fast': 'False', 'engine_timeout': '300.0s', 'engine_searches': '29 in 415s; slowest first move Nh2 300s'}
