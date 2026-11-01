@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""oracle.py -- verdicts on Einstellung candidates (v0.3, first piece of the composer).
+"""oracle.py -- verdicts on Einstellung candidates (v0.4, first piece of the composer).
 
 A *candidate* is: a FEN, the declared shared first move (SAN), and the declared
 forced-mate lengths of the lines it claims (e.g. short=3, familiar=5).  SAN
@@ -135,6 +135,8 @@ class Solver:
 
 ENGINE_LOG: List[tuple] = []     # (label, seconds, depth reached, timed_out) for every engine search
 PROGRESS = False                 # print each engine search as it finishes (diagnosis of slow runs)
+NEW_GAME_PER_SEARCH = True       # send ucinewgame before every engine search (v0.4). Off = the v0.3 behaviour,
+                                 # where one engine carried its search state across ~40 searches and some stalled
 
 
 def sf_len(eng, b: chess.Board, depth: int, root: Optional[chess.Move], cap: Optional[int],
@@ -148,7 +150,8 @@ def sf_len(eng, b: chess.Board, depth: int, root: Optional[chess.Move], cap: Opt
     import time
     t0 = time.time()
     lim = chess.engine.Limit(depth=depth, time=timeout) if timeout else chess.engine.Limit(depth=depth)
-    info = eng.analyse(b, lim, root_moves=[root] if root else None)
+    kw = {"game": object()} if NEW_GAME_PER_SEARCH else {}      # a new game object makes python-chess send ucinewgame
+    info = eng.analyse(b, lim, root_moves=[root] if root else None, **kw)
     secs = time.time() - t0
     reached = info.get("depth", depth)
     timed_out = bool(timeout) and reached < depth
@@ -252,6 +255,7 @@ def judge(c: Candidate, budget: int = DEFAULT_BUDGET, engine=None, depth: int = 
     v.meta.update(engine_info or {})
     v.meta["fast"] = str(fast)
     v.meta["engine_timeout"] = f"{engine_timeout}s" if (engine and engine_timeout) else "none"
+    v.meta["engine_state"] = ("ucinewgame before every search" if NEW_GAME_PER_SEARCH else "shared across searches") if engine else "none"
     S = Solver(budget)
     del ENGINE_LOG[:]
     try:
@@ -444,8 +448,9 @@ def _fmt(v: Verdict) -> str:
 
 
 def cmd_corpus(a) -> int:
-    global PROGRESS
+    global PROGRESS, NEW_GAME_PER_SEARCH
     PROGRESS = bool(a.progress)
+    NEW_GAME_PER_SEARCH = not a.keep_engine_state
     eng, info = (open_engine(a.engine) if a.engine else (None, None))
     bad = 0
     try:
@@ -471,8 +476,9 @@ def cmd_corpus(a) -> int:
 
 
 def cmd_verify(a) -> int:
-    global PROGRESS
+    global PROGRESS, NEW_GAME_PER_SEARCH
     PROGRESS = bool(a.progress)
+    NEW_GAME_PER_SEARCH = not a.keep_engine_state
     declared = {k: int(n) for k, n in (x.split("=") for x in a.declared.split(","))}
     lines = {}
     for x in a.line or []:
@@ -510,6 +516,8 @@ def main(argv=None) -> int:
     pc.add_argument("--engine-timeout", type=float, default=None,
                     help="seconds cap per engine search; a capped search gives UNKNOWN, never PASS")
     pc.add_argument("--progress", action="store_true", help="print each engine search and its time")
+    pc.add_argument("--keep-engine-state", action="store_true",
+                    help="do NOT clear the engine between searches (v0.3 behaviour; can stall)")
     pc.set_defaults(fn=cmd_corpus)
 
     pv = sub.add_parser("verify", help="judge one candidate")
@@ -523,6 +531,7 @@ def main(argv=None) -> int:
     pv.add_argument("--fast", action="store_true")
     pv.add_argument("--engine-timeout", type=float, default=None)
     pv.add_argument("--progress", action="store_true")
+    pv.add_argument("--keep-engine-state", action="store_true")
     pv.set_defaults(fn=cmd_verify)
 
     a = ap.parse_args(argv)

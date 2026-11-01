@@ -1,0 +1,62 @@
+    [engine] first move Rh8: 0.1s, depth 18
+    [engine] first move Rxg7: 0.1s, depth 18
+    [engine] first move Rh6: 0.0s, depth 18
+    [engine] first move Rh5: 0.2s, depth 18
+    [engine] first move Rh4: 0.2s, depth 18
+    [engine] first move Rh3: 0.2s, depth 18
+    [engine] first move Rh2: 0.5s, depth 18
+    [engine] first move Rhh1: 0.4s, depth 18
+    [engine] first move Nc7: 0.6s, depth 18
+    [engine] first move Nxa7: 0.7s, depth 18
+    [engine] first move Nd6: 1.2s, depth 18
+    [engine] first move Nbd4: 0.7s, depth 18
+    [engine] first move Nc3: 0.2s, depth 18
+    [engine] first move Na3: 0.2s, depth 18
+    [engine] first move Bxb7: 0.7s, depth 18
+    [engine] first move Bc6: 0.1s, depth 18
+    [engine] first move Bxf5: 0.2s, depth 18
+    [engine] first move Bd5: 0.4s, depth 18
+    [engine] first move Bd3: 0.3s, depth 18
+    [engine] first move Ng5: 0.2s, depth 18
+    [engine] first move Ne5: 0.2s, depth 18
+    [engine] first move Nh4: 0.4s, depth 18
+    [engine] first move Nfd4: 0.4s, depth 18
+    [engine] first move Nh2: 0.4s, depth 18
+    [engine] first move Ne1: 0.7s, depth 18
+    [engine] first move Qd8+: 0.5s, depth 18
+    [engine] first move Qd7: 0.6s, depth 18
+    [engine] first move Qh6: 1.8s, depth 18
+    [engine] first move Qd6+: 0.0s, depth 18
+    [engine] first move Qg5: 0.5s, depth 18
+    [engine] first move Qd5: 0.0s, depth 18
+    [engine] first move Qa5: 0.1s, depth 18
+    [engine] first move Qf4+: 0.0s, depth 18
+    [engine] first move Qd4: 0.0s, depth 18
+    [engine] first move Qb4: 0.4s, depth 18
+    [engine] first move Qe3: 0.0s, depth 18
+    [engine] first move Qd3: 0.0s, depth 18
+    [engine] first move Qc3: 0.1s, depth 18
+    [engine] first move Qf2: 1.2s, depth 18
+    [engine] first move Qe2: 0.7s, depth 18
+    [engine] first move Qe1: 0.4s, depth 18
+    [engine] first move Qd1: 0.0s, depth 18
+    [engine] first move Rgh1: 0.4s, depth 18
+    [engine] first move Rf1: 0.3s, depth 18
+    [engine] first move Re1: 0.3s, depth 18
+    [engine] first move Rd1: 0.3s, depth 18
+    [engine] first move Kd1: 0.4s, depth 18
+    [engine] first move Kxb1: 0.2s, depth 18
+    [engine] first move c3: 0.1s, depth 18
+    [engine] first move b3: 0.5s, depth 18
+    [engine] first move a3: 0.6s, depth 18
+    [engine] first move c4: 0.1s, depth 18
+    [engine] first move b4: 0.4s, depth 18
+    [engine] first move a4: 0.3s, depth 18
+    [engine] declared first move Qd6+: 0.0s, depth 18
+    [engine] familiar move 2 Nc7+: 0.0s, depth 18
+    [engine] familiar move 3 Na6+: 0.0s, depth 18
+    [engine] familiar move 4 Qb8+: 0.0s, depth 18
+    [engine] familiar move 5 Nc7#: 0.0s, depth 18
+ok   E-u1-142     -> PASS    codes=[] nodes=2600 tier=two-engine
+
+ALL SURVIVORS TWO-ENGINE PASS (1 checked)
