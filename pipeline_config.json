@@ -1,0 +1,20 @@
+{
+  "_comment": "Paths are relative to this file's folder.",
+  "paths": {
+    "oracle": "oracle.py",
+    "skeleton": "composer_skeleton.py",
+    "canonical": "positions/canonical.json",
+    "rejects": "fixtures/rejects.json",
+    "stockfish": "C:/Users/44777/Downloads/stockfish-windows-x86-64-universal/stockfish/stockfish-windows-x86-64-universal.exe",
+    "evidence_dir": "docs/outputs",
+    "survivors_dir": "composed_sample"
+  },
+  "compose": {
+    "enabled": false,
+    "search_command": [],
+    "finalize_command": []
+  },
+  "filter": {"budget": 5000000},
+  "certify": {"depth": 24, "budget": 15000000, "engine": true, "engine_timeout": 300},
+  "commit": {"enabled": false, "message_prefix": "Pipeline run"}
+}
