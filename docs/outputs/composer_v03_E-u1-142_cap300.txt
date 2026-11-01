@@ -1,0 +1,32 @@
+    [engine] first move Rh8: 0.1s, depth 24
+    [engine] first move Rxg7: 0.2s, depth 24
+    [engine] first move Rh6: 0.0s, depth 24
+    [engine] first move Rh5: 0.1s, depth 24
+    [engine] first move Rh4: 0.2s, depth 24
+    [engine] first move Rh3: 0.2s, depth 24
+    [engine] first move Rh2: 0.2s, depth 24
+    [engine] first move Rhh1: 0.3s, depth 24
+    [engine] first move Nc7: 18.4s, depth 24
+    [engine] first move Nxa7: 7.7s, depth 24
+    [engine] first move Nd6: 53.5s, depth 24
+    [engine] first move Nbd4: 13.7s, depth 24
+    [engine] first move Nc3: 3.4s, depth 24
+    [engine] first move Na3: 5.4s, depth 24
+    [engine] first move Bxb7: 29.8s, depth 24
+    [engine] first move Bc6: 0.3s, depth 24
+    [engine] first move Bxf5: 0.3s, depth 24
+    [engine] first move Bd5: 2.7s, depth 24
+    [engine] first move Bd3: 3.3s, depth 24
+    [engine] first move Ng5: 0.4s, depth 24
+    [engine] first move Ne5: 0.2s, depth 24
+    [engine] first move Nh4: 0.3s, depth 24
+    [engine] first move Nfd4: 1.1s, depth 24
+    [engine] first move Nh2: 300.0s, depth 15 TIMEOUT
+    [engine] declared first move Qd6+: 0.1s, depth 24
+    [engine] familiar move 2 Nc7+: 0.1s, depth 24
+    [engine] familiar move 3 Na6+: 0.0s, depth 24
+    [engine] familiar move 4 Qb8+: 0.0s, depth 24
+    [engine] familiar move 5 Nc7#: 0.0s, depth 24
+WRONG E-u1-142     -> UNKNOWN codes=['engine_timeout'] nodes=2600 tier=uncertified
+
+1 SURVIVOR(S) NOT CERTIFIED (1 checked)
