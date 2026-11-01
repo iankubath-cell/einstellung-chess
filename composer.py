@@ -396,6 +396,7 @@ def cmd_finalize(a) -> int:
 def cmd_verify(a) -> int:
     """Re-judge every composed/*.json with the engine cross-checks (run this on a machine with Stockfish)."""
     d = Path(a.dir)
+    oracle.PROGRESS = bool(a.progress)
     files = sorted(p for p in d.glob("E-*.json"))
     eng, info = oracle.open_engine(a.engine)
     bad = 0
@@ -403,7 +404,7 @@ def cmd_verify(a) -> int:
         for f in files:
             rec = json.loads(f.read_text(encoding="utf-8"))
             cand = oracle.Candidate(rec["id"], rec["fen"], rec["first_move"], rec["declared"], rec["lines"])
-            v = oracle.judge(cand, engine=eng, depth=a.depth, engine_info=info)
+            v = oracle.judge(cand, engine=eng, depth=a.depth, engine_info=info, engine_timeout=a.engine_timeout)
             ok = v.status == oracle.PASS and v.evidence_tier == "two-engine"
             bad += not ok
             print(f"{'ok  ' if ok else 'WRONG'} {rec['id']:12} -> {v.status:7} codes={v.codes} nodes={v.nodes} tier={v.evidence_tier}")
@@ -437,6 +438,9 @@ def main(argv=None) -> int:
     v.add_argument("--engine", required=True)
     v.add_argument("--depth", type=int, default=24)
     v.add_argument("--verbose", action="store_true")
+    v.add_argument("--engine-timeout", type=float, default=None,
+                   help="seconds cap per engine search; a capped search gives UNKNOWN, never PASS")
+    v.add_argument("--progress", action="store_true", help="print each engine search and its time")
     v.set_defaults(fn=cmd_verify)
     a = ap.parse_args(argv)
     return a.fn(a)
