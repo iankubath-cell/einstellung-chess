@@ -1,0 +1,16 @@
+
+===== certify =====
+  note: lint index absent -- running on ALL survivors (run 'lint' first for the strict SAN gate)
+  warning: filter index absent -- certifying ALL lint-clean candidates
+certify: 8 eligible, 0 already done, 8 to run
+  [1/8] E-g1-10                  UNKNOWN
+  [2/8] E-g1-100                 UNKNOWN
+  [3/8] E-g1-106                 UNKNOWN
+  [4/8] E-g1-120                 UNKNOWN
+  [5/8] E-g1-126                 UNKNOWN
+  [6/8] E-g1-99                  UNKNOWN
+  [7/8] E-u1-142                 UNKNOWN
+  [8/8] E-u1-212                 UNKNOWN
+
+certify: {'UNKNOWN': 8} in 67.1s
+===== certify done (exit 0, 69.6s) =====
