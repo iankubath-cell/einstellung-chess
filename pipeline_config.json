@@ -7,12 +7,19 @@
     "rejects": "fixtures/rejects.json",
     "stockfish": "C:/Users/44777/Downloads/stockfish-windows-x86-64-universal/stockfish/stockfish-windows-x86-64-universal.exe",
     "evidence_dir": "docs/outputs",
-    "survivors_dir": "composed_sample"
+    "survivors_dir": ""
   },
   "compose": {
-    "enabled": false,
-    "search_command": [],
-    "finalize_command": []
+    "enabled": true,
+    "search_command": [
+      "python", "composer.py", "search",
+      "--mode", "guided", "--seed", "2", "--evals", "400",
+      "--out", "{out}/raw_g2.json"
+    ],
+    "finalize_command": [
+      "python", "composer.py", "finalize",
+      "--raw", "{out}/raw_g2.json", "--out", "{out}"
+    ]
   },
   "filter": {"budget": 5000000},
   "certify": {"depth": 24, "budget": 15000000, "engine": true, "engine_timeout": 300},
