@@ -1,0 +1,47 @@
+{
+  "pipeline_version": "0.3",
+  "run_id": "20261103-215227",
+  "updated": "2026-11-04T04:49:07",
+  "steps": {
+    "preflight": {
+      "exit": 0,
+      "seconds": 0.0,
+      "ok": true
+    },
+    "compose-search": {
+      "exit": 0,
+      "seconds": 1695.8
+    },
+    "compose-finalize": {
+      "exit": 0,
+      "seconds": 489.5
+    },
+    "compose": {
+      "exit": 0,
+      "seconds": 2185.4,
+      "files": 148
+    },
+    "lint": {
+      "exit": 0,
+      "seconds": 0.4,
+      "examined": 146,
+      "flagged": 0
+    },
+    "filter": {
+      "exit": 0,
+      "seconds": 496.1,
+      "counts": {
+        "PASS": 146
+      },
+      "errors": 0
+    },
+    "certify": {
+      "exit": 0,
+      "seconds": 22308.8,
+      "counts": {
+        "PASS": 146
+      },
+      "errors": 0
+    }
+  }
+}

@@ -1,0 +1,152 @@
+
+=== 2026-11-03T21:52:33 python composer.py search --mode guided --seed 2 --evals 400 --out 'C:\Users\44777\einstellung-chess\runs\20261103-215227\compose/raw_g2.json'
+[guided s2] eval    7  PASS g2-1  dist 2  move white P g2->e5
+[guided s2] eval    8  PASS g2-2  dist 1  remove white P c2
+[guided s2] eval    9  PASS g2-3  dist 2  remove white P g3
+[guided s2] eval   12  PASS g2-4  dist 5  remove black P g7; retype white P->B c2
+[guided s2] eval   13  PASS g2-5  dist 2  move white R a1->f2
+[guided s2] eval   14  PASS g2-6  dist 1  remove black P h7
+[guided s2] eval   15  PASS g2-7  dist 3  add white B f6
+[guided s2] eval   16  PASS g2-8  dist 5  move black P h7->h3
+[guided s2] eval   17  PASS g2-9  dist 2  move white R h1->e1
+[guided s2] eval   18  PASS g2-10  dist 1  remove white P g2
+[guided s2] eval   20  PASS g2-11  dist 6  remove white P h2
+[guided s2] eval   21  PASS g2-12  dist 1  remove black B g7
+[guided s2] eval   22  PASS g2-13  dist 3  remove black B g7
+[guided s2] eval   26  PASS g2-14  dist 6  add white P f2
+[guided s2] eval   28  PASS g2-15  dist 8  recolour P white->black a2
+[guided s2] eval   34  PASS g2-16  dist 6  add black B f3
+[guided s2] eval   35  PASS g2-17  dist 1  remove white R a1
+[guided s2] eval   36  PASS g2-18  dist 3  remove black P h6; move white P h2->c3
+[guided s2] eval   38  PASS g2-19  dist 6  add black B h8
+[guided s2] eval   41  PASS g2-20  dist 3  add black N f6
+[guided s2] eval   42  PASS g2-21  dist 3  add black P f6
+[guided s2] eval   46  PASS g2-22  dist 7  add black N h5; remove white P h2
+[guided s2] eval   50  PASS g2-23  dist 3  add white B e7
+[guided s2] eval   54  PASS g2-24  dist 3  move white R a1->f6
+[guided s2] eval   55  PASS g2-25  dist 6  remove white R a1; move white P a2->a5
+[guided s2] eval   56  PASS g2-26  dist 4  remove white P e5
+[guided s2] eval   60  PASS g2-27  dist 2  recolour P white->black g2; remove white P b2; recolour P black->white g2
+[guided s2] eval   61  PASS g2-28  dist 4  move black B g4->e6
+[guided s2] eval   74  PASS g2-29  dist 6  add white N f3; recolour P black->white g7
+[guided s2] eval   78  PASS g2-30  dist 9  remove white P b2; recolour P black->white h7
+[guided s2] eval   79  PASS g2-31  dist 2  retype white R->N f2
+[guided s2] eval   82  PASS g2-32  dist 4  recolour P white->black g2; add white N h4; recolour P black->white g2
+[guided s2] eval   83  PASS g2-33  dist 7  remove white P b2; recolour P white->black a2
+[guided s2] eval   84  PASS g2-34  dist 3  recolour P black->white f7
+[guided s2] eval   85  PASS g2-35  dist 3  move white R h1->a1
+[guided s2] eval   86  PASS g2-36  dist 2  remove black R h4
+[guided s2] eval   88  PASS g2-37  dist 7  add white B b1; retype white P->N a2
+[guided s2] eval   91  PASS g2-38  dist 6  move white P h2->c4; remove black R h4
+[guided s2] eval   92  PASS g2-39  dist 8  remove black P h7
+[guided s2] eval   93  PASS g2-40  dist 5  remove white P e5
+[guided s2] eval   94  PASS g2-41  dist 9  add black B d1; move white P b2->b3
+[guided s2] eval   95  PASS g2-42  dist 4  remove black R h8; add black P h5
+[guided s2] eval   99  PASS g2-43  dist 4  remove white P b2
+[guided s2] eval  103  PASS g2-44  dist 3  remove black P f6; remove white P h2
+[guided s2] eval  104  PASS g2-45  dist 2  recolour N black->white g8
+[guided s2] eval  111  PASS g2-46  dist 8  remove white P b2
+[guided s2] eval  112  PASS g2-47  dist 1  remove black R h4
+[guided s2] eval  120  PASS g2-48  dist 4  add white B g6; add white N b3
+[guided s2] eval  134  PASS g2-49  dist 8  recolour P black->white g7
+[guided s2] eval  138  PASS g2-50  dist 5  add white N h5
+[guided s2] eval  139  PASS g2-51  dist 6  add black B b3
+[guided s2] eval  147  PASS g2-52  dist 9  recolour P white->black a2; add black B a6
+[guided s2] eval  148  PASS g2-53  dist 6  recolour P white->black c2; move white P h2->h6
+[guided s2] eval  150  PASS g2-54  dist 6  retype white P->B c2
+[guided s2] eval  160  PASS g2-55  dist 6  recolour P white->black a2
+[guided s2] eval  161  PASS g2-56  dist 3  remove white P b2
+[guided s2] eval  162  PASS g2-57  dist 7  add black N g2
+[guided s2] eval  163  PASS g2-58  dist 3  recolour P white->black c2
+[guided s2] eval  167  PASS g2-59  dist 3  remove white R h1; add white P f2
+[guided s2] eval  173  PASS g2-60  dist 8  retype black P->R a2
+[guided s2] eval  174  PASS g2-61  dist 8  recolour P black->white h6
+[guided s2] eval  175  PASS g2-62  dist 8  move white R a1->e1
+[guided s2] eval  182  PASS g2-63  dist 7  add black P c2
+[guided s2] eval  186  PASS g2-64  dist 2  move black N f6->g5
+[guided s2] eval  188  PASS g2-65  dist 10  retype white P->N h2
+[guided s2] eval  189  PASS g2-66  dist 5  move white P g3->e3
+[guided s2] eval  190  PASS g2-67  dist 4  add white B g8
+[guided s2] eval  191  PASS g2-68  dist 5  remove white P a5
+[guided s2] eval  196  PASS g2-69  dist 5  remove black P h7
+[guided s2] eval  200  PASS g2-70  dist 3  remove white R a1
+[guided s2] eval  206  PASS g2-71  dist 9  remove black P f7; move white P b2->f2
+[guided s2] eval  207  PASS g2-72  dist 5  recolour P black->white f7
+[guided s2] eval  208  PASS g2-73  dist 9  add white P a4
+[guided s2] eval  209  PASS g2-74  dist 5  recolour P black->white h7
+[guided s2] eval  210  PASS g2-75  dist 10  remove black R h8
+[guided s2] eval  211  PASS g2-76  dist 4  add black N h6
+[guided s2] eval  213  PASS g2-77  dist 3  retype white P->N b2; remove white R e1
+[guided s2] eval  217  PASS g2-78  dist 3  move black P f7->c5
+[guided s2] eval  222  PASS g2-79  dist 8  add black P h5
+[guided s2] eval  223  PASS g2-80  dist 8  remove white R a1; remove black P h7
+[guided s2] eval  224  PASS g2-81  dist 3  add black N e3
+[guided s2] eval  225  PASS g2-82  dist 3  move white R h1->f7; retype white R->N f7
+[guided s2] eval  226  PASS g2-83  dist 3  remove white P g2
+[guided s2] eval  230  PASS g2-84  dist 7  move white R h1->c3; remove white R c3
+[guided s2] eval  234  PASS g2-85  dist 4  remove white P b2
+[guided s2] eval  235  PASS g2-86  dist 3  remove black B g7; add white P c4
+[guided s2] eval  236  PASS g2-87  dist 9  remove white P g2
+[guided s2] eval  238  PASS g2-88  dist 5  move white P f7->h5; recolour N white->black c3; recolour N black->white c3
+[guided s2] eval  239  PASS g2-89  dist 1  remove white P h2
+[guided s2] eval  240  PASS g2-90  dist 5  recolour P black->white g7
+[guided s2] eval  241  PASS g2-91  dist 7  add black P a5
+[guided s2] eval  242  PASS g2-92  dist 10  recolour P white->black a2
+[guided s2] eval  243  PASS g2-93  dist 9  add black B h8
+[guided s2] eval  247  PASS g2-94  dist 3  remove white R h1
+[guided s2] eval  248  PASS g2-95  dist 6  remove white B f6
+[guided s2] eval  249  PASS g2-96  dist 8  remove white P h2
+[guided s2] eval  250  PASS g2-97  dist 4  add black B g8
+[guided s2] eval  254  PASS g2-98  dist 5  move white P h2->e7
+[guided s2] eval  263  PASS g2-99  dist 11  retype white R->N h1
+[guided s2] eval  266  PASS g2-100  dist 9  recolour R white->black h1; move white P h2->h6; remove black B b3; recolour R black->white h1
+[guided s2] eval  270  PASS g2-101  dist 10  move white P g2->e5
+[guided s2] eval  271  PASS g2-102  dist 7  move white B b1->d1
+[guided s2] eval  275  PASS g2-103  dist 2  add black N f8
+[guided s2] eval  282  PASS g2-104  dist 5  move black R h8->f3
+[guided s2] eval  283  PASS g2-105  dist 6  add white P h3; remove black B g7
+[guided s2] eval  285  PASS g2-106  dist 5  move white P c2->g6; add white P c5
+[guided s2] eval  288  PASS g2-107  dist 8  add white B h3; retype white B->P h3
+[guided s2] eval  293  PASS g2-108  dist 6  recolour P black->white a2; add white P f5
+[guided s2] eval  295  PASS g2-109  dist 4  remove black P g7
+[guided s2] eval  303  PASS g2-110  dist 6  move white P h2->e5
+[guided s2] eval  305  PASS g2-111  dist 2  remove white R h1
+[guided s2] eval  309  PASS g2-112  dist 10  add white P g5; add black N h8
+[guided s2] eval  312  PASS g2-113  dist 4  move white P g2->f6
+[guided s2] eval  314  PASS g2-114  dist 5  move white P b2->f7
+[guided s2] eval  318  PASS g2-115  dist 4  move white R e1->f2; recolour P white->black a2
+[guided s2] eval  322  PASS g2-116  dist 1  remove white N g8
+[guided s2] eval  326  PASS g2-117  dist 5  retype white P->B c2
+[guided s2] eval  327  PASS g2-118  dist 4  retype white R->P f2
+[guided s2] eval  331  PASS g2-119  dist 9  add black P d7
+[guided s2] eval  334  PASS g2-120  dist 6  move white P h2->g3
+[guided s2] eval  335  PASS g2-121  dist 3  move white P g2->b3
+[guided s2] eval  338  PASS g2-122  dist 2  move white P h2->f6
+[guided s2] eval  339  PASS g2-123  dist 9  recolour P white->black c2
+[guided s2] eval  348  PASS g2-124  dist 6  remove black R h8
+[guided s2] eval  351  PASS g2-125  dist 8  retype black B->N a6; remove black N a6
+[guided s2] eval  352  PASS g2-126  dist 7  recolour P white->black a2
+[guided s2] eval  356  PASS g2-127  dist 3  retype white N->B f7
+[guided s2] eval  366  PASS g2-128  dist 3  recolour P white->black c2
+[guided s2] eval  368  PASS g2-129  dist 9  move white P e5->h4; add white P h6
+[guided s2] eval  369  PASS g2-130  dist 5  recolour P white->black h2
+[guided s2] eval  373  PASS g2-131  dist 5  retype white N->B c3
+[guided s2] eval  375  PASS g2-132  dist 2  remove white R h1
+[guided s2] eval  381  PASS g2-133  dist 2  retype white P->N c2
+[guided s2] eval  384  PASS g2-134  dist 6  recolour P white->black a5
+[guided s2] eval  385  PASS g2-135  dist 4  remove white P h2
+[guided s2] eval  386  PASS g2-136  dist 7  remove black N f6; retype black P->B h7
+[guided s2] eval  387  PASS g2-137  dist 7  recolour B white->black c2; remove white R a1
+[guided s2] eval  388  PASS g2-138  dist 10  add black B f3
+[guided s2] eval  389  PASS g2-139  dist 4  recolour P white->black a2
+[guided s2] eval  390  PASS g2-140  dist 8  move white P h2->e3
+[guided s2] eval  391  PASS g2-141  dist 10  remove black P h6
+[guided s2] eval  393  PASS g2-142  dist 5  retype white P->N c2; add black Q c5; remove black Q c5
+[guided s2] eval  397  PASS g2-143  dist 7  retype white P->N g3
+[guided s2] eval  398  PASS g2-144  dist 4  add white P g3; remove black P h7
+[guided s2] eval  399  PASS g2-145  dist 5  add black P h4
+[guided s2] eval  400  PASS g2-146  dist 2  move black N f6->g5
+done: 400 evals, 146 PASS (fast), stats: {'evals': 400, 'prefilter_rejects': 66, 'cache_hits': 9, 'pass': 146, 'codes': {'line_replay_failed': 56, 'refuted_defence': 117, 'PASS': 146, 'faster_mate_leak': 15, 'alt_first_move_mates': 59, 'mate_in_1': 2, 'no_forced_mate': 3, 'budget_exceeded': 2}, 'guided_repairs': 163, 'guided_repair_passes': 9}
+
+=== 2026-11-03T22:20:49 python composer.py finalize --raw 'C:\Users\44777\einstellung-chess\runs\20261103-215227\compose/raw_g2.json' --out 'C:\Users\44777\einstellung-chess\runs\20261103-215227\compose'
+finalized 146 survivors into C:\Users\44777\einstellung-chess\runs\20261103-215227\compose/ ; rejected at finalize: 0

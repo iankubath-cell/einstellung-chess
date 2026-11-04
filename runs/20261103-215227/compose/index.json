@@ -1,0 +1,1182 @@
+{
+ "composer_version": "0.1",
+ "versions": {
+  "composer_py_sha256_lf": "9e82ff3b14a52fbe77a7076feac109a530fcffeea62c13df7cd599ac6d13465b",
+  "composer_py_sha256_lf_at_search_time": "not recorded",
+  "oracle_py_sha256_lf": "772a3a1d314f52564d40262ba489ada2813fd4111c0f608ab98a6c8e1c85ed56",
+  "composer_skeleton_py_sha256_lf": "9a5456ae376bda9471c5c4f4611343f53068d50780203caeeaae26e8c61c5b4d",
+  "python": "3.14.5",
+  "python_chess": "1.11.2"
+ },
+ "survivors": [
+  {
+   "id": "E-g2-1",
+   "fen": "1k2r3/pp4pp/8/1N2P3/4B1b1/8/PPPQ3P/R1K4R w - - 0 1",
+   "distance": 2,
+   "nearest_corpus": "C1",
+   "mode": "guided",
+   "seed": 2
+  },
+  {
+   "id": "E-g2-2",
+   "fen": "1k2r2r/pp3pb1/7p/1N6/4B1br/2N3P1/PP1Q2PP/R1K4R w - - 0 1",
+   "distance": 1,
+   "nearest_corpus": "S1",
+   "mode": "guided",
+   "seed": 2
+  },
+  {
+   "id": "E-g2-3",
+   "fen": "1k2r2r/pp3pb1/7p/1N6/4B1br/2N5/PP1Q2PP/R1K4R w - - 0 1",
+   "distance": 2,
+   "nearest_corpus": "S1",
+   "mode": "guided",
+   "seed": 2
+  },
+  {
+   "id": "E-g2-4",
+   "fen": "1k2r3/pp5p/8/1N2P3/4B1b1/8/PPBQ3P/R1K4R w - - 0 1",
+   "distance": 5,
+   "nearest_corpus": "C1",
+   "mode": "guided",
+   "seed": 2
+  },
+  {
+   "id": "E-g2-5",
+   "fen": "1k2r3/pp4pp/8/1N6/4B1b1/8/PPPQ1RPP/2K4R w - - 0 1",
+   "distance": 2,
+   "nearest_corpus": "C1",
+   "mode": "guided",
+   "seed": 2
+  },
+  {
+   "id": "E-g2-6",
+   "fen": "1k2r3/pp4p1/8/1N6/4B1b1/8/PPPQ2PP/R1K4R w - - 0 1",
+   "distance": 1,
+   "nearest_corpus": "C1",
+   "mode": "guided",
+   "seed": 2
+  },
+  {
+   "id": "E-g2-7",
+   "fen": "1k2r3/pp4pp/5B2/1N2P3/4B1b1/8/PPPQ3P/R1K4R w - - 0 1",
+   "distance": 3,
+   "nearest_corpus": "C1",
+   "mode": "guided",
+   "seed": 2
+  },
+  {
+   "id": "E-g2-8",
+   "fen": "1k2r3/pp4p1/5B2/1N2P3/4B1b1/7p/PPPQ3P/R1K4R w - - 0 1",
+   "distance": 5,
+   "nearest_corpus": "C1",
+   "mode": "guided",
+   "seed": 2
+  },
+  {
+   "id": "E-g2-9",
+   "fen": "1k2r3/pp4pp/8/1N6/4B1b1/8/PPPQ2PP/R1K1R3 w - - 0 1",
+   "distance": 2,
+   "nearest_corpus": "C1",
+   "mode": "guided",
+   "seed": 2
+  },
+  {
+   "id": "E-g2-10",
+   "fen": "1k2r2r/pp3pb1/7p/1N6/4B1br/2N3P1/PPPQ3P/R1K4R w - - 0 1",
+   "distance": 1,
+   "nearest_corpus": "S1",
+   "mode": "guided",
+   "seed": 2
+  },
+  {
+   "id": "E-g2-11",
+   "fen": "1k2r3/pp5p/8/1N2P3/4B1b1/8/PPBQ4/R1K4R w - - 0 1",
+   "distance": 6,
+   "nearest_corpus": "C1",
+   "mode": "guided",
+   "seed": 2
+  },
+  {
+   "id": "E-g2-12",
+   "fen": "1k2r2r/pp3p2/7p/1N6/4B1br/2N3P1/PPPQ2PP/R1K4R w - - 0 1",
+   "distance": 1,
+   "nearest_corpus": "S1",
+   "mode": "guided",
+   "seed": 2
+  },
+  {
+   "id": "E-g2-13",
+   "fen": "1k2r2r/pp3p2/7p/1N6/4B1br/2N5/PP1Q2PP/R1K4R w - - 0 1",
+   "distance": 3,
+   "nearest_corpus": "S1",
+   "mode": "guided",
+   "seed": 2
+  },
+  {
+   "id": "E-g2-14",
+   "fen": "1k2r3/pp4p1/5B2/1N2P3/4B1b1/7p/PPPQ1P1P/R1K4R w - - 0 1",
+   "distance": 6,
+   "nearest_corpus": "C1",
+   "mode": "guided",
+   "seed": 2
+  },
+  {
+   "id": "E-g2-15",
+   "fen": "1k2r3/pp4p1/5B2/1N2P3/4B1b1/7p/pPPQ1P1P/R1K4R w - - 0 1",
+   "distance": 8,
+   "nearest_corpus": "C1",
+   "mode": "guided",
+   "seed": 2
+  },
+  {
+   "id": "E-g2-16",
+   "fen": "1k2r3/pp5p/8/1N2P3/4B1b1/5b2/PPBQ3P/R1K4R w - - 0 1",
+   "distance": 6,
+   "nearest_corpus": "C1",
+   "mode": "guided",
+   "seed": 2
+  },
+  {
+   "id": "E-g2-17",
+   "fen": "1k2r2r/pp3pb1/7p/1N6/4B1br/2N3P1/PPPQ2PP/2K4R w - - 0 1",
+   "distance": 1,
+   "nearest_corpus": "S1",
+   "mode": "guided",
+   "seed": 2
+  },
+  {
+   "id": "E-g2-18",
+   "fen": "1k2rrn1/pp4pp/5n2/1N3b2/4B3/2P5/PPPQ2P1/R1K4R w - - 0 1",
+   "distance": 3,
+   "nearest_corpus": "C2",
+   "mode": "guided",
+   "seed": 2
+  },
+  {
+   "id": "E-g2-19",
+   "fen": "1k2r2b/pp4p1/5B2/1N2P3/4B1b1/7p/PPPQ3P/R1K4R w - - 0 1",
+   "distance": 6,
+   "nearest_corpus": "C1",
+   "mode": "guided",
+   "seed": 2
+  },
+  {
+   "id": "E-g2-20",
+   "fen": "1k2r3/pp4pp/5n2/1N6/4B1b1/8/PPPQ1RPP/2K4R w - - 0 1",
+   "distance": 3,
+   "nearest_corpus": "C1",
+   "mode": "guided",
+   "seed": 2
+  },
+  {
+   "id": "E-g2-21",
+   "fen": "1k2r3/pp4pp/5p2/1N6/4B1b1/8/PPPQ1RPP/2K4R w - - 0 1",
+   "distance": 3,
+   "nearest_corpus": "C1",
+   "mode": "guided",
+   "seed": 2
+  },
+  {
+   "id": "E-g2-22",
+   "fen": "1k2r3/pp4p1/5B2/1N2P2n/4B1b1/7p/PPPQ4/R1K4R w - - 0 1",
+   "distance": 7,
+   "nearest_corpus": "C1",
+   "mode": "guided",
+   "seed": 2
+  },
+  {
+   "id": "E-g2-23",
+   "fen": "1k2r3/pp2B1pp/8/1N2P3/4B1b1/8/PPPQ3P/R1K4R w - - 0 1",
+   "distance": 3,
+   "nearest_corpus": "C1",
+   "mode": "guided",
+   "seed": 2
+  },
+  {
+   "id": "E-g2-24",
+   "fen": "1k2r2r/pp3pb1/5R1p/1N6/4B1br/2N3P1/PP1Q2PP/2K4R w - - 0 1",
+   "distance": 3,
+   "nearest_corpus": "S1",
+   "mode": "guided",
+   "seed": 2
+  },
+  {
+   "id": "E-g2-25",
+   "fen": "1k2r2r/pp3p2/7p/PN6/4B1br/2N5/1P1Q2PP/2K4R w - - 0 1",
+   "distance": 6,
+   "nearest_corpus": "S1",
+   "mode": "guided",
+   "seed": 2
+  },
+  {
+   "id": "E-g2-26",
+   "fen": "1k2r3/pp4p1/5B2/1N6/4B1b1/7p/PPPQ3P/R1K4R w - - 0 1",
+   "distance": 4,
+   "nearest_corpus": "C1",
+   "mode": "guided",
+   "seed": 2
+  },
+  {
+   "id": "E-g2-27",
+   "fen": "1k2r3/pp4p1/8/1N6/4B1b1/8/P1PQ2PP/R1K4R w - - 0 1",
+   "distance": 2,
+   "nearest_corpus": "C1",
+   "mode": "guided",
+   "seed": 2
+  },
+  {
+   "id": "E-g2-28",
+   "fen": "1k2r3/pp4pp/4b3/1N6/4B3/8/PPPQ2PP/R1K1R3 w - - 0 1",
+   "distance": 4,
+   "nearest_corpus": "C1",
+   "mode": "guided",
+   "seed": 2
+  },
+  {
+   "id": "E-g2-29",
+   "fen": "1k2r3/pp4Pp/5n2/1N6/4B1b1/5N2/PPPQ1RPP/2K4R w - - 0 1",
+   "distance": 6,
+   "nearest_corpus": "C1",
+   "mode": "guided",
+   "seed": 2
+  },
+  {
+   "id": "E-g2-30",
+   "fen": "1k2r3/pp5P/8/1N2P3/4B1b1/8/P1BQ4/R1K4R w - - 0 1",
+   "distance": 9,
+   "nearest_corpus": "C1",
+   "mode": "guided",
+   "seed": 2
+  },
+  {
+   "id": "E-g2-31",
+   "fen": "1k2r3/pp4pp/8/1N6/4B1b1/8/PPPQ1NPP/2K4R w - - 0 1",
+   "distance": 2,
+   "nearest_corpus": "C1",
+   "mode": "guided",
+   "seed": 2
+  },
+  {
+   "id": "E-g2-32",
+   "fen": "1k2r3/pp4pp/5p2/1N6/4B1bN/8/PPPQ1RPP/2K4R w - - 0 1",
+   "distance": 4,
+   "nearest_corpus": "C1",
+   "mode": "guided",
+   "seed": 2
+  },
+  {
+   "id": "E-g2-33",
+   "fen": "1k2r3/pp4pp/4b3/1N6/4B3/8/p1PQ2PP/R1K1R3 w - - 0 1",
+   "distance": 7,
+   "nearest_corpus": "C1",
+   "mode": "guided",
+   "seed": 2
+  },
+  {
+   "id": "E-g2-34",
+   "fen": "1k2r2r/pp3Pb1/7p/1N6/4B1br/2N3P1/PP1Q2PP/R1K4R w - - 0 1",
+   "distance": 3,
+   "nearest_corpus": "S1",
+   "mode": "guided",
+   "seed": 2
+  },
+  {
+   "id": "E-g2-35",
+   "fen": "1k2r3/pp4pp/5p2/1N6/4B1b1/8/PPPQ1RPP/R1K5 w - - 0 1",
+   "distance": 3,
+   "nearest_corpus": "C1",
+   "mode": "guided",
+   "seed": 2
+  },
+  {
+   "id": "E-g2-36",
+   "fen": "1k2r2r/pp3p2/7p/1N6/4B1b1/2N3P1/PPPQ2PP/R1K4R w - - 0 1",
+   "distance": 2,
+   "nearest_corpus": "S1",
+   "mode": "guided",
+   "seed": 2
+  },
+  {
+   "id": "E-g2-37",
+   "fen": "1k2r3/pp4pp/4b3/1N6/4B3/8/NPPQ2PP/RBK1R3 w - - 0 1",
+   "distance": 7,
+   "nearest_corpus": "C1",
+   "mode": "guided",
+   "seed": 2
+  },
+  {
+   "id": "E-g2-38",
+   "fen": "1k2r2r/pp3p2/7p/1N6/2P1B1b1/2N5/PP1Q2P1/R1K4R w - - 0 1",
+   "distance": 6,
+   "nearest_corpus": "S1",
+   "mode": "guided",
+   "seed": 2
+  },
+  {
+   "id": "E-g2-39",
+   "fen": "1k2r3/pp4p1/4b3/1N6/4B3/8/p1PQ2PP/R1K1R3 w - - 0 1",
+   "distance": 8,
+   "nearest_corpus": "C1",
+   "mode": "guided",
+   "seed": 2
+  },
+  {
+   "id": "E-g2-40",
+   "fen": "1k2r3/pp5p/8/1N6/4B1b1/5b2/PPBQ3P/R1K4R w - - 0 1",
+   "distance": 5,
+   "nearest_corpus": "C1",
+   "mode": "guided",
+   "seed": 2
+  },
+  {
+   "id": "E-g2-41",
+   "fen": "1k2r3/pp4Pp/5n2/1N6/4B1b1/1P3N2/P1PQ1RPP/2Kb3R w - - 0 1",
+   "distance": 9,
+   "nearest_corpus": "C1",
+   "mode": "guided",
+   "seed": 2
+  },
+  {
+   "id": "E-g2-42",
+   "fen": "1k2r3/pp3p2/7p/1N5p/4B1b1/2N3P1/PPPQ2PP/R1K4R w - - 0 1",
+   "distance": 4,
+   "nearest_corpus": "S1",
+   "mode": "guided",
+   "seed": 2
+  },
+  {
+   "id": "E-g2-43",
+   "fen": "1k2r3/pp4pp/5n2/1N6/4B1b1/8/P1PQ1RPP/2K4R w - - 0 1",
+   "distance": 4,
+   "nearest_corpus": "C1",
+   "mode": "guided",
+   "seed": 2
+  },
+  {
+   "id": "E-g2-44",
+   "fen": "1k2r3/pp4pp/8/1N6/4B1b1/8/PPPQ1RP1/R1K5 w - - 0 1",
+   "distance": 3,
+   "nearest_corpus": "C1",
+   "mode": "guided",
+   "seed": 2
+  },
+  {
+   "id": "E-g2-45",
+   "fen": "1k2rrN1/pp4pp/5n1p/1N3b2/4B3/8/PPPQ2PP/R1K4R w - - 0 1",
+   "distance": 2,
+   "nearest_corpus": "C2",
+   "mode": "guided",
+   "seed": 2
+  },
+  {
+   "id": "E-g2-46",
+   "fen": "1k2r3/pp4p1/5B2/1N2P2n/4B1b1/7p/P1PQ4/R1K4R w - - 0 1",
+   "distance": 8,
+   "nearest_corpus": "C1",
+   "mode": "guided",
+   "seed": 2
+  },
+  {
+   "id": "E-g2-47",
+   "fen": "1k2r2r/pp3pb1/7p/1N6/4B1b1/2N3P1/PPPQ2PP/R1K4R w - - 0 1",
+   "distance": 1,
+   "nearest_corpus": "S1",
+   "mode": "guided",
+   "seed": 2
+  },
+  {
+   "id": "E-g2-48",
+   "fen": "1k2r3/pp4pp/6B1/1N6/4B1b1/1N6/PPPQ1RPP/2K4R w - - 0 1",
+   "distance": 4,
+   "nearest_corpus": "C1",
+   "mode": "guided",
+   "seed": 2
+  },
+  {
+   "id": "E-g2-49",
+   "fen": "1k2r2b/pp4P1/5B2/1N2P3/4B1b1/7p/PPPQ3P/R1K4R w - - 0 1",
+   "distance": 8,
+   "nearest_corpus": "C1",
+   "mode": "guided",
+   "seed": 2
+  },
+  {
+   "id": "E-g2-50",
+   "fen": "1k2r3/pp4pp/5n2/1N5N/4B1b1/8/P1PQ1RPP/2K4R w - - 0 1",
+   "distance": 5,
+   "nearest_corpus": "C1",
+   "mode": "guided",
+   "seed": 2
+  },
+  {
+   "id": "E-g2-51",
+   "fen": "1k2r3/pp5p/8/1N2P3/4B1b1/1b6/PPBQ3P/R1K4R w - - 0 1",
+   "distance": 6,
+   "nearest_corpus": "C1",
+   "mode": "guided",
+   "seed": 2
+  },
+  {
+   "id": "E-g2-52",
+   "fen": "1k2r3/pp5p/b7/1N2P3/4B1b1/8/pPBQ4/R1K4R w - - 0 1",
+   "distance": 9,
+   "nearest_corpus": "C1",
+   "mode": "guided",
+   "seed": 2
+  },
+  {
+   "id": "E-g2-53",
+   "fen": "1k2r3/pp4pp/7P/1N2P3/4B1b1/8/PPpQ4/R1K4R w - - 0 1",
+   "distance": 6,
+   "nearest_corpus": "C1",
+   "mode": "guided",
+   "seed": 2
+  },
+  {
+   "id": "E-g2-54",
+   "fen": "1k2r3/pp4pp/5n2/1N6/4B1b1/8/P1BQ1RPP/2K4R w - - 0 1",
+   "distance": 6,
+   "nearest_corpus": "C1",
+   "mode": "guided",
+   "seed": 2
+  },
+  {
+   "id": "E-g2-55",
+   "fen": "1k2r3/pp3p2/7p/1N5p/4B1b1/2N3P1/pPPQ2PP/R1K4R w - - 0 1",
+   "distance": 6,
+   "nearest_corpus": "S1",
+   "mode": "guided",
+   "seed": 2
+  },
+  {
+   "id": "E-g2-56",
+   "fen": "1k2r3/pp4pp/8/1N6/4B1b1/8/P1PQ2PP/R1K1R3 w - - 0 1",
+   "distance": 3,
+   "nearest_corpus": "C1",
+   "mode": "guided",
+   "seed": 2
+  },
+  {
+   "id": "E-g2-57",
+   "fen": "1k2r2b/pp4p1/5B2/1N2P3/4B1b1/7p/PPPQ2nP/R1K4R w - - 0 1",
+   "distance": 7,
+   "nearest_corpus": "C1",
+   "mode": "guided",
+   "seed": 2
+  },
+  {
+   "id": "E-g2-58",
+   "fen": "1k2r2r/pp3pb1/7p/1N6/4B1b1/2N3P1/PPpQ2PP/R1K4R w - - 0 1",
+   "distance": 3,
+   "nearest_corpus": "S1",
+   "mode": "guided",
+   "seed": 2
+  },
+  {
+   "id": "E-g2-59",
+   "fen": "1k2r2r/pp3pb1/7p/1N6/4B1b1/2N3P1/PPPQ1PPP/R1K5 w - - 0 1",
+   "distance": 3,
+   "nearest_corpus": "S1",
+   "mode": "guided",
+   "seed": 2
+  },
+  {
+   "id": "E-g2-60",
+   "fen": "1k2r3/pp4p1/5B2/1N2P3/4B1b1/7p/rPPQ1P1P/R1K4R w - - 0 1",
+   "distance": 8,
+   "nearest_corpus": "C1",
+   "mode": "guided",
+   "seed": 2
+  },
+  {
+   "id": "E-g2-61",
+   "fen": "1k2r2r/pp3p2/7P/PN6/4B1br/2N5/1P1Q2PP/2K4R w - - 0 1",
+   "distance": 8,
+   "nearest_corpus": "S1",
+   "mode": "guided",
+   "seed": 2
+  },
+  {
+   "id": "E-g2-62",
+   "fen": "1k2r3/pp5p/8/1N2P3/4B1b1/1b6/PPBQ3P/2K1R2R w - - 0 1",
+   "distance": 8,
+   "nearest_corpus": "C1",
+   "mode": "guided",
+   "seed": 2
+  },
+  {
+   "id": "E-g2-63",
+   "fen": "1k2r2r/pp3p2/7p/PN6/4B1br/2N5/1PpQ2PP/2K4R w - - 0 1",
+   "distance": 7,
+   "nearest_corpus": "S1",
+   "mode": "guided",
+   "seed": 2
+  },
+  {
+   "id": "E-g2-64",
+   "fen": "1k2r1n1/pp3pp1/8/1N3bn1/4B1b1/5PP1/PPPQ1PP1/2K4R w - - 0 1",
+   "distance": 2,
+   "nearest_corpus": "S3",
+   "mode": "guided",
+   "seed": 2
+  },
+  {
+   "id": "E-g2-65",
+   "fen": "1k2r2b/pp4P1/5B2/1N2P3/4B1b1/7p/PPPQ3N/R1K4R w - - 0 1",
+   "distance": 10,
+   "nearest_corpus": "C1",
+   "mode": "guided",
+   "seed": 2
+  },
+  {
+   "id": "E-g2-66",
+   "fen": "1k2r2r/pp3pb1/5R1p/1N6/4B1br/2N1P3/PP1Q2PP/2K4R w - - 0 1",
+   "distance": 5,
+   "nearest_corpus": "S1",
+   "mode": "guided",
+   "seed": 2
+  },
+  {
+   "id": "E-g2-67",
+   "fen": "1k2r1B1/pp4pp/5p2/1N6/4B1b1/8/PPPQ1RPP/R1K5 w - - 0 1",
+   "distance": 4,
+   "nearest_corpus": "C1",
+   "mode": "guided",
+   "seed": 2
+  },
+  {
+   "id": "E-g2-68",
+   "fen": "1k2r2r/pp3p2/7p/1N6/4B1br/2N5/1P1Q2PP/2K4R w - - 0 1",
+   "distance": 5,
+   "nearest_corpus": "S1",
+   "mode": "guided",
+   "seed": 2
+  },
+  {
+   "id": "E-g2-69",
+   "fen": "1k2r3/pp4p1/4b3/1N6/4B3/8/PPPQ2PP/R1K1R3 w - - 0 1",
+   "distance": 5,
+   "nearest_corpus": "C1",
+   "mode": "guided",
+   "seed": 2
+  },
+  {
+   "id": "E-g2-70",
+   "fen": "1k2r3/pp4pp/8/1N6/4B1b1/8/PPPQ2PP/2K1R3 w - - 0 1",
+   "distance": 3,
+   "nearest_corpus": "C1",
+   "mode": "guided",
+   "seed": 2
+  },
+  {
+   "id": "E-g2-71",
+   "fen": "1k2r2r/pp6/7p/PN6/4B1br/2N5/3Q1PPP/2K4R w - - 0 1",
+   "distance": 9,
+   "nearest_corpus": "S1",
+   "mode": "guided",
+   "seed": 2
+  },
+  {
+   "id": "E-g2-72",
+   "fen": "1k2r2r/pp3P2/7p/1N6/4B1br/2N5/PP1Q2PP/R1K4R w - - 0 1",
+   "distance": 5,
+   "nearest_corpus": "S1",
+   "mode": "guided",
+   "seed": 2
+  },
+  {
+   "id": "E-g2-73",
+   "fen": "1k2r3/pp4p1/4b3/1N6/P3B3/8/p1PQ2PP/R1K1R3 w - - 0 1",
+   "distance": 9,
+   "nearest_corpus": "C1",
+   "mode": "guided",
+   "seed": 2
+  },
+  {
+   "id": "E-g2-74",
+   "fen": "1k2r3/pp4pP/8/1N6/4B1b1/8/P1PQ2PP/R1K1R3 w - - 0 1",
+   "distance": 5,
+   "nearest_corpus": "C1",
+   "mode": "guided",
+   "seed": 2
+  },
+  {
+   "id": "E-g2-75",
+   "fen": "1k2r3/pp6/7p/PN6/4B1br/2N5/3Q1PPP/2K4R w - - 0 1",
+   "distance": 10,
+   "nearest_corpus": "S1",
+   "mode": "guided",
+   "seed": 2
+  },
+  {
+   "id": "E-g2-76",
+   "fen": "1k2r3/pp4pp/5p1n/1N6/4B1b1/8/PPPQ1RPP/2K4R w - - 0 1",
+   "distance": 4,
+   "nearest_corpus": "C1",
+   "mode": "guided",
+   "seed": 2
+  },
+  {
+   "id": "E-g2-77",
+   "fen": "1k2r3/pp4pp/8/1N6/4B1b1/8/PNPQ2PP/R1K5 w - - 0 1",
+   "distance": 3,
+   "nearest_corpus": "C1",
+   "mode": "guided",
+   "seed": 2
+  },
+  {
+   "id": "E-g2-78",
+   "fen": "1k2r2r/pp4b1/7p/1Np5/4B1br/2N3P1/PPPQ3P/R1K4R w - - 0 1",
+   "distance": 3,
+   "nearest_corpus": "S1",
+   "mode": "guided",
+   "seed": 2
+  },
+  {
+   "id": "E-g2-79",
+   "fen": "1k2r2r/pp3p2/7p/PN5p/4B1br/2N5/1PpQ2PP/2K4R w - - 0 1",
+   "distance": 8,
+   "nearest_corpus": "S1",
+   "mode": "guided",
+   "seed": 2
+  },
+  {
+   "id": "E-g2-80",
+   "fen": "1k2r3/pp6/8/1N2P3/4B1b1/1b6/PPBQ3P/2K4R w - - 0 1",
+   "distance": 8,
+   "nearest_corpus": "C1",
+   "mode": "guided",
+   "seed": 2
+  },
+  {
+   "id": "E-g2-81",
+   "fen": "1k2r2r/pp3pb1/7p/1N6/4B1br/2N1n3/PP1Q2PP/R1K4R w - - 0 1",
+   "distance": 3,
+   "nearest_corpus": "S1",
+   "mode": "guided",
+   "seed": 2
+  },
+  {
+   "id": "E-g2-82",
+   "fen": "1k2r3/pp3Np1/8/1N6/4B1b1/8/PPPQ2PP/R1K5 w - - 0 1",
+   "distance": 3,
+   "nearest_corpus": "C1",
+   "mode": "guided",
+   "seed": 2
+  },
+  {
+   "id": "E-g2-83",
+   "fen": "1k2r3/pp4p1/8/1N6/4B1b1/8/P1PQ3P/R1K4R w - - 0 1",
+   "distance": 3,
+   "nearest_corpus": "C1",
+   "mode": "guided",
+   "seed": 2
+  },
+  {
+   "id": "E-g2-84",
+   "fen": "1k2r3/pp4pp/5n2/1N6/4B1b1/8/P1BQ1RPP/2K5 w - - 0 1",
+   "distance": 7,
+   "nearest_corpus": "C1",
+   "mode": "guided",
+   "seed": 2
+  },
+  {
+   "id": "E-g2-85",
+   "fen": "1k2r2r/pp3pb1/7p/1N6/4B1b1/2N3P1/P1pQ2PP/R1K4R w - - 0 1",
+   "distance": 4,
+   "nearest_corpus": "S1",
+   "mode": "guided",
+   "seed": 2
+  },
+  {
+   "id": "E-g2-86",
+   "fen": "1k2r2r/pp3p2/7p/1N6/2P1B1br/2N3P1/PP1Q2PP/R1K4R w - - 0 1",
+   "distance": 3,
+   "nearest_corpus": "S1",
+   "mode": "guided",
+   "seed": 2
+  },
+  {
+   "id": "E-g2-87",
+   "fen": "1k2r3/pp4p1/4b3/1N6/4B3/8/p1PQ3P/R1K1R3 w - - 0 1",
+   "distance": 9,
+   "nearest_corpus": "C1",
+   "mode": "guided",
+   "seed": 2
+  },
+  {
+   "id": "E-g2-88",
+   "fen": "1k2r2r/pp6/7p/1N5P/4B1br/2N5/PP1Q2PP/R1K4R w - - 0 1",
+   "distance": 5,
+   "nearest_corpus": "S1",
+   "mode": "guided",
+   "seed": 2
+  },
+  {
+   "id": "E-g2-89",
+   "fen": "1k2r3/pp1b4/6br/1N6/4B2N/8/PPPQ2P1/R1K4R w - - 0 1",
+   "distance": 1,
+   "nearest_corpus": "C4",
+   "mode": "guided",
+   "seed": 2
+  },
+  {
+   "id": "E-g2-90",
+   "fen": "1k2r3/pp2B1Pp/8/1N2P3/4B1b1/8/PPPQ3P/R1K4R w - - 0 1",
+   "distance": 5,
+   "nearest_corpus": "C1",
+   "mode": "guided",
+   "seed": 2
+  },
+  {
+   "id": "E-g2-91",
+   "fen": "1k2r3/pp4p1/5B2/pN2P3/4B1b1/7p/PPPQ1P1P/R1K4R w - - 0 1",
+   "distance": 7,
+   "nearest_corpus": "C1",
+   "mode": "guided",
+   "seed": 2
+  },
+  {
+   "id": "E-g2-92",
+   "fen": "1k2r3/pp4p1/5B2/1N2P2n/4B1b1/7p/p1PQ4/R1K4R w - - 0 1",
+   "distance": 10,
+   "nearest_corpus": "C1",
+   "mode": "guided",
+   "seed": 2
+  },
+  {
+   "id": "E-g2-93",
+   "fen": "1k2r2b/pp4p1/5B2/1N2P3/4B1b1/7p/pPPQ1P1P/R1K4R w - - 0 1",
+   "distance": 9,
+   "nearest_corpus": "C1",
+   "mode": "guided",
+   "seed": 2
+  },
+  {
+   "id": "E-g2-94",
+   "fen": "1k2r1n1/pp3pp1/8/1N3bn1/4B1b1/5PP1/PPPQ1PP1/2K5 w - - 0 1",
+   "distance": 3,
+   "nearest_corpus": "S3",
+   "mode": "guided",
+   "seed": 2
+  },
+  {
+   "id": "E-g2-95",
+   "fen": "1k2r3/pp4p1/8/pN2P3/4B1b1/7p/PPPQ1P1P/R1K4R w - - 0 1",
+   "distance": 6,
+   "nearest_corpus": "C1",
+   "mode": "guided",
+   "seed": 2
+  },
+  {
+   "id": "E-g2-96",
+   "fen": "1k2r3/pp4pp/4b3/1N6/4B3/8/p1PQ2P1/R1K1R3 w - - 0 1",
+   "distance": 8,
+   "nearest_corpus": "C1",
+   "mode": "guided",
+   "seed": 2
+  },
+  {
+   "id": "E-g2-97",
+   "fen": "1k2r1b1/pp4pp/5p2/1N6/4B1b1/8/PPPQ1RPP/2K4R w - - 0 1",
+   "distance": 4,
+   "nearest_corpus": "C1",
+   "mode": "guided",
+   "seed": 2
+  },
+  {
+   "id": "E-g2-98",
+   "fen": "1k2r3/pp2P1pp/8/1N6/4B1b1/8/PNPQ2P1/R1K5 w - - 0 1",
+   "distance": 5,
+   "nearest_corpus": "C1",
+   "mode": "guided",
+   "seed": 2
+  },
+  {
+   "id": "E-g2-99",
+   "fen": "1k2r3/pp5p/b7/1N2P3/4B1b1/8/pPBQ4/R1K4N w - - 0 1",
+   "distance": 11,
+   "nearest_corpus": "C1",
+   "mode": "guided",
+   "seed": 2
+  },
+  {
+   "id": "E-g2-100",
+   "fen": "1k2r3/pp5p/7P/1N2P3/4B1b1/8/PPBQ4/2K1R2R w - - 0 1",
+   "distance": 9,
+   "nearest_corpus": "C1",
+   "mode": "guided",
+   "seed": 2
+  },
+  {
+   "id": "E-g2-101",
+   "fen": "1k2r3/pp4p1/4b3/1N2P3/4B3/8/p1PQ3P/R1K1R3 w - - 0 1",
+   "distance": 10,
+   "nearest_corpus": "C1",
+   "mode": "guided",
+   "seed": 2
+  },
+  {
+   "id": "E-g2-102",
+   "fen": "1k2r3/pp4pp/4b3/1N6/4B3/8/NPPQ2PP/R1KBR3 w - - 0 1",
+   "distance": 7,
+   "nearest_corpus": "C1",
+   "mode": "guided",
+   "seed": 2
+  },
+  {
+   "id": "E-g2-103",
+   "fen": "1k2rn2/pp4p1/8/1N6/4B1b1/8/PPPQ2PP/R1K4R w - - 0 1",
+   "distance": 2,
+   "nearest_corpus": "C1",
+   "mode": "guided",
+   "seed": 2
+  },
+  {
+   "id": "E-g2-104",
+   "fen": "1k2r3/pp3pb1/7p/1N6/4B1b1/2N2rP1/PPPQ1PPP/R1K5 w - - 0 1",
+   "distance": 5,
+   "nearest_corpus": "S1",
+   "mode": "guided",
+   "seed": 2
+  },
+  {
+   "id": "E-g2-105",
+   "fen": "1k2r2r/pp3p2/7p/1N6/4B1b1/2N3PP/P1pQ2PP/R1K4R w - - 0 1",
+   "distance": 6,
+   "nearest_corpus": "S1",
+   "mode": "guided",
+   "seed": 2
+  },
+  {
+   "id": "E-g2-106",
+   "fen": "1k2r3/pp4pp/6P1/1NP1P3/4B1b1/8/PP1Q3P/R1K4R w - - 0 1",
+   "distance": 5,
+   "nearest_corpus": "C1",
+   "mode": "guided",
+   "seed": 2
+  },
+  {
+   "id": "E-g2-107",
+   "fen": "1k2r2r/pp3p2/7p/PN6/4B1br/2N4P/1PpQ2PP/2K4R w - - 0 1",
+   "distance": 8,
+   "nearest_corpus": "S1",
+   "mode": "guided",
+   "seed": 2
+  },
+  {
+   "id": "E-g2-108",
+   "fen": "1k2r3/pp4pp/4b3/1N3P2/4B3/8/P1PQ2PP/R1K1R3 w - - 0 1",
+   "distance": 6,
+   "nearest_corpus": "C1",
+   "mode": "guided",
+   "seed": 2
+  },
+  {
+   "id": "E-g2-109",
+   "fen": "1k2r3/pp5p/5B2/1N2P3/4B1b1/8/PPPQ3P/R1K4R w - - 0 1",
+   "distance": 4,
+   "nearest_corpus": "C1",
+   "mode": "guided",
+   "seed": 2
+  },
+  {
+   "id": "E-g2-110",
+   "fen": "1k2r3/pp4pp/4b3/1N2P3/4B3/8/PPPQ2P1/R1K1R3 w - - 0 1",
+   "distance": 6,
+   "nearest_corpus": "C1",
+   "mode": "guided",
+   "seed": 2
+  },
+  {
+   "id": "E-g2-111",
+   "fen": "1k2r2r/pp3p2/7p/1N6/4B1br/2N3P1/PPPQ2PP/R1K5 w - - 0 1",
+   "distance": 2,
+   "nearest_corpus": "S1",
+   "mode": "guided",
+   "seed": 2
+  },
+  {
+   "id": "E-g2-112",
+   "fen": "1k2r2n/pp4pp/4b3/1N4P1/4B3/8/p1PQ2P1/R1K1R3 w - - 0 1",
+   "distance": 10,
+   "nearest_corpus": "C1",
+   "mode": "guided",
+   "seed": 2
+  },
+  {
+   "id": "E-g2-113",
+   "fen": "1k2r2r/pp3pb1/5P1p/1N6/4B1br/2N5/PP1Q3P/R1K4R w - - 0 1",
+   "distance": 4,
+   "nearest_corpus": "S1",
+   "mode": "guided",
+   "seed": 2
+  },
+  {
+   "id": "E-g2-114",
+   "fen": "1k2r2r/pp3Pb1/7p/1Np5/4B1br/2N3P1/P1PQ3P/R1K4R w - - 0 1",
+   "distance": 5,
+   "nearest_corpus": "S1",
+   "mode": "guided",
+   "seed": 2
+  },
+  {
+   "id": "E-g2-115",
+   "fen": "1k2r3/pp4pp/8/1N6/4B1b1/8/pPPQ1RPP/R1K5 w - - 0 1",
+   "distance": 4,
+   "nearest_corpus": "C1",
+   "mode": "guided",
+   "seed": 2
+  },
+  {
+   "id": "E-g2-116",
+   "fen": "1k2rr2/pp4pp/5n1p/1N3b2/4B3/8/PPPQ2PP/R1K4R w - - 0 1",
+   "distance": 1,
+   "nearest_corpus": "C2",
+   "mode": "guided",
+   "seed": 2
+  },
+  {
+   "id": "E-g2-117",
+   "fen": "1k2r3/pp4pp/5n2/1N6/4B1b1/8/PPBQ1RPP/2K4R w - - 0 1",
+   "distance": 5,
+   "nearest_corpus": "C1",
+   "mode": "guided",
+   "seed": 2
+  },
+  {
+   "id": "E-g2-118",
+   "fen": "1k2r3/pp4pp/8/1N6/4B1b1/8/pPPQ1PPP/R1K5 w - - 0 1",
+   "distance": 4,
+   "nearest_corpus": "C1",
+   "mode": "guided",
+   "seed": 2
+  },
+  {
+   "id": "E-g2-119",
+   "fen": "1k2r3/pp1p2pp/4b3/1N6/4B3/8/p1PQ2P1/R1K1R3 w - - 0 1",
+   "distance": 9,
+   "nearest_corpus": "C1",
+   "mode": "guided",
+   "seed": 2
+  },
+  {
+   "id": "E-g2-120",
+   "fen": "1k2r3/pp4pp/6B1/1N6/4B1b1/1N4P1/PPPQ1RP1/2K4R w - - 0 1",
+   "distance": 6,
+   "nearest_corpus": "C1",
+   "mode": "guided",
+   "seed": 2
+  },
+  {
+   "id": "E-g2-121",
+   "fen": "1k2rr2/pp4pp/5n1p/1N3b2/4B3/1P6/PPPQ3P/R1K4R w - - 0 1",
+   "distance": 3,
+   "nearest_corpus": "C2",
+   "mode": "guided",
+   "seed": 2
+  },
+  {
+   "id": "E-g2-122",
+   "fen": "1k2r3/pp4pp/5P2/1N6/4B1b1/8/PPPQ2P1/R1K4R w - - 0 1",
+   "distance": 2,
+   "nearest_corpus": "C1",
+   "mode": "guided",
+   "seed": 2
+  },
+  {
+   "id": "E-g2-123",
+   "fen": "1k2r3/pp4p1/5B2/1N2P2n/4B1b1/7p/PPpQ4/R1K4R w - - 0 1",
+   "distance": 9,
+   "nearest_corpus": "C1",
+   "mode": "guided",
+   "seed": 2
+  },
+  {
+   "id": "E-g2-124",
+   "fen": "1k2r3/pp3pb1/5R1p/1N6/4B1br/2N1P3/PP1Q2PP/2K4R w - - 0 1",
+   "distance": 6,
+   "nearest_corpus": "S1",
+   "mode": "guided",
+   "seed": 2
+  },
+  {
+   "id": "E-g2-125",
+   "fen": "1k2r3/pp5p/8/1N2P3/4B1b1/8/pPBQ4/R1K4R w - - 0 1",
+   "distance": 8,
+   "nearest_corpus": "C1",
+   "mode": "guided",
+   "seed": 2
+  },
+  {
+   "id": "E-g2-126",
+   "fen": "1k2r3/pp5p/8/1N2P3/4B1b1/8/pPBQ3P/R1K4R w - - 0 1",
+   "distance": 7,
+   "nearest_corpus": "C1",
+   "mode": "guided",
+   "seed": 2
+  },
+  {
+   "id": "E-g2-127",
+   "fen": "1k2r3/pp3Bp1/8/1N6/4B1b1/8/PPPQ2PP/R1K5 w - - 0 1",
+   "distance": 3,
+   "nearest_corpus": "C1",
+   "mode": "guided",
+   "seed": 2
+  },
+  {
+   "id": "E-g2-128",
+   "fen": "1k2rr2/pp4pp/5n1p/1N3b2/4B3/8/PPpQ2PP/R1K4R w - - 0 1",
+   "distance": 3,
+   "nearest_corpus": "C2",
+   "mode": "guided",
+   "seed": 2
+  },
+  {
+   "id": "E-g2-129",
+   "fen": "1k2r3/pp5p/7P/1N6/4B1bP/1b6/PPBQ3P/2K1R2R w - - 0 1",
+   "distance": 9,
+   "nearest_corpus": "C1",
+   "mode": "guided",
+   "seed": 2
+  },
+  {
+   "id": "E-g2-130",
+   "fen": "1k2r2r/pp3Pb1/7p/1N6/4B1br/2N3P1/PP1Q2Pp/R1K4R w - - 0 1",
+   "distance": 5,
+   "nearest_corpus": "S1",
+   "mode": "guided",
+   "seed": 2
+  },
+  {
+   "id": "E-g2-131",
+   "fen": "1k2r2r/pp3pb1/7p/1N6/4B1b1/2B3P1/PPpQ2PP/R1K4R w - - 0 1",
+   "distance": 5,
+   "nearest_corpus": "S1",
+   "mode": "guided",
+   "seed": 2
+  },
+  {
+   "id": "E-g2-132",
+   "fen": "1k2r3/pp1b4/6br/1N6/4B2N/8/PPPQ2P1/R1K5 w - - 0 1",
+   "distance": 2,
+   "nearest_corpus": "C4",
+   "mode": "guided",
+   "seed": 2
+  },
+  {
+   "id": "E-g2-133",
+   "fen": "1k2r3/pp4pp/8/1N6/4B1b1/8/PPNQ2PP/R1K4R w - - 0 1",
+   "distance": 2,
+   "nearest_corpus": "C1",
+   "mode": "guided",
+   "seed": 2
+  },
+  {
+   "id": "E-g2-134",
+   "fen": "1k2r2r/pp3p2/7p/pN6/4B1br/2N5/1P1Q2PP/2K4R w - - 0 1",
+   "distance": 6,
+   "nearest_corpus": "S1",
+   "mode": "guided",
+   "seed": 2
+  },
+  {
+   "id": "E-g2-135",
+   "fen": "1k2r2r/pp3pb1/7p/1N6/4B1b1/2N3P1/PPPQ1PP1/R1K5 w - - 0 1",
+   "distance": 4,
+   "nearest_corpus": "S1",
+   "mode": "guided",
+   "seed": 2
+  },
+  {
+   "id": "E-g2-136",
+   "fen": "1k2r3/pp4Pb/8/1N6/4B1b1/5N2/PPPQ1RPP/2K4R w - - 0 1",
+   "distance": 7,
+   "nearest_corpus": "C1",
+   "mode": "guided",
+   "seed": 2
+  },
+  {
+   "id": "E-g2-137",
+   "fen": "1k2r3/pp5p/8/1N2P3/4B1b1/8/PPbQ4/2K4R w - - 0 1",
+   "distance": 7,
+   "nearest_corpus": "C1",
+   "mode": "guided",
+   "seed": 2
+  },
+  {
+   "id": "E-g2-138",
+   "fen": "1k2r3/pp1p2pp/4b3/1N6/4B3/5b2/p1PQ2P1/R1K1R3 w - - 0 1",
+   "distance": 10,
+   "nearest_corpus": "C1",
+   "mode": "guided",
+   "seed": 2
+  },
+  {
+   "id": "E-g2-139",
+   "fen": "1k2r3/pp4p1/8/1N6/4B1b1/8/p1PQ2PP/R1K4R w - - 0 1",
+   "distance": 4,
+   "nearest_corpus": "C1",
+   "mode": "guided",
+   "seed": 2
+  },
+  {
+   "id": "E-g2-140",
+   "fen": "1k2r2r/pp3p2/7p/1N6/4B1b1/2N1P1PP/P1pQ2P1/R1K4R w - - 0 1",
+   "distance": 8,
+   "nearest_corpus": "S1",
+   "mode": "guided",
+   "seed": 2
+  },
+  {
+   "id": "E-g2-141",
+   "fen": "1k2r2r/pp6/8/PN6/4B1br/2N5/3Q1PPP/2K4R w - - 0 1",
+   "distance": 10,
+   "nearest_corpus": "S1",
+   "mode": "guided",
+   "seed": 2
+  },
+  {
+   "id": "E-g2-142",
+   "fen": "1k2rrn1/pp4pp/5n2/1N3b2/4B3/2P5/PPNQ2P1/R1K4R w - - 0 1",
+   "distance": 5,
+   "nearest_corpus": "C2",
+   "mode": "guided",
+   "seed": 2
+  },
+  {
+   "id": "E-g2-143",
+   "fen": "1k2r2r/pp3pb1/7p/1N6/4B1b1/2B3N1/PPpQ2PP/R1K4R w - - 0 1",
+   "distance": 7,
+   "nearest_corpus": "S1",
+   "mode": "guided",
+   "seed": 2
+  },
+  {
+   "id": "E-g2-144",
+   "fen": "1k2r3/pp4p1/5P2/1N6/4B1b1/6P1/PPPQ2P1/R1K4R w - - 0 1",
+   "distance": 4,
+   "nearest_corpus": "C1",
+   "mode": "guided",
+   "seed": 2
+  },
+  {
+   "id": "E-g2-145",
+   "fen": "1k2r1b1/pp4pp/5p2/1N6/4B1bp/8/PPPQ1RPP/2K4R w - - 0 1",
+   "distance": 5,
+   "nearest_corpus": "C1",
+   "mode": "guided",
+   "seed": 2
+  },
+  {
+   "id": "E-g2-146",
+   "fen": "1k2rrn1/pp4pp/7p/1N3bn1/4B3/8/PPPQ2PP/R1K4R w - - 0 1",
+   "distance": 2,
+   "nearest_corpus": "C2",
+   "mode": "guided",
+   "seed": 2
+  }
+ ],
+ "rejected_at_finalize": []
+}

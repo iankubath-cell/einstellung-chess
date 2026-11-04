@@ -1,0 +1,85 @@
+{
+  "pipeline_version": "0.3",
+  "run_id": "20261103-215227",
+  "generated": "2026-11-04T04:49:07",
+  "provenance": {
+    "pipeline_version": "0.3",
+    "run_id": "20261103-215227",
+    "started": "2026-11-03T21:52:28",
+    "python": "3.14.5",
+    "platform": "Windows 11",
+    "machine": "AMD64",
+    "inputs": {
+      "oracle.py": "c89dbbaf58e401b02e4c4c3c527800cbcd80af0351b89f58aee745030c00ec36",
+      "composer_skeleton.py": "d2e7af3ada106bb04f18e19b04d4a46e9bad1e9a4289864452b574fa861309d2",
+      "positions\\canonical.json": "4e3fa59b336b6b70e93f121e4a23cd4f49a8d6ad0721d4286bed70ac6be27bbf",
+      "fixtures\\rejects.json": "ab174207b7285a901df2d7b892db78f667b3ed259fdaa27709e0d3c5884a59a9",
+      "composer.py": "0f4acc884281575d21cc84c7d11bba8135d4155407db8b3dd384d10791fd12e7",
+      "pipeline.py": "6ac8a11aafc2dcb6a1f143fb70c0743037b65122ed2ea878bc2222610493a91b"
+    },
+    "imports": {
+      "python_chess": "1.11.2"
+    },
+    "stockfish_path": "C:/Users/44777/Downloads/stockfish-windows-x86-64-universal/stockfish/stockfish-windows-x86-64-universal.exe",
+    "engine": {
+      "engine_id": "Stockfish 19",
+      "engine_author": "the Stockfish developers (see AUTHORS file)",
+      "threads": "1 (applied)",
+      "hash": "256 (applied)"
+    }
+  },
+  "steps": {
+    "preflight": {
+      "exit": 0,
+      "seconds": 0.0,
+      "ok": true
+    },
+    "compose-search": {
+      "exit": 0,
+      "seconds": 1695.8
+    },
+    "compose-finalize": {
+      "exit": 0,
+      "seconds": 489.5
+    },
+    "compose": {
+      "exit": 0,
+      "seconds": 2185.4,
+      "files": 148
+    },
+    "lint": {
+      "exit": 0,
+      "seconds": 0.4,
+      "examined": 146,
+      "flagged": 0
+    },
+    "filter": {
+      "exit": 0,
+      "seconds": 496.1,
+      "counts": {
+        "PASS": 146
+      },
+      "errors": 0
+    },
+    "certify": {
+      "exit": 0,
+      "seconds": 22308.8,
+      "counts": {
+        "PASS": 146
+      },
+      "errors": 0
+    }
+  },
+  "counts": {
+    "lint": {
+      "clean": 146
+    },
+    "filter": {
+      "PASS": 146
+    },
+    "certify": {
+      "PASS": 146
+    }
+  },
+  "note": "Nothing here is a finding until it shows PASS at two-engine tier in the certify stage. Everything else is a candidate."
+}

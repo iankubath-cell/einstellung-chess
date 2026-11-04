@@ -1,0 +1,5435 @@
+{
+ "composer_version": "0.1",
+ "mode": "guided",
+ "seed": 2,
+ "evals_budget": 400,
+ "first_move": "Qd6+",
+ "familiar": [
+  "Qd6+",
+  "Ka8",
+  "Nc7+",
+  "Kb8",
+  "Na6+",
+  "Ka8",
+  "Qb8+",
+  "Rxb8",
+  "Nc7#"
+ ],
+ "declared": {
+  "short": 3,
+  "familiar": 5
+ },
+ "search_budget_nodes": 40000,
+ "skeleton_frame": "1k2r3/pp6/8/1N6/8/8/3Q4/2K5 w - - 0 1",
+ "stats": {
+  "evals": 400,
+  "prefilter_rejects": 66,
+  "cache_hits": 9,
+  "pass": 146,
+  "codes": {
+   "line_replay_failed": 56,
+   "refuted_defence": 117,
+   "PASS": 146,
+   "faster_mate_leak": 15,
+   "alt_first_move_mates": 59,
+   "mate_in_1": 2,
+   "no_forced_mate": 3,
+   "budget_exceeded": 2
+  },
+  "guided_repairs": 163,
+  "guided_repair_passes": 9
+ },
+ "survivors": [
+  {
+   "name": "g2-1",
+   "fen": "1k2r3/pp4pp/8/1N2P3/4B1b1/8/PPPQ3P/R1K4R w - - 0 1",
+   "lineage": [
+    {
+     "parent_fen": "1k2r3/pp4pp/8/1N6/4B1b1/8/PPPQ2PP/R1K4R w - - 0 1",
+     "parent": "C1",
+     "mutations": [
+      "move white P g2->e5"
+     ],
+     "verdict": "PASS (fast)"
+    }
+   ],
+   "iteration": 3,
+   "evals_so_far": 7,
+   "nearest_corpus": "C1",
+   "distance": 2
+  },
+  {
+   "name": "g2-2",
+   "fen": "1k2r2r/pp3pb1/7p/1N6/4B1br/2N3P1/PP1Q2PP/R1K4R w - - 0 1",
+   "lineage": [
+    {
+     "parent_fen": "1k2r2r/pp3pb1/7p/1N6/4B1br/2N3P1/PPPQ2PP/R1K4R w - - 0 1",
+     "parent": "S1",
+     "mutations": [
+      "remove white P c2"
+     ],
+     "verdict": "PASS (fast)"
+    }
+   ],
+   "iteration": 8,
+   "evals_so_far": 8,
+   "nearest_corpus": "S1",
+   "distance": 1
+  },
+  {
+   "name": "g2-3",
+   "fen": "1k2r2r/pp3pb1/7p/1N6/4B1br/2N5/PP1Q2PP/R1K4R w - - 0 1",
+   "lineage": [
+    {
+     "parent_fen": "1k2r2r/pp3pb1/7p/1N6/4B1br/2N3P1/PPPQ2PP/R1K4R w - - 0 1",
+     "parent": "S1",
+     "mutations": [
+      "remove white P c2"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r2r/pp3pb1/7p/1N6/4B1br/2N3P1/PP1Q2PP/R1K4R w - - 0 1",
+     "parent": "g2-2",
+     "mutations": [
+      "remove white P g3"
+     ],
+     "verdict": "PASS (fast)"
+    }
+   ],
+   "iteration": 10,
+   "evals_so_far": 9,
+   "nearest_corpus": "S1",
+   "distance": 2
+  },
+  {
+   "name": "g2-4",
+   "fen": "1k2r3/pp5p/8/1N2P3/4B1b1/8/PPBQ3P/R1K4R w - - 0 1",
+   "lineage": [
+    {
+     "parent_fen": "1k2r3/pp4pp/8/1N6/4B1b1/8/PPPQ2PP/R1K4R w - - 0 1",
+     "parent": "C1",
+     "mutations": [
+      "move white P g2->e5"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp4pp/8/1N2P3/4B1b1/8/PPPQ3P/R1K4R w - - 0 1",
+     "parent": "g2-1",
+     "mutations": [
+      "remove black P g7",
+      "retype white P->B c2"
+     ],
+     "verdict": "PASS (fast)"
+    }
+   ],
+   "iteration": 16,
+   "evals_so_far": 12,
+   "nearest_corpus": "C1",
+   "distance": 5
+  },
+  {
+   "name": "g2-5",
+   "fen": "1k2r3/pp4pp/8/1N6/4B1b1/8/PPPQ1RPP/2K4R w - - 0 1",
+   "lineage": [
+    {
+     "parent_fen": "1k2r3/pp4pp/8/1N6/4B1b1/8/PPPQ2PP/R1K4R w - - 0 1",
+     "parent": "C1",
+     "mutations": [
+      "move white R a1->f2"
+     ],
+     "verdict": "PASS (fast)"
+    }
+   ],
+   "iteration": 18,
+   "evals_so_far": 13,
+   "nearest_corpus": "C1",
+   "distance": 2
+  },
+  {
+   "name": "g2-6",
+   "fen": "1k2r3/pp4p1/8/1N6/4B1b1/8/PPPQ2PP/R1K4R w - - 0 1",
+   "lineage": [
+    {
+     "parent_fen": "1k2r3/pp4pp/8/1N6/4B1b1/8/PPPQ2PP/R1K4R w - - 0 1",
+     "parent": "C1",
+     "mutations": [
+      "remove black P h7"
+     ],
+     "verdict": "PASS (fast)"
+    }
+   ],
+   "iteration": 22,
+   "evals_so_far": 14,
+   "nearest_corpus": "C1",
+   "distance": 1
+  },
+  {
+   "name": "g2-7",
+   "fen": "1k2r3/pp4pp/5B2/1N2P3/4B1b1/8/PPPQ3P/R1K4R w - - 0 1",
+   "lineage": [
+    {
+     "parent_fen": "1k2r3/pp4pp/8/1N6/4B1b1/8/PPPQ2PP/R1K4R w - - 0 1",
+     "parent": "C1",
+     "mutations": [
+      "move white P g2->e5"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp4pp/8/1N2P3/4B1b1/8/PPPQ3P/R1K4R w - - 0 1",
+     "parent": "g2-1",
+     "mutations": [
+      "add white B f6"
+     ],
+     "verdict": "PASS (fast)"
+    }
+   ],
+   "iteration": 23,
+   "evals_so_far": 15,
+   "nearest_corpus": "C1",
+   "distance": 3
+  },
+  {
+   "name": "g2-8",
+   "fen": "1k2r3/pp4p1/5B2/1N2P3/4B1b1/7p/PPPQ3P/R1K4R w - - 0 1",
+   "lineage": [
+    {
+     "parent_fen": "1k2r3/pp4pp/8/1N6/4B1b1/8/PPPQ2PP/R1K4R w - - 0 1",
+     "parent": "C1",
+     "mutations": [
+      "move white P g2->e5"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp4pp/8/1N2P3/4B1b1/8/PPPQ3P/R1K4R w - - 0 1",
+     "parent": "g2-1",
+     "mutations": [
+      "add white B f6"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp4pp/5B2/1N2P3/4B1b1/8/PPPQ3P/R1K4R w - - 0 1",
+     "parent": "g2-7",
+     "mutations": [
+      "move black P h7->h3"
+     ],
+     "verdict": "PASS (fast)"
+    }
+   ],
+   "iteration": 24,
+   "evals_so_far": 16,
+   "nearest_corpus": "C1",
+   "distance": 5
+  },
+  {
+   "name": "g2-9",
+   "fen": "1k2r3/pp4pp/8/1N6/4B1b1/8/PPPQ2PP/R1K1R3 w - - 0 1",
+   "lineage": [
+    {
+     "parent_fen": "1k2r3/pp4pp/8/1N6/4B1b1/8/PPPQ2PP/R1K4R w - - 0 1",
+     "parent": "C1",
+     "mutations": [
+      "move white R h1->e1"
+     ],
+     "verdict": "PASS (fast)"
+    }
+   ],
+   "iteration": 26,
+   "evals_so_far": 17,
+   "nearest_corpus": "C1",
+   "distance": 2
+  },
+  {
+   "name": "g2-10",
+   "fen": "1k2r2r/pp3pb1/7p/1N6/4B1br/2N3P1/PPPQ3P/R1K4R w - - 0 1",
+   "lineage": [
+    {
+     "parent_fen": "1k2r2r/pp3pb1/7p/1N6/4B1br/2N3P1/PPPQ2PP/R1K4R w - - 0 1",
+     "parent": "S1",
+     "mutations": [
+      "remove white P g2"
+     ],
+     "verdict": "PASS (fast)"
+    }
+   ],
+   "iteration": 28,
+   "evals_so_far": 18,
+   "nearest_corpus": "S1",
+   "distance": 1
+  },
+  {
+   "name": "g2-11",
+   "fen": "1k2r3/pp5p/8/1N2P3/4B1b1/8/PPBQ4/R1K4R w - - 0 1",
+   "lineage": [
+    {
+     "parent_fen": "1k2r3/pp4pp/8/1N6/4B1b1/8/PPPQ2PP/R1K4R w - - 0 1",
+     "parent": "C1",
+     "mutations": [
+      "move white P g2->e5"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp4pp/8/1N2P3/4B1b1/8/PPPQ3P/R1K4R w - - 0 1",
+     "parent": "g2-1",
+     "mutations": [
+      "remove black P g7",
+      "retype white P->B c2"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp5p/8/1N2P3/4B1b1/8/PPBQ3P/R1K4R w - - 0 1",
+     "parent": "g2-4",
+     "mutations": [
+      "remove white P h2"
+     ],
+     "verdict": "PASS (fast)"
+    }
+   ],
+   "iteration": 31,
+   "evals_so_far": 20,
+   "nearest_corpus": "C1",
+   "distance": 6
+  },
+  {
+   "name": "g2-12",
+   "fen": "1k2r2r/pp3p2/7p/1N6/4B1br/2N3P1/PPPQ2PP/R1K4R w - - 0 1",
+   "lineage": [
+    {
+     "parent_fen": "1k2r2r/pp3pb1/7p/1N6/4B1br/2N3P1/PPPQ2PP/R1K4R w - - 0 1",
+     "parent": "S1",
+     "mutations": [
+      "remove black B g7"
+     ],
+     "verdict": "PASS (fast)"
+    }
+   ],
+   "iteration": 33,
+   "evals_so_far": 21,
+   "nearest_corpus": "S1",
+   "distance": 1
+  },
+  {
+   "name": "g2-13",
+   "fen": "1k2r2r/pp3p2/7p/1N6/4B1br/2N5/PP1Q2PP/R1K4R w - - 0 1",
+   "lineage": [
+    {
+     "parent_fen": "1k2r2r/pp3pb1/7p/1N6/4B1br/2N3P1/PPPQ2PP/R1K4R w - - 0 1",
+     "parent": "S1",
+     "mutations": [
+      "remove white P c2"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r2r/pp3pb1/7p/1N6/4B1br/2N3P1/PP1Q2PP/R1K4R w - - 0 1",
+     "parent": "g2-2",
+     "mutations": [
+      "remove white P g3"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r2r/pp3pb1/7p/1N6/4B1br/2N5/PP1Q2PP/R1K4R w - - 0 1",
+     "parent": "g2-3",
+     "mutations": [
+      "remove black B g7"
+     ],
+     "verdict": "PASS (fast)"
+    }
+   ],
+   "iteration": 34,
+   "evals_so_far": 22,
+   "nearest_corpus": "S1",
+   "distance": 3
+  },
+  {
+   "name": "g2-14",
+   "fen": "1k2r3/pp4p1/5B2/1N2P3/4B1b1/7p/PPPQ1P1P/R1K4R w - - 0 1",
+   "lineage": [
+    {
+     "parent_fen": "1k2r3/pp4pp/8/1N6/4B1b1/8/PPPQ2PP/R1K4R w - - 0 1",
+     "parent": "C1",
+     "mutations": [
+      "move white P g2->e5"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp4pp/8/1N2P3/4B1b1/8/PPPQ3P/R1K4R w - - 0 1",
+     "parent": "g2-1",
+     "mutations": [
+      "add white B f6"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp4pp/5B2/1N2P3/4B1b1/8/PPPQ3P/R1K4R w - - 0 1",
+     "parent": "g2-7",
+     "mutations": [
+      "move black P h7->h3"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp4p1/5B2/1N2P3/4B1b1/7p/PPPQ3P/R1K4R w - - 0 1",
+     "parent": "g2-8",
+     "mutations": [
+      "add white P f2"
+     ],
+     "verdict": "PASS (fast)"
+    }
+   ],
+   "iteration": 37,
+   "evals_so_far": 26,
+   "nearest_corpus": "C1",
+   "distance": 6
+  },
+  {
+   "name": "g2-15",
+   "fen": "1k2r3/pp4p1/5B2/1N2P3/4B1b1/7p/pPPQ1P1P/R1K4R w - - 0 1",
+   "lineage": [
+    {
+     "parent_fen": "1k2r3/pp4pp/8/1N6/4B1b1/8/PPPQ2PP/R1K4R w - - 0 1",
+     "parent": "C1",
+     "mutations": [
+      "move white P g2->e5"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp4pp/8/1N2P3/4B1b1/8/PPPQ3P/R1K4R w - - 0 1",
+     "parent": "g2-1",
+     "mutations": [
+      "add white B f6"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp4pp/5B2/1N2P3/4B1b1/8/PPPQ3P/R1K4R w - - 0 1",
+     "parent": "g2-7",
+     "mutations": [
+      "move black P h7->h3"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp4p1/5B2/1N2P3/4B1b1/7p/PPPQ3P/R1K4R w - - 0 1",
+     "parent": "g2-8",
+     "mutations": [
+      "add white P f2"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp4p1/5B2/1N2P3/4B1b1/7p/PPPQ1P1P/R1K4R w - - 0 1",
+     "parent": "g2-14",
+     "mutations": [
+      "recolour P white->black a2"
+     ],
+     "verdict": "PASS (fast)"
+    }
+   ],
+   "iteration": 41,
+   "evals_so_far": 28,
+   "nearest_corpus": "C1",
+   "distance": 8
+  },
+  {
+   "name": "g2-16",
+   "fen": "1k2r3/pp5p/8/1N2P3/4B1b1/5b2/PPBQ3P/R1K4R w - - 0 1",
+   "lineage": [
+    {
+     "parent_fen": "1k2r3/pp4pp/8/1N6/4B1b1/8/PPPQ2PP/R1K4R w - - 0 1",
+     "parent": "C1",
+     "mutations": [
+      "move white P g2->e5"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp4pp/8/1N2P3/4B1b1/8/PPPQ3P/R1K4R w - - 0 1",
+     "parent": "g2-1",
+     "mutations": [
+      "remove black P g7",
+      "retype white P->B c2"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp5p/8/1N2P3/4B1b1/8/PPBQ3P/R1K4R w - - 0 1",
+     "parent": "g2-4",
+     "mutations": [
+      "add black B f3"
+     ],
+     "verdict": "PASS (fast)"
+    }
+   ],
+   "iteration": 47,
+   "evals_so_far": 34,
+   "nearest_corpus": "C1",
+   "distance": 6
+  },
+  {
+   "name": "g2-17",
+   "fen": "1k2r2r/pp3pb1/7p/1N6/4B1br/2N3P1/PPPQ2PP/2K4R w - - 0 1",
+   "lineage": [
+    {
+     "parent_fen": "1k2r2r/pp3pb1/7p/1N6/4B1br/2N3P1/PPPQ2PP/R1K4R w - - 0 1",
+     "parent": "S1",
+     "mutations": [
+      "remove white R a1"
+     ],
+     "verdict": "PASS (fast)"
+    }
+   ],
+   "iteration": 48,
+   "evals_so_far": 35,
+   "nearest_corpus": "S1",
+   "distance": 1
+  },
+  {
+   "name": "g2-18",
+   "fen": "1k2rrn1/pp4pp/5n2/1N3b2/4B3/2P5/PPPQ2P1/R1K4R w - - 0 1",
+   "lineage": [
+    {
+     "parent_fen": "1k2rrn1/pp4pp/5n1p/1N3b2/4B3/8/PPPQ2PP/R1K4R w - - 0 1",
+     "parent": "C2",
+     "mutations": [
+      "remove black P h6",
+      "move white P h2->c3"
+     ],
+     "verdict": "PASS (fast)"
+    }
+   ],
+   "iteration": 49,
+   "evals_so_far": 36,
+   "nearest_corpus": "C2",
+   "distance": 3
+  },
+  {
+   "name": "g2-19",
+   "fen": "1k2r2b/pp4p1/5B2/1N2P3/4B1b1/7p/PPPQ3P/R1K4R w - - 0 1",
+   "lineage": [
+    {
+     "parent_fen": "1k2r3/pp4pp/8/1N6/4B1b1/8/PPPQ2PP/R1K4R w - - 0 1",
+     "parent": "C1",
+     "mutations": [
+      "move white P g2->e5"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp4pp/8/1N2P3/4B1b1/8/PPPQ3P/R1K4R w - - 0 1",
+     "parent": "g2-1",
+     "mutations": [
+      "add white B f6"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp4pp/5B2/1N2P3/4B1b1/8/PPPQ3P/R1K4R w - - 0 1",
+     "parent": "g2-7",
+     "mutations": [
+      "move black P h7->h3"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp4p1/5B2/1N2P3/4B1b1/7p/PPPQ3P/R1K4R w - - 0 1",
+     "parent": "g2-8",
+     "mutations": [
+      "add black B h8"
+     ],
+     "verdict": "PASS (fast)"
+    }
+   ],
+   "iteration": 51,
+   "evals_so_far": 38,
+   "nearest_corpus": "C1",
+   "distance": 6
+  },
+  {
+   "name": "g2-20",
+   "fen": "1k2r3/pp4pp/5n2/1N6/4B1b1/8/PPPQ1RPP/2K4R w - - 0 1",
+   "lineage": [
+    {
+     "parent_fen": "1k2r3/pp4pp/8/1N6/4B1b1/8/PPPQ2PP/R1K4R w - - 0 1",
+     "parent": "C1",
+     "mutations": [
+      "move white R a1->f2"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp4pp/8/1N6/4B1b1/8/PPPQ1RPP/2K4R w - - 0 1",
+     "parent": "g2-5",
+     "mutations": [
+      "add black N f6"
+     ],
+     "verdict": "PASS (fast)"
+    }
+   ],
+   "iteration": 55,
+   "evals_so_far": 41,
+   "nearest_corpus": "C1",
+   "distance": 3
+  },
+  {
+   "name": "g2-21",
+   "fen": "1k2r3/pp4pp/5p2/1N6/4B1b1/8/PPPQ1RPP/2K4R w - - 0 1",
+   "lineage": [
+    {
+     "parent_fen": "1k2r3/pp4pp/8/1N6/4B1b1/8/PPPQ2PP/R1K4R w - - 0 1",
+     "parent": "C1",
+     "mutations": [
+      "move white R a1->f2"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp4pp/8/1N6/4B1b1/8/PPPQ1RPP/2K4R w - - 0 1",
+     "parent": "g2-5",
+     "mutations": [
+      "add black P f6"
+     ],
+     "verdict": "PASS (fast)"
+    }
+   ],
+   "iteration": 56,
+   "evals_so_far": 42,
+   "nearest_corpus": "C1",
+   "distance": 3
+  },
+  {
+   "name": "g2-22",
+   "fen": "1k2r3/pp4p1/5B2/1N2P2n/4B1b1/7p/PPPQ4/R1K4R w - - 0 1",
+   "lineage": [
+    {
+     "parent_fen": "1k2r3/pp4pp/8/1N6/4B1b1/8/PPPQ2PP/R1K4R w - - 0 1",
+     "parent": "C1",
+     "mutations": [
+      "move white P g2->e5"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp4pp/8/1N2P3/4B1b1/8/PPPQ3P/R1K4R w - - 0 1",
+     "parent": "g2-1",
+     "mutations": [
+      "add white B f6"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp4pp/5B2/1N2P3/4B1b1/8/PPPQ3P/R1K4R w - - 0 1",
+     "parent": "g2-7",
+     "mutations": [
+      "move black P h7->h3"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp4p1/5B2/1N2P3/4B1b1/7p/PPPQ3P/R1K4R w - - 0 1",
+     "parent": "g2-8",
+     "mutations": [
+      "add black N h5",
+      "remove white P h2"
+     ],
+     "verdict": "PASS (fast)"
+    }
+   ],
+   "iteration": 60,
+   "evals_so_far": 46,
+   "nearest_corpus": "C1",
+   "distance": 7
+  },
+  {
+   "name": "g2-23",
+   "fen": "1k2r3/pp2B1pp/8/1N2P3/4B1b1/8/PPPQ3P/R1K4R w - - 0 1",
+   "lineage": [
+    {
+     "parent_fen": "1k2r3/pp4pp/8/1N6/4B1b1/8/PPPQ2PP/R1K4R w - - 0 1",
+     "parent": "C1",
+     "mutations": [
+      "move white P g2->e5"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp4pp/8/1N2P3/4B1b1/8/PPPQ3P/R1K4R w - - 0 1",
+     "parent": "g2-1",
+     "mutations": [
+      "add white B e7"
+     ],
+     "verdict": "PASS (fast)"
+    }
+   ],
+   "iteration": 63,
+   "evals_so_far": 50,
+   "nearest_corpus": "C1",
+   "distance": 3
+  },
+  {
+   "name": "g2-24",
+   "fen": "1k2r2r/pp3pb1/5R1p/1N6/4B1br/2N3P1/PP1Q2PP/2K4R w - - 0 1",
+   "lineage": [
+    {
+     "parent_fen": "1k2r2r/pp3pb1/7p/1N6/4B1br/2N3P1/PPPQ2PP/R1K4R w - - 0 1",
+     "parent": "S1",
+     "mutations": [
+      "remove white P c2"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r2r/pp3pb1/7p/1N6/4B1br/2N3P1/PP1Q2PP/R1K4R w - - 0 1",
+     "parent": "g2-2",
+     "mutations": [
+      "move white R a1->f6"
+     ],
+     "verdict": "PASS (fast)"
+    }
+   ],
+   "iteration": 66,
+   "evals_so_far": 54,
+   "nearest_corpus": "S1",
+   "distance": 3
+  },
+  {
+   "name": "g2-25",
+   "fen": "1k2r2r/pp3p2/7p/PN6/4B1br/2N5/1P1Q2PP/2K4R w - - 0 1",
+   "lineage": [
+    {
+     "parent_fen": "1k2r2r/pp3pb1/7p/1N6/4B1br/2N3P1/PPPQ2PP/R1K4R w - - 0 1",
+     "parent": "S1",
+     "mutations": [
+      "remove white P c2"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r2r/pp3pb1/7p/1N6/4B1br/2N3P1/PP1Q2PP/R1K4R w - - 0 1",
+     "parent": "g2-2",
+     "mutations": [
+      "remove white P g3"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r2r/pp3pb1/7p/1N6/4B1br/2N5/PP1Q2PP/R1K4R w - - 0 1",
+     "parent": "g2-3",
+     "mutations": [
+      "remove black B g7"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r2r/pp3p2/7p/1N6/4B1br/2N5/PP1Q2PP/R1K4R w - - 0 1",
+     "parent": "g2-13",
+     "mutations": [
+      "remove white R a1",
+      "move white P a2->a5"
+     ],
+     "verdict": "PASS (fast)"
+    }
+   ],
+   "iteration": 67,
+   "evals_so_far": 55,
+   "nearest_corpus": "S1",
+   "distance": 6
+  },
+  {
+   "name": "g2-26",
+   "fen": "1k2r3/pp4p1/5B2/1N6/4B1b1/7p/PPPQ3P/R1K4R w - - 0 1",
+   "lineage": [
+    {
+     "parent_fen": "1k2r3/pp4pp/8/1N6/4B1b1/8/PPPQ2PP/R1K4R w - - 0 1",
+     "parent": "C1",
+     "mutations": [
+      "move white P g2->e5"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp4pp/8/1N2P3/4B1b1/8/PPPQ3P/R1K4R w - - 0 1",
+     "parent": "g2-1",
+     "mutations": [
+      "add white B f6"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp4pp/5B2/1N2P3/4B1b1/8/PPPQ3P/R1K4R w - - 0 1",
+     "parent": "g2-7",
+     "mutations": [
+      "move black P h7->h3"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp4p1/5B2/1N2P3/4B1b1/7p/PPPQ3P/R1K4R w - - 0 1",
+     "parent": "g2-8",
+     "mutations": [
+      "remove white P e5"
+     ],
+     "verdict": "PASS (fast)"
+    }
+   ],
+   "iteration": 71,
+   "evals_so_far": 56,
+   "nearest_corpus": "C1",
+   "distance": 4
+  },
+  {
+   "name": "g2-27",
+   "fen": "1k2r3/pp4p1/8/1N6/4B1b1/8/P1PQ2PP/R1K4R w - - 0 1",
+   "lineage": [
+    {
+     "parent_fen": "1k2r3/pp4pp/8/1N6/4B1b1/8/PPPQ2PP/R1K4R w - - 0 1",
+     "parent": "C1",
+     "mutations": [
+      "remove black P h7"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp4p1/8/1N6/4B1b1/8/PPPQ2PP/R1K4R w - - 0 1",
+     "parent": "g2-6",
+     "mutations": [
+      "recolour P white->black g2",
+      "remove white P b2",
+      "recolour P black->white g2"
+     ],
+     "verdict": "PASS (fast)"
+    }
+   ],
+   "iteration": 75,
+   "evals_so_far": 60,
+   "nearest_corpus": "C1",
+   "distance": 2
+  },
+  {
+   "name": "g2-28",
+   "fen": "1k2r3/pp4pp/4b3/1N6/4B3/8/PPPQ2PP/R1K1R3 w - - 0 1",
+   "lineage": [
+    {
+     "parent_fen": "1k2r3/pp4pp/8/1N6/4B1b1/8/PPPQ2PP/R1K4R w - - 0 1",
+     "parent": "C1",
+     "mutations": [
+      "move white R h1->e1"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp4pp/8/1N6/4B1b1/8/PPPQ2PP/R1K1R3 w - - 0 1",
+     "parent": "g2-9",
+     "mutations": [
+      "move black B g4->e6"
+     ],
+     "verdict": "PASS (fast)"
+    }
+   ],
+   "iteration": 76,
+   "evals_so_far": 61,
+   "nearest_corpus": "C1",
+   "distance": 4
+  },
+  {
+   "name": "g2-29",
+   "fen": "1k2r3/pp4Pp/5n2/1N6/4B1b1/5N2/PPPQ1RPP/2K4R w - - 0 1",
+   "lineage": [
+    {
+     "parent_fen": "1k2r3/pp4pp/8/1N6/4B1b1/8/PPPQ2PP/R1K4R w - - 0 1",
+     "parent": "C1",
+     "mutations": [
+      "move white R a1->f2"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp4pp/8/1N6/4B1b1/8/PPPQ1RPP/2K4R w - - 0 1",
+     "parent": "g2-5",
+     "mutations": [
+      "add black N f6"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp4pp/5n2/1N6/4B1b1/8/PPPQ1RPP/2K4R w - - 0 1",
+     "parent": "g2-20",
+     "mutations": [
+      "add white N f3",
+      "recolour P black->white g7"
+     ],
+     "verdict": "PASS (fast)"
+    }
+   ],
+   "iteration": 87,
+   "evals_so_far": 74,
+   "nearest_corpus": "C1",
+   "distance": 6
+  },
+  {
+   "name": "g2-30",
+   "fen": "1k2r3/pp5P/8/1N2P3/4B1b1/8/P1BQ4/R1K4R w - - 0 1",
+   "lineage": [
+    {
+     "parent_fen": "1k2r3/pp4pp/8/1N6/4B1b1/8/PPPQ2PP/R1K4R w - - 0 1",
+     "parent": "C1",
+     "mutations": [
+      "move white P g2->e5"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp4pp/8/1N2P3/4B1b1/8/PPPQ3P/R1K4R w - - 0 1",
+     "parent": "g2-1",
+     "mutations": [
+      "remove black P g7",
+      "retype white P->B c2"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp5p/8/1N2P3/4B1b1/8/PPBQ3P/R1K4R w - - 0 1",
+     "parent": "g2-4",
+     "mutations": [
+      "remove white P h2"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp5p/8/1N2P3/4B1b1/8/PPBQ4/R1K4R w - - 0 1",
+     "parent": "g2-11",
+     "mutations": [
+      "remove white P b2",
+      "recolour P black->white h7"
+     ],
+     "verdict": "PASS (fast)"
+    }
+   ],
+   "iteration": 89,
+   "evals_so_far": 78,
+   "nearest_corpus": "C1",
+   "distance": 9
+  },
+  {
+   "name": "g2-31",
+   "fen": "1k2r3/pp4pp/8/1N6/4B1b1/8/PPPQ1NPP/2K4R w - - 0 1",
+   "lineage": [
+    {
+     "parent_fen": "1k2r3/pp4pp/8/1N6/4B1b1/8/PPPQ2PP/R1K4R w - - 0 1",
+     "parent": "C1",
+     "mutations": [
+      "move white R a1->f2"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp4pp/8/1N6/4B1b1/8/PPPQ1RPP/2K4R w - - 0 1",
+     "parent": "g2-5",
+     "mutations": [
+      "retype white R->N f2"
+     ],
+     "verdict": "PASS (fast)"
+    }
+   ],
+   "iteration": 90,
+   "evals_so_far": 79,
+   "nearest_corpus": "C1",
+   "distance": 2
+  },
+  {
+   "name": "g2-32",
+   "fen": "1k2r3/pp4pp/5p2/1N6/4B1bN/8/PPPQ1RPP/2K4R w - - 0 1",
+   "lineage": [
+    {
+     "parent_fen": "1k2r3/pp4pp/8/1N6/4B1b1/8/PPPQ2PP/R1K4R w - - 0 1",
+     "parent": "C1",
+     "mutations": [
+      "move white R a1->f2"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp4pp/8/1N6/4B1b1/8/PPPQ1RPP/2K4R w - - 0 1",
+     "parent": "g2-5",
+     "mutations": [
+      "add black P f6"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp4pp/5p2/1N6/4B1b1/8/PPPQ1RPP/2K4R w - - 0 1",
+     "parent": "g2-21",
+     "mutations": [
+      "recolour P white->black g2",
+      "add white N h4",
+      "recolour P black->white g2"
+     ],
+     "verdict": "PASS (fast)"
+    }
+   ],
+   "iteration": 92,
+   "evals_so_far": 82,
+   "nearest_corpus": "C1",
+   "distance": 4
+  },
+  {
+   "name": "g2-33",
+   "fen": "1k2r3/pp4pp/4b3/1N6/4B3/8/p1PQ2PP/R1K1R3 w - - 0 1",
+   "lineage": [
+    {
+     "parent_fen": "1k2r3/pp4pp/8/1N6/4B1b1/8/PPPQ2PP/R1K4R w - - 0 1",
+     "parent": "C1",
+     "mutations": [
+      "move white R h1->e1"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp4pp/8/1N6/4B1b1/8/PPPQ2PP/R1K1R3 w - - 0 1",
+     "parent": "g2-9",
+     "mutations": [
+      "move black B g4->e6"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp4pp/4b3/1N6/4B3/8/PPPQ2PP/R1K1R3 w - - 0 1",
+     "parent": "g2-28",
+     "mutations": [
+      "remove white P b2",
+      "recolour P white->black a2"
+     ],
+     "verdict": "PASS (fast)"
+    }
+   ],
+   "iteration": 93,
+   "evals_so_far": 83,
+   "nearest_corpus": "C1",
+   "distance": 7
+  },
+  {
+   "name": "g2-34",
+   "fen": "1k2r2r/pp3Pb1/7p/1N6/4B1br/2N3P1/PP1Q2PP/R1K4R w - - 0 1",
+   "lineage": [
+    {
+     "parent_fen": "1k2r2r/pp3pb1/7p/1N6/4B1br/2N3P1/PPPQ2PP/R1K4R w - - 0 1",
+     "parent": "S1",
+     "mutations": [
+      "remove white P c2"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r2r/pp3pb1/7p/1N6/4B1br/2N3P1/PP1Q2PP/R1K4R w - - 0 1",
+     "parent": "g2-2",
+     "mutations": [
+      "recolour P black->white f7"
+     ],
+     "verdict": "PASS (fast)"
+    }
+   ],
+   "iteration": 95,
+   "evals_so_far": 84,
+   "nearest_corpus": "S1",
+   "distance": 3
+  },
+  {
+   "name": "g2-35",
+   "fen": "1k2r3/pp4pp/5p2/1N6/4B1b1/8/PPPQ1RPP/R1K5 w - - 0 1",
+   "lineage": [
+    {
+     "parent_fen": "1k2r3/pp4pp/8/1N6/4B1b1/8/PPPQ2PP/R1K4R w - - 0 1",
+     "parent": "C1",
+     "mutations": [
+      "move white R a1->f2"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp4pp/8/1N6/4B1b1/8/PPPQ1RPP/2K4R w - - 0 1",
+     "parent": "g2-5",
+     "mutations": [
+      "add black P f6"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp4pp/5p2/1N6/4B1b1/8/PPPQ1RPP/2K4R w - - 0 1",
+     "parent": "g2-21",
+     "mutations": [
+      "move white R h1->a1"
+     ],
+     "verdict": "PASS (fast)"
+    }
+   ],
+   "iteration": 97,
+   "evals_so_far": 85,
+   "nearest_corpus": "C1",
+   "distance": 3
+  },
+  {
+   "name": "g2-36",
+   "fen": "1k2r2r/pp3p2/7p/1N6/4B1b1/2N3P1/PPPQ2PP/R1K4R w - - 0 1",
+   "lineage": [
+    {
+     "parent_fen": "1k2r2r/pp3pb1/7p/1N6/4B1br/2N3P1/PPPQ2PP/R1K4R w - - 0 1",
+     "parent": "S1",
+     "mutations": [
+      "remove black B g7"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r2r/pp3p2/7p/1N6/4B1br/2N3P1/PPPQ2PP/R1K4R w - - 0 1",
+     "parent": "g2-12",
+     "mutations": [
+      "remove black R h4"
+     ],
+     "verdict": "PASS (fast)"
+    }
+   ],
+   "iteration": 98,
+   "evals_so_far": 86,
+   "nearest_corpus": "S1",
+   "distance": 2
+  },
+  {
+   "name": "g2-37",
+   "fen": "1k2r3/pp4pp/4b3/1N6/4B3/8/NPPQ2PP/RBK1R3 w - - 0 1",
+   "lineage": [
+    {
+     "parent_fen": "1k2r3/pp4pp/8/1N6/4B1b1/8/PPPQ2PP/R1K4R w - - 0 1",
+     "parent": "C1",
+     "mutations": [
+      "move white R h1->e1"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp4pp/8/1N6/4B1b1/8/PPPQ2PP/R1K1R3 w - - 0 1",
+     "parent": "g2-9",
+     "mutations": [
+      "move black B g4->e6"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp4pp/4b3/1N6/4B3/8/PPPQ2PP/R1K1R3 w - - 0 1",
+     "parent": "g2-28",
+     "mutations": [
+      "add white B b1",
+      "retype white P->N a2"
+     ],
+     "verdict": "PASS (fast)"
+    }
+   ],
+   "iteration": 101,
+   "evals_so_far": 88,
+   "nearest_corpus": "C1",
+   "distance": 7
+  },
+  {
+   "name": "g2-38",
+   "fen": "1k2r2r/pp3p2/7p/1N6/2P1B1b1/2N5/PP1Q2P1/R1K4R w - - 0 1",
+   "lineage": [
+    {
+     "parent_fen": "1k2r2r/pp3pb1/7p/1N6/4B1br/2N3P1/PPPQ2PP/R1K4R w - - 0 1",
+     "parent": "S1",
+     "mutations": [
+      "remove white P c2"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r2r/pp3pb1/7p/1N6/4B1br/2N3P1/PP1Q2PP/R1K4R w - - 0 1",
+     "parent": "g2-2",
+     "mutations": [
+      "remove white P g3"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r2r/pp3pb1/7p/1N6/4B1br/2N5/PP1Q2PP/R1K4R w - - 0 1",
+     "parent": "g2-3",
+     "mutations": [
+      "remove black B g7"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r2r/pp3p2/7p/1N6/4B1br/2N5/PP1Q2PP/R1K4R w - - 0 1",
+     "parent": "g2-13",
+     "mutations": [
+      "move white P h2->c4",
+      "remove black R h4"
+     ],
+     "verdict": "PASS (fast)"
+    }
+   ],
+   "iteration": 107,
+   "evals_so_far": 91,
+   "nearest_corpus": "S1",
+   "distance": 6
+  },
+  {
+   "name": "g2-39",
+   "fen": "1k2r3/pp4p1/4b3/1N6/4B3/8/p1PQ2PP/R1K1R3 w - - 0 1",
+   "lineage": [
+    {
+     "parent_fen": "1k2r3/pp4pp/8/1N6/4B1b1/8/PPPQ2PP/R1K4R w - - 0 1",
+     "parent": "C1",
+     "mutations": [
+      "move white R h1->e1"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp4pp/8/1N6/4B1b1/8/PPPQ2PP/R1K1R3 w - - 0 1",
+     "parent": "g2-9",
+     "mutations": [
+      "move black B g4->e6"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp4pp/4b3/1N6/4B3/8/PPPQ2PP/R1K1R3 w - - 0 1",
+     "parent": "g2-28",
+     "mutations": [
+      "remove white P b2",
+      "recolour P white->black a2"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp4pp/4b3/1N6/4B3/8/p1PQ2PP/R1K1R3 w - - 0 1",
+     "parent": "g2-33",
+     "mutations": [
+      "remove black P h7"
+     ],
+     "verdict": "PASS (fast)"
+    }
+   ],
+   "iteration": 110,
+   "evals_so_far": 92,
+   "nearest_corpus": "C1",
+   "distance": 8
+  },
+  {
+   "name": "g2-40",
+   "fen": "1k2r3/pp5p/8/1N6/4B1b1/5b2/PPBQ3P/R1K4R w - - 0 1",
+   "lineage": [
+    {
+     "parent_fen": "1k2r3/pp4pp/8/1N6/4B1b1/8/PPPQ2PP/R1K4R w - - 0 1",
+     "parent": "C1",
+     "mutations": [
+      "move white P g2->e5"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp4pp/8/1N2P3/4B1b1/8/PPPQ3P/R1K4R w - - 0 1",
+     "parent": "g2-1",
+     "mutations": [
+      "remove black P g7",
+      "retype white P->B c2"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp5p/8/1N2P3/4B1b1/8/PPBQ3P/R1K4R w - - 0 1",
+     "parent": "g2-4",
+     "mutations": [
+      "add black B f3"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp5p/8/1N2P3/4B1b1/5b2/PPBQ3P/R1K4R w - - 0 1",
+     "parent": "g2-16",
+     "mutations": [
+      "remove white P e5"
+     ],
+     "verdict": "PASS (fast)"
+    }
+   ],
+   "iteration": 112,
+   "evals_so_far": 93,
+   "nearest_corpus": "C1",
+   "distance": 5
+  },
+  {
+   "name": "g2-41",
+   "fen": "1k2r3/pp4Pp/5n2/1N6/4B1b1/1P3N2/P1PQ1RPP/2Kb3R w - - 0 1",
+   "lineage": [
+    {
+     "parent_fen": "1k2r3/pp4pp/8/1N6/4B1b1/8/PPPQ2PP/R1K4R w - - 0 1",
+     "parent": "C1",
+     "mutations": [
+      "move white R a1->f2"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp4pp/8/1N6/4B1b1/8/PPPQ1RPP/2K4R w - - 0 1",
+     "parent": "g2-5",
+     "mutations": [
+      "add black N f6"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp4pp/5n2/1N6/4B1b1/8/PPPQ1RPP/2K4R w - - 0 1",
+     "parent": "g2-20",
+     "mutations": [
+      "add white N f3",
+      "recolour P black->white g7"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp4Pp/5n2/1N6/4B1b1/5N2/PPPQ1RPP/2K4R w - - 0 1",
+     "parent": "g2-29",
+     "mutations": [
+      "add black B d1",
+      "move white P b2->b3"
+     ],
+     "verdict": "PASS (fast)"
+    }
+   ],
+   "iteration": 115,
+   "evals_so_far": 94,
+   "nearest_corpus": "C1",
+   "distance": 9
+  },
+  {
+   "name": "g2-42",
+   "fen": "1k2r3/pp3p2/7p/1N5p/4B1b1/2N3P1/PPPQ2PP/R1K4R w - - 0 1",
+   "lineage": [
+    {
+     "parent_fen": "1k2r2r/pp3pb1/7p/1N6/4B1br/2N3P1/PPPQ2PP/R1K4R w - - 0 1",
+     "parent": "S1",
+     "mutations": [
+      "remove black B g7"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r2r/pp3p2/7p/1N6/4B1br/2N3P1/PPPQ2PP/R1K4R w - - 0 1",
+     "parent": "g2-12",
+     "mutations": [
+      "remove black R h4"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r2r/pp3p2/7p/1N6/4B1b1/2N3P1/PPPQ2PP/R1K4R w - - 0 1",
+     "parent": "g2-36",
+     "mutations": [
+      "remove black R h8",
+      "add black P h5"
+     ],
+     "verdict": "PASS (fast)"
+    }
+   ],
+   "iteration": 116,
+   "evals_so_far": 95,
+   "nearest_corpus": "S1",
+   "distance": 4
+  },
+  {
+   "name": "g2-43",
+   "fen": "1k2r3/pp4pp/5n2/1N6/4B1b1/8/P1PQ1RPP/2K4R w - - 0 1",
+   "lineage": [
+    {
+     "parent_fen": "1k2r3/pp4pp/8/1N6/4B1b1/8/PPPQ2PP/R1K4R w - - 0 1",
+     "parent": "C1",
+     "mutations": [
+      "move white R a1->f2"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp4pp/8/1N6/4B1b1/8/PPPQ1RPP/2K4R w - - 0 1",
+     "parent": "g2-5",
+     "mutations": [
+      "add black N f6"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp4pp/5n2/1N6/4B1b1/8/PPPQ1RPP/2K4R w - - 0 1",
+     "parent": "g2-20",
+     "mutations": [
+      "remove white P b2"
+     ],
+     "verdict": "PASS (fast)"
+    }
+   ],
+   "iteration": 118,
+   "evals_so_far": 99,
+   "nearest_corpus": "C1",
+   "distance": 4
+  },
+  {
+   "name": "g2-44",
+   "fen": "1k2r3/pp4pp/8/1N6/4B1b1/8/PPPQ1RP1/R1K5 w - - 0 1",
+   "lineage": [
+    {
+     "parent_fen": "1k2r3/pp4pp/8/1N6/4B1b1/8/PPPQ2PP/R1K4R w - - 0 1",
+     "parent": "C1",
+     "mutations": [
+      "move white R a1->f2"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp4pp/8/1N6/4B1b1/8/PPPQ1RPP/2K4R w - - 0 1",
+     "parent": "g2-5",
+     "mutations": [
+      "add black P f6"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp4pp/5p2/1N6/4B1b1/8/PPPQ1RPP/2K4R w - - 0 1",
+     "parent": "g2-21",
+     "mutations": [
+      "move white R h1->a1"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp4pp/5p2/1N6/4B1b1/8/PPPQ1RPP/R1K5 w - - 0 1",
+     "parent": "g2-35",
+     "mutations": [
+      "remove black P f6",
+      "remove white P h2"
+     ],
+     "verdict": "PASS (fast)"
+    }
+   ],
+   "iteration": 120,
+   "evals_so_far": 103,
+   "nearest_corpus": "C1",
+   "distance": 3
+  },
+  {
+   "name": "g2-45",
+   "fen": "1k2rrN1/pp4pp/5n1p/1N3b2/4B3/8/PPPQ2PP/R1K4R w - - 0 1",
+   "lineage": [
+    {
+     "parent_fen": "1k2rrn1/pp4pp/5n1p/1N3b2/4B3/8/PPPQ2PP/R1K4R w - - 0 1",
+     "parent": "C2",
+     "mutations": [
+      "recolour N black->white g8"
+     ],
+     "verdict": "PASS (fast)"
+    }
+   ],
+   "iteration": 122,
+   "evals_so_far": 104,
+   "nearest_corpus": "C2",
+   "distance": 2
+  },
+  {
+   "name": "g2-46",
+   "fen": "1k2r3/pp4p1/5B2/1N2P2n/4B1b1/7p/P1PQ4/R1K4R w - - 0 1",
+   "lineage": [
+    {
+     "parent_fen": "1k2r3/pp4pp/8/1N6/4B1b1/8/PPPQ2PP/R1K4R w - - 0 1",
+     "parent": "C1",
+     "mutations": [
+      "move white P g2->e5"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp4pp/8/1N2P3/4B1b1/8/PPPQ3P/R1K4R w - - 0 1",
+     "parent": "g2-1",
+     "mutations": [
+      "add white B f6"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp4pp/5B2/1N2P3/4B1b1/8/PPPQ3P/R1K4R w - - 0 1",
+     "parent": "g2-7",
+     "mutations": [
+      "move black P h7->h3"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp4p1/5B2/1N2P3/4B1b1/7p/PPPQ3P/R1K4R w - - 0 1",
+     "parent": "g2-8",
+     "mutations": [
+      "add black N h5",
+      "remove white P h2"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp4p1/5B2/1N2P2n/4B1b1/7p/PPPQ4/R1K4R w - - 0 1",
+     "parent": "g2-22",
+     "mutations": [
+      "remove white P b2"
+     ],
+     "verdict": "PASS (fast)"
+    }
+   ],
+   "iteration": 126,
+   "evals_so_far": 111,
+   "nearest_corpus": "C1",
+   "distance": 8
+  },
+  {
+   "name": "g2-47",
+   "fen": "1k2r2r/pp3pb1/7p/1N6/4B1b1/2N3P1/PPPQ2PP/R1K4R w - - 0 1",
+   "lineage": [
+    {
+     "parent_fen": "1k2r2r/pp3pb1/7p/1N6/4B1br/2N3P1/PPPQ2PP/R1K4R w - - 0 1",
+     "parent": "S1",
+     "mutations": [
+      "remove black R h4"
+     ],
+     "verdict": "PASS (fast)"
+    }
+   ],
+   "iteration": 127,
+   "evals_so_far": 112,
+   "nearest_corpus": "S1",
+   "distance": 1
+  },
+  {
+   "name": "g2-48",
+   "fen": "1k2r3/pp4pp/6B1/1N6/4B1b1/1N6/PPPQ1RPP/2K4R w - - 0 1",
+   "lineage": [
+    {
+     "parent_fen": "1k2r3/pp4pp/8/1N6/4B1b1/8/PPPQ2PP/R1K4R w - - 0 1",
+     "parent": "C1",
+     "mutations": [
+      "move white R a1->f2"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp4pp/8/1N6/4B1b1/8/PPPQ1RPP/2K4R w - - 0 1",
+     "parent": "g2-5",
+     "mutations": [
+      "add white B g6",
+      "add white N b3"
+     ],
+     "verdict": "PASS (fast)"
+    }
+   ],
+   "iteration": 133,
+   "evals_so_far": 120,
+   "nearest_corpus": "C1",
+   "distance": 4
+  },
+  {
+   "name": "g2-49",
+   "fen": "1k2r2b/pp4P1/5B2/1N2P3/4B1b1/7p/PPPQ3P/R1K4R w - - 0 1",
+   "lineage": [
+    {
+     "parent_fen": "1k2r3/pp4pp/8/1N6/4B1b1/8/PPPQ2PP/R1K4R w - - 0 1",
+     "parent": "C1",
+     "mutations": [
+      "move white P g2->e5"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp4pp/8/1N2P3/4B1b1/8/PPPQ3P/R1K4R w - - 0 1",
+     "parent": "g2-1",
+     "mutations": [
+      "add white B f6"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp4pp/5B2/1N2P3/4B1b1/8/PPPQ3P/R1K4R w - - 0 1",
+     "parent": "g2-7",
+     "mutations": [
+      "move black P h7->h3"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp4p1/5B2/1N2P3/4B1b1/7p/PPPQ3P/R1K4R w - - 0 1",
+     "parent": "g2-8",
+     "mutations": [
+      "add black B h8"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r2b/pp4p1/5B2/1N2P3/4B1b1/7p/PPPQ3P/R1K4R w - - 0 1",
+     "parent": "g2-19",
+     "mutations": [
+      "recolour P black->white g7"
+     ],
+     "verdict": "PASS (fast)"
+    }
+   ],
+   "iteration": 139,
+   "evals_so_far": 134,
+   "nearest_corpus": "C1",
+   "distance": 8
+  },
+  {
+   "name": "g2-50",
+   "fen": "1k2r3/pp4pp/5n2/1N5N/4B1b1/8/P1PQ1RPP/2K4R w - - 0 1",
+   "lineage": [
+    {
+     "parent_fen": "1k2r3/pp4pp/8/1N6/4B1b1/8/PPPQ2PP/R1K4R w - - 0 1",
+     "parent": "C1",
+     "mutations": [
+      "move white R a1->f2"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp4pp/8/1N6/4B1b1/8/PPPQ1RPP/2K4R w - - 0 1",
+     "parent": "g2-5",
+     "mutations": [
+      "add black N f6"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp4pp/5n2/1N6/4B1b1/8/PPPQ1RPP/2K4R w - - 0 1",
+     "parent": "g2-20",
+     "mutations": [
+      "remove white P b2"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp4pp/5n2/1N6/4B1b1/8/P1PQ1RPP/2K4R w - - 0 1",
+     "parent": "g2-43",
+     "mutations": [
+      "add white N h5"
+     ],
+     "verdict": "PASS (fast)"
+    }
+   ],
+   "iteration": 143,
+   "evals_so_far": 138,
+   "nearest_corpus": "C1",
+   "distance": 5
+  },
+  {
+   "name": "g2-51",
+   "fen": "1k2r3/pp5p/8/1N2P3/4B1b1/1b6/PPBQ3P/R1K4R w - - 0 1",
+   "lineage": [
+    {
+     "parent_fen": "1k2r3/pp4pp/8/1N6/4B1b1/8/PPPQ2PP/R1K4R w - - 0 1",
+     "parent": "C1",
+     "mutations": [
+      "move white P g2->e5"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp4pp/8/1N2P3/4B1b1/8/PPPQ3P/R1K4R w - - 0 1",
+     "parent": "g2-1",
+     "mutations": [
+      "remove black P g7",
+      "retype white P->B c2"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp5p/8/1N2P3/4B1b1/8/PPBQ3P/R1K4R w - - 0 1",
+     "parent": "g2-4",
+     "mutations": [
+      "add black B b3"
+     ],
+     "verdict": "PASS (fast)"
+    }
+   ],
+   "iteration": 145,
+   "evals_so_far": 139,
+   "nearest_corpus": "C1",
+   "distance": 6
+  },
+  {
+   "name": "g2-52",
+   "fen": "1k2r3/pp5p/b7/1N2P3/4B1b1/8/pPBQ4/R1K4R w - - 0 1",
+   "lineage": [
+    {
+     "parent_fen": "1k2r3/pp4pp/8/1N6/4B1b1/8/PPPQ2PP/R1K4R w - - 0 1",
+     "parent": "C1",
+     "mutations": [
+      "move white P g2->e5"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp4pp/8/1N2P3/4B1b1/8/PPPQ3P/R1K4R w - - 0 1",
+     "parent": "g2-1",
+     "mutations": [
+      "remove black P g7",
+      "retype white P->B c2"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp5p/8/1N2P3/4B1b1/8/PPBQ3P/R1K4R w - - 0 1",
+     "parent": "g2-4",
+     "mutations": [
+      "remove white P h2"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp5p/8/1N2P3/4B1b1/8/PPBQ4/R1K4R w - - 0 1",
+     "parent": "g2-11",
+     "mutations": [
+      "recolour P white->black a2",
+      "add black B a6"
+     ],
+     "verdict": "PASS (fast)"
+    }
+   ],
+   "iteration": 152,
+   "evals_so_far": 147,
+   "nearest_corpus": "C1",
+   "distance": 9
+  },
+  {
+   "name": "g2-53",
+   "fen": "1k2r3/pp4pp/7P/1N2P3/4B1b1/8/PPpQ4/R1K4R w - - 0 1",
+   "lineage": [
+    {
+     "parent_fen": "1k2r3/pp4pp/8/1N6/4B1b1/8/PPPQ2PP/R1K4R w - - 0 1",
+     "parent": "C1",
+     "mutations": [
+      "move white P g2->e5"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp4pp/8/1N2P3/4B1b1/8/PPPQ3P/R1K4R w - - 0 1",
+     "parent": "g2-1",
+     "mutations": [
+      "recolour P white->black c2",
+      "move white P h2->h6"
+     ],
+     "verdict": "PASS (fast)"
+    }
+   ],
+   "iteration": 153,
+   "evals_so_far": 148,
+   "nearest_corpus": "C1",
+   "distance": 6
+  },
+  {
+   "name": "g2-54",
+   "fen": "1k2r3/pp4pp/5n2/1N6/4B1b1/8/P1BQ1RPP/2K4R w - - 0 1",
+   "lineage": [
+    {
+     "parent_fen": "1k2r3/pp4pp/8/1N6/4B1b1/8/PPPQ2PP/R1K4R w - - 0 1",
+     "parent": "C1",
+     "mutations": [
+      "move white R a1->f2"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp4pp/8/1N6/4B1b1/8/PPPQ1RPP/2K4R w - - 0 1",
+     "parent": "g2-5",
+     "mutations": [
+      "add black N f6"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp4pp/5n2/1N6/4B1b1/8/PPPQ1RPP/2K4R w - - 0 1",
+     "parent": "g2-20",
+     "mutations": [
+      "remove white P b2"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp4pp/5n2/1N6/4B1b1/8/P1PQ1RPP/2K4R w - - 0 1",
+     "parent": "g2-43",
+     "mutations": [
+      "retype white P->B c2"
+     ],
+     "verdict": "PASS (fast)"
+    }
+   ],
+   "iteration": 160,
+   "evals_so_far": 150,
+   "nearest_corpus": "C1",
+   "distance": 6
+  },
+  {
+   "name": "g2-55",
+   "fen": "1k2r3/pp3p2/7p/1N5p/4B1b1/2N3P1/pPPQ2PP/R1K4R w - - 0 1",
+   "lineage": [
+    {
+     "parent_fen": "1k2r2r/pp3pb1/7p/1N6/4B1br/2N3P1/PPPQ2PP/R1K4R w - - 0 1",
+     "parent": "S1",
+     "mutations": [
+      "remove black B g7"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r2r/pp3p2/7p/1N6/4B1br/2N3P1/PPPQ2PP/R1K4R w - - 0 1",
+     "parent": "g2-12",
+     "mutations": [
+      "remove black R h4"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r2r/pp3p2/7p/1N6/4B1b1/2N3P1/PPPQ2PP/R1K4R w - - 0 1",
+     "parent": "g2-36",
+     "mutations": [
+      "remove black R h8",
+      "add black P h5"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp3p2/7p/1N5p/4B1b1/2N3P1/PPPQ2PP/R1K4R w - - 0 1",
+     "parent": "g2-42",
+     "mutations": [
+      "recolour P white->black a2"
+     ],
+     "verdict": "PASS (fast)"
+    }
+   ],
+   "iteration": 170,
+   "evals_so_far": 160,
+   "nearest_corpus": "S1",
+   "distance": 6
+  },
+  {
+   "name": "g2-56",
+   "fen": "1k2r3/pp4pp/8/1N6/4B1b1/8/P1PQ2PP/R1K1R3 w - - 0 1",
+   "lineage": [
+    {
+     "parent_fen": "1k2r3/pp4pp/8/1N6/4B1b1/8/PPPQ2PP/R1K4R w - - 0 1",
+     "parent": "C1",
+     "mutations": [
+      "move white R h1->e1"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp4pp/8/1N6/4B1b1/8/PPPQ2PP/R1K1R3 w - - 0 1",
+     "parent": "g2-9",
+     "mutations": [
+      "remove white P b2"
+     ],
+     "verdict": "PASS (fast)"
+    }
+   ],
+   "iteration": 171,
+   "evals_so_far": 161,
+   "nearest_corpus": "C1",
+   "distance": 3
+  },
+  {
+   "name": "g2-57",
+   "fen": "1k2r2b/pp4p1/5B2/1N2P3/4B1b1/7p/PPPQ2nP/R1K4R w - - 0 1",
+   "lineage": [
+    {
+     "parent_fen": "1k2r3/pp4pp/8/1N6/4B1b1/8/PPPQ2PP/R1K4R w - - 0 1",
+     "parent": "C1",
+     "mutations": [
+      "move white P g2->e5"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp4pp/8/1N2P3/4B1b1/8/PPPQ3P/R1K4R w - - 0 1",
+     "parent": "g2-1",
+     "mutations": [
+      "add white B f6"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp4pp/5B2/1N2P3/4B1b1/8/PPPQ3P/R1K4R w - - 0 1",
+     "parent": "g2-7",
+     "mutations": [
+      "move black P h7->h3"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp4p1/5B2/1N2P3/4B1b1/7p/PPPQ3P/R1K4R w - - 0 1",
+     "parent": "g2-8",
+     "mutations": [
+      "add black B h8"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r2b/pp4p1/5B2/1N2P3/4B1b1/7p/PPPQ3P/R1K4R w - - 0 1",
+     "parent": "g2-19",
+     "mutations": [
+      "add black N g2"
+     ],
+     "verdict": "PASS (fast)"
+    }
+   ],
+   "iteration": 174,
+   "evals_so_far": 162,
+   "nearest_corpus": "C1",
+   "distance": 7
+  },
+  {
+   "name": "g2-58",
+   "fen": "1k2r2r/pp3pb1/7p/1N6/4B1b1/2N3P1/PPpQ2PP/R1K4R w - - 0 1",
+   "lineage": [
+    {
+     "parent_fen": "1k2r2r/pp3pb1/7p/1N6/4B1br/2N3P1/PPPQ2PP/R1K4R w - - 0 1",
+     "parent": "S1",
+     "mutations": [
+      "remove black R h4"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r2r/pp3pb1/7p/1N6/4B1b1/2N3P1/PPPQ2PP/R1K4R w - - 0 1",
+     "parent": "g2-47",
+     "mutations": [
+      "recolour P white->black c2"
+     ],
+     "verdict": "PASS (fast)"
+    }
+   ],
+   "iteration": 176,
+   "evals_so_far": 163,
+   "nearest_corpus": "S1",
+   "distance": 3
+  },
+  {
+   "name": "g2-59",
+   "fen": "1k2r2r/pp3pb1/7p/1N6/4B1b1/2N3P1/PPPQ1PPP/R1K5 w - - 0 1",
+   "lineage": [
+    {
+     "parent_fen": "1k2r2r/pp3pb1/7p/1N6/4B1br/2N3P1/PPPQ2PP/R1K4R w - - 0 1",
+     "parent": "S1",
+     "mutations": [
+      "remove black R h4"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r2r/pp3pb1/7p/1N6/4B1b1/2N3P1/PPPQ2PP/R1K4R w - - 0 1",
+     "parent": "g2-47",
+     "mutations": [
+      "remove white R h1",
+      "add white P f2"
+     ],
+     "verdict": "PASS (fast)"
+    }
+   ],
+   "iteration": 181,
+   "evals_so_far": 167,
+   "nearest_corpus": "S1",
+   "distance": 3
+  },
+  {
+   "name": "g2-60",
+   "fen": "1k2r3/pp4p1/5B2/1N2P3/4B1b1/7p/rPPQ1P1P/R1K4R w - - 0 1",
+   "lineage": [
+    {
+     "parent_fen": "1k2r3/pp4pp/8/1N6/4B1b1/8/PPPQ2PP/R1K4R w - - 0 1",
+     "parent": "C1",
+     "mutations": [
+      "move white P g2->e5"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp4pp/8/1N2P3/4B1b1/8/PPPQ3P/R1K4R w - - 0 1",
+     "parent": "g2-1",
+     "mutations": [
+      "add white B f6"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp4pp/5B2/1N2P3/4B1b1/8/PPPQ3P/R1K4R w - - 0 1",
+     "parent": "g2-7",
+     "mutations": [
+      "move black P h7->h3"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp4p1/5B2/1N2P3/4B1b1/7p/PPPQ3P/R1K4R w - - 0 1",
+     "parent": "g2-8",
+     "mutations": [
+      "add white P f2"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp4p1/5B2/1N2P3/4B1b1/7p/PPPQ1P1P/R1K4R w - - 0 1",
+     "parent": "g2-14",
+     "mutations": [
+      "recolour P white->black a2"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp4p1/5B2/1N2P3/4B1b1/7p/pPPQ1P1P/R1K4R w - - 0 1",
+     "parent": "g2-15",
+     "mutations": [
+      "retype black P->R a2"
+     ],
+     "verdict": "PASS (fast)"
+    }
+   ],
+   "iteration": 187,
+   "evals_so_far": 173,
+   "nearest_corpus": "C1",
+   "distance": 8
+  },
+  {
+   "name": "g2-61",
+   "fen": "1k2r2r/pp3p2/7P/PN6/4B1br/2N5/1P1Q2PP/2K4R w - - 0 1",
+   "lineage": [
+    {
+     "parent_fen": "1k2r2r/pp3pb1/7p/1N6/4B1br/2N3P1/PPPQ2PP/R1K4R w - - 0 1",
+     "parent": "S1",
+     "mutations": [
+      "remove white P c2"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r2r/pp3pb1/7p/1N6/4B1br/2N3P1/PP1Q2PP/R1K4R w - - 0 1",
+     "parent": "g2-2",
+     "mutations": [
+      "remove white P g3"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r2r/pp3pb1/7p/1N6/4B1br/2N5/PP1Q2PP/R1K4R w - - 0 1",
+     "parent": "g2-3",
+     "mutations": [
+      "remove black B g7"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r2r/pp3p2/7p/1N6/4B1br/2N5/PP1Q2PP/R1K4R w - - 0 1",
+     "parent": "g2-13",
+     "mutations": [
+      "remove white R a1",
+      "move white P a2->a5"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r2r/pp3p2/7p/PN6/4B1br/2N5/1P1Q2PP/2K4R w - - 0 1",
+     "parent": "g2-25",
+     "mutations": [
+      "recolour P black->white h6"
+     ],
+     "verdict": "PASS (fast)"
+    }
+   ],
+   "iteration": 189,
+   "evals_so_far": 174,
+   "nearest_corpus": "S1",
+   "distance": 8
+  },
+  {
+   "name": "g2-62",
+   "fen": "1k2r3/pp5p/8/1N2P3/4B1b1/1b6/PPBQ3P/2K1R2R w - - 0 1",
+   "lineage": [
+    {
+     "parent_fen": "1k2r3/pp4pp/8/1N6/4B1b1/8/PPPQ2PP/R1K4R w - - 0 1",
+     "parent": "C1",
+     "mutations": [
+      "move white P g2->e5"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp4pp/8/1N2P3/4B1b1/8/PPPQ3P/R1K4R w - - 0 1",
+     "parent": "g2-1",
+     "mutations": [
+      "remove black P g7",
+      "retype white P->B c2"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp5p/8/1N2P3/4B1b1/8/PPBQ3P/R1K4R w - - 0 1",
+     "parent": "g2-4",
+     "mutations": [
+      "add black B b3"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp5p/8/1N2P3/4B1b1/1b6/PPBQ3P/R1K4R w - - 0 1",
+     "parent": "g2-51",
+     "mutations": [
+      "move white R a1->e1"
+     ],
+     "verdict": "PASS (fast)"
+    }
+   ],
+   "iteration": 190,
+   "evals_so_far": 175,
+   "nearest_corpus": "C1",
+   "distance": 8
+  },
+  {
+   "name": "g2-63",
+   "fen": "1k2r2r/pp3p2/7p/PN6/4B1br/2N5/1PpQ2PP/2K4R w - - 0 1",
+   "lineage": [
+    {
+     "parent_fen": "1k2r2r/pp3pb1/7p/1N6/4B1br/2N3P1/PPPQ2PP/R1K4R w - - 0 1",
+     "parent": "S1",
+     "mutations": [
+      "remove white P c2"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r2r/pp3pb1/7p/1N6/4B1br/2N3P1/PP1Q2PP/R1K4R w - - 0 1",
+     "parent": "g2-2",
+     "mutations": [
+      "remove white P g3"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r2r/pp3pb1/7p/1N6/4B1br/2N5/PP1Q2PP/R1K4R w - - 0 1",
+     "parent": "g2-3",
+     "mutations": [
+      "remove black B g7"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r2r/pp3p2/7p/1N6/4B1br/2N5/PP1Q2PP/R1K4R w - - 0 1",
+     "parent": "g2-13",
+     "mutations": [
+      "remove white R a1",
+      "move white P a2->a5"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r2r/pp3p2/7p/PN6/4B1br/2N5/1P1Q2PP/2K4R w - - 0 1",
+     "parent": "g2-25",
+     "mutations": [
+      "add black P c2"
+     ],
+     "verdict": "PASS (fast)"
+    }
+   ],
+   "iteration": 197,
+   "evals_so_far": 182,
+   "nearest_corpus": "S1",
+   "distance": 7
+  },
+  {
+   "name": "g2-64",
+   "fen": "1k2r1n1/pp3pp1/8/1N3bn1/4B1b1/5PP1/PPPQ1PP1/2K4R w - - 0 1",
+   "lineage": [
+    {
+     "parent_fen": "1k2r1n1/pp3pp1/5n2/1N3b2/4B1b1/5PP1/PPPQ1PP1/2K4R w - - 0 1",
+     "parent": "S3",
+     "mutations": [
+      "move black N f6->g5"
+     ],
+     "verdict": "PASS (fast)"
+    }
+   ],
+   "iteration": 202,
+   "evals_so_far": 186,
+   "nearest_corpus": "S3",
+   "distance": 2
+  },
+  {
+   "name": "g2-65",
+   "fen": "1k2r2b/pp4P1/5B2/1N2P3/4B1b1/7p/PPPQ3N/R1K4R w - - 0 1",
+   "lineage": [
+    {
+     "parent_fen": "1k2r3/pp4pp/8/1N6/4B1b1/8/PPPQ2PP/R1K4R w - - 0 1",
+     "parent": "C1",
+     "mutations": [
+      "move white P g2->e5"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp4pp/8/1N2P3/4B1b1/8/PPPQ3P/R1K4R w - - 0 1",
+     "parent": "g2-1",
+     "mutations": [
+      "add white B f6"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp4pp/5B2/1N2P3/4B1b1/8/PPPQ3P/R1K4R w - - 0 1",
+     "parent": "g2-7",
+     "mutations": [
+      "move black P h7->h3"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp4p1/5B2/1N2P3/4B1b1/7p/PPPQ3P/R1K4R w - - 0 1",
+     "parent": "g2-8",
+     "mutations": [
+      "add black B h8"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r2b/pp4p1/5B2/1N2P3/4B1b1/7p/PPPQ3P/R1K4R w - - 0 1",
+     "parent": "g2-19",
+     "mutations": [
+      "recolour P black->white g7"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r2b/pp4P1/5B2/1N2P3/4B1b1/7p/PPPQ3P/R1K4R w - - 0 1",
+     "parent": "g2-49",
+     "mutations": [
+      "retype white P->N h2"
+     ],
+     "verdict": "PASS (fast)"
+    }
+   ],
+   "iteration": 205,
+   "evals_so_far": 188,
+   "nearest_corpus": "C1",
+   "distance": 10
+  },
+  {
+   "name": "g2-66",
+   "fen": "1k2r2r/pp3pb1/5R1p/1N6/4B1br/2N1P3/PP1Q2PP/2K4R w - - 0 1",
+   "lineage": [
+    {
+     "parent_fen": "1k2r2r/pp3pb1/7p/1N6/4B1br/2N3P1/PPPQ2PP/R1K4R w - - 0 1",
+     "parent": "S1",
+     "mutations": [
+      "remove white P c2"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r2r/pp3pb1/7p/1N6/4B1br/2N3P1/PP1Q2PP/R1K4R w - - 0 1",
+     "parent": "g2-2",
+     "mutations": [
+      "move white R a1->f6"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r2r/pp3pb1/5R1p/1N6/4B1br/2N3P1/PP1Q2PP/2K4R w - - 0 1",
+     "parent": "g2-24",
+     "mutations": [
+      "move white P g3->e3"
+     ],
+     "verdict": "PASS (fast)"
+    }
+   ],
+   "iteration": 208,
+   "evals_so_far": 189,
+   "nearest_corpus": "S1",
+   "distance": 5
+  },
+  {
+   "name": "g2-67",
+   "fen": "1k2r1B1/pp4pp/5p2/1N6/4B1b1/8/PPPQ1RPP/R1K5 w - - 0 1",
+   "lineage": [
+    {
+     "parent_fen": "1k2r3/pp4pp/8/1N6/4B1b1/8/PPPQ2PP/R1K4R w - - 0 1",
+     "parent": "C1",
+     "mutations": [
+      "move white R a1->f2"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp4pp/8/1N6/4B1b1/8/PPPQ1RPP/2K4R w - - 0 1",
+     "parent": "g2-5",
+     "mutations": [
+      "add black P f6"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp4pp/5p2/1N6/4B1b1/8/PPPQ1RPP/2K4R w - - 0 1",
+     "parent": "g2-21",
+     "mutations": [
+      "move white R h1->a1"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp4pp/5p2/1N6/4B1b1/8/PPPQ1RPP/R1K5 w - - 0 1",
+     "parent": "g2-35",
+     "mutations": [
+      "add white B g8"
+     ],
+     "verdict": "PASS (fast)"
+    }
+   ],
+   "iteration": 210,
+   "evals_so_far": 190,
+   "nearest_corpus": "C1",
+   "distance": 4
+  },
+  {
+   "name": "g2-68",
+   "fen": "1k2r2r/pp3p2/7p/1N6/4B1br/2N5/1P1Q2PP/2K4R w - - 0 1",
+   "lineage": [
+    {
+     "parent_fen": "1k2r2r/pp3pb1/7p/1N6/4B1br/2N3P1/PPPQ2PP/R1K4R w - - 0 1",
+     "parent": "S1",
+     "mutations": [
+      "remove white P c2"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r2r/pp3pb1/7p/1N6/4B1br/2N3P1/PP1Q2PP/R1K4R w - - 0 1",
+     "parent": "g2-2",
+     "mutations": [
+      "remove white P g3"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r2r/pp3pb1/7p/1N6/4B1br/2N5/PP1Q2PP/R1K4R w - - 0 1",
+     "parent": "g2-3",
+     "mutations": [
+      "remove black B g7"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r2r/pp3p2/7p/1N6/4B1br/2N5/PP1Q2PP/R1K4R w - - 0 1",
+     "parent": "g2-13",
+     "mutations": [
+      "remove white R a1",
+      "move white P a2->a5"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r2r/pp3p2/7p/PN6/4B1br/2N5/1P1Q2PP/2K4R w - - 0 1",
+     "parent": "g2-25",
+     "mutations": [
+      "remove white P a5"
+     ],
+     "verdict": "PASS (fast)"
+    }
+   ],
+   "iteration": 213,
+   "evals_so_far": 191,
+   "nearest_corpus": "S1",
+   "distance": 5
+  },
+  {
+   "name": "g2-69",
+   "fen": "1k2r3/pp4p1/4b3/1N6/4B3/8/PPPQ2PP/R1K1R3 w - - 0 1",
+   "lineage": [
+    {
+     "parent_fen": "1k2r3/pp4pp/8/1N6/4B1b1/8/PPPQ2PP/R1K4R w - - 0 1",
+     "parent": "C1",
+     "mutations": [
+      "move white R h1->e1"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp4pp/8/1N6/4B1b1/8/PPPQ2PP/R1K1R3 w - - 0 1",
+     "parent": "g2-9",
+     "mutations": [
+      "move black B g4->e6"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp4pp/4b3/1N6/4B3/8/PPPQ2PP/R1K1R3 w - - 0 1",
+     "parent": "g2-28",
+     "mutations": [
+      "remove black P h7"
+     ],
+     "verdict": "PASS (fast)"
+    }
+   ],
+   "iteration": 218,
+   "evals_so_far": 196,
+   "nearest_corpus": "C1",
+   "distance": 5
+  },
+  {
+   "name": "g2-70",
+   "fen": "1k2r3/pp4pp/8/1N6/4B1b1/8/PPPQ2PP/2K1R3 w - - 0 1",
+   "lineage": [
+    {
+     "parent_fen": "1k2r3/pp4pp/8/1N6/4B1b1/8/PPPQ2PP/R1K4R w - - 0 1",
+     "parent": "C1",
+     "mutations": [
+      "move white R h1->e1"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp4pp/8/1N6/4B1b1/8/PPPQ2PP/R1K1R3 w - - 0 1",
+     "parent": "g2-9",
+     "mutations": [
+      "remove white R a1"
+     ],
+     "verdict": "PASS (fast)"
+    }
+   ],
+   "iteration": 227,
+   "evals_so_far": 200,
+   "nearest_corpus": "C1",
+   "distance": 3
+  },
+  {
+   "name": "g2-71",
+   "fen": "1k2r2r/pp6/7p/PN6/4B1br/2N5/3Q1PPP/2K4R w - - 0 1",
+   "lineage": [
+    {
+     "parent_fen": "1k2r2r/pp3pb1/7p/1N6/4B1br/2N3P1/PPPQ2PP/R1K4R w - - 0 1",
+     "parent": "S1",
+     "mutations": [
+      "remove white P c2"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r2r/pp3pb1/7p/1N6/4B1br/2N3P1/PP1Q2PP/R1K4R w - - 0 1",
+     "parent": "g2-2",
+     "mutations": [
+      "remove white P g3"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r2r/pp3pb1/7p/1N6/4B1br/2N5/PP1Q2PP/R1K4R w - - 0 1",
+     "parent": "g2-3",
+     "mutations": [
+      "remove black B g7"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r2r/pp3p2/7p/1N6/4B1br/2N5/PP1Q2PP/R1K4R w - - 0 1",
+     "parent": "g2-13",
+     "mutations": [
+      "remove white R a1",
+      "move white P a2->a5"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r2r/pp3p2/7p/PN6/4B1br/2N5/1P1Q2PP/2K4R w - - 0 1",
+     "parent": "g2-25",
+     "mutations": [
+      "remove black P f7",
+      "move white P b2->f2"
+     ],
+     "verdict": "PASS (fast)"
+    }
+   ],
+   "iteration": 237,
+   "evals_so_far": 206,
+   "nearest_corpus": "S1",
+   "distance": 9
+  },
+  {
+   "name": "g2-72",
+   "fen": "1k2r2r/pp3P2/7p/1N6/4B1br/2N5/PP1Q2PP/R1K4R w - - 0 1",
+   "lineage": [
+    {
+     "parent_fen": "1k2r2r/pp3pb1/7p/1N6/4B1br/2N3P1/PPPQ2PP/R1K4R w - - 0 1",
+     "parent": "S1",
+     "mutations": [
+      "remove white P c2"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r2r/pp3pb1/7p/1N6/4B1br/2N3P1/PP1Q2PP/R1K4R w - - 0 1",
+     "parent": "g2-2",
+     "mutations": [
+      "remove white P g3"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r2r/pp3pb1/7p/1N6/4B1br/2N5/PP1Q2PP/R1K4R w - - 0 1",
+     "parent": "g2-3",
+     "mutations": [
+      "remove black B g7"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r2r/pp3p2/7p/1N6/4B1br/2N5/PP1Q2PP/R1K4R w - - 0 1",
+     "parent": "g2-13",
+     "mutations": [
+      "recolour P black->white f7"
+     ],
+     "verdict": "PASS (fast)"
+    }
+   ],
+   "iteration": 239,
+   "evals_so_far": 207,
+   "nearest_corpus": "S1",
+   "distance": 5
+  },
+  {
+   "name": "g2-73",
+   "fen": "1k2r3/pp4p1/4b3/1N6/P3B3/8/p1PQ2PP/R1K1R3 w - - 0 1",
+   "lineage": [
+    {
+     "parent_fen": "1k2r3/pp4pp/8/1N6/4B1b1/8/PPPQ2PP/R1K4R w - - 0 1",
+     "parent": "C1",
+     "mutations": [
+      "move white R h1->e1"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp4pp/8/1N6/4B1b1/8/PPPQ2PP/R1K1R3 w - - 0 1",
+     "parent": "g2-9",
+     "mutations": [
+      "move black B g4->e6"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp4pp/4b3/1N6/4B3/8/PPPQ2PP/R1K1R3 w - - 0 1",
+     "parent": "g2-28",
+     "mutations": [
+      "remove white P b2",
+      "recolour P white->black a2"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp4pp/4b3/1N6/4B3/8/p1PQ2PP/R1K1R3 w - - 0 1",
+     "parent": "g2-33",
+     "mutations": [
+      "remove black P h7"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp4p1/4b3/1N6/4B3/8/p1PQ2PP/R1K1R3 w - - 0 1",
+     "parent": "g2-39",
+     "mutations": [
+      "add white P a4"
+     ],
+     "verdict": "PASS (fast)"
+    }
+   ],
+   "iteration": 240,
+   "evals_so_far": 208,
+   "nearest_corpus": "C1",
+   "distance": 9
+  },
+  {
+   "name": "g2-74",
+   "fen": "1k2r3/pp4pP/8/1N6/4B1b1/8/P1PQ2PP/R1K1R3 w - - 0 1",
+   "lineage": [
+    {
+     "parent_fen": "1k2r3/pp4pp/8/1N6/4B1b1/8/PPPQ2PP/R1K4R w - - 0 1",
+     "parent": "C1",
+     "mutations": [
+      "move white R h1->e1"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp4pp/8/1N6/4B1b1/8/PPPQ2PP/R1K1R3 w - - 0 1",
+     "parent": "g2-9",
+     "mutations": [
+      "remove white P b2"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp4pp/8/1N6/4B1b1/8/P1PQ2PP/R1K1R3 w - - 0 1",
+     "parent": "g2-56",
+     "mutations": [
+      "recolour P black->white h7"
+     ],
+     "verdict": "PASS (fast)"
+    }
+   ],
+   "iteration": 241,
+   "evals_so_far": 209,
+   "nearest_corpus": "C1",
+   "distance": 5
+  },
+  {
+   "name": "g2-75",
+   "fen": "1k2r3/pp6/7p/PN6/4B1br/2N5/3Q1PPP/2K4R w - - 0 1",
+   "lineage": [
+    {
+     "parent_fen": "1k2r2r/pp3pb1/7p/1N6/4B1br/2N3P1/PPPQ2PP/R1K4R w - - 0 1",
+     "parent": "S1",
+     "mutations": [
+      "remove white P c2"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r2r/pp3pb1/7p/1N6/4B1br/2N3P1/PP1Q2PP/R1K4R w - - 0 1",
+     "parent": "g2-2",
+     "mutations": [
+      "remove white P g3"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r2r/pp3pb1/7p/1N6/4B1br/2N5/PP1Q2PP/R1K4R w - - 0 1",
+     "parent": "g2-3",
+     "mutations": [
+      "remove black B g7"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r2r/pp3p2/7p/1N6/4B1br/2N5/PP1Q2PP/R1K4R w - - 0 1",
+     "parent": "g2-13",
+     "mutations": [
+      "remove white R a1",
+      "move white P a2->a5"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r2r/pp3p2/7p/PN6/4B1br/2N5/1P1Q2PP/2K4R w - - 0 1",
+     "parent": "g2-25",
+     "mutations": [
+      "remove black P f7",
+      "move white P b2->f2"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r2r/pp6/7p/PN6/4B1br/2N5/3Q1PPP/2K4R w - - 0 1",
+     "parent": "g2-71",
+     "mutations": [
+      "remove black R h8"
+     ],
+     "verdict": "PASS (fast)"
+    }
+   ],
+   "iteration": 245,
+   "evals_so_far": 210,
+   "nearest_corpus": "S1",
+   "distance": 10
+  },
+  {
+   "name": "g2-76",
+   "fen": "1k2r3/pp4pp/5p1n/1N6/4B1b1/8/PPPQ1RPP/2K4R w - - 0 1",
+   "lineage": [
+    {
+     "parent_fen": "1k2r3/pp4pp/8/1N6/4B1b1/8/PPPQ2PP/R1K4R w - - 0 1",
+     "parent": "C1",
+     "mutations": [
+      "move white R a1->f2"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp4pp/8/1N6/4B1b1/8/PPPQ1RPP/2K4R w - - 0 1",
+     "parent": "g2-5",
+     "mutations": [
+      "add black P f6"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp4pp/5p2/1N6/4B1b1/8/PPPQ1RPP/2K4R w - - 0 1",
+     "parent": "g2-21",
+     "mutations": [
+      "add black N h6"
+     ],
+     "verdict": "PASS (fast)"
+    }
+   ],
+   "iteration": 247,
+   "evals_so_far": 211,
+   "nearest_corpus": "C1",
+   "distance": 4
+  },
+  {
+   "name": "g2-77",
+   "fen": "1k2r3/pp4pp/8/1N6/4B1b1/8/PNPQ2PP/R1K5 w - - 0 1",
+   "lineage": [
+    {
+     "parent_fen": "1k2r3/pp4pp/8/1N6/4B1b1/8/PPPQ2PP/R1K4R w - - 0 1",
+     "parent": "C1",
+     "mutations": [
+      "move white R h1->e1"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp4pp/8/1N6/4B1b1/8/PPPQ2PP/R1K1R3 w - - 0 1",
+     "parent": "g2-9",
+     "mutations": [
+      "retype white P->N b2",
+      "remove white R e1"
+     ],
+     "verdict": "PASS (fast)"
+    }
+   ],
+   "iteration": 250,
+   "evals_so_far": 213,
+   "nearest_corpus": "C1",
+   "distance": 3
+  },
+  {
+   "name": "g2-78",
+   "fen": "1k2r2r/pp4b1/7p/1Np5/4B1br/2N3P1/PPPQ3P/R1K4R w - - 0 1",
+   "lineage": [
+    {
+     "parent_fen": "1k2r2r/pp3pb1/7p/1N6/4B1br/2N3P1/PPPQ2PP/R1K4R w - - 0 1",
+     "parent": "S1",
+     "mutations": [
+      "remove white P g2"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r2r/pp3pb1/7p/1N6/4B1br/2N3P1/PPPQ3P/R1K4R w - - 0 1",
+     "parent": "g2-10",
+     "mutations": [
+      "move black P f7->c5"
+     ],
+     "verdict": "PASS (fast)"
+    }
+   ],
+   "iteration": 253,
+   "evals_so_far": 217,
+   "nearest_corpus": "S1",
+   "distance": 3
+  },
+  {
+   "name": "g2-79",
+   "fen": "1k2r2r/pp3p2/7p/PN5p/4B1br/2N5/1PpQ2PP/2K4R w - - 0 1",
+   "lineage": [
+    {
+     "parent_fen": "1k2r2r/pp3pb1/7p/1N6/4B1br/2N3P1/PPPQ2PP/R1K4R w - - 0 1",
+     "parent": "S1",
+     "mutations": [
+      "remove white P c2"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r2r/pp3pb1/7p/1N6/4B1br/2N3P1/PP1Q2PP/R1K4R w - - 0 1",
+     "parent": "g2-2",
+     "mutations": [
+      "remove white P g3"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r2r/pp3pb1/7p/1N6/4B1br/2N5/PP1Q2PP/R1K4R w - - 0 1",
+     "parent": "g2-3",
+     "mutations": [
+      "remove black B g7"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r2r/pp3p2/7p/1N6/4B1br/2N5/PP1Q2PP/R1K4R w - - 0 1",
+     "parent": "g2-13",
+     "mutations": [
+      "remove white R a1",
+      "move white P a2->a5"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r2r/pp3p2/7p/PN6/4B1br/2N5/1P1Q2PP/2K4R w - - 0 1",
+     "parent": "g2-25",
+     "mutations": [
+      "add black P c2"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r2r/pp3p2/7p/PN6/4B1br/2N5/1PpQ2PP/2K4R w - - 0 1",
+     "parent": "g2-63",
+     "mutations": [
+      "add black P h5"
+     ],
+     "verdict": "PASS (fast)"
+    }
+   ],
+   "iteration": 257,
+   "evals_so_far": 222,
+   "nearest_corpus": "S1",
+   "distance": 8
+  },
+  {
+   "name": "g2-80",
+   "fen": "1k2r3/pp6/8/1N2P3/4B1b1/1b6/PPBQ3P/2K4R w - - 0 1",
+   "lineage": [
+    {
+     "parent_fen": "1k2r3/pp4pp/8/1N6/4B1b1/8/PPPQ2PP/R1K4R w - - 0 1",
+     "parent": "C1",
+     "mutations": [
+      "move white P g2->e5"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp4pp/8/1N2P3/4B1b1/8/PPPQ3P/R1K4R w - - 0 1",
+     "parent": "g2-1",
+     "mutations": [
+      "remove black P g7",
+      "retype white P->B c2"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp5p/8/1N2P3/4B1b1/8/PPBQ3P/R1K4R w - - 0 1",
+     "parent": "g2-4",
+     "mutations": [
+      "add black B b3"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp5p/8/1N2P3/4B1b1/1b6/PPBQ3P/R1K4R w - - 0 1",
+     "parent": "g2-51",
+     "mutations": [
+      "remove white R a1",
+      "remove black P h7"
+     ],
+     "verdict": "PASS (fast)"
+    }
+   ],
+   "iteration": 260,
+   "evals_so_far": 223,
+   "nearest_corpus": "C1",
+   "distance": 8
+  },
+  {
+   "name": "g2-81",
+   "fen": "1k2r2r/pp3pb1/7p/1N6/4B1br/2N1n3/PP1Q2PP/R1K4R w - - 0 1",
+   "lineage": [
+    {
+     "parent_fen": "1k2r2r/pp3pb1/7p/1N6/4B1br/2N3P1/PPPQ2PP/R1K4R w - - 0 1",
+     "parent": "S1",
+     "mutations": [
+      "remove white P c2"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r2r/pp3pb1/7p/1N6/4B1br/2N3P1/PP1Q2PP/R1K4R w - - 0 1",
+     "parent": "g2-2",
+     "mutations": [
+      "remove white P g3"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r2r/pp3pb1/7p/1N6/4B1br/2N5/PP1Q2PP/R1K4R w - - 0 1",
+     "parent": "g2-3",
+     "mutations": [
+      "add black N e3"
+     ],
+     "verdict": "PASS (fast)"
+    }
+   ],
+   "iteration": 261,
+   "evals_so_far": 224,
+   "nearest_corpus": "S1",
+   "distance": 3
+  },
+  {
+   "name": "g2-82",
+   "fen": "1k2r3/pp3Np1/8/1N6/4B1b1/8/PPPQ2PP/R1K5 w - - 0 1",
+   "lineage": [
+    {
+     "parent_fen": "1k2r3/pp4pp/8/1N6/4B1b1/8/PPPQ2PP/R1K4R w - - 0 1",
+     "parent": "C1",
+     "mutations": [
+      "remove black P h7"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp4p1/8/1N6/4B1b1/8/PPPQ2PP/R1K4R w - - 0 1",
+     "parent": "g2-6",
+     "mutations": [
+      "move white R h1->f7",
+      "retype white R->N f7"
+     ],
+     "verdict": "PASS (fast)"
+    }
+   ],
+   "iteration": 263,
+   "evals_so_far": 225,
+   "nearest_corpus": "C1",
+   "distance": 3
+  },
+  {
+   "name": "g2-83",
+   "fen": "1k2r3/pp4p1/8/1N6/4B1b1/8/P1PQ3P/R1K4R w - - 0 1",
+   "lineage": [
+    {
+     "parent_fen": "1k2r3/pp4pp/8/1N6/4B1b1/8/PPPQ2PP/R1K4R w - - 0 1",
+     "parent": "C1",
+     "mutations": [
+      "remove black P h7"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp4p1/8/1N6/4B1b1/8/PPPQ2PP/R1K4R w - - 0 1",
+     "parent": "g2-6",
+     "mutations": [
+      "recolour P white->black g2",
+      "remove white P b2",
+      "recolour P black->white g2"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp4p1/8/1N6/4B1b1/8/P1PQ2PP/R1K4R w - - 0 1",
+     "parent": "g2-27",
+     "mutations": [
+      "remove white P g2"
+     ],
+     "verdict": "PASS (fast)"
+    }
+   ],
+   "iteration": 264,
+   "evals_so_far": 226,
+   "nearest_corpus": "C1",
+   "distance": 3
+  },
+  {
+   "name": "g2-84",
+   "fen": "1k2r3/pp4pp/5n2/1N6/4B1b1/8/P1BQ1RPP/2K5 w - - 0 1",
+   "lineage": [
+    {
+     "parent_fen": "1k2r3/pp4pp/8/1N6/4B1b1/8/PPPQ2PP/R1K4R w - - 0 1",
+     "parent": "C1",
+     "mutations": [
+      "move white R a1->f2"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp4pp/8/1N6/4B1b1/8/PPPQ1RPP/2K4R w - - 0 1",
+     "parent": "g2-5",
+     "mutations": [
+      "add black N f6"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp4pp/5n2/1N6/4B1b1/8/PPPQ1RPP/2K4R w - - 0 1",
+     "parent": "g2-20",
+     "mutations": [
+      "remove white P b2"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp4pp/5n2/1N6/4B1b1/8/P1PQ1RPP/2K4R w - - 0 1",
+     "parent": "g2-43",
+     "mutations": [
+      "retype white P->B c2"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp4pp/5n2/1N6/4B1b1/8/P1BQ1RPP/2K4R w - - 0 1",
+     "parent": "g2-54",
+     "mutations": [
+      "move white R h1->c3",
+      "remove white R c3"
+     ],
+     "verdict": "PASS (fast)"
+    }
+   ],
+   "iteration": 267,
+   "evals_so_far": 230,
+   "nearest_corpus": "C1",
+   "distance": 7
+  },
+  {
+   "name": "g2-85",
+   "fen": "1k2r2r/pp3pb1/7p/1N6/4B1b1/2N3P1/P1pQ2PP/R1K4R w - - 0 1",
+   "lineage": [
+    {
+     "parent_fen": "1k2r2r/pp3pb1/7p/1N6/4B1br/2N3P1/PPPQ2PP/R1K4R w - - 0 1",
+     "parent": "S1",
+     "mutations": [
+      "remove black R h4"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r2r/pp3pb1/7p/1N6/4B1b1/2N3P1/PPPQ2PP/R1K4R w - - 0 1",
+     "parent": "g2-47",
+     "mutations": [
+      "recolour P white->black c2"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r2r/pp3pb1/7p/1N6/4B1b1/2N3P1/PPpQ2PP/R1K4R w - - 0 1",
+     "parent": "g2-58",
+     "mutations": [
+      "remove white P b2"
+     ],
+     "verdict": "PASS (fast)"
+    }
+   ],
+   "iteration": 273,
+   "evals_so_far": 234,
+   "nearest_corpus": "S1",
+   "distance": 4
+  },
+  {
+   "name": "g2-86",
+   "fen": "1k2r2r/pp3p2/7p/1N6/2P1B1br/2N3P1/PP1Q2PP/R1K4R w - - 0 1",
+   "lineage": [
+    {
+     "parent_fen": "1k2r2r/pp3pb1/7p/1N6/4B1br/2N3P1/PPPQ2PP/R1K4R w - - 0 1",
+     "parent": "S1",
+     "mutations": [
+      "remove white P c2"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r2r/pp3pb1/7p/1N6/4B1br/2N3P1/PP1Q2PP/R1K4R w - - 0 1",
+     "parent": "g2-2",
+     "mutations": [
+      "remove black B g7",
+      "add white P c4"
+     ],
+     "verdict": "PASS (fast)"
+    }
+   ],
+   "iteration": 274,
+   "evals_so_far": 235,
+   "nearest_corpus": "S1",
+   "distance": 3
+  },
+  {
+   "name": "g2-87",
+   "fen": "1k2r3/pp4p1/4b3/1N6/4B3/8/p1PQ3P/R1K1R3 w - - 0 1",
+   "lineage": [
+    {
+     "parent_fen": "1k2r3/pp4pp/8/1N6/4B1b1/8/PPPQ2PP/R1K4R w - - 0 1",
+     "parent": "C1",
+     "mutations": [
+      "move white R h1->e1"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp4pp/8/1N6/4B1b1/8/PPPQ2PP/R1K1R3 w - - 0 1",
+     "parent": "g2-9",
+     "mutations": [
+      "move black B g4->e6"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp4pp/4b3/1N6/4B3/8/PPPQ2PP/R1K1R3 w - - 0 1",
+     "parent": "g2-28",
+     "mutations": [
+      "remove white P b2",
+      "recolour P white->black a2"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp4pp/4b3/1N6/4B3/8/p1PQ2PP/R1K1R3 w - - 0 1",
+     "parent": "g2-33",
+     "mutations": [
+      "remove black P h7"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp4p1/4b3/1N6/4B3/8/p1PQ2PP/R1K1R3 w - - 0 1",
+     "parent": "g2-39",
+     "mutations": [
+      "remove white P g2"
+     ],
+     "verdict": "PASS (fast)"
+    }
+   ],
+   "iteration": 275,
+   "evals_so_far": 236,
+   "nearest_corpus": "C1",
+   "distance": 9
+  },
+  {
+   "name": "g2-88",
+   "fen": "1k2r2r/pp6/7p/1N5P/4B1br/2N5/PP1Q2PP/R1K4R w - - 0 1",
+   "lineage": [
+    {
+     "parent_fen": "1k2r2r/pp3pb1/7p/1N6/4B1br/2N3P1/PPPQ2PP/R1K4R w - - 0 1",
+     "parent": "S1",
+     "mutations": [
+      "remove white P c2"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r2r/pp3pb1/7p/1N6/4B1br/2N3P1/PP1Q2PP/R1K4R w - - 0 1",
+     "parent": "g2-2",
+     "mutations": [
+      "remove white P g3"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r2r/pp3pb1/7p/1N6/4B1br/2N5/PP1Q2PP/R1K4R w - - 0 1",
+     "parent": "g2-3",
+     "mutations": [
+      "remove black B g7"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r2r/pp3p2/7p/1N6/4B1br/2N5/PP1Q2PP/R1K4R w - - 0 1",
+     "parent": "g2-13",
+     "mutations": [
+      "recolour P black->white f7"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r2r/pp3P2/7p/1N6/4B1br/2N5/PP1Q2PP/R1K4R w - - 0 1",
+     "parent": "g2-72",
+     "mutations": [
+      "move white P f7->h5",
+      "recolour N white->black c3",
+      "recolour N black->white c3"
+     ],
+     "verdict": "PASS (fast)"
+    }
+   ],
+   "iteration": 277,
+   "evals_so_far": 238,
+   "nearest_corpus": "S1",
+   "distance": 5
+  },
+  {
+   "name": "g2-89",
+   "fen": "1k2r3/pp1b4/6br/1N6/4B2N/8/PPPQ2P1/R1K4R w - - 0 1",
+   "lineage": [
+    {
+     "parent_fen": "1k2r3/pp1b4/6br/1N6/4B2N/8/PPPQ2PP/R1K4R w - - 0 1",
+     "parent": "C4",
+     "mutations": [
+      "remove white P h2"
+     ],
+     "verdict": "PASS (fast)"
+    }
+   ],
+   "iteration": 279,
+   "evals_so_far": 239,
+   "nearest_corpus": "C4",
+   "distance": 1
+  },
+  {
+   "name": "g2-90",
+   "fen": "1k2r3/pp2B1Pp/8/1N2P3/4B1b1/8/PPPQ3P/R1K4R w - - 0 1",
+   "lineage": [
+    {
+     "parent_fen": "1k2r3/pp4pp/8/1N6/4B1b1/8/PPPQ2PP/R1K4R w - - 0 1",
+     "parent": "C1",
+     "mutations": [
+      "move white P g2->e5"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp4pp/8/1N2P3/4B1b1/8/PPPQ3P/R1K4R w - - 0 1",
+     "parent": "g2-1",
+     "mutations": [
+      "add white B e7"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp2B1pp/8/1N2P3/4B1b1/8/PPPQ3P/R1K4R w - - 0 1",
+     "parent": "g2-23",
+     "mutations": [
+      "recolour P black->white g7"
+     ],
+     "verdict": "PASS (fast)"
+    }
+   ],
+   "iteration": 280,
+   "evals_so_far": 240,
+   "nearest_corpus": "C1",
+   "distance": 5
+  },
+  {
+   "name": "g2-91",
+   "fen": "1k2r3/pp4p1/5B2/pN2P3/4B1b1/7p/PPPQ1P1P/R1K4R w - - 0 1",
+   "lineage": [
+    {
+     "parent_fen": "1k2r3/pp4pp/8/1N6/4B1b1/8/PPPQ2PP/R1K4R w - - 0 1",
+     "parent": "C1",
+     "mutations": [
+      "move white P g2->e5"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp4pp/8/1N2P3/4B1b1/8/PPPQ3P/R1K4R w - - 0 1",
+     "parent": "g2-1",
+     "mutations": [
+      "add white B f6"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp4pp/5B2/1N2P3/4B1b1/8/PPPQ3P/R1K4R w - - 0 1",
+     "parent": "g2-7",
+     "mutations": [
+      "move black P h7->h3"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp4p1/5B2/1N2P3/4B1b1/7p/PPPQ3P/R1K4R w - - 0 1",
+     "parent": "g2-8",
+     "mutations": [
+      "add white P f2"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp4p1/5B2/1N2P3/4B1b1/7p/PPPQ1P1P/R1K4R w - - 0 1",
+     "parent": "g2-14",
+     "mutations": [
+      "add black P a5"
+     ],
+     "verdict": "PASS (fast)"
+    }
+   ],
+   "iteration": 283,
+   "evals_so_far": 241,
+   "nearest_corpus": "C1",
+   "distance": 7
+  },
+  {
+   "name": "g2-92",
+   "fen": "1k2r3/pp4p1/5B2/1N2P2n/4B1b1/7p/p1PQ4/R1K4R w - - 0 1",
+   "lineage": [
+    {
+     "parent_fen": "1k2r3/pp4pp/8/1N6/4B1b1/8/PPPQ2PP/R1K4R w - - 0 1",
+     "parent": "C1",
+     "mutations": [
+      "move white P g2->e5"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp4pp/8/1N2P3/4B1b1/8/PPPQ3P/R1K4R w - - 0 1",
+     "parent": "g2-1",
+     "mutations": [
+      "add white B f6"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp4pp/5B2/1N2P3/4B1b1/8/PPPQ3P/R1K4R w - - 0 1",
+     "parent": "g2-7",
+     "mutations": [
+      "move black P h7->h3"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp4p1/5B2/1N2P3/4B1b1/7p/PPPQ3P/R1K4R w - - 0 1",
+     "parent": "g2-8",
+     "mutations": [
+      "add black N h5",
+      "remove white P h2"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp4p1/5B2/1N2P2n/4B1b1/7p/PPPQ4/R1K4R w - - 0 1",
+     "parent": "g2-22",
+     "mutations": [
+      "remove white P b2"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp4p1/5B2/1N2P2n/4B1b1/7p/P1PQ4/R1K4R w - - 0 1",
+     "parent": "g2-46",
+     "mutations": [
+      "recolour P white->black a2"
+     ],
+     "verdict": "PASS (fast)"
+    }
+   ],
+   "iteration": 285,
+   "evals_so_far": 242,
+   "nearest_corpus": "C1",
+   "distance": 10
+  },
+  {
+   "name": "g2-93",
+   "fen": "1k2r2b/pp4p1/5B2/1N2P3/4B1b1/7p/pPPQ1P1P/R1K4R w - - 0 1",
+   "lineage": [
+    {
+     "parent_fen": "1k2r3/pp4pp/8/1N6/4B1b1/8/PPPQ2PP/R1K4R w - - 0 1",
+     "parent": "C1",
+     "mutations": [
+      "move white P g2->e5"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp4pp/8/1N2P3/4B1b1/8/PPPQ3P/R1K4R w - - 0 1",
+     "parent": "g2-1",
+     "mutations": [
+      "add white B f6"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp4pp/5B2/1N2P3/4B1b1/8/PPPQ3P/R1K4R w - - 0 1",
+     "parent": "g2-7",
+     "mutations": [
+      "move black P h7->h3"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp4p1/5B2/1N2P3/4B1b1/7p/PPPQ3P/R1K4R w - - 0 1",
+     "parent": "g2-8",
+     "mutations": [
+      "add white P f2"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp4p1/5B2/1N2P3/4B1b1/7p/PPPQ1P1P/R1K4R w - - 0 1",
+     "parent": "g2-14",
+     "mutations": [
+      "recolour P white->black a2"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp4p1/5B2/1N2P3/4B1b1/7p/pPPQ1P1P/R1K4R w - - 0 1",
+     "parent": "g2-15",
+     "mutations": [
+      "add black B h8"
+     ],
+     "verdict": "PASS (fast)"
+    }
+   ],
+   "iteration": 286,
+   "evals_so_far": 243,
+   "nearest_corpus": "C1",
+   "distance": 9
+  },
+  {
+   "name": "g2-94",
+   "fen": "1k2r1n1/pp3pp1/8/1N3bn1/4B1b1/5PP1/PPPQ1PP1/2K5 w - - 0 1",
+   "lineage": [
+    {
+     "parent_fen": "1k2r1n1/pp3pp1/5n2/1N3b2/4B1b1/5PP1/PPPQ1PP1/2K4R w - - 0 1",
+     "parent": "S3",
+     "mutations": [
+      "move black N f6->g5"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r1n1/pp3pp1/8/1N3bn1/4B1b1/5PP1/PPPQ1PP1/2K4R w - - 0 1",
+     "parent": "g2-64",
+     "mutations": [
+      "remove white R h1"
+     ],
+     "verdict": "PASS (fast)"
+    }
+   ],
+   "iteration": 288,
+   "evals_so_far": 247,
+   "nearest_corpus": "S3",
+   "distance": 3
+  },
+  {
+   "name": "g2-95",
+   "fen": "1k2r3/pp4p1/8/pN2P3/4B1b1/7p/PPPQ1P1P/R1K4R w - - 0 1",
+   "lineage": [
+    {
+     "parent_fen": "1k2r3/pp4pp/8/1N6/4B1b1/8/PPPQ2PP/R1K4R w - - 0 1",
+     "parent": "C1",
+     "mutations": [
+      "move white P g2->e5"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp4pp/8/1N2P3/4B1b1/8/PPPQ3P/R1K4R w - - 0 1",
+     "parent": "g2-1",
+     "mutations": [
+      "add white B f6"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp4pp/5B2/1N2P3/4B1b1/8/PPPQ3P/R1K4R w - - 0 1",
+     "parent": "g2-7",
+     "mutations": [
+      "move black P h7->h3"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp4p1/5B2/1N2P3/4B1b1/7p/PPPQ3P/R1K4R w - - 0 1",
+     "parent": "g2-8",
+     "mutations": [
+      "add white P f2"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp4p1/5B2/1N2P3/4B1b1/7p/PPPQ1P1P/R1K4R w - - 0 1",
+     "parent": "g2-14",
+     "mutations": [
+      "add black P a5"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp4p1/5B2/pN2P3/4B1b1/7p/PPPQ1P1P/R1K4R w - - 0 1",
+     "parent": "g2-91",
+     "mutations": [
+      "remove white B f6"
+     ],
+     "verdict": "PASS (fast)"
+    }
+   ],
+   "iteration": 289,
+   "evals_so_far": 248,
+   "nearest_corpus": "C1",
+   "distance": 6
+  },
+  {
+   "name": "g2-96",
+   "fen": "1k2r3/pp4pp/4b3/1N6/4B3/8/p1PQ2P1/R1K1R3 w - - 0 1",
+   "lineage": [
+    {
+     "parent_fen": "1k2r3/pp4pp/8/1N6/4B1b1/8/PPPQ2PP/R1K4R w - - 0 1",
+     "parent": "C1",
+     "mutations": [
+      "move white R h1->e1"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp4pp/8/1N6/4B1b1/8/PPPQ2PP/R1K1R3 w - - 0 1",
+     "parent": "g2-9",
+     "mutations": [
+      "move black B g4->e6"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp4pp/4b3/1N6/4B3/8/PPPQ2PP/R1K1R3 w - - 0 1",
+     "parent": "g2-28",
+     "mutations": [
+      "remove white P b2",
+      "recolour P white->black a2"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp4pp/4b3/1N6/4B3/8/p1PQ2PP/R1K1R3 w - - 0 1",
+     "parent": "g2-33",
+     "mutations": [
+      "remove white P h2"
+     ],
+     "verdict": "PASS (fast)"
+    }
+   ],
+   "iteration": 291,
+   "evals_so_far": 249,
+   "nearest_corpus": "C1",
+   "distance": 8
+  },
+  {
+   "name": "g2-97",
+   "fen": "1k2r1b1/pp4pp/5p2/1N6/4B1b1/8/PPPQ1RPP/2K4R w - - 0 1",
+   "lineage": [
+    {
+     "parent_fen": "1k2r3/pp4pp/8/1N6/4B1b1/8/PPPQ2PP/R1K4R w - - 0 1",
+     "parent": "C1",
+     "mutations": [
+      "move white R a1->f2"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp4pp/8/1N6/4B1b1/8/PPPQ1RPP/2K4R w - - 0 1",
+     "parent": "g2-5",
+     "mutations": [
+      "add black P f6"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp4pp/5p2/1N6/4B1b1/8/PPPQ1RPP/2K4R w - - 0 1",
+     "parent": "g2-21",
+     "mutations": [
+      "add black B g8"
+     ],
+     "verdict": "PASS (fast)"
+    }
+   ],
+   "iteration": 294,
+   "evals_so_far": 250,
+   "nearest_corpus": "C1",
+   "distance": 4
+  },
+  {
+   "name": "g2-98",
+   "fen": "1k2r3/pp2P1pp/8/1N6/4B1b1/8/PNPQ2P1/R1K5 w - - 0 1",
+   "lineage": [
+    {
+     "parent_fen": "1k2r3/pp4pp/8/1N6/4B1b1/8/PPPQ2PP/R1K4R w - - 0 1",
+     "parent": "C1",
+     "mutations": [
+      "move white R h1->e1"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp4pp/8/1N6/4B1b1/8/PPPQ2PP/R1K1R3 w - - 0 1",
+     "parent": "g2-9",
+     "mutations": [
+      "retype white P->N b2",
+      "remove white R e1"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp4pp/8/1N6/4B1b1/8/PNPQ2PP/R1K5 w - - 0 1",
+     "parent": "g2-77",
+     "mutations": [
+      "move white P h2->e7"
+     ],
+     "verdict": "PASS (fast)"
+    }
+   ],
+   "iteration": 299,
+   "evals_so_far": 254,
+   "nearest_corpus": "C1",
+   "distance": 5
+  },
+  {
+   "name": "g2-99",
+   "fen": "1k2r3/pp5p/b7/1N2P3/4B1b1/8/pPBQ4/R1K4N w - - 0 1",
+   "lineage": [
+    {
+     "parent_fen": "1k2r3/pp4pp/8/1N6/4B1b1/8/PPPQ2PP/R1K4R w - - 0 1",
+     "parent": "C1",
+     "mutations": [
+      "move white P g2->e5"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp4pp/8/1N2P3/4B1b1/8/PPPQ3P/R1K4R w - - 0 1",
+     "parent": "g2-1",
+     "mutations": [
+      "remove black P g7",
+      "retype white P->B c2"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp5p/8/1N2P3/4B1b1/8/PPBQ3P/R1K4R w - - 0 1",
+     "parent": "g2-4",
+     "mutations": [
+      "remove white P h2"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp5p/8/1N2P3/4B1b1/8/PPBQ4/R1K4R w - - 0 1",
+     "parent": "g2-11",
+     "mutations": [
+      "recolour P white->black a2",
+      "add black B a6"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp5p/b7/1N2P3/4B1b1/8/pPBQ4/R1K4R w - - 0 1",
+     "parent": "g2-52",
+     "mutations": [
+      "retype white R->N h1"
+     ],
+     "verdict": "PASS (fast)"
+    }
+   ],
+   "iteration": 306,
+   "evals_so_far": 263,
+   "nearest_corpus": "C1",
+   "distance": 11
+  },
+  {
+   "name": "g2-100",
+   "fen": "1k2r3/pp5p/7P/1N2P3/4B1b1/8/PPBQ4/2K1R2R w - - 0 1",
+   "lineage": [
+    {
+     "parent_fen": "1k2r3/pp4pp/8/1N6/4B1b1/8/PPPQ2PP/R1K4R w - - 0 1",
+     "parent": "C1",
+     "mutations": [
+      "move white P g2->e5"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp4pp/8/1N2P3/4B1b1/8/PPPQ3P/R1K4R w - - 0 1",
+     "parent": "g2-1",
+     "mutations": [
+      "remove black P g7",
+      "retype white P->B c2"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp5p/8/1N2P3/4B1b1/8/PPBQ3P/R1K4R w - - 0 1",
+     "parent": "g2-4",
+     "mutations": [
+      "add black B b3"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp5p/8/1N2P3/4B1b1/1b6/PPBQ3P/R1K4R w - - 0 1",
+     "parent": "g2-51",
+     "mutations": [
+      "move white R a1->e1"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp5p/8/1N2P3/4B1b1/1b6/PPBQ3P/2K1R2R w - - 0 1",
+     "parent": "g2-62",
+     "mutations": [
+      "recolour R white->black h1",
+      "move white P h2->h6",
+      "remove black B b3",
+      "recolour R black->white h1"
+     ],
+     "verdict": "PASS (fast)"
+    }
+   ],
+   "iteration": 309,
+   "evals_so_far": 266,
+   "nearest_corpus": "C1",
+   "distance": 9
+  },
+  {
+   "name": "g2-101",
+   "fen": "1k2r3/pp4p1/4b3/1N2P3/4B3/8/p1PQ3P/R1K1R3 w - - 0 1",
+   "lineage": [
+    {
+     "parent_fen": "1k2r3/pp4pp/8/1N6/4B1b1/8/PPPQ2PP/R1K4R w - - 0 1",
+     "parent": "C1",
+     "mutations": [
+      "move white R h1->e1"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp4pp/8/1N6/4B1b1/8/PPPQ2PP/R1K1R3 w - - 0 1",
+     "parent": "g2-9",
+     "mutations": [
+      "move black B g4->e6"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp4pp/4b3/1N6/4B3/8/PPPQ2PP/R1K1R3 w - - 0 1",
+     "parent": "g2-28",
+     "mutations": [
+      "remove white P b2",
+      "recolour P white->black a2"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp4pp/4b3/1N6/4B3/8/p1PQ2PP/R1K1R3 w - - 0 1",
+     "parent": "g2-33",
+     "mutations": [
+      "remove black P h7"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp4p1/4b3/1N6/4B3/8/p1PQ2PP/R1K1R3 w - - 0 1",
+     "parent": "g2-39",
+     "mutations": [
+      "move white P g2->e5"
+     ],
+     "verdict": "PASS (fast)"
+    }
+   ],
+   "iteration": 312,
+   "evals_so_far": 270,
+   "nearest_corpus": "C1",
+   "distance": 10
+  },
+  {
+   "name": "g2-102",
+   "fen": "1k2r3/pp4pp/4b3/1N6/4B3/8/NPPQ2PP/R1KBR3 w - - 0 1",
+   "lineage": [
+    {
+     "parent_fen": "1k2r3/pp4pp/8/1N6/4B1b1/8/PPPQ2PP/R1K4R w - - 0 1",
+     "parent": "C1",
+     "mutations": [
+      "move white R h1->e1"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp4pp/8/1N6/4B1b1/8/PPPQ2PP/R1K1R3 w - - 0 1",
+     "parent": "g2-9",
+     "mutations": [
+      "move black B g4->e6"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp4pp/4b3/1N6/4B3/8/PPPQ2PP/R1K1R3 w - - 0 1",
+     "parent": "g2-28",
+     "mutations": [
+      "add white B b1",
+      "retype white P->N a2"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp4pp/4b3/1N6/4B3/8/NPPQ2PP/RBK1R3 w - - 0 1",
+     "parent": "g2-37",
+     "mutations": [
+      "move white B b1->d1"
+     ],
+     "verdict": "PASS (fast)"
+    }
+   ],
+   "iteration": 313,
+   "evals_so_far": 271,
+   "nearest_corpus": "C1",
+   "distance": 7
+  },
+  {
+   "name": "g2-103",
+   "fen": "1k2rn2/pp4p1/8/1N6/4B1b1/8/PPPQ2PP/R1K4R w - - 0 1",
+   "lineage": [
+    {
+     "parent_fen": "1k2r3/pp4pp/8/1N6/4B1b1/8/PPPQ2PP/R1K4R w - - 0 1",
+     "parent": "C1",
+     "mutations": [
+      "remove black P h7"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp4p1/8/1N6/4B1b1/8/PPPQ2PP/R1K4R w - - 0 1",
+     "parent": "g2-6",
+     "mutations": [
+      "add black N f8"
+     ],
+     "verdict": "PASS (fast)"
+    }
+   ],
+   "iteration": 315,
+   "evals_so_far": 275,
+   "nearest_corpus": "C1",
+   "distance": 2
+  },
+  {
+   "name": "g2-104",
+   "fen": "1k2r3/pp3pb1/7p/1N6/4B1b1/2N2rP1/PPPQ1PPP/R1K5 w - - 0 1",
+   "lineage": [
+    {
+     "parent_fen": "1k2r2r/pp3pb1/7p/1N6/4B1br/2N3P1/PPPQ2PP/R1K4R w - - 0 1",
+     "parent": "S1",
+     "mutations": [
+      "remove black R h4"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r2r/pp3pb1/7p/1N6/4B1b1/2N3P1/PPPQ2PP/R1K4R w - - 0 1",
+     "parent": "g2-47",
+     "mutations": [
+      "remove white R h1",
+      "add white P f2"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r2r/pp3pb1/7p/1N6/4B1b1/2N3P1/PPPQ1PPP/R1K5 w - - 0 1",
+     "parent": "g2-59",
+     "mutations": [
+      "move black R h8->f3"
+     ],
+     "verdict": "PASS (fast)"
+    }
+   ],
+   "iteration": 324,
+   "evals_so_far": 282,
+   "nearest_corpus": "S1",
+   "distance": 5
+  },
+  {
+   "name": "g2-105",
+   "fen": "1k2r2r/pp3p2/7p/1N6/4B1b1/2N3PP/P1pQ2PP/R1K4R w - - 0 1",
+   "lineage": [
+    {
+     "parent_fen": "1k2r2r/pp3pb1/7p/1N6/4B1br/2N3P1/PPPQ2PP/R1K4R w - - 0 1",
+     "parent": "S1",
+     "mutations": [
+      "remove black R h4"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r2r/pp3pb1/7p/1N6/4B1b1/2N3P1/PPPQ2PP/R1K4R w - - 0 1",
+     "parent": "g2-47",
+     "mutations": [
+      "recolour P white->black c2"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r2r/pp3pb1/7p/1N6/4B1b1/2N3P1/PPpQ2PP/R1K4R w - - 0 1",
+     "parent": "g2-58",
+     "mutations": [
+      "remove white P b2"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r2r/pp3pb1/7p/1N6/4B1b1/2N3P1/P1pQ2PP/R1K4R w - - 0 1",
+     "parent": "g2-85",
+     "mutations": [
+      "add white P h3",
+      "remove black B g7"
+     ],
+     "verdict": "PASS (fast)"
+    }
+   ],
+   "iteration": 328,
+   "evals_so_far": 283,
+   "nearest_corpus": "S1",
+   "distance": 6
+  },
+  {
+   "name": "g2-106",
+   "fen": "1k2r3/pp4pp/6P1/1NP1P3/4B1b1/8/PP1Q3P/R1K4R w - - 0 1",
+   "lineage": [
+    {
+     "parent_fen": "1k2r3/pp4pp/8/1N6/4B1b1/8/PPPQ2PP/R1K4R w - - 0 1",
+     "parent": "C1",
+     "mutations": [
+      "move white P g2->e5"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp4pp/8/1N2P3/4B1b1/8/PPPQ3P/R1K4R w - - 0 1",
+     "parent": "g2-1",
+     "mutations": [
+      "move white P c2->g6",
+      "add white P c5"
+     ],
+     "verdict": "PASS (fast)"
+    }
+   ],
+   "iteration": 329,
+   "evals_so_far": 285,
+   "nearest_corpus": "C1",
+   "distance": 5
+  },
+  {
+   "name": "g2-107",
+   "fen": "1k2r2r/pp3p2/7p/PN6/4B1br/2N4P/1PpQ2PP/2K4R w - - 0 1",
+   "lineage": [
+    {
+     "parent_fen": "1k2r2r/pp3pb1/7p/1N6/4B1br/2N3P1/PPPQ2PP/R1K4R w - - 0 1",
+     "parent": "S1",
+     "mutations": [
+      "remove white P c2"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r2r/pp3pb1/7p/1N6/4B1br/2N3P1/PP1Q2PP/R1K4R w - - 0 1",
+     "parent": "g2-2",
+     "mutations": [
+      "remove white P g3"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r2r/pp3pb1/7p/1N6/4B1br/2N5/PP1Q2PP/R1K4R w - - 0 1",
+     "parent": "g2-3",
+     "mutations": [
+      "remove black B g7"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r2r/pp3p2/7p/1N6/4B1br/2N5/PP1Q2PP/R1K4R w - - 0 1",
+     "parent": "g2-13",
+     "mutations": [
+      "remove white R a1",
+      "move white P a2->a5"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r2r/pp3p2/7p/PN6/4B1br/2N5/1P1Q2PP/2K4R w - - 0 1",
+     "parent": "g2-25",
+     "mutations": [
+      "add black P c2"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r2r/pp3p2/7p/PN6/4B1br/2N5/1PpQ2PP/2K4R w - - 0 1",
+     "parent": "g2-63",
+     "mutations": [
+      "add white B h3",
+      "retype white B->P h3"
+     ],
+     "verdict": "PASS (fast)"
+    }
+   ],
+   "iteration": 333,
+   "evals_so_far": 288,
+   "nearest_corpus": "S1",
+   "distance": 8
+  },
+  {
+   "name": "g2-108",
+   "fen": "1k2r3/pp4pp/4b3/1N3P2/4B3/8/P1PQ2PP/R1K1R3 w - - 0 1",
+   "lineage": [
+    {
+     "parent_fen": "1k2r3/pp4pp/8/1N6/4B1b1/8/PPPQ2PP/R1K4R w - - 0 1",
+     "parent": "C1",
+     "mutations": [
+      "move white R h1->e1"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp4pp/8/1N6/4B1b1/8/PPPQ2PP/R1K1R3 w - - 0 1",
+     "parent": "g2-9",
+     "mutations": [
+      "move black B g4->e6"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp4pp/4b3/1N6/4B3/8/PPPQ2PP/R1K1R3 w - - 0 1",
+     "parent": "g2-28",
+     "mutations": [
+      "remove white P b2",
+      "recolour P white->black a2"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp4pp/4b3/1N6/4B3/8/p1PQ2PP/R1K1R3 w - - 0 1",
+     "parent": "g2-33",
+     "mutations": [
+      "recolour P black->white a2",
+      "add white P f5"
+     ],
+     "verdict": "PASS (fast)"
+    }
+   ],
+   "iteration": 340,
+   "evals_so_far": 293,
+   "nearest_corpus": "C1",
+   "distance": 6
+  },
+  {
+   "name": "g2-109",
+   "fen": "1k2r3/pp5p/5B2/1N2P3/4B1b1/8/PPPQ3P/R1K4R w - - 0 1",
+   "lineage": [
+    {
+     "parent_fen": "1k2r3/pp4pp/8/1N6/4B1b1/8/PPPQ2PP/R1K4R w - - 0 1",
+     "parent": "C1",
+     "mutations": [
+      "move white P g2->e5"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp4pp/8/1N2P3/4B1b1/8/PPPQ3P/R1K4R w - - 0 1",
+     "parent": "g2-1",
+     "mutations": [
+      "add white B f6"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp4pp/5B2/1N2P3/4B1b1/8/PPPQ3P/R1K4R w - - 0 1",
+     "parent": "g2-7",
+     "mutations": [
+      "remove black P g7"
+     ],
+     "verdict": "PASS (fast)"
+    }
+   ],
+   "iteration": 343,
+   "evals_so_far": 295,
+   "nearest_corpus": "C1",
+   "distance": 4
+  },
+  {
+   "name": "g2-110",
+   "fen": "1k2r3/pp4pp/4b3/1N2P3/4B3/8/PPPQ2P1/R1K1R3 w - - 0 1",
+   "lineage": [
+    {
+     "parent_fen": "1k2r3/pp4pp/8/1N6/4B1b1/8/PPPQ2PP/R1K4R w - - 0 1",
+     "parent": "C1",
+     "mutations": [
+      "move white R h1->e1"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp4pp/8/1N6/4B1b1/8/PPPQ2PP/R1K1R3 w - - 0 1",
+     "parent": "g2-9",
+     "mutations": [
+      "move black B g4->e6"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp4pp/4b3/1N6/4B3/8/PPPQ2PP/R1K1R3 w - - 0 1",
+     "parent": "g2-28",
+     "mutations": [
+      "move white P h2->e5"
+     ],
+     "verdict": "PASS (fast)"
+    }
+   ],
+   "iteration": 354,
+   "evals_so_far": 303,
+   "nearest_corpus": "C1",
+   "distance": 6
+  },
+  {
+   "name": "g2-111",
+   "fen": "1k2r2r/pp3p2/7p/1N6/4B1br/2N3P1/PPPQ2PP/R1K5 w - - 0 1",
+   "lineage": [
+    {
+     "parent_fen": "1k2r2r/pp3pb1/7p/1N6/4B1br/2N3P1/PPPQ2PP/R1K4R w - - 0 1",
+     "parent": "S1",
+     "mutations": [
+      "remove black B g7"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r2r/pp3p2/7p/1N6/4B1br/2N3P1/PPPQ2PP/R1K4R w - - 0 1",
+     "parent": "g2-12",
+     "mutations": [
+      "remove white R h1"
+     ],
+     "verdict": "PASS (fast)"
+    }
+   ],
+   "iteration": 358,
+   "evals_so_far": 305,
+   "nearest_corpus": "S1",
+   "distance": 2
+  },
+  {
+   "name": "g2-112",
+   "fen": "1k2r2n/pp4pp/4b3/1N4P1/4B3/8/p1PQ2P1/R1K1R3 w - - 0 1",
+   "lineage": [
+    {
+     "parent_fen": "1k2r3/pp4pp/8/1N6/4B1b1/8/PPPQ2PP/R1K4R w - - 0 1",
+     "parent": "C1",
+     "mutations": [
+      "move white R h1->e1"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp4pp/8/1N6/4B1b1/8/PPPQ2PP/R1K1R3 w - - 0 1",
+     "parent": "g2-9",
+     "mutations": [
+      "move black B g4->e6"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp4pp/4b3/1N6/4B3/8/PPPQ2PP/R1K1R3 w - - 0 1",
+     "parent": "g2-28",
+     "mutations": [
+      "remove white P b2",
+      "recolour P white->black a2"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp4pp/4b3/1N6/4B3/8/p1PQ2PP/R1K1R3 w - - 0 1",
+     "parent": "g2-33",
+     "mutations": [
+      "remove white P h2"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp4pp/4b3/1N6/4B3/8/p1PQ2P1/R1K1R3 w - - 0 1",
+     "parent": "g2-96",
+     "mutations": [
+      "add white P g5",
+      "add black N h8"
+     ],
+     "verdict": "PASS (fast)"
+    }
+   ],
+   "iteration": 360,
+   "evals_so_far": 309,
+   "nearest_corpus": "C1",
+   "distance": 10
+  },
+  {
+   "name": "g2-113",
+   "fen": "1k2r2r/pp3pb1/5P1p/1N6/4B1br/2N5/PP1Q3P/R1K4R w - - 0 1",
+   "lineage": [
+    {
+     "parent_fen": "1k2r2r/pp3pb1/7p/1N6/4B1br/2N3P1/PPPQ2PP/R1K4R w - - 0 1",
+     "parent": "S1",
+     "mutations": [
+      "remove white P c2"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r2r/pp3pb1/7p/1N6/4B1br/2N3P1/PP1Q2PP/R1K4R w - - 0 1",
+     "parent": "g2-2",
+     "mutations": [
+      "remove white P g3"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r2r/pp3pb1/7p/1N6/4B1br/2N5/PP1Q2PP/R1K4R w - - 0 1",
+     "parent": "g2-3",
+     "mutations": [
+      "move white P g2->f6"
+     ],
+     "verdict": "PASS (fast)"
+    }
+   ],
+   "iteration": 364,
+   "evals_so_far": 312,
+   "nearest_corpus": "S1",
+   "distance": 4
+  },
+  {
+   "name": "g2-114",
+   "fen": "1k2r2r/pp3Pb1/7p/1Np5/4B1br/2N3P1/P1PQ3P/R1K4R w - - 0 1",
+   "lineage": [
+    {
+     "parent_fen": "1k2r2r/pp3pb1/7p/1N6/4B1br/2N3P1/PPPQ2PP/R1K4R w - - 0 1",
+     "parent": "S1",
+     "mutations": [
+      "remove white P g2"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r2r/pp3pb1/7p/1N6/4B1br/2N3P1/PPPQ3P/R1K4R w - - 0 1",
+     "parent": "g2-10",
+     "mutations": [
+      "move black P f7->c5"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r2r/pp4b1/7p/1Np5/4B1br/2N3P1/PPPQ3P/R1K4R w - - 0 1",
+     "parent": "g2-78",
+     "mutations": [
+      "move white P b2->f7"
+     ],
+     "verdict": "PASS (fast)"
+    }
+   ],
+   "iteration": 368,
+   "evals_so_far": 314,
+   "nearest_corpus": "S1",
+   "distance": 5
+  },
+  {
+   "name": "g2-115",
+   "fen": "1k2r3/pp4pp/8/1N6/4B1b1/8/pPPQ1RPP/R1K5 w - - 0 1",
+   "lineage": [
+    {
+     "parent_fen": "1k2r3/pp4pp/8/1N6/4B1b1/8/PPPQ2PP/R1K4R w - - 0 1",
+     "parent": "C1",
+     "mutations": [
+      "move white R h1->e1"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp4pp/8/1N6/4B1b1/8/PPPQ2PP/R1K1R3 w - - 0 1",
+     "parent": "g2-9",
+     "mutations": [
+      "move white R e1->f2",
+      "recolour P white->black a2"
+     ],
+     "verdict": "PASS (fast)"
+    }
+   ],
+   "iteration": 371,
+   "evals_so_far": 318,
+   "nearest_corpus": "C1",
+   "distance": 4
+  },
+  {
+   "name": "g2-116",
+   "fen": "1k2rr2/pp4pp/5n1p/1N3b2/4B3/8/PPPQ2PP/R1K4R w - - 0 1",
+   "lineage": [
+    {
+     "parent_fen": "1k2rrn1/pp4pp/5n1p/1N3b2/4B3/8/PPPQ2PP/R1K4R w - - 0 1",
+     "parent": "C2",
+     "mutations": [
+      "recolour N black->white g8"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2rrN1/pp4pp/5n1p/1N3b2/4B3/8/PPPQ2PP/R1K4R w - - 0 1",
+     "parent": "g2-45",
+     "mutations": [
+      "remove white N g8"
+     ],
+     "verdict": "PASS (fast)"
+    }
+   ],
+   "iteration": 378,
+   "evals_so_far": 322,
+   "nearest_corpus": "C2",
+   "distance": 1
+  },
+  {
+   "name": "g2-117",
+   "fen": "1k2r3/pp4pp/5n2/1N6/4B1b1/8/PPBQ1RPP/2K4R w - - 0 1",
+   "lineage": [
+    {
+     "parent_fen": "1k2r3/pp4pp/8/1N6/4B1b1/8/PPPQ2PP/R1K4R w - - 0 1",
+     "parent": "C1",
+     "mutations": [
+      "move white R a1->f2"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp4pp/8/1N6/4B1b1/8/PPPQ1RPP/2K4R w - - 0 1",
+     "parent": "g2-5",
+     "mutations": [
+      "add black N f6"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp4pp/5n2/1N6/4B1b1/8/PPPQ1RPP/2K4R w - - 0 1",
+     "parent": "g2-20",
+     "mutations": [
+      "retype white P->B c2"
+     ],
+     "verdict": "PASS (fast)"
+    }
+   ],
+   "iteration": 382,
+   "evals_so_far": 326,
+   "nearest_corpus": "C1",
+   "distance": 5
+  },
+  {
+   "name": "g2-118",
+   "fen": "1k2r3/pp4pp/8/1N6/4B1b1/8/pPPQ1PPP/R1K5 w - - 0 1",
+   "lineage": [
+    {
+     "parent_fen": "1k2r3/pp4pp/8/1N6/4B1b1/8/PPPQ2PP/R1K4R w - - 0 1",
+     "parent": "C1",
+     "mutations": [
+      "move white R h1->e1"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp4pp/8/1N6/4B1b1/8/PPPQ2PP/R1K1R3 w - - 0 1",
+     "parent": "g2-9",
+     "mutations": [
+      "move white R e1->f2",
+      "recolour P white->black a2"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp4pp/8/1N6/4B1b1/8/pPPQ1RPP/R1K5 w - - 0 1",
+     "parent": "g2-115",
+     "mutations": [
+      "retype white R->P f2"
+     ],
+     "verdict": "PASS (fast)"
+    }
+   ],
+   "iteration": 383,
+   "evals_so_far": 327,
+   "nearest_corpus": "C1",
+   "distance": 4
+  },
+  {
+   "name": "g2-119",
+   "fen": "1k2r3/pp1p2pp/4b3/1N6/4B3/8/p1PQ2P1/R1K1R3 w - - 0 1",
+   "lineage": [
+    {
+     "parent_fen": "1k2r3/pp4pp/8/1N6/4B1b1/8/PPPQ2PP/R1K4R w - - 0 1",
+     "parent": "C1",
+     "mutations": [
+      "move white R h1->e1"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp4pp/8/1N6/4B1b1/8/PPPQ2PP/R1K1R3 w - - 0 1",
+     "parent": "g2-9",
+     "mutations": [
+      "move black B g4->e6"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp4pp/4b3/1N6/4B3/8/PPPQ2PP/R1K1R3 w - - 0 1",
+     "parent": "g2-28",
+     "mutations": [
+      "remove white P b2",
+      "recolour P white->black a2"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp4pp/4b3/1N6/4B3/8/p1PQ2PP/R1K1R3 w - - 0 1",
+     "parent": "g2-33",
+     "mutations": [
+      "remove white P h2"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp4pp/4b3/1N6/4B3/8/p1PQ2P1/R1K1R3 w - - 0 1",
+     "parent": "g2-96",
+     "mutations": [
+      "add black P d7"
+     ],
+     "verdict": "PASS (fast)"
+    }
+   ],
+   "iteration": 385,
+   "evals_so_far": 331,
+   "nearest_corpus": "C1",
+   "distance": 9
+  },
+  {
+   "name": "g2-120",
+   "fen": "1k2r3/pp4pp/6B1/1N6/4B1b1/1N4P1/PPPQ1RP1/2K4R w - - 0 1",
+   "lineage": [
+    {
+     "parent_fen": "1k2r3/pp4pp/8/1N6/4B1b1/8/PPPQ2PP/R1K4R w - - 0 1",
+     "parent": "C1",
+     "mutations": [
+      "move white R a1->f2"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp4pp/8/1N6/4B1b1/8/PPPQ1RPP/2K4R w - - 0 1",
+     "parent": "g2-5",
+     "mutations": [
+      "add white B g6",
+      "add white N b3"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp4pp/6B1/1N6/4B1b1/1N6/PPPQ1RPP/2K4R w - - 0 1",
+     "parent": "g2-48",
+     "mutations": [
+      "move white P h2->g3"
+     ],
+     "verdict": "PASS (fast)"
+    }
+   ],
+   "iteration": 390,
+   "evals_so_far": 334,
+   "nearest_corpus": "C1",
+   "distance": 6
+  },
+  {
+   "name": "g2-121",
+   "fen": "1k2rr2/pp4pp/5n1p/1N3b2/4B3/1P6/PPPQ3P/R1K4R w - - 0 1",
+   "lineage": [
+    {
+     "parent_fen": "1k2rrn1/pp4pp/5n1p/1N3b2/4B3/8/PPPQ2PP/R1K4R w - - 0 1",
+     "parent": "C2",
+     "mutations": [
+      "recolour N black->white g8"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2rrN1/pp4pp/5n1p/1N3b2/4B3/8/PPPQ2PP/R1K4R w - - 0 1",
+     "parent": "g2-45",
+     "mutations": [
+      "remove white N g8"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2rr2/pp4pp/5n1p/1N3b2/4B3/8/PPPQ2PP/R1K4R w - - 0 1",
+     "parent": "g2-116",
+     "mutations": [
+      "move white P g2->b3"
+     ],
+     "verdict": "PASS (fast)"
+    }
+   ],
+   "iteration": 391,
+   "evals_so_far": 335,
+   "nearest_corpus": "C2",
+   "distance": 3
+  },
+  {
+   "name": "g2-122",
+   "fen": "1k2r3/pp4pp/5P2/1N6/4B1b1/8/PPPQ2P1/R1K4R w - - 0 1",
+   "lineage": [
+    {
+     "parent_fen": "1k2r3/pp4pp/8/1N6/4B1b1/8/PPPQ2PP/R1K4R w - - 0 1",
+     "parent": "C1",
+     "mutations": [
+      "move white P h2->f6"
+     ],
+     "verdict": "PASS (fast)"
+    }
+   ],
+   "iteration": 395,
+   "evals_so_far": 338,
+   "nearest_corpus": "C1",
+   "distance": 2
+  },
+  {
+   "name": "g2-123",
+   "fen": "1k2r3/pp4p1/5B2/1N2P2n/4B1b1/7p/PPpQ4/R1K4R w - - 0 1",
+   "lineage": [
+    {
+     "parent_fen": "1k2r3/pp4pp/8/1N6/4B1b1/8/PPPQ2PP/R1K4R w - - 0 1",
+     "parent": "C1",
+     "mutations": [
+      "move white P g2->e5"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp4pp/8/1N2P3/4B1b1/8/PPPQ3P/R1K4R w - - 0 1",
+     "parent": "g2-1",
+     "mutations": [
+      "add white B f6"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp4pp/5B2/1N2P3/4B1b1/8/PPPQ3P/R1K4R w - - 0 1",
+     "parent": "g2-7",
+     "mutations": [
+      "move black P h7->h3"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp4p1/5B2/1N2P3/4B1b1/7p/PPPQ3P/R1K4R w - - 0 1",
+     "parent": "g2-8",
+     "mutations": [
+      "add black N h5",
+      "remove white P h2"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp4p1/5B2/1N2P2n/4B1b1/7p/PPPQ4/R1K4R w - - 0 1",
+     "parent": "g2-22",
+     "mutations": [
+      "recolour P white->black c2"
+     ],
+     "verdict": "PASS (fast)"
+    }
+   ],
+   "iteration": 396,
+   "evals_so_far": 339,
+   "nearest_corpus": "C1",
+   "distance": 9
+  },
+  {
+   "name": "g2-124",
+   "fen": "1k2r3/pp3pb1/5R1p/1N6/4B1br/2N1P3/PP1Q2PP/2K4R w - - 0 1",
+   "lineage": [
+    {
+     "parent_fen": "1k2r2r/pp3pb1/7p/1N6/4B1br/2N3P1/PPPQ2PP/R1K4R w - - 0 1",
+     "parent": "S1",
+     "mutations": [
+      "remove white P c2"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r2r/pp3pb1/7p/1N6/4B1br/2N3P1/PP1Q2PP/R1K4R w - - 0 1",
+     "parent": "g2-2",
+     "mutations": [
+      "move white R a1->f6"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r2r/pp3pb1/5R1p/1N6/4B1br/2N3P1/PP1Q2PP/2K4R w - - 0 1",
+     "parent": "g2-24",
+     "mutations": [
+      "move white P g3->e3"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r2r/pp3pb1/5R1p/1N6/4B1br/2N1P3/PP1Q2PP/2K4R w - - 0 1",
+     "parent": "g2-66",
+     "mutations": [
+      "remove black R h8"
+     ],
+     "verdict": "PASS (fast)"
+    }
+   ],
+   "iteration": 405,
+   "evals_so_far": 348,
+   "nearest_corpus": "S1",
+   "distance": 6
+  },
+  {
+   "name": "g2-125",
+   "fen": "1k2r3/pp5p/8/1N2P3/4B1b1/8/pPBQ4/R1K4R w - - 0 1",
+   "lineage": [
+    {
+     "parent_fen": "1k2r3/pp4pp/8/1N6/4B1b1/8/PPPQ2PP/R1K4R w - - 0 1",
+     "parent": "C1",
+     "mutations": [
+      "move white P g2->e5"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp4pp/8/1N2P3/4B1b1/8/PPPQ3P/R1K4R w - - 0 1",
+     "parent": "g2-1",
+     "mutations": [
+      "remove black P g7",
+      "retype white P->B c2"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp5p/8/1N2P3/4B1b1/8/PPBQ3P/R1K4R w - - 0 1",
+     "parent": "g2-4",
+     "mutations": [
+      "remove white P h2"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp5p/8/1N2P3/4B1b1/8/PPBQ4/R1K4R w - - 0 1",
+     "parent": "g2-11",
+     "mutations": [
+      "recolour P white->black a2",
+      "add black B a6"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp5p/b7/1N2P3/4B1b1/8/pPBQ4/R1K4R w - - 0 1",
+     "parent": "g2-52",
+     "mutations": [
+      "retype black B->N a6",
+      "remove black N a6"
+     ],
+     "verdict": "PASS (fast)"
+    }
+   ],
+   "iteration": 408,
+   "evals_so_far": 351,
+   "nearest_corpus": "C1",
+   "distance": 8
+  },
+  {
+   "name": "g2-126",
+   "fen": "1k2r3/pp5p/8/1N2P3/4B1b1/8/pPBQ3P/R1K4R w - - 0 1",
+   "lineage": [
+    {
+     "parent_fen": "1k2r3/pp4pp/8/1N6/4B1b1/8/PPPQ2PP/R1K4R w - - 0 1",
+     "parent": "C1",
+     "mutations": [
+      "move white P g2->e5"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp4pp/8/1N2P3/4B1b1/8/PPPQ3P/R1K4R w - - 0 1",
+     "parent": "g2-1",
+     "mutations": [
+      "remove black P g7",
+      "retype white P->B c2"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp5p/8/1N2P3/4B1b1/8/PPBQ3P/R1K4R w - - 0 1",
+     "parent": "g2-4",
+     "mutations": [
+      "recolour P white->black a2"
+     ],
+     "verdict": "PASS (fast)"
+    }
+   ],
+   "iteration": 409,
+   "evals_so_far": 352,
+   "nearest_corpus": "C1",
+   "distance": 7
+  },
+  {
+   "name": "g2-127",
+   "fen": "1k2r3/pp3Bp1/8/1N6/4B1b1/8/PPPQ2PP/R1K5 w - - 0 1",
+   "lineage": [
+    {
+     "parent_fen": "1k2r3/pp4pp/8/1N6/4B1b1/8/PPPQ2PP/R1K4R w - - 0 1",
+     "parent": "C1",
+     "mutations": [
+      "remove black P h7"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp4p1/8/1N6/4B1b1/8/PPPQ2PP/R1K4R w - - 0 1",
+     "parent": "g2-6",
+     "mutations": [
+      "move white R h1->f7",
+      "retype white R->N f7"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp3Np1/8/1N6/4B1b1/8/PPPQ2PP/R1K5 w - - 0 1",
+     "parent": "g2-82",
+     "mutations": [
+      "retype white N->B f7"
+     ],
+     "verdict": "PASS (fast)"
+    }
+   ],
+   "iteration": 414,
+   "evals_so_far": 356,
+   "nearest_corpus": "C1",
+   "distance": 3
+  },
+  {
+   "name": "g2-128",
+   "fen": "1k2rr2/pp4pp/5n1p/1N3b2/4B3/8/PPpQ2PP/R1K4R w - - 0 1",
+   "lineage": [
+    {
+     "parent_fen": "1k2rrn1/pp4pp/5n1p/1N3b2/4B3/8/PPPQ2PP/R1K4R w - - 0 1",
+     "parent": "C2",
+     "mutations": [
+      "recolour N black->white g8"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2rrN1/pp4pp/5n1p/1N3b2/4B3/8/PPPQ2PP/R1K4R w - - 0 1",
+     "parent": "g2-45",
+     "mutations": [
+      "remove white N g8"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2rr2/pp4pp/5n1p/1N3b2/4B3/8/PPPQ2PP/R1K4R w - - 0 1",
+     "parent": "g2-116",
+     "mutations": [
+      "recolour P white->black c2"
+     ],
+     "verdict": "PASS (fast)"
+    }
+   ],
+   "iteration": 420,
+   "evals_so_far": 366,
+   "nearest_corpus": "C2",
+   "distance": 3
+  },
+  {
+   "name": "g2-129",
+   "fen": "1k2r3/pp5p/7P/1N6/4B1bP/1b6/PPBQ3P/2K1R2R w - - 0 1",
+   "lineage": [
+    {
+     "parent_fen": "1k2r3/pp4pp/8/1N6/4B1b1/8/PPPQ2PP/R1K4R w - - 0 1",
+     "parent": "C1",
+     "mutations": [
+      "move white P g2->e5"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp4pp/8/1N2P3/4B1b1/8/PPPQ3P/R1K4R w - - 0 1",
+     "parent": "g2-1",
+     "mutations": [
+      "remove black P g7",
+      "retype white P->B c2"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp5p/8/1N2P3/4B1b1/8/PPBQ3P/R1K4R w - - 0 1",
+     "parent": "g2-4",
+     "mutations": [
+      "add black B b3"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp5p/8/1N2P3/4B1b1/1b6/PPBQ3P/R1K4R w - - 0 1",
+     "parent": "g2-51",
+     "mutations": [
+      "move white R a1->e1"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp5p/8/1N2P3/4B1b1/1b6/PPBQ3P/2K1R2R w - - 0 1",
+     "parent": "g2-62",
+     "mutations": [
+      "move white P e5->h4",
+      "add white P h6"
+     ],
+     "verdict": "PASS (fast)"
+    }
+   ],
+   "iteration": 422,
+   "evals_so_far": 368,
+   "nearest_corpus": "C1",
+   "distance": 9
+  },
+  {
+   "name": "g2-130",
+   "fen": "1k2r2r/pp3Pb1/7p/1N6/4B1br/2N3P1/PP1Q2Pp/R1K4R w - - 0 1",
+   "lineage": [
+    {
+     "parent_fen": "1k2r2r/pp3pb1/7p/1N6/4B1br/2N3P1/PPPQ2PP/R1K4R w - - 0 1",
+     "parent": "S1",
+     "mutations": [
+      "remove white P c2"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r2r/pp3pb1/7p/1N6/4B1br/2N3P1/PP1Q2PP/R1K4R w - - 0 1",
+     "parent": "g2-2",
+     "mutations": [
+      "recolour P black->white f7"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r2r/pp3Pb1/7p/1N6/4B1br/2N3P1/PP1Q2PP/R1K4R w - - 0 1",
+     "parent": "g2-34",
+     "mutations": [
+      "recolour P white->black h2"
+     ],
+     "verdict": "PASS (fast)"
+    }
+   ],
+   "iteration": 424,
+   "evals_so_far": 369,
+   "nearest_corpus": "S1",
+   "distance": 5
+  },
+  {
+   "name": "g2-131",
+   "fen": "1k2r2r/pp3pb1/7p/1N6/4B1b1/2B3P1/PPpQ2PP/R1K4R w - - 0 1",
+   "lineage": [
+    {
+     "parent_fen": "1k2r2r/pp3pb1/7p/1N6/4B1br/2N3P1/PPPQ2PP/R1K4R w - - 0 1",
+     "parent": "S1",
+     "mutations": [
+      "remove black R h4"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r2r/pp3pb1/7p/1N6/4B1b1/2N3P1/PPPQ2PP/R1K4R w - - 0 1",
+     "parent": "g2-47",
+     "mutations": [
+      "recolour P white->black c2"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r2r/pp3pb1/7p/1N6/4B1b1/2N3P1/PPpQ2PP/R1K4R w - - 0 1",
+     "parent": "g2-58",
+     "mutations": [
+      "retype white N->B c3"
+     ],
+     "verdict": "PASS (fast)"
+    }
+   ],
+   "iteration": 427,
+   "evals_so_far": 373,
+   "nearest_corpus": "S1",
+   "distance": 5
+  },
+  {
+   "name": "g2-132",
+   "fen": "1k2r3/pp1b4/6br/1N6/4B2N/8/PPPQ2P1/R1K5 w - - 0 1",
+   "lineage": [
+    {
+     "parent_fen": "1k2r3/pp1b4/6br/1N6/4B2N/8/PPPQ2PP/R1K4R w - - 0 1",
+     "parent": "C4",
+     "mutations": [
+      "remove white P h2"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp1b4/6br/1N6/4B2N/8/PPPQ2P1/R1K4R w - - 0 1",
+     "parent": "g2-89",
+     "mutations": [
+      "remove white R h1"
+     ],
+     "verdict": "PASS (fast)"
+    }
+   ],
+   "iteration": 430,
+   "evals_so_far": 375,
+   "nearest_corpus": "C4",
+   "distance": 2
+  },
+  {
+   "name": "g2-133",
+   "fen": "1k2r3/pp4pp/8/1N6/4B1b1/8/PPNQ2PP/R1K4R w - - 0 1",
+   "lineage": [
+    {
+     "parent_fen": "1k2r3/pp4pp/8/1N6/4B1b1/8/PPPQ2PP/R1K4R w - - 0 1",
+     "parent": "C1",
+     "mutations": [
+      "retype white P->N c2"
+     ],
+     "verdict": "PASS (fast)"
+    }
+   ],
+   "iteration": 438,
+   "evals_so_far": 381,
+   "nearest_corpus": "C1",
+   "distance": 2
+  },
+  {
+   "name": "g2-134",
+   "fen": "1k2r2r/pp3p2/7p/pN6/4B1br/2N5/1P1Q2PP/2K4R w - - 0 1",
+   "lineage": [
+    {
+     "parent_fen": "1k2r2r/pp3pb1/7p/1N6/4B1br/2N3P1/PPPQ2PP/R1K4R w - - 0 1",
+     "parent": "S1",
+     "mutations": [
+      "remove white P c2"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r2r/pp3pb1/7p/1N6/4B1br/2N3P1/PP1Q2PP/R1K4R w - - 0 1",
+     "parent": "g2-2",
+     "mutations": [
+      "remove white P g3"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r2r/pp3pb1/7p/1N6/4B1br/2N5/PP1Q2PP/R1K4R w - - 0 1",
+     "parent": "g2-3",
+     "mutations": [
+      "remove black B g7"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r2r/pp3p2/7p/1N6/4B1br/2N5/PP1Q2PP/R1K4R w - - 0 1",
+     "parent": "g2-13",
+     "mutations": [
+      "remove white R a1",
+      "move white P a2->a5"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r2r/pp3p2/7p/PN6/4B1br/2N5/1P1Q2PP/2K4R w - - 0 1",
+     "parent": "g2-25",
+     "mutations": [
+      "recolour P white->black a5"
+     ],
+     "verdict": "PASS (fast)"
+    }
+   ],
+   "iteration": 442,
+   "evals_so_far": 384,
+   "nearest_corpus": "S1",
+   "distance": 6
+  },
+  {
+   "name": "g2-135",
+   "fen": "1k2r2r/pp3pb1/7p/1N6/4B1b1/2N3P1/PPPQ1PP1/R1K5 w - - 0 1",
+   "lineage": [
+    {
+     "parent_fen": "1k2r2r/pp3pb1/7p/1N6/4B1br/2N3P1/PPPQ2PP/R1K4R w - - 0 1",
+     "parent": "S1",
+     "mutations": [
+      "remove black R h4"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r2r/pp3pb1/7p/1N6/4B1b1/2N3P1/PPPQ2PP/R1K4R w - - 0 1",
+     "parent": "g2-47",
+     "mutations": [
+      "remove white R h1",
+      "add white P f2"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r2r/pp3pb1/7p/1N6/4B1b1/2N3P1/PPPQ1PPP/R1K5 w - - 0 1",
+     "parent": "g2-59",
+     "mutations": [
+      "remove white P h2"
+     ],
+     "verdict": "PASS (fast)"
+    }
+   ],
+   "iteration": 443,
+   "evals_so_far": 385,
+   "nearest_corpus": "S1",
+   "distance": 4
+  },
+  {
+   "name": "g2-136",
+   "fen": "1k2r3/pp4Pb/8/1N6/4B1b1/5N2/PPPQ1RPP/2K4R w - - 0 1",
+   "lineage": [
+    {
+     "parent_fen": "1k2r3/pp4pp/8/1N6/4B1b1/8/PPPQ2PP/R1K4R w - - 0 1",
+     "parent": "C1",
+     "mutations": [
+      "move white R a1->f2"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp4pp/8/1N6/4B1b1/8/PPPQ1RPP/2K4R w - - 0 1",
+     "parent": "g2-5",
+     "mutations": [
+      "add black N f6"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp4pp/5n2/1N6/4B1b1/8/PPPQ1RPP/2K4R w - - 0 1",
+     "parent": "g2-20",
+     "mutations": [
+      "add white N f3",
+      "recolour P black->white g7"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp4Pp/5n2/1N6/4B1b1/5N2/PPPQ1RPP/2K4R w - - 0 1",
+     "parent": "g2-29",
+     "mutations": [
+      "remove black N f6",
+      "retype black P->B h7"
+     ],
+     "verdict": "PASS (fast)"
+    }
+   ],
+   "iteration": 444,
+   "evals_so_far": 386,
+   "nearest_corpus": "C1",
+   "distance": 7
+  },
+  {
+   "name": "g2-137",
+   "fen": "1k2r3/pp5p/8/1N2P3/4B1b1/8/PPbQ4/2K4R w - - 0 1",
+   "lineage": [
+    {
+     "parent_fen": "1k2r3/pp4pp/8/1N6/4B1b1/8/PPPQ2PP/R1K4R w - - 0 1",
+     "parent": "C1",
+     "mutations": [
+      "move white P g2->e5"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp4pp/8/1N2P3/4B1b1/8/PPPQ3P/R1K4R w - - 0 1",
+     "parent": "g2-1",
+     "mutations": [
+      "remove black P g7",
+      "retype white P->B c2"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp5p/8/1N2P3/4B1b1/8/PPBQ3P/R1K4R w - - 0 1",
+     "parent": "g2-4",
+     "mutations": [
+      "remove white P h2"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp5p/8/1N2P3/4B1b1/8/PPBQ4/R1K4R w - - 0 1",
+     "parent": "g2-11",
+     "mutations": [
+      "recolour B white->black c2",
+      "remove white R a1"
+     ],
+     "verdict": "PASS (fast)"
+    }
+   ],
+   "iteration": 446,
+   "evals_so_far": 387,
+   "nearest_corpus": "C1",
+   "distance": 7
+  },
+  {
+   "name": "g2-138",
+   "fen": "1k2r3/pp1p2pp/4b3/1N6/4B3/5b2/p1PQ2P1/R1K1R3 w - - 0 1",
+   "lineage": [
+    {
+     "parent_fen": "1k2r3/pp4pp/8/1N6/4B1b1/8/PPPQ2PP/R1K4R w - - 0 1",
+     "parent": "C1",
+     "mutations": [
+      "move white R h1->e1"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp4pp/8/1N6/4B1b1/8/PPPQ2PP/R1K1R3 w - - 0 1",
+     "parent": "g2-9",
+     "mutations": [
+      "move black B g4->e6"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp4pp/4b3/1N6/4B3/8/PPPQ2PP/R1K1R3 w - - 0 1",
+     "parent": "g2-28",
+     "mutations": [
+      "remove white P b2",
+      "recolour P white->black a2"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp4pp/4b3/1N6/4B3/8/p1PQ2PP/R1K1R3 w - - 0 1",
+     "parent": "g2-33",
+     "mutations": [
+      "remove white P h2"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp4pp/4b3/1N6/4B3/8/p1PQ2P1/R1K1R3 w - - 0 1",
+     "parent": "g2-96",
+     "mutations": [
+      "add black P d7"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp1p2pp/4b3/1N6/4B3/8/p1PQ2P1/R1K1R3 w - - 0 1",
+     "parent": "g2-119",
+     "mutations": [
+      "add black B f3"
+     ],
+     "verdict": "PASS (fast)"
+    }
+   ],
+   "iteration": 447,
+   "evals_so_far": 388,
+   "nearest_corpus": "C1",
+   "distance": 10
+  },
+  {
+   "name": "g2-139",
+   "fen": "1k2r3/pp4p1/8/1N6/4B1b1/8/p1PQ2PP/R1K4R w - - 0 1",
+   "lineage": [
+    {
+     "parent_fen": "1k2r3/pp4pp/8/1N6/4B1b1/8/PPPQ2PP/R1K4R w - - 0 1",
+     "parent": "C1",
+     "mutations": [
+      "remove black P h7"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp4p1/8/1N6/4B1b1/8/PPPQ2PP/R1K4R w - - 0 1",
+     "parent": "g2-6",
+     "mutations": [
+      "recolour P white->black g2",
+      "remove white P b2",
+      "recolour P black->white g2"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp4p1/8/1N6/4B1b1/8/P1PQ2PP/R1K4R w - - 0 1",
+     "parent": "g2-27",
+     "mutations": [
+      "recolour P white->black a2"
+     ],
+     "verdict": "PASS (fast)"
+    }
+   ],
+   "iteration": 450,
+   "evals_so_far": 389,
+   "nearest_corpus": "C1",
+   "distance": 4
+  },
+  {
+   "name": "g2-140",
+   "fen": "1k2r2r/pp3p2/7p/1N6/4B1b1/2N1P1PP/P1pQ2P1/R1K4R w - - 0 1",
+   "lineage": [
+    {
+     "parent_fen": "1k2r2r/pp3pb1/7p/1N6/4B1br/2N3P1/PPPQ2PP/R1K4R w - - 0 1",
+     "parent": "S1",
+     "mutations": [
+      "remove black R h4"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r2r/pp3pb1/7p/1N6/4B1b1/2N3P1/PPPQ2PP/R1K4R w - - 0 1",
+     "parent": "g2-47",
+     "mutations": [
+      "recolour P white->black c2"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r2r/pp3pb1/7p/1N6/4B1b1/2N3P1/PPpQ2PP/R1K4R w - - 0 1",
+     "parent": "g2-58",
+     "mutations": [
+      "remove white P b2"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r2r/pp3pb1/7p/1N6/4B1b1/2N3P1/P1pQ2PP/R1K4R w - - 0 1",
+     "parent": "g2-85",
+     "mutations": [
+      "add white P h3",
+      "remove black B g7"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r2r/pp3p2/7p/1N6/4B1b1/2N3PP/P1pQ2PP/R1K4R w - - 0 1",
+     "parent": "g2-105",
+     "mutations": [
+      "move white P h2->e3"
+     ],
+     "verdict": "PASS (fast)"
+    }
+   ],
+   "iteration": 452,
+   "evals_so_far": 390,
+   "nearest_corpus": "S1",
+   "distance": 8
+  },
+  {
+   "name": "g2-141",
+   "fen": "1k2r2r/pp6/8/PN6/4B1br/2N5/3Q1PPP/2K4R w - - 0 1",
+   "lineage": [
+    {
+     "parent_fen": "1k2r2r/pp3pb1/7p/1N6/4B1br/2N3P1/PPPQ2PP/R1K4R w - - 0 1",
+     "parent": "S1",
+     "mutations": [
+      "remove white P c2"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r2r/pp3pb1/7p/1N6/4B1br/2N3P1/PP1Q2PP/R1K4R w - - 0 1",
+     "parent": "g2-2",
+     "mutations": [
+      "remove white P g3"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r2r/pp3pb1/7p/1N6/4B1br/2N5/PP1Q2PP/R1K4R w - - 0 1",
+     "parent": "g2-3",
+     "mutations": [
+      "remove black B g7"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r2r/pp3p2/7p/1N6/4B1br/2N5/PP1Q2PP/R1K4R w - - 0 1",
+     "parent": "g2-13",
+     "mutations": [
+      "remove white R a1",
+      "move white P a2->a5"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r2r/pp3p2/7p/PN6/4B1br/2N5/1P1Q2PP/2K4R w - - 0 1",
+     "parent": "g2-25",
+     "mutations": [
+      "remove black P f7",
+      "move white P b2->f2"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r2r/pp6/7p/PN6/4B1br/2N5/3Q1PPP/2K4R w - - 0 1",
+     "parent": "g2-71",
+     "mutations": [
+      "remove black P h6"
+     ],
+     "verdict": "PASS (fast)"
+    }
+   ],
+   "iteration": 453,
+   "evals_so_far": 391,
+   "nearest_corpus": "S1",
+   "distance": 10
+  },
+  {
+   "name": "g2-142",
+   "fen": "1k2rrn1/pp4pp/5n2/1N3b2/4B3/2P5/PPNQ2P1/R1K4R w - - 0 1",
+   "lineage": [
+    {
+     "parent_fen": "1k2rrn1/pp4pp/5n1p/1N3b2/4B3/8/PPPQ2PP/R1K4R w - - 0 1",
+     "parent": "C2",
+     "mutations": [
+      "remove black P h6",
+      "move white P h2->c3"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2rrn1/pp4pp/5n2/1N3b2/4B3/2P5/PPPQ2P1/R1K4R w - - 0 1",
+     "parent": "g2-18",
+     "mutations": [
+      "retype white P->N c2",
+      "add black Q c5",
+      "remove black Q c5"
+     ],
+     "verdict": "PASS (fast)"
+    }
+   ],
+   "iteration": 454,
+   "evals_so_far": 393,
+   "nearest_corpus": "C2",
+   "distance": 5
+  },
+  {
+   "name": "g2-143",
+   "fen": "1k2r2r/pp3pb1/7p/1N6/4B1b1/2B3N1/PPpQ2PP/R1K4R w - - 0 1",
+   "lineage": [
+    {
+     "parent_fen": "1k2r2r/pp3pb1/7p/1N6/4B1br/2N3P1/PPPQ2PP/R1K4R w - - 0 1",
+     "parent": "S1",
+     "mutations": [
+      "remove black R h4"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r2r/pp3pb1/7p/1N6/4B1b1/2N3P1/PPPQ2PP/R1K4R w - - 0 1",
+     "parent": "g2-47",
+     "mutations": [
+      "recolour P white->black c2"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r2r/pp3pb1/7p/1N6/4B1b1/2N3P1/PPpQ2PP/R1K4R w - - 0 1",
+     "parent": "g2-58",
+     "mutations": [
+      "retype white N->B c3"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r2r/pp3pb1/7p/1N6/4B1b1/2B3P1/PPpQ2PP/R1K4R w - - 0 1",
+     "parent": "g2-131",
+     "mutations": [
+      "retype white P->N g3"
+     ],
+     "verdict": "PASS (fast)"
+    }
+   ],
+   "iteration": 459,
+   "evals_so_far": 397,
+   "nearest_corpus": "S1",
+   "distance": 7
+  },
+  {
+   "name": "g2-144",
+   "fen": "1k2r3/pp4p1/5P2/1N6/4B1b1/6P1/PPPQ2P1/R1K4R w - - 0 1",
+   "lineage": [
+    {
+     "parent_fen": "1k2r3/pp4pp/8/1N6/4B1b1/8/PPPQ2PP/R1K4R w - - 0 1",
+     "parent": "C1",
+     "mutations": [
+      "move white P h2->f6"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp4pp/5P2/1N6/4B1b1/8/PPPQ2P1/R1K4R w - - 0 1",
+     "parent": "g2-122",
+     "mutations": [
+      "add white P g3",
+      "remove black P h7"
+     ],
+     "verdict": "PASS (fast)"
+    }
+   ],
+   "iteration": 460,
+   "evals_so_far": 398,
+   "nearest_corpus": "C1",
+   "distance": 4
+  },
+  {
+   "name": "g2-145",
+   "fen": "1k2r1b1/pp4pp/5p2/1N6/4B1bp/8/PPPQ1RPP/2K4R w - - 0 1",
+   "lineage": [
+    {
+     "parent_fen": "1k2r3/pp4pp/8/1N6/4B1b1/8/PPPQ2PP/R1K4R w - - 0 1",
+     "parent": "C1",
+     "mutations": [
+      "move white R a1->f2"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp4pp/8/1N6/4B1b1/8/PPPQ1RPP/2K4R w - - 0 1",
+     "parent": "g2-5",
+     "mutations": [
+      "add black P f6"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r3/pp4pp/5p2/1N6/4B1b1/8/PPPQ1RPP/2K4R w - - 0 1",
+     "parent": "g2-21",
+     "mutations": [
+      "add black B g8"
+     ],
+     "verdict": "PASS (fast)"
+    },
+    {
+     "parent_fen": "1k2r1b1/pp4pp/5p2/1N6/4B1b1/8/PPPQ1RPP/2K4R w - - 0 1",
+     "parent": "g2-97",
+     "mutations": [
+      "add black P h4"
+     ],
+     "verdict": "PASS (fast)"
+    }
+   ],
+   "iteration": 464,
+   "evals_so_far": 399,
+   "nearest_corpus": "C1",
+   "distance": 5
+  },
+  {
+   "name": "g2-146",
+   "fen": "1k2rrn1/pp4pp/7p/1N3bn1/4B3/8/PPPQ2PP/R1K4R w - - 0 1",
+   "lineage": [
+    {
+     "parent_fen": "1k2rrn1/pp4pp/5n1p/1N3b2/4B3/8/PPPQ2PP/R1K4R w - - 0 1",
+     "parent": "C2",
+     "mutations": [
+      "move black N f6->g5"
+     ],
+     "verdict": "PASS (fast)"
+    }
+   ],
+   "iteration": 466,
+   "evals_so_far": 400,
+   "nearest_corpus": "C2",
+   "distance": 2
+  }
+ ]
+}

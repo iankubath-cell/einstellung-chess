@@ -1,0 +1,21 @@
+status=PASS
+codes=[]
+nodes=2370
+tier=two-engine
+budget=15000000
+
+PASS fen valid, side to move not in check  
+PASS line 'familiar' replays and ends in mate  
+PASS line 'familiar' starts with the shared first move  Qd6+
+PASS line 'familiar' length matches declared 5  recorded 5
+PASS no first move mates in 1  mate in 1: []
+PASS solver and engine agree on all 51 first moves (horizon 3)  
+PASS no other first move mates within 3  []
+PASS solver and engine agree on the declared first move out to 3  solver 3, engine 3
+PASS declared first move's shortest mate is exactly 3  Qd6+
+PASS familiar: move 2 Nc7+ forces mate in exactly 4  declared remaining 4, solver 4, engine 4
+PASS familiar: move 3 Na6+ forces mate in exactly 3  declared remaining 3, solver 3, engine 3
+PASS familiar: move 4 Qb8+ forces mate in exactly 2  declared remaining 2, solver 2, engine 2
+PASS familiar: move 5 Nc7# forces mate in exactly 1  declared remaining 1, solver 1, engine 1
+
+meta={'python': '3.14.5', 'python_chess': '1.11.2', 'engine_depth': '24', 'solver_budget': '15000000', 'engine_id': 'Stockfish 19', 'engine_author': 'the Stockfish developers (see AUTHORS file)', 'threads': '1 (applied)', 'hash': '256 (applied)', 'fast': 'False', 'engine_timeout': '300s', 'engine_state': 'ucinewgame before every search', 'engine_searches': '56 in 174s; slowest first move Nd4 16s'}

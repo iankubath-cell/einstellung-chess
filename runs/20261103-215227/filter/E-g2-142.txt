@@ -1,0 +1,19 @@
+status=PASS
+codes=[]
+nodes=2183
+tier=python-only
+budget=5000000
+
+PASS fen valid, side to move not in check  
+PASS line 'familiar' replays and ends in mate  
+PASS line 'familiar' starts with the shared first move  Qd6+
+PASS line 'familiar' length matches declared 5  recorded 5
+PASS no first move mates in 1  mate in 1: []
+PASS no other first move mates within 3  []
+PASS declared first move's shortest mate is exactly 3  Qd6+
+PASS familiar: move 2 Nc7+ forces mate in exactly 4  declared remaining 4, solver 4
+PASS familiar: move 3 Na6+ forces mate in exactly 3  declared remaining 3, solver 3
+PASS familiar: move 4 Qb8+ forces mate in exactly 2  declared remaining 2, solver 2
+PASS familiar: move 5 Nc7# forces mate in exactly 1  declared remaining 1, solver 1
+
+meta={'python': '3.14.5', 'python_chess': '1.11.2', 'engine_depth': 'none', 'solver_budget': '5000000', 'fast': 'True', 'engine_timeout': 'none', 'engine_state': 'none'}

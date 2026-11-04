@@ -1,0 +1,128 @@
+{
+ "id": "E-g2-94",
+ "fen": "1k2r1n1/pp3pp1/8/1N3bn1/4B1b1/5PP1/PPPQ1PP1/2K5 w - - 0 1",
+ "orientation": "canonical (white attacks, skeleton in b-file corner)",
+ "decoration": [
+  "B@e4",
+  "P@a2",
+  "P@b2",
+  "P@c2",
+  "P@f2",
+  "P@f3",
+  "P@g2",
+  "P@g3",
+  "b@f5",
+  "b@g4",
+  "n@g5",
+  "n@g8",
+  "p@f7",
+  "p@g7"
+ ],
+ "authenticity": {
+  "material_white": 22,
+  "material_black": 21,
+  "imbalance": 1,
+  "pieces": 21,
+  "decoration_pieces": 14,
+  "max_pawns_on_a_file": 2,
+  "flags": [
+   "more_than_20_pieces"
+  ],
+  "used_as_filter": false
+ },
+ "first_move": "Qd6+",
+ "declared": {
+  "short": 3,
+  "familiar": 5
+ },
+ "lines": {
+  "familiar": [
+   "Qd6+",
+   "Ka8",
+   "Nc7+",
+   "Kb8",
+   "Na6+",
+   "Ka8",
+   "Qb8+",
+   "Rxb8",
+   "Nc7#"
+  ]
+ },
+ "lines_as_searched": {
+  "first_move": "Qd6+",
+  "familiar": [
+   "Qd6+",
+   "Ka8",
+   "Nc7+",
+   "Kb8",
+   "Na6+",
+   "Ka8",
+   "Qb8+",
+   "Rxb8",
+   "Nc7#"
+  ]
+ },
+ "familiar_line_captures": [
+  "Rxb8"
+ ],
+ "extra_line_captures_vs_corpus": 0,
+ "images": {
+  "id": "1k2r1n1/pp3pp1/8/1N3bn1/4B1b1/5PP1/PPPQ1PP1/2K5 w - - 0 1",
+  "H": "1n1r2k1/1pp3pp/8/1nb3N1/1b1B4/1PP5/1PP1QPPP/5K2 w - - 0 1",
+  "C": "2k5/pppq1pp1/5pp1/4b1B1/1n3BN1/8/PP3PP1/1K2R1N1 b - - 0 1",
+  "HC": "5k2/1pp1qppp/1pp5/1B1b4/1NB3n1/8/1PP3PP/1N1R2K1 b - - 0 1"
+ },
+ "symmetry_key": "1k2r1n1/pp3pp1/8/1N3bn1/4B1b1/5PP1/PPPQ1PP1/2K5 w",
+ "provenance": {
+  "mode": "guided",
+  "seed": 2,
+  "iteration": 288,
+  "layer_history": [
+   {
+    "parent_fen": "1k2r1n1/pp3pp1/5n2/1N3b2/4B1b1/5PP1/PPPQ1PP1/2K4R w - - 0 1",
+    "parent": "S3",
+    "mutations": [
+     "move black N f6->g5"
+    ],
+    "verdict": "PASS (fast)"
+   },
+   {
+    "parent_fen": "1k2r1n1/pp3pp1/8/1N3bn1/4B1b1/5PP1/PPPQ1PP1/2K4R w - - 0 1",
+    "parent": "g2-64",
+    "mutations": [
+     "remove white R h1"
+    ],
+    "verdict": "PASS (fast)"
+   }
+  ],
+  "nearest_corpus": "S3",
+  "distance_from_nearest_corpus_decoration": 3
+ },
+ "oracle": {
+  "status": "PASS",
+  "codes": [],
+  "nodes": 1665,
+  "tier": "python-only",
+  "mode": "full (not fast)",
+  "python_only": true,
+  "meta": {
+   "python": "3.14.5",
+   "python_chess": "1.11.2",
+   "engine_depth": "none",
+   "solver_budget": "5000000",
+   "fast": "False",
+   "engine_timeout": "none",
+   "engine_state": "none"
+  }
+ },
+ "versions": {
+  "composer_py_sha256_lf": "9e82ff3b14a52fbe77a7076feac109a530fcffeea62c13df7cd599ac6d13465b",
+  "composer_py_sha256_lf_at_search_time": "not recorded",
+  "oracle_py_sha256_lf": "772a3a1d314f52564d40262ba489ada2813fd4111c0f608ab98a6c8e1c85ed56",
+  "composer_skeleton_py_sha256_lf": "9a5456ae376bda9471c5c4f4611343f53068d50780203caeeaae26e8c61c5b4d",
+  "python": "3.14.5",
+  "python_chess": "1.11.2"
+ },
+ "engine_certified": false,
+ "note": "Python oracle PASS only. Run `composer.py verify` with Stockfish to upgrade the tier. Not shown to catch human players."
+}
