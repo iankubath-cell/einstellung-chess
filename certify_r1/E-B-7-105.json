@@ -1,0 +1,35 @@
+{
+  "id": "E-B-7-105",
+  "fen": "7k/8/4B3/5R2/8/8/2B3N1/6K1 w - - 0 1",
+  "first_move": "Rh5+",
+  "declared": {
+    "short": 3,
+    "familiar": 6
+  },
+  "lines": {
+    "familiar": [
+      "Rh5+",
+      "Kg7",
+      "Rf5",
+      "Kh7",
+      "Nh4",
+      "Kh8",
+      "Rf7",
+      "Kg8",
+      "Ng2",
+      "Kh8",
+      "Rh7#"
+    ]
+  },
+  "symmetry_key": "7k/8/4B3/5R2/8/8/2B3N1/6K1 w",
+  "provenance": {
+    "generator": "ep_gen",
+    "version": "0.3",
+    "seed_name": "knight-2",
+    "mutation_depth": 8,
+    "note": "Kh8 boxed by Rg8 + ph7; Ng2 marches toward the net; Nh6+ may be the tempter",
+    "engine_probe_depth": 18,
+    "best_move": "Rf7",
+    "familiar_line_verified_by": "pv-replay"
+  }
+}

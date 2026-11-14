@@ -1,0 +1,56 @@
+{
+  "id": "T-B44-04",
+  "name": "The Knight's Screen",
+  "paradigm": "twin",
+  "fen": "rn4k1/5ppp/2p5/5NN1/1rQ5/8/8/6K1 w - - 0 1",
+  "first_move": "Qxf7+",
+  "declared": {
+    "mate_length": 2,
+    "root_count": 2
+  },
+  "lines": {
+    "familiar": [
+      "Qxf7+",
+      "Kh8",
+      "Qxg7#"
+    ]
+  },
+  "roots": [
+    {
+      "role": "familiar",
+      "move": "Qxf7+",
+      "branches": {
+        "Kh8": [
+          "Qxf7+",
+          "Kh8",
+          "Qxg7#"
+        ]
+      }
+    },
+    {
+      "role": "twin",
+      "move": "Ne7+",
+      "branches": {
+        "Kh8": [
+          "Ne7+",
+          "Kh8",
+          "Nxf7#"
+        ],
+        "Kf8": [
+          "Ne7+",
+          "Kf8",
+          "Qxf7#"
+        ]
+      }
+    }
+  ],
+  "provenance": {
+    "generated_by": "Base44 app-builder (lookbeyondtheobviousmove.com)",
+    "inspiration": "Bilalic, McLeod & Gobet (2008) Einstellung effect in chess",
+    "acquired": "2026-11-10",
+    "verified_by": "build_twins_fixtures.py v0.3",
+    "verification": "exhaustive first-move enumeration: exactly 2 mating roots, both mate-in-2; all advertised branch lines replayed to proven checkmate",
+    "built": "2026-11-14"
+  },
+  "schema": "twins-fixture/1.0"
+}

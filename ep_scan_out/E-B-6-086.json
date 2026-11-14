@@ -1,0 +1,33 @@
+{
+  "id": "E-B-6-086",
+  "fen": "6k1/5pp1/2N5/8/7B/8/8/1B2R1K1 w - - 0 1",
+  "first_move": "Ne7+",
+  "declared": {
+    "short": 1,
+    "familiar": 4
+  },
+  "lines": {
+    "familiar": [
+      "Ne7+",
+      "Kh8",
+      "Ng6+",
+      "Kh7",
+      "Re8",
+      "fxg6",
+      "Bc2",
+      "Kh6",
+      "Rh8#"
+    ]
+  },
+  "symmetry_key": "6k1/5pp1/2N5/8/7B/8/8/1B2R1K1 w",
+  "provenance": {
+    "generator": "ep_gen",
+    "version": "0.3",
+    "seed_name": "backrank-2",
+    "mutation_depth": 5,
+    "note": "back-rank with black rook guarding the entry square (Re8 contest)",
+    "engine_probe_depth": 18,
+    "best_move": "Re8#",
+    "familiar_line_verified_by": "pv-replay"
+  }
+}

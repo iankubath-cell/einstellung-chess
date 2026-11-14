@@ -1,0 +1,14 @@
+{
+  "schema": "twins-fixture/1.0",
+  "paradigm": "twin",
+  "source": "Base44 app-builder (lookbeyondtheobviousmove.com)",
+  "built": "2026-11-14",
+  "records": [
+    "T-B44-01.json",
+    "T-B44-02.json",
+    "T-B44-03.json",
+    "T-B44-04.json"
+  ],
+  "count": 4,
+  "note": "Exhaustively verified: each position has exactly two mating roots, both mate-in-2; all branch lines end in proven mate. Oracle note: these are twins -- the shadow-doctrine check alt_first_move_mates rejects them BY DESIGN; they are fixtures, not corpus records."
+}

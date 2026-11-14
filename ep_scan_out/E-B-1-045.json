@@ -1,0 +1,31 @@
+{
+  "id": "E-B-1-045",
+  "fen": "7k/3R3N/8/7N/8/8/R5P1/1R4K1 w - - 0 1",
+  "first_move": "Rd8+",
+  "declared": {
+    "short": 1,
+    "familiar": 3
+  },
+  "lines": {
+    "familiar": [
+      "Rd8+",
+      "Kxh7",
+      "Ra7+",
+      "Kg6",
+      "Rd5",
+      "Kh6",
+      "Rb6#"
+    ]
+  },
+  "symmetry_key": "7k/3R3N/8/7N/8/8/R5P1/1R4K1 w",
+  "provenance": {
+    "generator": "ep_gen",
+    "version": "0.3",
+    "seed_name": "rooklad-anchor",
+    "mutation_depth": 5,
+    "note": "PROVEN ACCEPT from --check-seeds; kept as calibration anchor",
+    "engine_probe_depth": 18,
+    "best_move": "Rb8#",
+    "familiar_line_verified_by": "pv-replay"
+  }
+}

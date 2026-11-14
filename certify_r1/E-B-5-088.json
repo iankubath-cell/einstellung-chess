@@ -1,0 +1,33 @@
+{
+  "id": "E-B-5-088",
+  "fen": "7k/4P1p1/8/8/6R1/6B1/8/7K w - - 0 1",
+  "first_move": "e8=R+",
+  "declared": {
+    "short": 2,
+    "familiar": 5
+  },
+  "lines": {
+    "familiar": [
+      "e8=R+",
+      "Kh7",
+      "Be5",
+      "g5",
+      "Rxg5",
+      "Kh6",
+      "Rg1",
+      "Kh7",
+      "Rh8#"
+    ]
+  },
+  "symmetry_key": "7k/4P1p1/8/8/6R1/6B1/8/7K w",
+  "provenance": {
+    "generator": "ep_gen",
+    "version": "0.3",
+    "seed_name": "opera-1",
+    "mutation_depth": 7,
+    "note": "opera-mate scaffold: Ba1 long diagonal, rook on the d-file, black rook guards e8",
+    "engine_probe_depth": 18,
+    "best_move": "Rh4+",
+    "familiar_line_verified_by": "pv-replay"
+  }
+}
