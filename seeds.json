@@ -1,0 +1,16 @@
+[
+  {"name": "rooklad-anchor", "note": "PROVEN ACCEPT from --check-seeds; kept as calibration anchor",
+   "fen": "7k/8/8/8/8/8/R7/1R4K1 w - - 0 1"},
+  {"name": "bishop-anchor", "note": "PROVEN ACCEPT but short=1 (degenerate); expect junk unless mutation enriches it",
+   "fen": "8/8/8/8/8/2B5/1R6/k1K5 w - - 0 1"},
+  {"name": "smother-2", "note": "knight net around Kh8 with black rook f8 (defenders add tempo, not mate-in-1)",
+   "fen": "4r2k/6pp/8/5N2/8/8/8/6K1 w - - 0 1"},
+  {"name": "smother-3", "note": "semi-smothered Kg8, Rf8 + f7/g7/h7 pawn shell; knight must pry it open",
+   "fen": "5rk1/5ppp/8/5N2/8/8/8/6K1 w - - 0 1"},
+  {"name": "opera-1", "note": "opera-mate scaffold: Ba1 long diagonal, rook on the d-file, black rook guards e8",
+   "fen": "5r1k/6pp/8/8/8/8/8/B2R3K w - - 0 1"},
+  {"name": "backrank-2", "note": "back-rank with black rook guarding the entry square (Re8 contest)",
+   "fen": "5rk1/5ppp/8/8/8/8/8/1B2R1K1 w - - 0 1"},
+  {"name": "knight-2", "note": "Kh8 boxed by Rg8 + ph7; Ng2 marches toward the net; Nh6+ may be the tempter",
+   "fen": "6rk/7p/8/8/8/8/6N1/6K1 w - - 0 1"}
+]

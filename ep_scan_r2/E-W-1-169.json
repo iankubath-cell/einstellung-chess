@@ -1,0 +1,40 @@
+{
+  "id": "E-W-1-169",
+  "fen": "5B1k/3R4/8/6N1/8/8/R7/1R4K1 w - - 0 1",
+  "first_move": "Bg7+",
+  "declared": {
+    "short": 2,
+    "familiar": 5
+  },
+  "lines": {
+    "familiar": [
+      "Bg7+",
+      "Kg8",
+      "Rd8+",
+      "Kxg7",
+      "Rd6",
+      "Kh8",
+      "Rb8+",
+      "Kg7",
+      "Ra7#"
+    ]
+  },
+  "symmetry_key": "5B1k/3R4/8/6N1/8/8/R7/1R4K1 w",
+  "provenance": {
+    "generator": "ep_gen",
+    "version": "0.4",
+    "paradigm": "weak-form-shadow",
+    "seed_name": "rooklad-1",
+    "mutation_depth": 4,
+    "note": "two-rook ladder vs cornered king",
+    "engine_probe_depth": 18,
+    "entry_uci": "f8g7",
+    "defender_reply": "Kg8",
+    "fork": "Rd8+",
+    "fork_uci": "d7d8",
+    "m_familiar_est": 5,
+    "est_note": "depth-18 distance HINT, not a declaration",
+    "realized_familiar": 5,
+    "familiar_line_verified_by": "pv-replay"
+  }
+}

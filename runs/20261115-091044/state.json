@@ -1,0 +1,41 @@
+{
+  "pipeline_version": "0.3",
+  "run_id": "20261115-091044",
+  "updated": "2026-11-15T09:16:26",
+  "steps": {
+    "preflight": {
+      "exit": 0,
+      "seconds": 0.0,
+      "ok": true
+    },
+    "compose": {
+      "exit": 0,
+      "seconds": 0.0,
+      "skipped": true
+    },
+    "lint": {
+      "exit": 0,
+      "seconds": 0.1,
+      "examined": 17,
+      "flagged": 0
+    },
+    "filter": {
+      "exit": 0,
+      "seconds": 177.2,
+      "counts": {
+        "PASS": 11,
+        "FAIL": 6
+      },
+      "errors": 0
+    },
+    "certify": {
+      "exit": 0,
+      "seconds": 161.9,
+      "counts": {
+        "PASS": 9,
+        "FAIL": 2
+      },
+      "errors": 0
+    }
+  }
+}

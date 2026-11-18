@@ -1,0 +1,14 @@
+status=FAIL
+codes=['alt_first_move_mates']
+nodes=57
+tier=python-only
+budget=5000000
+
+PASS fen valid, side to move not in check  
+PASS line 'familiar' replays and ends in mate  
+PASS line 'familiar' starts with the shared first move  Bg7+
+PASS line 'familiar' length matches declared 5  recorded 5
+PASS no first move mates in 1  mate in 1: []
+FAIL no other first move mates within 2  ['Ba3', 'Bb4', 'Bc5', 'Bd6', 'Bh6', 'Ra8', 'Rb8', 'Rd8']
+
+meta={'python': '3.14.5', 'python_chess': '1.11.2', 'engine_depth': 'none', 'solver_budget': '5000000', 'fast': 'True', 'engine_timeout': 'none', 'engine_state': 'none'}

@@ -1,0 +1,24 @@
+status=PASS
+codes=[]
+nodes=87042
+tier=two-engine
+budget=15000000
+
+PASS fen valid, side to move not in check  
+PASS line 'familiar' replays and ends in mate  
+PASS line 'familiar' starts with the shared first move  Rb1+
+PASS line 'familiar' length matches declared 8  recorded 8
+PASS no first move mates in 1  mate in 1: []
+PASS solver and engine agree on all 13 first moves (horizon 2)  
+PASS no other first move mates within 2  []
+PASS solver and engine agree on the declared first move out to 2  solver 2, engine 2
+PASS declared first move's shortest mate is exactly 2  Rb1+
+PASS familiar: move 2 Rb2+ forces mate in exactly 7  declared remaining 7, solver 7, engine 7
+PASS familiar: move 3 b4 forces mate in exactly 6  declared remaining 6, solver 6, engine 6
+PASS familiar: move 4 b5 forces mate in exactly 5  declared remaining 5, solver 5, engine 5
+PASS familiar: move 5 b6 forces mate in exactly 4  declared remaining 4, solver 4, engine 4
+PASS familiar: move 6 b7 forces mate in exactly 3  declared remaining 3, solver 3, engine 3
+PASS familiar: move 7 b8=R forces mate in exactly 2  declared remaining 2, solver 2, engine 2
+PASS familiar: move 8 Ra8# forces mate in exactly 1  declared remaining 1, solver 1, engine 1
+
+meta={'python': '3.14.5', 'python_chess': '1.11.2', 'engine_depth': '24', 'solver_budget': '15000000', 'engine_id': 'Stockfish 19', 'engine_author': 'the Stockfish developers (see AUTHORS file)', 'threads': '1 (applied)', 'hash': '256 (applied)', 'fast': 'False', 'engine_timeout': '300s', 'engine_state': 'ucinewgame before every search', 'engine_searches': '21 in 1s; slowest familiar move 2 Rb2+ 0s'}

@@ -1,0 +1,96 @@
+{
+  "version": "0.3",
+  "total_records": 146,
+  "unique_fens": 146,
+  "unique_symmetries": 146,
+  "corpus_distribution": {
+    "C1": 92,
+    "S1": 43,
+    "C2": 7,
+    "C4": 2,
+    "S3": 2
+  },
+  "first_move_distribution": {
+    "Qd6+": 146
+  },
+  "pair_distribution": {
+    "(3, 5)": 146
+  },
+  "largest_corpus": "C1",
+  "largest_corpus_fraction": 0.6301369863013698,
+  "per_corpus_breakdown": {
+    "C1": {
+      "count": 92,
+      "unique_fens": 92,
+      "unique_symmetries": 92,
+      "sample_ids": [
+        "E-g2-1",
+        "E-g2-100",
+        "E-g2-101",
+        "E-g2-102",
+        "E-g2-103",
+        "E-g2-106",
+        "E-g2-108",
+        "E-g2-109",
+        "E-g2-11",
+        "E-g2-110"
+      ]
+    },
+    "S1": {
+      "count": 43,
+      "unique_fens": 43,
+      "unique_symmetries": 43,
+      "sample_ids": [
+        "E-g2-10",
+        "E-g2-104",
+        "E-g2-105",
+        "E-g2-107",
+        "E-g2-111",
+        "E-g2-113",
+        "E-g2-114",
+        "E-g2-12",
+        "E-g2-124",
+        "E-g2-13"
+      ]
+    },
+    "C2": {
+      "count": 7,
+      "unique_fens": 7,
+      "unique_symmetries": 7,
+      "sample_ids": [
+        "E-g2-116",
+        "E-g2-121",
+        "E-g2-128",
+        "E-g2-142",
+        "E-g2-146",
+        "E-g2-18",
+        "E-g2-45"
+      ]
+    },
+    "C4": {
+      "count": 2,
+      "unique_fens": 2,
+      "unique_symmetries": 2,
+      "sample_ids": [
+        "E-g2-132",
+        "E-g2-89"
+      ]
+    },
+    "S3": {
+      "count": 2,
+      "unique_fens": 2,
+      "unique_symmetries": 2,
+      "sample_ids": [
+        "E-g2-64",
+        "E-g2-94"
+      ]
+    }
+  },
+  "skipped_files": [
+    [
+      "raw_g2.json",
+      "malformed or missing FEN"
+    ]
+  ],
+  "skipped_total": 1
+}

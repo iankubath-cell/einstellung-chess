@@ -1,0 +1,16 @@
+status=FAIL
+codes=['faster_mate_leak']
+nodes=1813
+tier=python-only
+budget=5000000
+
+PASS fen valid, side to move not in check  
+PASS line 'familiar' replays and ends in mate  
+PASS line 'familiar' starts with the shared first move  Rb1+
+PASS line 'familiar' length matches declared 7  recorded 7
+PASS no first move mates in 1  mate in 1: []
+PASS no other first move mates within 3  []
+PASS declared first move's shortest mate is exactly 3  Rb1+
+FAIL familiar: move 2 Ra1+ forces mate in exactly 6  declared remaining 6, solver 5
+
+meta={'python': '3.14.5', 'python_chess': '1.11.2', 'engine_depth': 'none', 'solver_budget': '5000000', 'fast': 'True', 'engine_timeout': 'none', 'engine_state': 'none'}

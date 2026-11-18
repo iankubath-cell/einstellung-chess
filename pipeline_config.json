@@ -7,10 +7,10 @@
     "rejects": "fixtures/rejects.json",
     "stockfish": "C:/Users/44777/Downloads/stockfish-windows-x86-64-universal/stockfish/stockfish-windows-x86-64-universal.exe",
     "evidence_dir": "docs/outputs",
-    "survivors_dir": ""
+    "survivors_dir": "ep_scan_r2"
   },
   "compose": {
-    "enabled": true,
+    "enabled": false,
     "search_command": [
       "python", "composer.py", "search",
       "--mode", "guided", "--seed", "2", "--evals", "400",

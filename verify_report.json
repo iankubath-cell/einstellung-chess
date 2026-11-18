@@ -1,0 +1,20 @@
+{
+  "version": "0.2",
+  "records_checked": 146,
+  "skipped_files": [],
+  "line_failures": [],
+  "first_move_mismatches": [],
+  "mirror_duplicates": [],
+  "mirror_unverifiable": 0,
+  "key_audit": {
+    "conventions": {
+      "placement": 142,
+      "vertical": 0,
+      "horizontal": 4
+    },
+    "mismatched_keys": [],
+    "missing_keys": 0,
+    "unverifiable": 0,
+    "duplicate_keys": {}
+  }
+}

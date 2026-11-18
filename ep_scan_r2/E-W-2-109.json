@@ -1,0 +1,46 @@
+{
+  "id": "E-W-2-109",
+  "fen": "8/8/3B4/N7/8/1P6/1RP5/k1K5 w - - 0 1",
+  "first_move": "Rb1+",
+  "declared": {
+    "short": 3,
+    "familiar": 8
+  },
+  "lines": {
+    "familiar": [
+      "Rb1+",
+      "Ka2",
+      "Ra1+",
+      "Kxa1",
+      "b4",
+      "Ka2",
+      "b5",
+      "Ka1",
+      "b6",
+      "Ka2",
+      "b7",
+      "Ka1",
+      "b8=Q",
+      "Ka2",
+      "Qb2#"
+    ]
+  },
+  "symmetry_key": "8/8/3B4/N7/8/1P6/1RP5/k1K5 w",
+  "provenance": {
+    "generator": "ep_gen",
+    "version": "0.4",
+    "paradigm": "weak-form-shadow",
+    "seed_name": "bishop-1",
+    "mutation_depth": 7,
+    "note": "bishop net with rook cut-off attempt",
+    "engine_probe_depth": 18,
+    "entry_uci": "b2b1",
+    "defender_reply": "Ka2",
+    "fork": "Ra1+",
+    "fork_uci": "b1a1",
+    "m_familiar_est": 8,
+    "est_note": "depth-18 distance HINT, not a declaration",
+    "realized_familiar": 8,
+    "familiar_line_verified_by": "pv-replay"
+  }
+}
