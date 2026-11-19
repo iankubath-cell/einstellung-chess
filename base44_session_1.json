@@ -1,0 +1,650 @@
+[
+  {
+    "fen": "1n4qk/pp3ppp/3R3N/8/7Q/1BN4P/PPPP1PPP/R1B3K1 w - - 0 1",
+    "outcome": "verified",
+    "horizon": {
+      "maxMateMoves": 3,
+      "plies": 5
+    },
+    "proofScope": "Proven to 5 plies: every legal white first move classified, every legal black reply enumerated.",
+    "quietKey": {
+      "primary": "Rd8",
+      "keys": [
+        "Rd8"
+      ],
+      "defences": [
+        {
+          "defence": "Nd7",
+          "mate": "Rxg8#"
+        },
+        {
+          "defence": "Nc6",
+          "mate": "Rxg8#"
+        },
+        {
+          "defence": "Na6",
+          "mate": "Rxg8#"
+        },
+        {
+          "defence": "Qf8",
+          "mate": "Rxf8#"
+        },
+        {
+          "defence": "Qe8",
+          "mate": "Rxe8#"
+        },
+        {
+          "defence": "Qxd8",
+          "mate": "Qxd8#"
+        },
+        {
+          "defence": "a6",
+          "mate": "Rxg8#"
+        },
+        {
+          "defence": "a5",
+          "mate": "Rxg8#"
+        },
+        {
+          "defence": "b6",
+          "mate": "Rxg8#"
+        },
+        {
+          "defence": "b5",
+          "mate": "Rxg8#"
+        },
+        {
+          "defence": "f6",
+          "mate": "Rxg8#"
+        },
+        {
+          "defence": "f5",
+          "mate": "Rxg8#"
+        },
+        {
+          "defence": "g6",
+          "mate": "Rxg8#"
+        },
+        {
+          "defence": "g5",
+          "mate": "Rxg8#"
+        },
+        {
+          "defence": "gxh6",
+          "mate": "Qf6#"
+        }
+      ]
+    },
+    "slowerLine": {
+      "primary": "Nxf7+",
+      "keys": [
+        "Nxf7+"
+      ],
+      "mateIn": 3,
+      "longestDefence": "Qxf7",
+      "moves": [
+        "Nxf7+",
+        "Qxf7",
+        "Rd8+",
+        "Qe8",
+        "Rxe8#"
+      ]
+    },
+    "roots": 51,
+    "nodes": 71497,
+    "memoHits": 645,
+    "wallClockMs": 744
+  },
+  {
+    "fen": "1n6/kp2N3/p2Q3P/2N4K/3p4/8/P1PP1PPP/2B2B1R w - - 0 1",
+    "outcome": "verified",
+    "horizon": {
+      "maxMateMoves": 3,
+      "plies": 5
+    },
+    "proofScope": "Proven to 5 plies: every legal white first move classified, every legal black reply enumerated.",
+    "quietKey": {
+      "primary": "Qc7",
+      "keys": [
+        "Qc7"
+      ],
+      "defences": [
+        {
+          "defence": "Nd7",
+          "mate": "Qxb7#"
+        },
+        {
+          "defence": "Nc6",
+          "mate": "Qxb7#"
+        },
+        {
+          "defence": "Ka8",
+          "mate": "Qxb7#"
+        },
+        {
+          "defence": "a5",
+          "mate": "Qxb7#"
+        },
+        {
+          "defence": "d3",
+          "mate": "Qxb7#"
+        }
+      ]
+    },
+    "slowerLine": {
+      "primary": "Nc8+",
+      "keys": [
+        "Nc8+"
+      ],
+      "mateIn": 3,
+      "longestDefence": "Ka8",
+      "moves": [
+        "Nc8+",
+        "Ka8",
+        "Qc7",
+        "Nd7",
+        "Qxb7#"
+      ]
+    },
+    "roots": 53,
+    "nodes": 111056,
+    "memoHits": 663,
+    "wallClockMs": 1153
+  },
+  {
+    "fen": "1n6/kp2N2p/p2Q3P/2N4K/8/8/P1PP1P1P/2B2B1R w - - 0 1",
+    "outcome": "verified",
+    "horizon": {
+      "maxMateMoves": 3,
+      "plies": 5
+    },
+    "proofScope": "Proven to 5 plies: every legal white first move classified, every legal black reply enumerated.",
+    "quietKey": {
+      "primary": "Qc7",
+      "keys": [
+        "Qc7"
+      ],
+      "defences": [
+        {
+          "defence": "Nd7",
+          "mate": "Qxb7#"
+        },
+        {
+          "defence": "Nc6",
+          "mate": "Qxb7#"
+        },
+        {
+          "defence": "Ka8",
+          "mate": "Qxb7#"
+        },
+        {
+          "defence": "a5",
+          "mate": "Qxb7#"
+        }
+      ]
+    },
+    "slowerLine": {
+      "primary": "Nc8+",
+      "keys": [
+        "Nc8+"
+      ],
+      "mateIn": 3,
+      "longestDefence": "Ka8",
+      "moves": [
+        "Nc8+",
+        "Ka8",
+        "Qc7",
+        "Nd7",
+        "Qxb7#"
+      ]
+    },
+    "roots": 53,
+    "nodes": 104540,
+    "memoHits": 576,
+    "wallClockMs": 1028
+  },
+  {
+    "fen": "k6n/pn2R3/3QR3/8/8/2K1P3/PPPPP1PP/N1BN1B2 w - - 0 1",
+    "outcome": "verified",
+    "horizon": {
+      "maxMateMoves": 3,
+      "plies": 5
+    },
+    "proofScope": "Proven to 5 plies: every legal white first move classified, every legal black reply enumerated.",
+    "quietKey": {
+      "primary": "Qa6",
+      "keys": [
+        "Qa6",
+        "Qc6",
+        "Qc7",
+        "Qd5",
+        "Qd7"
+      ],
+      "defences": [
+        {
+          "defence": "Kb8",
+          "mate": "Qxb7#"
+        },
+        {
+          "defence": "Ng6",
+          "mate": "Qxb7#"
+        },
+        {
+          "defence": "Nf7",
+          "mate": "Qxb7#"
+        },
+        {
+          "defence": "Nd8",
+          "mate": "Qxa7#"
+        },
+        {
+          "defence": "Nd6",
+          "mate": "Qxa7#"
+        },
+        {
+          "defence": "Nc5",
+          "mate": "Re8#"
+        },
+        {
+          "defence": "Na5",
+          "mate": "Re8#"
+        }
+      ]
+    },
+    "slowerLine": {
+      "primary": "Re8+",
+      "keys": [
+        "Re8+"
+      ],
+      "mateIn": 3,
+      "longestDefence": "Nd8",
+      "moves": [
+        "Re8+",
+        "Nd8",
+        "Rxd8+",
+        "Kb7",
+        "Rb8#"
+      ]
+    },
+    "roots": 46,
+    "nodes": 41134,
+    "memoHits": 385,
+    "wallClockMs": 430
+  },
+  {
+    "fen": "k6n/pn2R3/3QR3/8/P7/2K5/PPPP1PPP/N1BN1B2 w - - 0 1",
+    "outcome": "verified",
+    "horizon": {
+      "maxMateMoves": 3,
+      "plies": 5
+    },
+    "proofScope": "Proven to 5 plies: every legal white first move classified, every legal black reply enumerated.",
+    "quietKey": {
+      "primary": "Qa6",
+      "keys": [
+        "Qa6",
+        "Qc6",
+        "Qc7",
+        "Qd5",
+        "Qd7"
+      ],
+      "defences": [
+        {
+          "defence": "Kb8",
+          "mate": "Qxb7#"
+        },
+        {
+          "defence": "Ng6",
+          "mate": "Qxb7#"
+        },
+        {
+          "defence": "Nf7",
+          "mate": "Qxb7#"
+        },
+        {
+          "defence": "Nd8",
+          "mate": "Qxa7#"
+        },
+        {
+          "defence": "Nd6",
+          "mate": "Qxa7#"
+        },
+        {
+          "defence": "Nc5",
+          "mate": "Re8#"
+        },
+        {
+          "defence": "Na5",
+          "mate": "Re8#"
+        }
+      ]
+    },
+    "slowerLine": {
+      "primary": "Re8+",
+      "keys": [
+        "Re8+"
+      ],
+      "mateIn": 3,
+      "longestDefence": "Nd8",
+      "moves": [
+        "Re8+",
+        "Nd8",
+        "Rxd8+",
+        "Kb7",
+        "Rb8#"
+      ]
+    },
+    "roots": 55,
+    "nodes": 67628,
+    "memoHits": 615,
+    "wallClockMs": 629
+  },
+  {
+    "fen": "1n6/kp2N2p/p2Q3P/2N4K/4P3/8/P1PP1P1P/2B2B1R w - - 0 1",
+    "outcome": "verified",
+    "horizon": {
+      "maxMateMoves": 3,
+      "plies": 5
+    },
+    "proofScope": "Proven to 5 plies: every legal white first move classified, every legal black reply enumerated.",
+    "quietKey": {
+      "primary": "Qc7",
+      "keys": [
+        "Qc7"
+      ],
+      "defences": [
+        {
+          "defence": "Nd7",
+          "mate": "Qxb7#"
+        },
+        {
+          "defence": "Nc6",
+          "mate": "Qxb7#"
+        },
+        {
+          "defence": "Ka8",
+          "mate": "Qxb7#"
+        },
+        {
+          "defence": "a5",
+          "mate": "Qxb7#"
+        }
+      ]
+    },
+    "slowerLine": {
+      "primary": "Nc8+",
+      "keys": [
+        "Nc8+"
+      ],
+      "mateIn": 3,
+      "longestDefence": "Ka8",
+      "moves": [
+        "Nc8+",
+        "Ka8",
+        "Qc7",
+        "Nd7",
+        "Qxb7#"
+      ]
+    },
+    "roots": 53,
+    "nodes": 103412,
+    "memoHits": 557,
+    "wallClockMs": 1029
+  },
+  {
+    "fen": "k6n/pn2R3/3QR3/8/8/2K5/PP1PPPPP/N1BN1B2 w - - 0 1",
+    "outcome": "verified",
+    "horizon": {
+      "maxMateMoves": 3,
+      "plies": 5
+    },
+    "proofScope": "Proven to 5 plies: every legal white first move classified, every legal black reply enumerated.",
+    "quietKey": {
+      "primary": "Qa6",
+      "keys": [
+        "Qa6",
+        "Qc6",
+        "Qc7",
+        "Qd5",
+        "Qd7"
+      ],
+      "defences": [
+        {
+          "defence": "Kb8",
+          "mate": "Qxb7#"
+        },
+        {
+          "defence": "Ng6",
+          "mate": "Qxb7#"
+        },
+        {
+          "defence": "Nf7",
+          "mate": "Qxb7#"
+        },
+        {
+          "defence": "Nd8",
+          "mate": "Qxa7#"
+        },
+        {
+          "defence": "Nd6",
+          "mate": "Qxa7#"
+        },
+        {
+          "defence": "Nc5",
+          "mate": "Re8#"
+        },
+        {
+          "defence": "Na5",
+          "mate": "Re8#"
+        }
+      ]
+    },
+    "slowerLine": {
+      "primary": "Re8+",
+      "keys": [
+        "Re8+"
+      ],
+      "mateIn": 3,
+      "longestDefence": "Nd8",
+      "moves": [
+        "Re8+",
+        "Nd8",
+        "Rxd8+",
+        "Kb7",
+        "Rb8#"
+      ]
+    },
+    "roots": 52,
+    "nodes": 59246,
+    "memoHits": 553,
+    "wallClockMs": 592
+  },
+  {
+    "fen": "1n6/kp2N2p/p2Q3P/2N4K/8/8/P1P2PPP/2B2B1R w - - 0 1",
+    "outcome": "verified",
+    "horizon": {
+      "maxMateMoves": 3,
+      "plies": 5
+    },
+    "proofScope": "Proven to 5 plies: every legal white first move classified, every legal black reply enumerated.",
+    "quietKey": {
+      "primary": "Qc7",
+      "keys": [
+        "Qc7"
+      ],
+      "defences": [
+        {
+          "defence": "Nd7",
+          "mate": "Qxb7#"
+        },
+        {
+          "defence": "Nc6",
+          "mate": "Qxb7#"
+        },
+        {
+          "defence": "Ka8",
+          "mate": "Qxb7#"
+        },
+        {
+          "defence": "a5",
+          "mate": "Qxb7#"
+        }
+      ]
+    },
+    "slowerLine": {
+      "primary": "Nc8+",
+      "keys": [
+        "Nc8+"
+      ],
+      "mateIn": 3,
+      "longestDefence": "Ka8",
+      "moves": [
+        "Nc8+",
+        "Ka8",
+        "Qc7",
+        "Nd7",
+        "Qxb7#"
+      ]
+    },
+    "roots": 57,
+    "nodes": 122994,
+    "memoHits": 676,
+    "wallClockMs": 1165
+  },
+  {
+    "fen": "k6n/pn2R3/3QR3/8/5P2/2K5/1PPPPPPP/N1BN1B2 w - - 0 1",
+    "outcome": "verified",
+    "horizon": {
+      "maxMateMoves": 3,
+      "plies": 5
+    },
+    "proofScope": "Proven to 5 plies: every legal white first move classified, every legal black reply enumerated.",
+    "quietKey": {
+      "primary": "Qa6",
+      "keys": [
+        "Qa6",
+        "Qc6",
+        "Qc7",
+        "Qd5",
+        "Qd7"
+      ],
+      "defences": [
+        {
+          "defence": "Kb8",
+          "mate": "Qxb7#"
+        },
+        {
+          "defence": "Ng6",
+          "mate": "Qxb7#"
+        },
+        {
+          "defence": "Nf7",
+          "mate": "Qxb7#"
+        },
+        {
+          "defence": "Nd8",
+          "mate": "Qxa7#"
+        },
+        {
+          "defence": "Nd6",
+          "mate": "Qxa7#"
+        },
+        {
+          "defence": "Nc5",
+          "mate": "Re8#"
+        },
+        {
+          "defence": "Na5",
+          "mate": "Re8#"
+        }
+      ]
+    },
+    "slowerLine": {
+      "primary": "Re8+",
+      "keys": [
+        "Re8+"
+      ],
+      "mateIn": 3,
+      "longestDefence": "Nd8",
+      "moves": [
+        "Re8+",
+        "Nd8",
+        "Rxd8+",
+        "Kb7",
+        "Rb8#"
+      ]
+    },
+    "roots": 46,
+    "nodes": 42500,
+    "memoHits": 407,
+    "wallClockMs": 448
+  },
+  {
+    "fen": "k6n/pn2R3/3QR3/2B5/8/2K5/PPPPPPPP/N1BN4 w - - 0 1",
+    "outcome": "verified",
+    "horizon": {
+      "maxMateMoves": 3,
+      "plies": 5
+    },
+    "proofScope": "Proven to 5 plies: every legal white first move classified, every legal black reply enumerated.",
+    "quietKey": {
+      "primary": "Qa6",
+      "keys": [
+        "Qa6",
+        "Qc6",
+        "Qc7",
+        "Qd5",
+        "Qd7"
+      ],
+      "defences": [
+        {
+          "defence": "Kb8",
+          "mate": "Qxb7#"
+        },
+        {
+          "defence": "Ng6",
+          "mate": "Qxa7#"
+        },
+        {
+          "defence": "Nf7",
+          "mate": "Qxa7#"
+        },
+        {
+          "defence": "Nd8",
+          "mate": "Qxa7#"
+        },
+        {
+          "defence": "Nd6",
+          "mate": "Qxa7#"
+        },
+        {
+          "defence": "Nxc5",
+          "mate": "Re8#"
+        },
+        {
+          "defence": "Na5",
+          "mate": "Re8#"
+        }
+      ]
+    },
+    "slowerLine": {
+      "primary": "Re8+",
+      "keys": [
+        "Re8+"
+      ],
+      "mateIn": 3,
+      "longestDefence": "Nd8",
+      "moves": [
+        "Re8+",
+        "Nd8",
+        "Rxd8+",
+        "Kb7",
+        "Rb8#"
+      ]
+    },
+    "roots": 53,
+    "nodes": 71614,
+    "memoHits": 607,
+    "wallClockMs": 821
+  }
+]
