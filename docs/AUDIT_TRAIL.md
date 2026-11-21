@@ -30,7 +30,8 @@ No single participant's confidence overrides the pipeline.
 | Lumo (parent session) | Verification architecture, rabbit-toothpaste framing, constraint analysis | Confident-but-wrong repairs; stale recollections later corrected by archived runs |
 | Lumo (successor session) | Loader migration, POV correction, corpus reviews, C4 reinstatement | Self-caught POV bug (`score.white()`), wrong CLI flags, FEN-mapping assumption (AX-10 context) |
 | Lumo (current session) | Depth-24 full-run archive and closure; S2 classification adjudication; lineage reconciliation; environment and hash record | Instructed `taskkill` on an unverified process count, killing a healthy run (AX-25); environment-capture instruction mutated the archived run log (AX-22); proposed a phantom hash as a verification checkpoint |
-| Human operator | Orchestration, final judgment, discipline in replaying failures | Notepad/FEN handling errors, paste/run mismatches |
+| Lumo (2026-11 sessions) | ep_gen v0.4 weak-form redesign; fen_eval and adjudicate_base44 tooling; Base44 spec amendments and cross-stack adjudication doctrine | Engine-path literal rewritten wrongly twice from memory against machine evidence (AX-27); truncated inline code delivery; twice advised against the action (a revert) that the evidence supported |
+| Human operator | Orchestration, final judgment, discipline in replaying failures | Notepad/FEN handling errors, paste/run mismatches, extension-hidden saves (AX-29) |
 
 ---
 
@@ -209,7 +210,8 @@ The two sections below are the 2026-10-24 state, kept unedited as the record of 
 
 > The failures are part of the method.
 > Without them, the verified set is less credible, not more.
-# AUDIT TRAIL — ADDENDUM: v0.2 → v0.4 Lineage, Cap Certification, and Survivor Census Correction
+
+# AUDIT TRAIL — ADDENDUM I: v0.2 → v0.4 Lineage, Cap Certification, and Survivor Census Correction
 
 **Project:** Einstellung Chess (`C:\Users\44777\einstellung-chess`)
 **Remote:** github.com/iankubath-cell/einstellung-chess (branch `main`)
@@ -296,11 +298,6 @@ The pipeline investigating how prior patterns blind judgement was itself blinded
 
 `patch_pipeline.py` (one-shot; refuses to execute unless its target text matches exactly once) forwards `engine_timeout` from `pipeline_config.json` into `oracle.judge()` at both call sites. Post-patch inspection confirms three occurrences of the identifier in `pipeline.py` [C]:
 
-```
-pipeline.py:    tmo = pl.cfg["certify"].get("engine_timeout") if use_engine else None
-pipeline.py:      … depth=depth, engine_info=pl._engine_info, fast=fast, engine_timeout=tmo)
-pipeline.py:      … depth=depth, engine_info=pl._engine_info, fast=fast, engine_timeout=tmo)
-```
 
 Configuration state: `"certify": {"depth": 24, "budget": 15000000, "engine": true, "engine_timeout": 300}` [C].
 
@@ -322,10 +319,6 @@ Same eight candidates, same patched pipeline, same oracle, same engine path. The
 
 Following the control, `pipeline_config.json` was restored with `git checkout -- pipeline_config.json` — deliberately **not** by editing, because a JSON round-trip alters the file's bytes and invalidates the pinned hash. Restoration verified [C]:
 
-```
-certutil -hashfile pipeline_config.json SHA256
-→ 6b9d188236ce5f77740772121cf30b90354ba433dedd0b14a7012cd0483248b9
-```
 
 This matches the pinned value in [H]. Production cap is confirmed at 300 s.
 
@@ -333,10 +326,7 @@ This matches the pinned value in [H]. Production cap is confirmed at 300 s.
 
 Interrogation of the persisted verdict records returned nothing [C]:
 
-```
-findstr /s /i "engine_timeout engine_searches" composed_sample\*.json
-→ (no output)
-```
+
 
 The behavioural control proves the cap *acts*; it does not prove the cap *value* is recorded alongside each verdict. There is currently no per-record audit trail tying a given PASS to the cap under which it was obtained. This is a genuine gap in the certification record and is carried forward as an open item (§6, item 4).
 
@@ -352,9 +342,6 @@ The behavioural control proves the cap *acts*; it does not prove the cap *value*
 
 An exhaustive enumeration of every candidate-bearing directory [C]:
 
-```
-dir /s /b composed_sample composed_u142 composed_u212 v03_staging
-```
 
 | Path | Contents | Candidate records |
 |---|---|---|
@@ -372,10 +359,6 @@ Corroborating enumerations [C]: `dir /s /b positions\*.json` returns only `canon
 
 A broad filename scan returned 121 hits [C]:
 
-```
-dir /s /b /a-d | findstr /i "E-g1- E-u1-" | find /c /v ""
-→ 121
-```
 
 This count is inflated by **run-tree verdict artefacts**. Each pipeline stage writes per-record output beneath `runs/<timestamp>/<stage>/` — for example `runs/20261101-120213/certify/E-g1-10.json` and `E-g1-10.txt`, and likewise under `lint/` and `filter/`. The same logical record is therefore counted once per stage per run. Seventeen timestamped run directories are present [C].
 
@@ -404,12 +387,6 @@ This retroactively explains the persistent `certify: 8 eligible` reporting: `sur
 
 Each pipeline invocation creates a fresh timestamped run directory `runs/YYYYMMDD-HHMMSS/`. Stage indices are written to `runs/<run>/<stage>/index.jsonl` and read from the same relative location [C, from `findstr /N /I "index" pipeline.py`]:
 
-```
-700:    idx = pl.run_dir / "lint" / "index.jsonl"
-713:    idx = pl.run_dir / stage_name / "index.jsonl"
-764:    if pl.run_dir.joinpath("lint", "index.jsonl").exists():
-774:        if pl.run_dir.joinpath("filter", "index.jsonl").exists():
-```
 
 Because `lint`, `filter` and `certify` were invoked as three separate commands on 02 Nov, each received its own run directory [C]:
 
@@ -425,10 +402,6 @@ Consequence: the intended throughput discipline — cheap python-only gates scop
 
 Byte-level comparison [C]:
 
-```
-certutil -hashfile composer.py            → 0f4acc884281575d21cc84c7d11bba8135d4155407db8b3dd384d10791fd12e7
-certutil -hashfile composer_v02_backup.py → 0f4acc884281575d21cc84c7d11bba8135d4155407db8b3dd384d10791fd12e7
-```
 
 Identical. Both files are 21,310 bytes. The live `composer.py` matches the pinned v0.3 hash from [H], so the delivered artefact is correct — but the file named as the v0.2 backup **contains v0.3**, and therefore preserves nothing. If a genuine pre-v0.3 composer is required for the lineage, it must be recovered from git history rather than from this backup.
 
@@ -529,20 +502,7 @@ dir /s /b composed_sample composed_u142 composed_u212 v03_staging
 
 :: Canonical LF-normalised hash
 python -c "import hashlib;print(hashlib.sha256(open('FILE','rb').read().replace(b'\r\n',b'\n')).hexdigest())"
-```
 
----
 
-## 10. Operational cautions carried forward
 
-- Environment variables do not survive a new console window.
-- `>` truncates instantly; `2>&1` conceals startup crashes inside the capture file. An instantaneous return to the prompt is a failure signature, not a speed signal — inspect the file before re-running, since a second redirect destroys the first attempt's evidence.
-- Commands that print nothing are suspect. Silence is not success; verify with a hash or a directory listing.
-- Editing JSON via a Python round-trip changes the file's bytes and breaks the pinned hash. Restore from git when the committed hash must hold.
-- Notepad "Save as type" must be **All Files (\*.\*)**, or a `.txt` suffix is appended silently.
-- `Get-Content -Wait` never exits on its own.
-- Nested `cmd` shells break environment-variable continuity and command history.
 
----
-
-*End of addendum.*
