@@ -1,0 +1,141 @@
+[
+  {
+    "fen": "1RK1k3/p7/p1p5/P6p/PN4P1/P2P1P1p/1p2pp1Q/8 w - - 0 1",
+    "outcome": "verified",
+    "horizon": 3,
+    "quietKey": {
+      "primary": "Qc7",
+      "keys": ["Qc7"],
+      "defenceCount": 17,
+      "defences": [
+        { "defence": "Kf8", "mate": "Kb7#" },
+        { "defence": "c5", "mate": "Kb7#" },
+        { "defence": "h4", "mate": "Kb7#" },
+        { "defence": "hxg4", "mate": "Kb7#" },
+        { "defence": "h2", "mate": "Kb7#" },
+        { "defence": "b1=N", "mate": "Kb7#" },
+        { "defence": "b1=B", "mate": "Kb7#" },
+        { "defence": "b1=R", "mate": "Kb7#" },
+        { "defence": "b1=Q", "mate": "Kb7#" },
+        { "defence": "e1=N", "mate": "Kb7#" },
+        { "defence": "e1=B", "mate": "Kb7#" },
+        { "defence": "e1=R", "mate": "Kb7#" },
+        { "defence": "e1=Q", "mate": "Kb7#" },
+        { "defence": "f1=N", "mate": "Kb7#" },
+        { "defence": "f1=B", "mate": "Kb7#" },
+        { "defence": "f1=R", "mate": "Kb7#" },
+        { "defence": "f1=Q", "mate": "Kb7#" }
+      ]
+    },
+    "slowerLine": {
+      "primary": "Qe5+",
+      "key": "Qe5+",
+      "defenceCount": 2,
+      "defences": [
+        { "defence": "Kf8", "then": "Rb7", "mate": "Qe8#" },
+        { "defence": "Kf7", "then": "Rb7+", "mate": "Qh8#" }
+      ],
+      "representative": { "first": "Qe5+", "defence": "Kf8", "key": "Rb7", "mate": "Qe8#" }
+    },
+    "net": {
+      "bucket": "zone_coverage",
+      "newlyCovered": ["e7", "f7"],
+      "participants": [],
+      "attackedMaterial": ["a7", "c6"],
+      "attackedInNet": []
+    },
+    "net_bucket": "zone_coverage",
+    "nodes": 23153,
+    "roots": null,
+    "wallClockMs": 258,
+    "note": "Constructed by the cage-first composer. Quiet key adds zone control while attacking no piece inside the mating configuration."
+  },
+  {
+    "fen": "8/4p1p1/1K2pp1p/3PQ1Rp/k6P/3PpPPp/4NP2/8 w - - 0 1",
+    "outcome": "verified",
+    "horizon": 3,
+    "quietKey": {
+      "primary": "Qb2",
+      "keys": ["Qb2"],
+      "defenceCount": 8,
+      "defences": [
+        { "defence": "g6", "mate": "Nc3#" },
+        { "defence": "e5", "mate": "Nc3#" },
+        { "defence": "exd5", "mate": "Nc3#" },
+        { "defence": "f5", "mate": "Nc3#" },
+        { "defence": "fxg5", "mate": "Nc3#" },
+        { "defence": "hxg5", "mate": "Nc3#" },
+        { "defence": "exf2", "mate": "Nc3#" },
+        { "defence": "h2", "mate": "Nc3#" }
+      ]
+    },
+    "slowerLine": {
+      "primary": "Qa1+",
+      "key": "Qa1+",
+      "defenceCount": 2,
+      "defences": [
+        { "defence": "Kb4", "then": "Nd4", "mate": "Qa5#" },
+        { "defence": "Kb3", "then": "Nd4+", "mate": "Qa5#" }
+      ],
+      "representative": { "first": "Qa1+", "defence": "Kb4", "key": "Nd4", "mate": "Qa5#" }
+    },
+    "net": {
+      "bucket": "zone_coverage",
+      "newlyCovered": ["b4", "a3", "b3"],
+      "participants": [],
+      "attackedMaterial": ["f6"],
+      "attackedInNet": []
+    },
+    "net_bucket": "zone_coverage",
+    "nodes": 37424,
+    "roots": null,
+    "wallClockMs": 293,
+    "note": "Constructed by the cage-first composer. Quiet key adds zone control while attacking no piece inside the mating configuration."
+  },
+  {
+    "fen": "8/K7/3R2p1/k4pPp/3PpP2/2NP1ppP/2Pp1PNp/8 w - - 0 1",
+    "outcome": "verified",
+    "horizon": 3,
+    "quietKey": {
+      "primary": "Rb6",
+      "keys": ["Rb6"],
+      "defenceCount": 13,
+      "defences": [
+        { "defence": "h4", "mate": "Rb5#" },
+        { "defence": "e3", "mate": "Rb5#" },
+        { "defence": "exd3", "mate": "Rb5#" },
+        { "defence": "fxg2", "mate": "Rb5#" },
+        { "defence": "gxf2", "mate": "Rb5#" },
+        { "defence": "d1=N", "mate": "Rb5#" },
+        { "defence": "d1=B", "mate": "Rb5#" },
+        { "defence": "d1=R", "mate": "Rb5#" },
+        { "defence": "d1=Q", "mate": "Rb5#" },
+        { "defence": "h1=N", "mate": "Rb5#" },
+        { "defence": "h1=B", "mate": "Rb5#" },
+        { "defence": "h1=R", "mate": "Rb5#" },
+        { "defence": "h1=Q", "mate": "Rb5#" }
+      ]
+    },
+    "slowerLine": {
+      "primary": "Ra6+",
+      "key": "Ra6+",
+      "defenceCount": 1,
+      "defences": [
+        { "defence": "Kb4", "then": "Nd5+", "mate": "c4#" }
+      ],
+      "representative": { "first": "Ra6+", "defence": "Kb4", "key": "Nd5+", "mate": "c4#" }
+    },
+    "net": {
+      "bucket": "zone_coverage",
+      "newlyCovered": ["b4"],
+      "participants": [],
+      "attackedMaterial": ["g6"],
+      "attackedInNet": []
+    },
+    "net_bucket": "zone_coverage",
+    "nodes": 27472,
+    "roots": null,
+    "wallClockMs": 216,
+    "note": "Constructed by the cage-first composer. Quiet key adds zone control while attacking no piece inside the mating configuration."
+  }
+]

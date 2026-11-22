@@ -1,24 +1,23 @@
 #!/usr/bin/env python3
-"""adjudicate_base44.py v0.1.1 -- independent re-proof of Base44 duel exports.
+"""adjudicate_base44.py v0.1.2 -- independent re-proof of Base44 duel exports.
 
-v0.1.1 over v0.1 (bug-review pass):
-  1. Quiet length DERIVED from slowerLine.mateIn (fast = slow - 1) and
-     cross-checked against the horizon fields (maxMateMoves, plies),
-     instead of silently assuming FAST = 2. Inconsistent metadata fails
-     horizon_mismatch; a non-2 fast length fails anatomy_unsupported.
-  2. Missing fields (quietKey, slowerLine, defences entries, moves)
-     fail as missing_field instead of a bare KeyError.
-  3. Defence coverage is compared on canonicalised moves: their SANs are
-     parsed first (defence_bad_san if unparsable, defence_duplicate if
-     two entries denote one move), so spelling differences between
-     chess.js and python-chess cannot masquerade as missing/spurious.
-  4. longestDefence absence is its own missing_field, not a nonsense
-     comparison against None.
-  5. Missing input file or invalid JSON exits 2 with a clear message.
+v0.1.2 over v0.1.1 (dialect tolerance; strictness unchanged):
+  1. `horizon` accepted as int (treated as maxMateMoves, plies = 2n-1),
+     as the session-export object, or absent. The composer-lane export
+     writes `"horizon": 3` -- v0.1.1 assumed the object form and crashed
+     fail-closed on `hz.get`.
+  2. Longest-defence evidence accepted from `longestDefence` OR
+     `representative.defence` (composer-lane form). Absent in both ->
+     missing_field, as before.
+  3. `roots: null` tolerated in the informational line (composer-lane
+     export writes null where sessions wrote a count).
+  All chess checks unchanged: exact mate lengths by oracle.Solver,
+  exhaustive defence coverage, constructive refutations, tie-set
+  exactness, no mate-in-1, strict no-loud-mate-2 root tables.
 
 Checks (fail-closed; each defence refuted constructively):
   invalid_fen        FEN parses; White to move; not in check; not terminal
-  horizon_mismatch   horizon fields contradict slowerLine.mateIn
+  horizon_mismatch   horizon contradicts slowerLine.mateIn
   anatomy_unsupported derived quiet length is not 2
   fast_is_loud       quietKey keys are non-checking AND non-capturing
   key_not_mate_in_2  primary quiet key forces mate in exactly 2 (exhaustive)
@@ -50,14 +49,13 @@ import oracle
 
 BUDGET = 5_000_000
 
-
 def adjudicate(rec):
     problems, info = [], []
 
     def bad(code, detail):
         problems.append((code, detail))
 
-    # --- 0. schema presence (bare KeyErrors are not reject codes)
+    # --- 0. schema presence
     for fld in ("fen", "quietKey", "slowerLine"):
         if fld not in rec:
             return "FAIL", [("missing_field", fld)], info
@@ -71,20 +69,24 @@ def adjudicate(rec):
     if rec.get("outcome") != "verified":
         bad("outcome_mismatch", f"outcome is {rec.get('outcome')!r}")
 
-    # --- 1. derived lengths, horizon consistency
+    # --- 1. derived lengths, horizon consistency (int | dict | absent)
     try:
         slow_n = int(sl.get("mateIn", 3))
     except (TypeError, ValueError):
         return "FAIL", [("missing_field", "slowerLine.mateIn")], info
     hz = rec.get("horizon")
-    if hz is not None:
-        if (int(hz.get("maxMateMoves", -1)) != slow_n
-                or int(hz.get("plies", -1)) != 2 * slow_n - 1):
-            bad("horizon_mismatch",
-                f"maxMateMoves={hz.get('maxMateMoves')}, "
-                f"plies={hz.get('plies')} vs mateIn={slow_n}")
-    else:
-        info.append("no horizon field; slow length taken from mateIn")
+    hz_moves = hz_plies = None
+    if isinstance(hz, dict):
+        hz_moves = int(hz.get("maxMateMoves", -1))
+        hz_plies = int(hz.get("plies", -1))
+    elif isinstance(hz, (int, float)):
+        hz_moves = int(hz)
+        hz_plies = 2 * hz_moves - 1
+    if hz_moves is not None and (hz_moves != slow_n
+                                 or hz_plies != 2 * slow_n - 1):
+        bad("horizon_mismatch",
+            f"horizon maxMateMoves={hz_moves}, plies={hz_plies} vs "
+            f"mateIn={slow_n}")
     fast_n = slow_n - 1
     if fast_n != 2:
         return "FAIL", problems + [
@@ -144,7 +146,7 @@ def adjudicate(rec):
             try:
                 dsan, msan = d["defence"], d["mate"]
             except (KeyError, TypeError):
-                continue  # already reported above
+                continue
             b2 = b1.copy(stack=False)
             try:
                 b2.push_san(dsan)
@@ -199,20 +201,25 @@ def adjudicate(rec):
             if len(sl["moves"]) != 2 * slow_n - 1:
                 bad("slower_length_wrong",
                     f"{len(sl['moves'])} plies recorded for mate in {slow_n}")
-            if "longestDefence" in sl:
-                if (len(sl["moves"]) > 1
-                        and sl["moves"][1] != sl["longestDefence"]):
-                    bad("slower_defence_mismatch",
-                        f"moves[1]={sl['moves'][1]}, "
-                        f"declared {sl['longestDefence']}")
-            else:
-                bad("missing_field", "slowerLine.longestDefence")
+            long_def = sl.get("longestDefence")
+            if long_def is None:
+                rep = sl.get("representative")
+                if isinstance(rep, dict):
+                    long_def = rep.get("defence")
+            if long_def is None:
+                bad("missing_field", "slowerLine longest defence "
+                    "(neither longestDefence nor representative.defence)")
+            elif len(sl["moves"]) > 1 and sl["moves"][1] != long_def:
+                bad("slower_defence_mismatch",
+                    f"moves[1]={sl['moves'][1]}, declared {long_def}")
 
         # --- 8. informational: testimony vs our own measurements
-        info.append(f"roots ours {len(roots_all)} vs theirs "
-                    f"{rec.get('roots')}; solver nodes ours {S.nodes} "
-                    f"vs theirs {rec.get('nodes')}; defences "
-                    f"{len(qk['defences'])}")
+        their_roots = rec.get("roots")
+        info.append(f"roots ours {len(roots_all)}"
+                    f"{' vs theirs ' + str(their_roots) if their_roots else ''};"
+                    f" solver nodes ours {S.nodes}"
+                    f"{' vs theirs ' + str(rec['nodes']) if rec.get('nodes') else ''};"
+                    f" defences {len(qk['defences'])}")
 
     except oracle.BudgetExceeded:
         return "UNPROVEN", problems + [
@@ -221,7 +228,6 @@ def adjudicate(rec):
         return "FAIL", problems + [("invalid_san", str(e))], info
 
     return ("PASS" if not problems else "FAIL"), problems, info
-
 
 def main(argv):
     if len(argv) != 2:
@@ -256,7 +262,6 @@ def main(argv):
     print(f"\n{n['PASS']}/{len(data)} PASS, {n['FAIL']} FAIL, "
           f"{n['UNPROVEN']} UNPROVEN in {time.time() - t0:.1f}s")
     return 0 if n["PASS"] == len(data) else 1
-
 
 if __name__ == "__main__":
     if hasattr(sys.stdout, "reconfigure"):
