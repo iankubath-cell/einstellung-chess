@@ -1,0 +1,2355 @@
+%PDF-1.3
+%ºß¬à
+3 0 obj
+<</Type /Page
+/Parent 1 0 R
+/Resources 2 0 R
+/MediaBox [0 0 595.2799999999999727 841.8899999999999864]
+/Contents 4 0 R
+>>
+endobj
+4 0 obj
+<<
+/Length 6068
+>>
+stream
+0.200025 w
+0 G
+BT
+/F1 9 Tf
+10.3499999999999996 TL
+0.549 0.431 0.157 rg
+56. 785.8899999999999864 Td
+(EINSTELLUNG TACTICS) Tj
+ET
+BT
+/F2 22 Tf
+25.2999999999999972 TL
+0.118 g
+56. 758.8400000000000318 Td
+(Length Duel Finder: guide and field notes) Tj
+ET
+BT
+/F1 11 Tf
+12.6499999999999986 TL
+0.353 g
+56. 723.3400000000000318 Td
+(How the four lanes work, what every number means, and the rules that keep a run reproducible.) Tj
+ET
+0.82 G
+56. 694.8399999999999181 m
+539.2799999999999727 694.8399999999999181 l
+S
+BT
+/F5 8 Tf
+9.1999999999999993 TL
+0.431 g
+56. 680.8399999999999181 Td
+(Guide finder-guide/1.1.0 - build 2026-11-26 - sampler estimate-sampler/1.2.0 - verifier) Tj
+ET
+BT
+/F5 8 Tf
+9.1999999999999993 TL
+0.431 g
+56. 669.2400000000000091 Td
+(duel-solver/1.0.0) Tj
+ET
+BT
+/F5 8 Tf
+9.1999999999999993 TL
+0.431 g
+56. 653.6399999999999864 Td
+(Printed 2026-11-26) Tj
+ET
+BT
+/F1 9 Tf
+10.3499999999999996 TL
+0.353 g
+56. 626.0399999999999636 Td
+(A guide without its version is testimony. Keep the stamp above with any copy you print: it names the sampler and verifier) Tj
+ET
+BT
+/F1 9 Tf
+10.3499999999999996 TL
+0.353 g
+56. 612.5399999999999636 Td
+(this edition describes, so an older page is never read against newer numbers.) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.588 0.451 0.176 rg
+56. 585.0399999999999636 Td
+(01  THE CANON) Tj
+ET
+BT
+/F2 14 Tf
+16.0999999999999979 TL
+0.118 g
+56. 571.4399999999999409 Td
+(The three pinned definitions) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0.118 g
+56. 545.2400000000000091 Td
+(Every number in this app is measured against these definitions. They are written here in the same words a) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0.118 g
+56. 530.2400000000000091 Td
+(run record carries, so a figure on screen and a line in a saved record cannot mean different things.) Tj
+ET
+BT
+/F2 9 Tf
+10.3499999999999996 TL
+0.275 g
+56. 507.2399999999999523 Td
+(Horizon 3) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0.118 g
+66. 493.1899999999999409 Td
+(Three White moves and two Black replies: 5 plies. "Mate in 3" and "three plies" are not the same claim, and) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0.118 g
+66. 478.1899999999999409 Td
+(a mate-in-3 line is 5 plies deep. The app always prints both, and every proof is scoped to the plies, not to) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0.118 g
+66. 463.1899999999999409 Td
+(the move count.) Tj
+ET
+BT
+/F2 9 Tf
+10.3499999999999996 TL
+0.275 g
+56. 440.1899999999999409 Td
+(Duel \(strict predicate\)) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0.118 g
+66. 426.1399999999999295 Td
+(At least one White first move forces mate in two and is quiet, meaning it gives no check and makes no) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0.118 g
+66. 411.1399999999999295 Td
+(capture, AND no mate-in-two root is loud. A loud mate-in-two beside the quiet one is a tie and is rejected. A) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0.118 g
+66. 396.1399999999999295 Td
+(slower checking mate must also exist inside the horizon, or the silent line has nothing to be tempted away) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0.118 g
+66. 381.1399999999999295 Td
+(from.) Tj
+ET
+BT
+/F2 9 Tf
+10.3499999999999996 TL
+0.275 g
+56. 358.1399999999999295 Td
+(Family boundary) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0.118 g
+66. 344.0899999999999181 Td
+(Pawnless positions with 8 to 12 pieces including both kings, White to move, White not in check. Nothing) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0.118 g
+66. 329.0899999999999181 Td
+(outside this family is sampled, and no figure in this app speaks about chess beyond it.) Tj
+ET
+BT
+/F2 10 Tf
+11.5 TL
+0.196 0.392 0.549 rg
+56. 304.0899999999999181 Td
+(Why ties disqualify instead of counting) Tj
+ET
+BT
+/F1 9.5 Tf
+10.9249999999999989 TL
+0.235 g
+56. 287.5899999999999181 Td
+(When a loud mate-in-two also wins, there is no silent-looking best move to fall for: the contrast is gone. Those) Tj
+ET
+BT
+/F1 9.5 Tf
+10.9249999999999989 TL
+0.235 g
+56. 273.3399999999999181 Td
+(positions are counted separately as "quiet mate-2 beside a loud mate-2" so the adjacent population stays visible) Tj
+ET
+BT
+/F1 9.5 Tf
+10.9249999999999989 TL
+0.235 g
+56. 259.0899999999999181 Td
+(rather than disappearing into a reject.) Tj
+ET
+0.2 0.39 0.55 RG
+1.2 w
+46. 306.0899999999999181 m
+46. 244.8399999999999181 l
+S
+0.2 w
+BT
+/F2 9 Tf
+10.3499999999999996 TL
+0.275 g
+56. 234.8399999999999181 Td
+(Placement procedure, exactly as written into every global run record) Tj
+ET
+BT
+/F5 8.5 Tf
+9.7749999999999986 TL
+0.275 g
+66. 218.7899999999999636 Td
+(1. Pieces on the board, both kings included, drawn uniformly from {8,9,10,11,12}.) Tj
+ET
+BT
+/F5 8.5 Tf
+9.7749999999999986 TL
+0.275 g
+66. 206.0399999999999636 Td
+(2. Attackers \(White non-king pieces\) drawn uniformly from the feasible subset of {2,3,4};) Tj
+ET
+BT
+/F5 8.5 Tf
+9.7749999999999986 TL
+0.275 g
+66. 193.2899999999999636 Td
+(defenders \(Black non-king pieces\) are the remainder, always at least one.) Tj
+ET
+BT
+/F5 8.5 Tf
+9.7749999999999986 TL
+0.275 g
+66. 180.5399999999999636 Td
+(3. Piece types for each side drawn without replacement from that side's legal pool) Tj
+ET
+BT
+/F5 8.5 Tf
+9.7749999999999986 TL
+0.275 g
+66. 167.7899999999999636 Td
+({Q,R,R,B,B,N,N}, so the material caps always hold.) Tj
+ET
+BT
+/F5 8.5 Tf
+9.7749999999999986 TL
+0.275 g
+66. 155.0399999999999636 Td
+(4. Both kings and every piece are placed on squares drawn uniformly without replacement from) Tj
+ET
+BT
+/F5 8.5 Tf
+9.7749999999999986 TL
+0.275 g
+66. 142.2899999999999636 Td
+(the 64 squares.) Tj
+ET
+BT
+/F5 8.5 Tf
+9.7749999999999986 TL
+0.275 g
+66. 129.5399999999999636 Td
+(5. Rejected and resampled: adjacent kings, Black in check with White to move, and any) Tj
+ET
+BT
+/F5 8.5 Tf
+9.7749999999999986 TL
+0.275 g
+66. 116.7899999999999636 Td
+(placement that fails validation. Rejected placements are diagnostics and are excluded from) Tj
+ET
+BT
+/F5 8.5 Tf
+9.7749999999999986 TL
+0.275 g
+66. 104.0399999999999636 Td
+(the rate.) Tj
+ET
+BT
+/F5 8.5 Tf
+9.7749999999999986 TL
+0.275 g
+66. 91.2899999999999636 Td
+(6. No pawns, no castling rights, no en passant. White to move.) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.549 g
+56. 26. Td
+(finder-guide/1.1.0 - page 1 of 7) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.549 g
+472.9599999999999795 26. Td
+(Einstellung Tactics) Tj
+ET
+endstream
+endobj
+5 0 obj
+<</Type /Page
+/Parent 1 0 R
+/Resources 2 0 R
+/MediaBox [0 0 595.2799999999999727 841.8899999999999864]
+/Contents 6 0 R
+>>
+endobj
+6 0 obj
+<<
+/Length 6033
+>>
+stream
+0.2 w
+0.2 0.39 0.55 RG
+0.82 G
+56. 785.8899999999999864 m
+539.2799999999999727 785.8899999999999864 l
+S
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.588 0.451 0.176 rg
+56. 765.8899999999999864 Td
+(02  MISREADING WARNINGS) Tj
+ET
+BT
+/F2 14 Tf
+16.0999999999999979 TL
+0.118 g
+56. 752.2899999999999636 Td
+(The four ways these numbers get misread) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0.118 g
+56. 726.0900000000000318 Td
+(Each of these errors has already cost the project a wrong conclusion. They sit beside the numbers here) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0.118 g
+56. 711.0899999999999181 Td
+(because that is where the confusion happens.) Tj
+ET
+BT
+/F2 10 Tf
+11.5 TL
+0.667 0.157 0.157 rg
+56. 686.0899999999999181 Td
+(1. Net-local and light-local density are not population estimates) Tj
+ET
+BT
+/F1 9.5 Tf
+10.9249999999999989 TL
+0.235 g
+56. 669.5899999999999181 Td
+(A net-local run perturbs positions you already hold. Its rate answers one question: how wide is this net's basin, how) Tj
+ET
+BT
+/F1 9.5 Tf
+10.9249999999999989 TL
+0.235 g
+56. 655.3399999999999181 Td
+(far can you move a piece before the duel breaks? It does not say how many duels exist. A light-local run is the) Tj
+ET
+BT
+/F1 9.5 Tf
+10.9249999999999989 TL
+0.235 g
+56. 641.0899999999999181 Td
+(same measure around light-material nets. A local rate read as a share of the universe is the single most expensive) Tj
+ET
+BT
+/F1 9.5 Tf
+10.9249999999999989 TL
+0.235 g
+56. 626.8399999999999181 Td
+(misreading in this project.) Tj
+ET
+0.67 0.16 0.16 RG
+1.2 w
+46. 688.0899999999999181 m
+46. 612.5899999999999181 l
+S
+0.2 w
+BT
+/F2 10 Tf
+11.5 TL
+0.588 0.431 0.078 rg
+56. 600.5899999999999181 Td
+(2. Unproven is unresolved, never a reject) Tj
+ET
+BT
+/F1 9.5 Tf
+10.9249999999999989 TL
+0.235 g
+56. 584.0899999999999181 Td
+(A position the budget could not settle is held open and excluded from every denominator. It is not evidence against) Tj
+ET
+BT
+/F1 9.5 Tf
+10.9249999999999989 TL
+0.235 g
+56. 569.8399999999999181 Td
+(a duel. The unproven list is kept in the record so the same positions can be re-run at a higher budget: do that) Tj
+ET
+BT
+/F1 9.5 Tf
+10.9249999999999989 TL
+0.235 g
+56. 555.5899999999999181 Td
+(before quoting any density that excluded something.) Tj
+ET
+0.59 0.43 0.08 RG
+1.2 w
+46. 602.5899999999999181 m
+46. 541.3399999999999181 l
+S
+0.2 w
+BT
+/F2 10 Tf
+11.5 TL
+0.588 0.431 0.078 rg
+56. 529.3399999999999181 Td
+(3. populationHigh and worstCase are ceilings, not estimates) Tj
+ET
+BT
+/F1 9.5 Tf
+10.9249999999999989 TL
+0.235 g
+56. 512.8399999999999181 Td
+(Both count unresolved evidence as if it were a duel. They state how much the sample could be hiding, not what is) Tj
+ET
+BT
+/F1 9.5 Tf
+10.9249999999999989 TL
+0.235 g
+56. 498.589999999999975 Td
+(there. Quote the estimate with its interval. Quote the ceiling only as a bound, and never as the finding.) Tj
+ET
+0.59 0.43 0.08 RG
+1.2 w
+46. 531.3399999999999181 m
+46. 484.339999999999975 l
+S
+0.2 w
+BT
+/F2 10 Tf
+11.5 TL
+0.196 0.392 0.549 rg
+56. 472.339999999999975 Td
+(4. Tier 1 only) Tj
+ET
+BT
+/F1 9.5 Tf
+10.9249999999999989 TL
+0.235 g
+56. 455.839999999999975 Td
+(Every figure counts positions that satisfy the rule. It makes no claim about whether a human player, or any engine,) Tj
+ET
+BT
+/F1 9.5 Tf
+10.9249999999999989 TL
+0.235 g
+56. 441.589999999999975 Td
+(is tempted by them. The Einstellung claim is a separate hypothesis this app does not test.) Tj
+ET
+0.2 0.39 0.55 RG
+1.2 w
+46. 474.339999999999975 m
+46. 427.339999999999975 l
+S
+0.2 w
+0.82 G
+56. 417.339999999999975 m
+539.2799999999999727 417.339999999999975 l
+S
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.588 0.451 0.176 rg
+56. 397.339999999999975 Td
+(03  READING A RESULT) Tj
+ET
+BT
+/F2 14 Tf
+16.0999999999999979 TL
+0.118 g
+56. 383.7399999999999523 Td
+(Intervals, strata and the population number) Tj
+ET
+BT
+/F2 9 Tf
+10.3499999999999996 TL
+0.275 g
+56. 357.5399999999999636 Td
+(Draw-level density) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0.118 g
+66. 343.4899999999999523 Td
+(Duel draws over draws that reached a verdict. The interval is Wilson 95%: the normal approximation fails) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0.118 g
+66. 328.4899999999998954 Td
+(near zero, and this distribution lives near zero.) Tj
+ET
+BT
+/F2 9 Tf
+10.3499999999999996 TL
+0.275 g
+56. 305.4899999999998954 Td
+(Unique-class census) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0.118 g
+66. 291.4399999999999409 Td
+(The same rate after mirror images are collapsed to one class. It carries orbit-size bias because symmetry) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0.118 g
+66. 276.4399999999999409 Td
+(orbits are unevenly sized. When the two estimands disagree the app says so instead of reconciling them) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0.118 g
+66. 261.4399999999999409 Td
+(away.) Tj
+ET
+BT
+/F2 9 Tf
+10.3499999999999996 TL
+0.275 g
+56. 238.4399999999999409 Td
+(By piece count) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0.118 g
+66. 224.3899999999999864 Td
+(Each stratum gets its own draws, its own interval and its own validity fraction. A stratum the run never) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0.118 g
+66. 209.3899999999999864 Td
+(touched contributes nothing to the population rather than being interpolated.) Tj
+ET
+BT
+/F2 9 Tf
+10.3499999999999996 TL
+0.275 g
+56. 186.3899999999999864 Td
+(Population) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0.118 g
+66. 172.3400000000000318 Td
+(N = Sum |U_n| - v_n - p_n: the exact labelled size of each stratum, times the validity this run measured,) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0.118 g
+66. 157.3400000000000318 Td
+(times the density inside it. It counts the stated family only.) Tj
+ET
+BT
+/F2 9 Tf
+10.3499999999999996 TL
+0.275 g
+56. 134.3400000000000318 Td
+(Allocation) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0.118 g
+66. 120.2900000000000773 Td
+(Per piece count gives every stratum equal draws, so the dominant 12-piece term carries a fifth of the) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0.118 g
+66. 105.2900000000000773 Td
+(sample. Per position weights each stratum by its exact size, which is what a population number needs.) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.549 g
+56. 26. Td
+(finder-guide/1.1.0 - page 2 of 7) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.549 g
+472.9599999999999795 26. Td
+(Einstellung Tactics) Tj
+ET
+endstream
+endobj
+7 0 obj
+<</Type /Page
+/Parent 1 0 R
+/Resources 2 0 R
+/MediaBox [0 0 595.2799999999999727 841.8899999999999864]
+/Contents 8 0 R
+>>
+endobj
+8 0 obj
+<<
+/Length 6061
+>>
+stream
+0.2 w
+0.82 G
+BT
+/F2 10 Tf
+11.5 TL
+0.196 0.392 0.549 rg
+56. 783.8899999999999864 Td
+(The worst case is the other reading of the same run) Tj
+ET
+BT
+/F1 9.5 Tf
+10.9249999999999989 TL
+0.235 g
+56. 767.3899999999999864 Td
+(Every unproven draw counted as a duel. If the worst case and the estimate are far apart, the run has not settled the) Tj
+ET
+BT
+/F1 9.5 Tf
+10.9249999999999989 TL
+0.235 g
+56. 753.1399999999999864 Td
+(question and the honest output is the pair of them, not the smaller one.) Tj
+ET
+0.2 0.39 0.55 RG
+1.2 w
+46. 785.8899999999999864 m
+46. 738.8899999999999864 l
+S
+0.2 w
+0.82 G
+56. 728.8899999999999864 m
+539.2799999999999727 728.8899999999999864 l
+S
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.588 0.451 0.176 rg
+56. 708.8899999999999864 Td
+(04  REPRODUCIBILITY) Tj
+ET
+BT
+/F2 14 Tf
+16.0999999999999979 TL
+0.118 g
+56. 695.2899999999999636 Td
+(Stream discipline: chaining chunks without corrupting the run) Tj
+ET
+BT
+/F2 10 Tf
+11.5 TL
+0.667 0.157 0.157 rg
+56. 667.0900000000000318 Td
+(The checklist assumes the chunk survives. Here is what kills one) Tj
+ET
+BT
+/F1 9.5 Tf
+10.9249999999999989 TL
+0.235 g
+56. 650.5900000000000318 Td
+(A live chunk dies if you talk to the builder, navigate away from the page, reload, or let the tab sleep. A chunk that is) Tj
+ET
+BT
+/F1 9.5 Tf
+10.9249999999999989 TL
+0.235 g
+56. 636.3400000000000318 Td
+(cancelled, interrupted or killed writes nothing at all: no partial record, no rows, no trace. This is not a rare edge. It is) Tj
+ET
+BT
+/F1 9.5 Tf
+10.9249999999999989 TL
+0.235 g
+56. 622.0900000000000318 Td
+(the ordinary way a night of compute is lost, and the entire discipline below exists because it happened once and) Tj
+ET
+BT
+/F1 9.5 Tf
+10.9249999999999989 TL
+0.235 g
+56. 607.8400000000000318 Td
+(cost a run.) Tj
+ET
+0.67 0.16 0.16 RG
+1.2 w
+46. 669.0900000000000318 m
+46. 593.5900000000000318 l
+S
+0.2 w
+BT
+/F2 9 Tf
+10.3499999999999996 TL
+0.275 g
+56. 583.5900000000000318 Td
+(Save to the research log) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0.118 g
+66. 569.5399999999999636 Td
+(On before every chunk. Not after it: a chunk that dies before the write leaves the log empty, and the toggle) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0.118 g
+66. 554.5399999999999636 Td
+(cannot be pressed by a tab that is already gone.) Tj
+ET
+BT
+/F2 9 Tf
+10.3499999999999996 TL
+0.275 g
+56. 531.5399999999999636 Td
+(Run ceiling) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0.118 g
+66. 517.4900000000000091 Td
+(Set so the blast radius of any interruption is one chunk. A ceiling of 30 minutes loses 30 minutes, not the) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0.118 g
+66. 502.4900000000000091 Td
+(night. Chain more chunks instead of making one longer.) Tj
+ET
+BT
+/F2 9 Tf
+10.3499999999999996 TL
+0.275 g
+56. 479.4900000000000091 Td
+(The run window) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0.118 g
+66. 465.4399999999999977 Td
+(Untouchable while it lives. No chatting with the builder, no navigating away, no other heavy tabs, screen) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0.118 g
+66. 450.4399999999999977 Td
+(kept awake. This is the cost of the run, not an inconvenience around it.) Tj
+ET
+BT
+/F2 9 Tf
+10.3499999999999996 TL
+0.275 g
+56. 427.4399999999999977 Td
+(After it ends) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0.118 g
+66. 413.3899999999999864 Td
+(Read streamDraws from the saved record, then start the next chunk. A chunk that produced no record is a) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0.118 g
+66. 398.3899999999999864 Td
+(chunk that did not happen; restart it at the previous offset rather than guessing forward.) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0.118 g
+56. 375.3899999999999864 Td
+(A long estimate is split into chunks. A chunk is only the same measurement as the one before it if the draw) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0.118 g
+56. 360.3899999999999864 Td
+(stream is unchanged. The app cannot enforce this for you at 1 AM, so this is the checklist.) Tj
+ET
+BT
+/F2 9 Tf
+10.3499999999999996 TL
+0.275 g
+56. 337.3899999999999864 Td
+(Same stream) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0.118 g
+66. 323.3400000000000318 Td
+(Seed, universe \(global or net-local\), allocation, floor, and for net-local the exact seed list. Nothing else) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0.118 g
+66. 308.3400000000000318 Td
+(defines it.) Tj
+ET
+BT
+/F2 9 Tf
+10.3499999999999996 TL
+0.275 g
+56. 285.3400000000000318 Td
+(New stream) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0.118 g
+66. 271.2900000000000773 Td
+(Changing any of those. A new seed starts a new stream. So does switching allocation, or adding a floor.) Tj
+ET
+BT
+/F2 9 Tf
+10.3499999999999996 TL
+0.275 g
+56. 248.2900000000000773 Td
+(Resume offset) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0.118 g
+66. 234.2400000000001228 Td
+(The previous chunk's streamDraws: the field the result panel prints as "next chunk resumes at draw N".) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0.118 g
+66. 219.2400000000001228 Td
+(Read it from the saved record. Never type it from memory.) Tj
+ET
+BT
+/F2 9 Tf
+10.3499999999999996 TL
+0.275 g
+56. 196.2400000000001228 Td
+(Replay key) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0.118 g
+66. 182.1900000000001683 Td
+(draw_hash. The same seed, settings and seed list must reproduce it. If it does not, the chunk is not the) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0.118 g
+66. 167.1900000000001683 Td
+(stream it claims to be, and the two chunks must not be pooled.) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0.118 g
+56. 144.1900000000001683 Td
+(1.) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0.118 g
+74. 144.1900000000001683 Td
+(Turn on "Save run to the research log" before launching the chunk, so the record exists even if the tab) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0.118 g
+74. 129.6900000000001683 Td
+(closes.) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0.118 g
+56. 115.1900000000001683 Td
+(2.) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0.118 g
+74. 115.1900000000001683 Td
+(Let the chunk end at its run ceiling. A cancelled chunk writes nothing.) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0.118 g
+56. 100.6900000000001683 Td
+(3.) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0.118 g
+74. 100.6900000000001683 Td
+(Open the saved record and read streamDraws. That number is the next resume offset.) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.549 g
+56. 26. Td
+(finder-guide/1.1.0 - page 3 of 7) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.549 g
+472.9599999999999795 26. Td
+(Einstellung Tactics) Tj
+ET
+endstream
+endobj
+9 0 obj
+<</Type /Page
+/Parent 1 0 R
+/Resources 2 0 R
+/MediaBox [0 0 595.2799999999999727 841.8899999999999864]
+/Contents 10 0 R
+>>
+endobj
+10 0 obj
+<<
+/Length 5759
+>>
+stream
+0.2 w
+0.67 0.16 0.16 RG
+BT
+/F1 10 Tf
+11.5 TL
+0.118 g
+56. 785.8899999999999864 Td
+(4.) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0.118 g
+74. 785.8899999999999864 Td
+(Start the next chunk with the same seed, universe, allocation, floor and seed list, and set "Resume at) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0.118 g
+74. 771.3899999999999864 Td
+(draw" to that offset.) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0.118 g
+56. 756.8899999999999864 Td
+(5.) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0.118 g
+74. 756.8899999999999864 Td
+(Do not change node or time budgets mid-stream. The stream survives, but unproven rates become) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0.118 g
+74. 742.3899999999999864 Td
+(heterogeneous across the chunks, so they are no longer one measurement. If a change is unavoidable,) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0.118 g
+74. 727.8899999999999864 Td
+(report the chunks separately.) Tj
+ET
+BT
+/F2 10 Tf
+11.5 TL
+0.588 0.431 0.078 rg
+56. 703.3899999999999864 Td
+(A floor changes the stream) Tj
+ET
+BT
+/F1 9.5 Tf
+10.9249999999999989 TL
+0.235 g
+56. 686.8899999999999864 Td
+(The floor exists so the small strata stop being starved, and the run record says so in its procedure text. That means) Tj
+ET
+BT
+/F1 9.5 Tf
+10.9249999999999989 TL
+0.235 g
+56. 672.6399999999999864 Td
+(adding a floor to rescue an underpowered stratum starts a new stream. Do not resume an older one under it.) Tj
+ET
+0.59 0.43 0.08 RG
+1.2 w
+46. 705.3899999999999864 m
+46. 658.3899999999999864 l
+S
+0.2 w
+0.82 G
+56. 648.3899999999999864 m
+539.2799999999999727 648.3899999999999864 l
+S
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.588 0.451 0.176 rg
+56. 628.3899999999999864 Td
+(05  PROVENANCE) Tj
+ET
+BT
+/F2 14 Tf
+16.0999999999999979 TL
+0.118 g
+56. 614.7899999999999636 Td
+(Which copy is the record) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0.118 g
+56. 588.5900000000000318 Td
+(Three places hold run data. They are not equal, and treating them as equal is how a spreadsheet cell ends up) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0.118 g
+56. 573.5900000000000318 Td
+(cited as evidence.) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0.118 g
+56. 550.5900000000000318 Td
+(1.) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0.118 g
+74. 550.5900000000000318 Td
+(In-app research log \(DensityRun, ResearchRecord\): the record of account. Every claim cites this.) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0.118 g
+56. 536.0900000000000318 Td
+(2.) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0.118 g
+74. 536.0900000000000318 Td
+(Google Sheets row: a convenience mirror, written from the record so the history can be read at a glance.) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0.118 g
+74. 521.5900000000000318 Td
+(A sheet cell is never evidence.) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0.118 g
+56. 507.0900000000000318 Td
+(3.) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0.118 g
+74. 507.0900000000000318 Td
+(Exported JSON: the artifact that crosses the wall to adjudication. It carries the procedure, seeds, hash,) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0.118 g
+74. 492.5900000000000318 Td
+(unproven list and counts, so an outside verifier can replay it without trusting this app.) Tj
+ET
+BT
+/F2 10 Tf
+11.5 TL
+0.196 0.392 0.549 rg
+56. 468.0900000000000318 Td
+(When a row and a record disagree) Tj
+ET
+BT
+/F1 9.5 Tf
+10.9249999999999989 TL
+0.235 g
+56. 451.5900000000000318 Td
+(The record wins and the row is stale. Re-export from the record rather than repairing the sheet, because a repaired) Tj
+ET
+BT
+/F1 9.5 Tf
+10.9249999999999989 TL
+0.235 g
+56. 437.3400000000000318 Td
+(row is a second authority with no provenance.) Tj
+ET
+0.2 0.39 0.55 RG
+1.2 w
+46. 470.0900000000000318 m
+46. 423.0900000000000318 l
+S
+0.2 w
+0.82 G
+56. 413.0900000000000318 m
+539.2799999999999727 413.0900000000000318 l
+S
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.588 0.451 0.176 rg
+56. 393.0900000000000318 Td
+(06  CONTROLS) Tj
+ET
+BT
+/F2 14 Tf
+16.0999999999999979 TL
+0.118 g
+56. 379.4900000000000091 Td
+(The four lanes, field by field) Tj
+ET
+BT
+/F2 11 Tf
+12.6499999999999986 TL
+0.118 g
+56. 349.2900000000000205 Td
+(Generate) Tj
+ET
+BT
+/F2 9 Tf
+10.3499999999999996 TL
+0.275 g
+56. 329.3400000000000318 Td
+(Seeds) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0.118 g
+66. 315.2900000000000773 Td
+(The three verified library nets. Each candidate is one piece or one square away from a seed. Random) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0.118 g
+66. 300.2900000000000773 Td
+(placement is not used: a recorded dry run of 673 random positions found nothing.) Tj
+ET
+BT
+/F2 9 Tf
+10.3499999999999996 TL
+0.275 g
+56. 277.2900000000000773 Td
+(Candidates) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0.118 g
+66. 263.2400000000001228 Td
+(How many perturbations to build before giving up on the batch.) Tj
+ET
+BT
+/F2 9 Tf
+10.3499999999999996 TL
+0.275 g
+56. 240.2400000000001228 Td
+(Keep at most) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0.118 g
+66. 226.1900000000001683 Td
+(How many verified duels to stop at.) Tj
+ET
+BT
+/F2 9 Tf
+10.3499999999999996 TL
+0.275 g
+56. 203.1900000000001683 Td
+(Limits) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0.118 g
+66. 189.1400000000002137 Td
+(Nodes, seconds and Black replies per position. Horizon is fixed at mate in 3, five plies, in this lane.) Tj
+ET
+BT
+/F2 11 Tf
+12.6499999999999986 TL
+0.118 g
+56. 162.1400000000002137 Td
+(Construct) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0.118 g
+56. 142.1900000000001683 Td
+(Builds heavy nets from a mating cage, 18 to 22 pieces, with pawn-only filler so the filler never joins the net.) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0.118 g
+56. 127.1900000000001683 Td
+(No seed is consulted, so the net is never grown from an existing duel. It exists to test whether heavy material) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0.118 g
+56. 112.1900000000001683 Td
+(behaves differently; a single zone-coverage counterexample refutes the dichotomy, and the summary says) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0.118 g
+56. 97.1900000000001683 Td
+(so.) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.549 g
+56. 26. Td
+(finder-guide/1.1.0 - page 4 of 7) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.549 g
+472.9599999999999795 26. Td
+(Einstellung Tactics) Tj
+ET
+endstream
+endobj
+11 0 obj
+<</Type /Page
+/Parent 1 0 R
+/Resources 2 0 R
+/MediaBox [0 0 595.2799999999999727 841.8899999999999864]
+/Contents 12 0 R
+>>
+endobj
+12 0 obj
+<<
+/Length 5926
+>>
+stream
+0.2 w
+0.82 G
+BT
+/F2 11 Tf
+12.6499999999999986 TL
+0.118 g
+56. 785.8899999999999864 Td
+(Analyse FENs) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0.118 g
+56. 765.9399999999999409 Td
+(One FEN per line, verified individually under the same limits. "Load library" fills the box with the library nets.) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0.118 g
+56. 750.9399999999999409 Td
+(Every position gets an outcome: verified, or a named rejection reason. Nothing is skipped.) Tj
+ET
+BT
+/F2 11 Tf
+12.6499999999999986 TL
+0.118 g
+56. 723.9399999999999409 Td
+(Estimate) Tj
+ET
+BT
+/F2 9 Tf
+10.3499999999999996 TL
+0.275 g
+56. 703.9900000000000091 Td
+(Universe) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0.118 g
+66. 689.9399999999999409 Td
+(Global draws from the stated family. Net-local perturbs the library and every verified research-log record,) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0.118 g
+66. 674.9399999999999409 Td
+(and measures basin width rather than population.) Tj
+ET
+BT
+/F2 9 Tf
+10.3499999999999996 TL
+0.275 g
+56. 651.9399999999999409 Td
+(Allocation) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0.118 g
+66. 637.8899999999999864 Td
+(Per piece count or per position. Per position is the population estimand; 12-piece boards then take roughly) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0.118 g
+66. 622.8899999999999864 Td
+(92% of draws.) Tj
+ET
+BT
+/F2 9 Tf
+10.3499999999999996 TL
+0.275 g
+56. 599.8899999999999864 Td
+(Floor per piece count) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0.118 g
+66. 585.8399999999999181 Td
+(Guarantees a minimum of valid draws in each of 8 to 12 before universe weighting resumes. 0 leaves the) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0.118 g
+66. 570.8399999999999181 Td
+(stream untouched. A floor changes the stream.) Tj
+ET
+BT
+/F2 9 Tf
+10.3499999999999996 TL
+0.275 g
+56. 547.8399999999999181 Td
+(Samples) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0.118 g
+66. 533.7899999999999636 Td
+(Valid draws requested for this chunk, not attempts.) Tj
+ET
+BT
+/F2 9 Tf
+10.3499999999999996 TL
+0.275 g
+56. 510.7899999999999068 Td
+(Seed) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0.118 g
+66. 496.7399999999998954 Td
+(The replay key. Blank means a fresh seed is drawn for this run, which is recorded.) Tj
+ET
+BT
+/F2 9 Tf
+10.3499999999999996 TL
+0.275 g
+56. 473.7399999999998954 Td
+(Resume at draw) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0.118 g
+66. 459.689999999999884 Td
+(Chunk offset. Draws before it are replayed for stream alignment and not verified.) Tj
+ET
+BT
+/F2 9 Tf
+10.3499999999999996 TL
+0.275 g
+56. 436.689999999999884 Td
+(Budget ms / position, nodes / position) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0.118 g
+66. 422.6399999999998727 Td
+(Per-position ceilings for one classification. Exceeding either leaves the position unproven, never rejected.) Tj
+ET
+BT
+/F2 9 Tf
+10.3499999999999996 TL
+0.275 g
+56. 399.6399999999998727 Td
+(Run ceiling \(minutes\)) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0.118 g
+66. 385.5899999999998613 Td
+(A hard stop for the chunk. Whatever was classified is reported; the record notes it was truncated.) Tj
+ET
+0.82 G
+56. 362.5899999999998613 m
+539.2799999999999727 362.5899999999998613 l
+S
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.588 0.451 0.176 rg
+56. 342.5899999999998613 Td
+(07  TUTORIAL) Tj
+ET
+BT
+/F2 14 Tf
+16.0999999999999979 TL
+0.118 g
+56. 328.9899999999998954 Td
+(A first run, end to end) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0.118 g
+56. 302.7899999999998499 Td
+(A pilot that finishes in a few minutes and produces a record you can read. The point is the loop, not the) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0.118 g
+56. 287.7899999999998499 Td
+(number.) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0.118 g
+56. 264.7899999999998499 Td
+(1.) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0.118 g
+74. 264.7899999999998499 Td
+(Open the Duel finder and choose the Estimate lane.) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0.118 g
+56. 250.2899999999998499 Td
+(2.) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0.118 g
+74. 250.2899999999998499 Td
+(Leave Universe on Global and Allocation on Per position.) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0.118 g
+56. 235.7899999999998499 Td
+(3.) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0.118 g
+74. 235.7899999999998499 Td
+(Set Samples to 500 and the run ceiling to 10 minutes. A pilot below 500 draws has an interval too wide to) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0.118 g
+74. 221.2899999999998499 Td
+(quote.) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0.118 g
+56. 206.7899999999998499 Td
+(4.) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0.118 g
+74. 206.7899999999998499 Td
+(Leave the seed blank so a fresh one is drawn and recorded, and leave Resume at draw at 0.) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0.118 g
+56. 192.2899999999998499 Td
+(5.) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0.118 g
+74. 192.2899999999998499 Td
+(Turn on "Save run to the research log".) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0.118 g
+56. 177.7899999999998499 Td
+(6.) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0.118 g
+74. 177.7899999999998499 Td
+(Press Run estimate. Cancel is always available; a cancelled run writes nothing.) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0.118 g
+56. 163.2899999999998499 Td
+(7.) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0.118 g
+74. 163.2899999999998499 Td
+(Read the result top to bottom: the population card, the draw-level density with its Wilson interval, the) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0.118 g
+74. 148.7899999999998499 Td
+(category breakdown, then the strata table. Each block links back to the section above that explains it.) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0.118 g
+56. 134.2899999999998499 Td
+(8.) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0.118 g
+74. 134.2899999999998499 Td
+(Check the unproven block. If it holds positions, re-run them at 4x or 16x budget before trusting the density) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0.118 g
+74. 119.7899999999998499 Td
+(that excluded them.) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0.118 g
+56. 105.2899999999998499 Td
+(9.) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0.118 g
+74. 105.2899999999998499 Td
+(Note the "next chunk resumes at draw N" line. That number is the resume offset for a larger run with the) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0.118 g
+74. 90.7899999999998499 Td
+(same seed.) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.549 g
+56. 26. Td
+(finder-guide/1.1.0 - page 5 of 7) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.549 g
+472.9599999999999795 26. Td
+(Einstellung Tactics) Tj
+ET
+endstream
+endobj
+13 0 obj
+<</Type /Page
+/Parent 1 0 R
+/Resources 2 0 R
+/MediaBox [0 0 595.2799999999999727 841.8899999999999864]
+/Contents 14 0 R
+>>
+endobj
+14 0 obj
+<<
+/Length 5637
+>>
+stream
+0.2 w
+0.82 G
+BT
+/F1 10 Tf
+11.5 TL
+0.118 g
+56. 785.8899999999999864 Td
+(10.) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0.118 g
+74. 785.8899999999999864 Td
+(Export the run as JSON. That file, not the screen and not the sheet, is what leaves the app.) Tj
+ET
+BT
+/F2 10 Tf
+11.5 TL
+0.196 0.392 0.549 rg
+56. 761.3899999999999864 Td
+(What a pilot can and cannot say) Tj
+ET
+BT
+/F1 9.5 Tf
+10.9249999999999989 TL
+0.235 g
+56. 744.8899999999999864 Td
+(A 500-draw pilot can tell you the machinery works, the validity fraction is plausible and where the unproven) Tj
+ET
+BT
+/F1 9.5 Tf
+10.9249999999999989 TL
+0.235 g
+56. 730.6399999999999864 Td
+(positions cluster. It cannot support a population figure. Scale the samples before quoting N.) Tj
+ET
+0.2 0.39 0.55 RG
+1.2 w
+46. 763.3899999999999864 m
+46. 716.3899999999999864 l
+S
+0.2 w
+0.82 G
+56. 706.3899999999999864 m
+539.2799999999999727 706.3899999999999864 l
+S
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.588 0.451 0.176 rg
+56. 686.3899999999999864 Td
+(08  PERSISTENCE) Tj
+ET
+BT
+/F2 14 Tf
+16.0999999999999979 TL
+0.118 g
+56. 672.7899999999999636 Td
+(Saving, exports and what each one is for) Tj
+ET
+BT
+/F2 9 Tf
+10.3499999999999996 TL
+0.275 g
+56. 646.5900000000000318 Td
+(Save to the research log) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0.118 g
+66. 632.5399999999999636 Td
+(Writes a DensityRun for an estimate, or a ResearchRecord per verified duel. Off means the session only,) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0.118 g
+66. 617.5399999999999636 Td
+(and nothing survives a reload.) Tj
+ET
+BT
+/F2 9 Tf
+10.3499999999999996 TL
+0.275 g
+56. 594.5399999999999636 Td
+(Export run as JSON) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0.118 g
+66. 580.4900000000000091 Td
+(The whole record: procedure, seeds, draw hash, strata, population, unproven list, versions and timestamps.) Tj
+ET
+BT
+/F2 9 Tf
+10.3499999999999996 TL
+0.275 g
+56. 557.4900000000000091 Td
+(Export session) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0.118 g
+66. 543.4400000000000546 Td
+(Every verified result from this session, as evidence logs.) Tj
+ET
+BT
+/F2 9 Tf
+10.3499999999999996 TL
+0.275 g
+56. 520.4400000000000546 Td
+(Export saved) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0.118 g
+66. 506.3899999999999864 Td
+(The proof payload of the records already in the log.) Tj
+ET
+BT
+/F2 10 Tf
+11.5 TL
+0.196 0.392 0.549 rg
+56. 481.3899999999999864 Td
+(A run record without its seed and procedure is testimony) Tj
+ET
+BT
+/F1 9.5 Tf
+10.9249999999999989 TL
+0.235 g
+56. 464.8899999999999864 Td
+(Every saved record carries the seed, the placement procedure verbatim, the sampler and verifier versions, and the) Tj
+ET
+BT
+/F1 9.5 Tf
+10.9249999999999989 TL
+0.235 g
+56. 450.6399999999999864 Td
+(draw hash. If one of those is missing from a record, that record cannot be defended and should not be cited.) Tj
+ET
+0.2 0.39 0.55 RG
+1.2 w
+46. 483.3899999999999864 m
+46. 436.3899999999999864 l
+S
+0.2 w
+0.82 G
+56. 426.3899999999999864 m
+539.2799999999999727 426.3899999999999864 l
+S
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.588 0.451 0.176 rg
+56. 406.3899999999999864 Td
+(09  MIRROR) Tj
+ET
+BT
+/F2 14 Tf
+16.0999999999999979 TL
+0.118 g
+56. 392.7899999999999636 Td
+(Google Sheets connection and its failures) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0.118 g
+56. 366.589999999999975 Td
+(Connecting your Google account appends one row per saved run to a spreadsheet in your own Drive, written) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0.118 g
+56. 351.589999999999975 Td
+(with your own token. Per-user by construction: nobody else's runs appear in your sheet, and the app never) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0.118 g
+56. 336.589999999999975 Td
+(writes to an account that has not consented.) Tj
+ET
+BT
+/F2 9 Tf
+10.3499999999999996 TL
+0.275 g
+56. 313.5900000000000318 Td
+(Not connected) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0.118 g
+66. 299.5400000000000773 Td
+(The normal first-run state, not an error. Runs still save to the research log; only the sheet row is skipped.) Tj
+ET
+BT
+/F2 9 Tf
+10.3499999999999996 TL
+0.275 g
+56. 276.5400000000000773 Td
+(Connected, no sheet yet) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0.118 g
+66. 262.4900000000001228 Td
+(The spreadsheet is created by the first saved run after connecting.) Tj
+ET
+BT
+/F2 9 Tf
+10.3499999999999996 TL
+0.275 g
+56. 239.4900000000001228 Td
+(Connected with a sheet) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0.118 g
+66. 225.4400000000001683 Td
+(Every saved run appends a row. "Open sheet" goes straight to it.) Tj
+ET
+BT
+/F2 10 Tf
+11.5 TL
+0.667 0.157 0.157 rg
+56. 200.4400000000001683 Td
+(invalid_client is a configuration failure, not your account) Tj
+ET
+BT
+/F1 9.5 Tf
+10.9249999999999989 TL
+0.235 g
+56. 183.9400000000001683 Td
+(Google rejected the workspace's OAuth client: the client ID or secret is wrong, rotated or revoked. Reconnecting as) Tj
+ET
+BT
+/F1 9.5 Tf
+10.9249999999999989 TL
+0.235 g
+56. 169.6900000000001683 Td
+(a user repeats the same rejection, because the failure is above your account. Only a workspace admin can fix it, by) Tj
+ET
+BT
+/F1 9.5 Tf
+10.9249999999999989 TL
+0.235 g
+56. 155.4400000000001683 Td
+(updating the credentials on the connector. Nothing in this app can repair it, and the app never sees the secret.) Tj
+ET
+0.67 0.16 0.16 RG
+1.2 w
+46. 202.4400000000001683 m
+46. 141.1900000000001683 l
+S
+0.2 w
+BT
+/F2 9 Tf
+10.3499999999999996 TL
+0.275 g
+56. 131.1900000000001683 Td
+(Consent denied or sign-in window blocked) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0.118 g
+66. 117.1400000000002137 Td
+(Press Connect again and approve. Allow popups for this site, otherwise the window is closed before you) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0.118 g
+66. 102.1400000000002137 Td
+(can consent.) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.549 g
+56. 26. Td
+(finder-guide/1.1.0 - page 6 of 7) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.549 g
+472.9599999999999795 26. Td
+(Einstellung Tactics) Tj
+ET
+endstream
+endobj
+15 0 obj
+<</Type /Page
+/Parent 1 0 R
+/Resources 2 0 R
+/MediaBox [0 0 595.2799999999999727 841.8899999999999864]
+/Contents 16 0 R
+>>
+endobj
+16 0 obj
+<<
+/Length 1531
+>>
+stream
+0.2 w
+0.67 0.16 0.16 RG
+BT
+/F2 9 Tf
+10.3499999999999996 TL
+0.275 g
+56. 785.8899999999999864 Td
+(Grant expired or revoked) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0.118 g
+66. 771.8400000000000318 Td
+(The panel can still read as connected until the first write fails. Reconnect from the panel to replace the) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0.118 g
+66. 756.8400000000000318 Td
+(grant.) Tj
+ET
+BT
+/F2 9 Tf
+10.3499999999999996 TL
+0.275 g
+56. 733.8400000000000318 Td
+(Sheet writes failing while connected) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0.118 g
+66. 719.7899999999999636 Td
+(Check that the connected account can still open the sheet. If it was deleted or moved, disconnect and) Tj
+ET
+BT
+/F1 10 Tf
+11.5 TL
+0.118 g
+66. 704.7899999999999636 Td
+(reconnect to start a fresh one.) Tj
+ET
+BT
+/F2 10 Tf
+11.5 TL
+0.196 0.392 0.549 rg
+56. 679.7899999999999636 Td
+(The sheet is a mirror) Tj
+ET
+BT
+/F1 9.5 Tf
+10.9249999999999989 TL
+0.235 g
+56. 663.2899999999999636 Td
+(A row is written from the record, so the record is the authority and the row is the convenience copy. See "Which) Tj
+ET
+BT
+/F1 9.5 Tf
+10.9249999999999989 TL
+0.235 g
+56. 649.0399999999999636 Td
+(copy is the record" above before citing either.) Tj
+ET
+0.2 0.39 0.55 RG
+1.2 w
+46. 681.7899999999999636 m
+46. 634.7899999999999636 l
+S
+0.2 w
+0.82 G
+56. 624.7899999999999636 m
+539.2799999999999727 624.7899999999999636 l
+S
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.549 g
+56. 26. Td
+(finder-guide/1.1.0 - page 7 of 7) Tj
+ET
+BT
+/F1 8 Tf
+9.1999999999999993 TL
+0.549 g
+472.9599999999999795 26. Td
+(Einstellung Tactics) Tj
+ET
+endstream
+endobj
+1 0 obj
+<</Type /Pages
+/Kids [3 0 R 5 0 R 7 0 R 9 0 R 11 0 R 13 0 R 15 0 R ]
+/Count 7
+>>
+endobj
+17 0 obj
+<<
+/Type /Font
+/BaseFont /Helvetica
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+18 0 obj
+<<
+/Type /Font
+/BaseFont /Helvetica-Bold
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+19 0 obj
+<<
+/Type /Font
+/BaseFont /Helvetica-Oblique
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+20 0 obj
+<<
+/Type /Font
+/BaseFont /Helvetica-BoldOblique
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+21 0 obj
+<<
+/Type /Font
+/BaseFont /Courier
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+22 0 obj
+<<
+/Type /Font
+/BaseFont /Courier-Bold
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+23 0 obj
+<<
+/Type /Font
+/BaseFont /Courier-Oblique
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+24 0 obj
+<<
+/Type /Font
+/BaseFont /Courier-BoldOblique
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+25 0 obj
+<<
+/Type /Font
+/BaseFont /Times-Roman
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+26 0 obj
+<<
+/Type /Font
+/BaseFont /Times-Bold
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+27 0 obj
+<<
+/Type /Font
+/BaseFont /Times-Italic
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+28 0 obj
+<<
+/Type /Font
+/BaseFont /Times-BoldItalic
+/Subtype /Type1
+/Encoding /WinAnsiEncoding
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+29 0 obj
+<<
+/Type /Font
+/BaseFont /ZapfDingbats
+/Subtype /Type1
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+30 0 obj
+<<
+/Type /Font
+/BaseFont /Symbol
+/Subtype /Type1
+/FirstChar 32
+/LastChar 255
+>>
+endobj
+2 0 obj
+<<
+/ProcSet [/PDF /Text /ImageB /ImageC /ImageI]
+/Font <<
+/F1 17 0 R
+/F2 18 0 R
+/F3 19 0 R
+/F4 20 0 R
+/F5 21 0 R
+/F6 22 0 R
+/F7 23 0 R
+/F8 24 0 R
+/F9 25 0 R
+/F10 26 0 R
+/F11 27 0 R
+/F12 28 0 R
+/F13 29 0 R
+/F14 30 0 R
+>>
+/XObject <<
+>>
+>>
+endobj
+31 0 obj
+<<
+/Producer (jsPDF 4.2.1)
+/CreationDate (D:20261126212135-00'00')
+>>
+endobj
+32 0 obj
+<<
+/Type /Catalog
+/Pages 1 0 R
+/OpenAction [3 0 R /FitH null]
+/PageLayout /OneColumn
+>>
+endobj
+xref
+0 33
+0000000000 65535 f 
+0000038364 00000 n 
+0000040225 00000 n 
+0000000015 00000 n 
+0000000152 00000 n 
+0000006272 00000 n 
+0000006409 00000 n 
+0000012494 00000 n 
+0000012631 00000 n 
+0000018744 00000 n 
+0000018882 00000 n 
+0000024694 00000 n 
+0000024833 00000 n 
+0000030812 00000 n 
+0000030951 00000 n 
+0000036641 00000 n 
+0000036780 00000 n 
+0000038460 00000 n 
+0000038586 00000 n 
+0000038717 00000 n 
+0000038851 00000 n 
+0000038989 00000 n 
+0000039113 00000 n 
+0000039242 00000 n 
+0000039374 00000 n 
+0000039510 00000 n 
+0000039638 00000 n 
+0000039765 00000 n 
+0000039894 00000 n 
+0000040027 00000 n 
+0000040129 00000 n 
+0000040478 00000 n 
+0000040564 00000 n 
+trailer
+<<
+/Size 33
+/Root 32 0 R
+/Info 31 0 R
+/ID [ <C9220B6AD2FD26A8B74A8AFD733FCA6E> <C9220B6AD2FD26A8B74A8AFD733FCA6E> ]
+>>
+startxref
+40668
+%%EOF
