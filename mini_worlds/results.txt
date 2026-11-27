@@ -1,0 +1,128 @@
+# Mini-worlds duel census: raw outputs (sandbox run, Claude, 2026-11-27)
+# Predicate = my reading (see README). Hypothesis-grade: not run on the project machine.
+
+## exact census (C): n k
+n=4 k=0  legal=156  mate_in_1_exists=0  loud_mate_in_2=0  no_mate_in_2_at_all=156  quiet_m2_but_no_check_m3=0  DUELS=0  degenerate=0  any_mate_in_2=0
+n=4 k=1  legal=11184  mate_in_1_exists=304  loud_mate_in_2=44  no_mate_in_2_at_all=9964  quiet_m2_but_no_check_m3=456  DUELS=116  degenerate=300  any_mate_in_2=616
+n=4 k=2  legal=386176  mate_in_1_exists=27028  loud_mate_in_2=11796  no_mate_in_2_at_all=317368  quiet_m2_but_no_check_m3=8564  DUELS=6008  degenerate=15412  any_mate_in_2=26368
+n=5 k=1  legal=58656  mate_in_1_exists=752  loud_mate_in_2=104  no_mate_in_2_at_all=55652  quiet_m2_but_no_check_m3=1436  DUELS=232  degenerate=480  any_mate_in_2=1772
+n=5 k=2  legal=3697592  mate_in_1_exists=145072  loud_mate_in_2=85616  no_mate_in_2_at_all=3300948  quiet_m2_but_no_check_m3=57532  DUELS=50644  degenerate=57780  any_mate_in_2=193792
+n=4 k=3  legal=8504560  mate_in_1_exists=987548  loud_mate_in_2=479844  no_mate_in_2_at_all=6533268  quiet_m2_but_no_check_m3=100480  DUELS=87136  degenerate=316284  any_mate_in_2=667460
+n=6 k=1  legal=210144  mate_in_1_exists=1480  loud_mate_in_2=196  no_mate_in_2_at_all=204364  quiet_m2_but_no_check_m3=2960  DUELS=468  degenerate=676  any_mate_in_2=3624
+n=8 k=1  legal=1436912  mate_in_1_exists=3960  loud_mate_in_2=452  no_mate_in_2_at_all=1422148  quiet_m2_but_no_check_m3=8064  DUELS=1172  degenerate=1116  any_mate_in_2=9688
+
+## independent Python re-implementation (full raw enumeration, no symmetry shortcut)
+n=4 k=0  legal=156  mate_in_1_exists=0  loud_mate_in_2=0  no_mate_in_2_at_all=156  quiet_m2_but_no_check_m3=0  DUELS=0  degenerate=0  any_mate_in_2=0
+n=4 k=1  legal=11184  mate_in_1_exists=304  loud_mate_in_2=44  no_mate_in_2_at_all=9964  quiet_m2_but_no_check_m3=456  DUELS=116  degenerate=300  any_mate_in_2=616
+n=5 k=1  legal=58656  mate_in_1_exists=752  loud_mate_in_2=104  no_mate_in_2_at_all=55652  quiet_m2_but_no_check_m3=1436  DUELS=232  degenerate=480  any_mate_in_2=1772
+n=4 k=2  legal=386176  mate_in_1_exists=27028  loud_mate_in_2=11796  no_mate_in_2_at_all=317368  quiet_m2_but_no_check_m3=8564  DUELS=6008  degenerate=15412  any_mate_in_2=26368
+
+## sampled 8x8 by piece count (non-king pieces k)
+n=8 k=2 (pieces 4) samples=300000 legal=174740 (58.2%)  mate1=2073 (1.19% of legal)  loud2=1935  duels=1468  duel/legal=8.401e-03  (1 in 119)
+n=8 k=4 (pieces 6) samples=100000 legal=39311 (39.3%)  mate1=1608 (4.09% of legal)  loud2=1795  duels=288  duel/legal=7.326e-03  (1 in 136)
+n=8 k=6 (pieces 8) samples=100000 legal=27682 (27.7%)  mate1=2211 (7.99% of legal)  loud2=2104  duels=88  duel/legal=3.179e-03  (1 in 315)
+n=8 k=8 (pieces 10) samples=80000 legal=15953 (19.9%)  mate1=1744 (10.93% of legal)  loud2=1581  duels=22  duel/legal=1.379e-03  (1 in 725)
+n=8 k=10 (pieces 12) samples=60000 legal=9192 (15.3%)  mate1=1287 (14.00% of legal)  loud2=1016  duels=3  duel/legal=3.264e-04  (1 in 3064)
+
+## sampled, board size comparison at fixed k
+n=5 k=3 (pieces 5) samples=300000 legal=83611 (27.9%)  mate1=6077 (7.27% of legal)  loud2=3935  duels=882  duel/legal=1.055e-02  (1 in 95)
+n=6 k=3 (pieces 5) samples=300000 legal=106660 (35.6%)  mate1=5135 (4.81% of legal)  loud2=4346  duels=1163  duel/legal=1.090e-02  (1 in 92)
+n=7 k=3 (pieces 5) samples=300000 legal=126327 (42.1%)  mate1=4471 (3.54% of legal)  loud2=4187  duels=1265  duel/legal=1.001e-02  (1 in 100)
+n=8 k=3 (pieces 5) samples=300000 legal=143091 (47.7%)  mate1=3464 (2.42% of legal)  loud2=3973  duels=1476  duel/legal=1.032e-02  (1 in 97)
+n=5 k=4 (pieces 6) samples=200000 legal=41900 (20.9%)  mate1=4440 (10.60% of legal)  loud2=2865  duels=260  duel/legal=6.205e-03  (1 in 161)
+n=6 k=4 (pieces 6) samples=200000 legal=55428 (27.7%)  mate1=4179 (7.54% of legal)  loud2=3253  duels=386  duel/legal=6.964e-03  (1 in 144)
+n=7 k=4 (pieces 6) samples=200000 legal=68059 (34.0%)  mate1=3751 (5.51% of legal)  loud2=3666  duels=558  duel/legal=8.199e-03  (1 in 122)
+n=6 k=5 (pieces 7) samples=150000 legal=33255 (22.2%)  mate1=3338 (10.04% of legal)  loud2=2474  duels=168  duel/legal=5.052e-03  (1 in 198)
+n=7 k=5 (pieces 7) samples=150000 legal=41469 (27.6%)  mate1=3090 (7.45% of legal)  loud2=2785  duels=206  duel/legal=4.968e-03  (1 in 201)
+n=6 k=2 (pieces 4) samples=300000 legal=138978 (46.3%)  mate1=3408 (2.45% of legal)  loud2=2435  duels=1590  duel/legal=1.144e-02  (1 in 87)
+n=7 k=2 (pieces 4) samples=300000 legal=159198 (53.1%)  mate1=2655 (1.67% of legal)  loud2=2156  duels=1470  duel/legal=9.234e-03  (1 in 108)
+n=5 k=2 (pieces 4) samples=300000 legal=114196 (38.1%)  mate1=4452 (3.90% of legal)  loud2=2671  duels=1501  duel/legal=1.314e-02  (1 in 76)
+n=4 k=3 (pieces 5) samples=300000 legal=56758 (18.9%)  mate1=6693 (11.79% of legal)  loud2=3139  duels=559  duel/legal=9.849e-03  (1 in 102)
+
+## embedding: every raw duel on the small board dropped into an empty larger board at every offset
+### 4x4 k=1 -> 5x5
+   illegal(king capturable / white in check)            0    0.00%
+   degenerate                                           0    0.00%
+   mate in 1 appears                                    8    1.72%
+   loud mate in 2 appears                               0    0.00%
+   no forced mate in 2 left                           276   59.48%
+   quiet m2 but no checking m3                         80   17.24%
+   STILL A DUEL                                       100   21.55%
+   row offset 0, survivors by column offset: 25 25
+   row offset 1, survivors by column offset: 25 25
+### 4x4 k=1 -> 6x6
+phase 2: embedded into 6x6 at all 9 offsets: 1044 trials
+   illegal(king capturable / white in check)            0    0.00%
+   degenerate                                           0    0.00%
+   mate in 1 appears                                   24    2.30%
+   loud mate in 2 appears                               0    0.00%
+   no forced mate in 2 left                           792   75.86%
+   quiet m2 but no checking m3                        112   10.73%
+   STILL A DUEL                                       116   11.11%
+   row offset 0, survivors by column offset: 27 2 27
+   row offset 1, survivors by column offset: 2 0 2
+   row offset 2, survivors by column offset: 27 2 27
+### 4x4 k=1 -> 8x8
+phase 2: embedded into 8x8 at all 25 offsets: 2900 trials
+   illegal(king capturable / white in check)            0    0.00%
+   degenerate                                           0    0.00%
+   mate in 1 appears                                   40    1.38%
+   loud mate in 2 appears                               8    0.28%
+   no forced mate in 2 left                          2520   86.90%
+   quiet m2 but no checking m3                        192    6.62%
+   STILL A DUEL                                       140    4.83%
+   row offset 0, survivors by column offset: 25 3 4 3 25
+   row offset 1, survivors by column offset: 3 0 0 0 3
+   row offset 2, survivors by column offset: 4 0 0 0 4
+   row offset 3, survivors by column offset: 3 0 0 0 3
+   row offset 4, survivors by column offset: 25 3 4 3 25
+### 5x5 k=1 -> 8x8
+phase 1: 5x5 k=1  raw duels = 232
+phase 2: embedded into 8x8 at all 16 offsets: 3712 trials
+   illegal(king capturable / white in check)            0    0.00%
+   degenerate                                           0    0.00%
+   mate in 1 appears                                    0    0.00%
+   loud mate in 2 appears                              40    1.08%
+   no forced mate in 2 left                          3016   81.25%
+   quiet m2 but no checking m3                        376   10.13%
+   STILL A DUEL                                       280    7.54%
+   row offset 0, survivors by column offset: 56 7 7 56
+   row offset 1, survivors by column offset: 7 0 0 7
+   row offset 2, survivors by column offset: 7 0 0 7
+   row offset 3, survivors by column offset: 56 7 7 56
+### 4x4 k=2 -> 5x5
+phase 1: 4x4 k=2  raw duels = 6008
+phase 2: embedded into 5x5 at all 4 offsets: 24032 trials
+   illegal(king capturable / white in check)            0    0.00%
+   degenerate                                           0    0.00%
+   mate in 1 appears                                   96    0.40%
+   loud mate in 2 appears                             192    0.80%
+   no forced mate in 2 left                         12360   51.43%
+   quiet m2 but no checking m3                       2944   12.25%
+   STILL A DUEL                                      8440   35.12%
+   row offset 0, survivors by column offset: 2110 2110
+   row offset 1, survivors by column offset: 2110 2110
+### 4x4 k=2 -> 8x8
+phase 1: 4x4 k=2  raw duels = 6008
+phase 2: embedded into 8x8 at all 25 offsets: 150200 trials
+   illegal(king capturable / white in check)            0    0.00%
+   degenerate                                           0    0.00%
+   mate in 1 appears                                  704    0.47%
+   loud mate in 2 appears                            1048    0.70%
+   no forced mate in 2 left                        120200   80.03%
+   quiet m2 but no checking m3                      13632    9.08%
+   STILL A DUEL                                     14616    9.73%
+   row offset 0, survivors by column offset: 1858 586 508 586 1858
+   row offset 1, survivors by column offset: 586 54 50 54 586
+   row offset 2, survivors by column offset: 508 50 48 50 508
+   row offset 3, survivors by column offset: 586 54 50 54 586
+   row offset 4, survivors by column offset: 1858 586 508 586 1858
+
+## per-position cross-check vs project oracle.Solver (oracle.py v0.3, sha256 f2eb1b64...9bde)
+positions checked: 1150  in 213s   disagreements: 0
+   C says degenerate       oracle.Solver says degenerate       1
+   C says mate1            oracle.Solver says mate1            64
+   C says loud2            oracle.Solver says loud2            55
+   C says nomate2          oracle.Solver says nomate2          873
+   C says quiet2_nocheck3  oracle.Solver says quiet2_nocheck3  6
+   C says DUEL             oracle.Solver says DUEL             151
