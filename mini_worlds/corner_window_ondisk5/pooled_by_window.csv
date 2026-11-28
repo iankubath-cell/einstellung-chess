@@ -1,0 +1,17 @@
+w,class,tested,duel,survival_rate,not_duel,unknown,invalid,kings_not_in_window
+2,corner,0,0,,0,0,0,12
+2,edge,0,0,,0,0,0,60
+2,interior,0,0,,0,0,0,75
+3,corner,0,0,,0,0,0,12
+3,edge,3,0,0.0000,3,0,0,45
+3,interior,0,0,,0,0,0,48
+4,corner,1,0,0.0000,1,0,0,11
+4,edge,5,0,0.0000,5,0,0,31
+4,interior,0,0,,0,0,0,27
+5,corner,3,0,0.0000,3,0,0,9
+5,edge,5,1,0.2000,4,0,0,19
+5,interior,0,0,,0,0,0,12
+6,corner,5,1,0.2000,4,0,0,7
+6,edge,3,2,0.6667,1,0,0,9
+6,interior,0,0,,0,0,0,3
+7,corner,6,5,0.8333,1,0,0,6

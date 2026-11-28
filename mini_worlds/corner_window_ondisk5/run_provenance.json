@@ -1,0 +1,28 @@
+{
+ "script": "C:\\Users\\44777\\einstellung-chess\\corner_window.py",
+ "script_sha256_raw": "0f493ded8617feb390dbfe5c973e0f3e206c34daed5a200036f35fe74b3d60c5",
+ "script_sha256_lf": "f367fdb620e3dabbde325007f9892761f59ad76fd6def60a0f3f820c960b5439",
+ "oracle": "C:\\Users\\44777\\einstellung-chess\\oracle.py",
+ "oracle_sha256_raw": "c89dbbaf58e401b02e4c4c3c527800cbcd80af0351b89f58aee745030c00ec36",
+ "oracle_sha256_lf": "772a3a1d314f52564d40262ba489ada2813fd4111c0f608ab98a6c8e1c85ed56",
+ "input": "C:\\Users\\44777\\einstellung-chess\\duels_ondisk5.json",
+ "input_sha256_raw": "dbba56d7a60c3fe9ff2eec76cc3ca618816c294330cc0dacfcfc4cc16e86b8bd",
+ "input_sha256_lf": "dbba56d7a60c3fe9ff2eec76cc3ca618816c294330cc0dacfcfc4cc16e86b8bd",
+ "budget": 5000000,
+ "workers": 4,
+ "python": "3.14.5",
+ "python_chess": "1.11.2",
+ "platform": "Windows-11-10.0.26100-SP0",
+ "seconds": 7.7,
+ "gate_ok": true,
+ "command": [
+  "corner_window.py",
+  "duels_ondisk5.json",
+  "--oracle",
+  "oracle.py",
+  "--outdir",
+  "mini_worlds\\corner_window_ondisk5",
+  "--workers",
+  "4"
+ ]
+}
