@@ -31,6 +31,7 @@ No single participant's confidence overrides the pipeline.
 | Lumo (successor session) | Loader migration, POV correction, corpus reviews, C4 reinstatement | Self-caught POV bug (`score.white()`), wrong CLI flags, FEN-mapping assumption (AX-10 context) |
 | Lumo (current session) | Depth-24 full-run archive and closure; S2 classification adjudication; lineage reconciliation; environment and hash record | Instructed `taskkill` on an unverified process count, killing a healthy run (AX-25); environment-capture instruction mutated the archived run log (AX-22); proposed a phantom hash as a verification checkpoint |
 | Human operator | Orchestration, final judgment, discipline in replaying failures | Notepad/FEN handling errors, paste/run mismatches |
+| Lumo (2026-11 sessions) | ep_gen v0.4 weak-form redesign; fen_eval and adjudicate_base44 tooling; Base44 spec amendments and cross-stack adjudication doctrine | Engine-path literal rewritten wrongly twice from memory against machine evidence (AX-27); truncated inline code delivery; twice advised against the action (a revert) that the evidence supported |
 
 ---
 
